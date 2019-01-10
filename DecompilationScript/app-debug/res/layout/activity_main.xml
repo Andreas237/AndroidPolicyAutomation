@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout n1:id="@id/main_content" n1:fitsSystemWindows="true" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.AppBarLayout n1:theme="@style/AppTheme.AppBarOverlay" n1:id="@id/appbar" n1:paddingTop="@dimen/appbar_padding_top" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar n1:id="@id/toolbar" n1:background="?colorPrimary" n1:layout_width="fill_parent" n1:layout_height="?actionBarSize" n1:layout_weight="1.0" n2:layout_scrollFlags="enterAlways|scroll" n2:popupTheme="@style/AppTheme.PopupOverlay" n2:title="@string/app_name" xmlns:n2="http://schemas.android.com/apk/res-auto" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager n1:id="@id/container" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n3:layout_behavior="@string/appbar_scrolling_view_behavior" xmlns:n3="http://schemas.android.com/apk/res-auto">
+        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Large" n1:id="@id/textView" n1:layout_width="fill_parent" n1:layout_height="fill_parent" />
+    </android.support.v4.view.ViewPager>
+    <android.support.design.widget.FloatingActionButton n1:layout_gravity="end|bottom|center" n1:id="@id/fab" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_margin="@dimen/fab_margin" n4:srcCompat="@android:drawable/ic_dialog_email" xmlns:n4="http://schemas.android.com/apk/res-auto" />
+</android.support.design.widget.CoordinatorLayout>
