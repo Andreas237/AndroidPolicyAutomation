@@ -24,7 +24,12 @@
     </application>
 
 
+    <!-- Grants the app access to the users exact location-->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- Grands the app access to managing all aspects of wifi connectivity-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
 
 </manifest>
+
