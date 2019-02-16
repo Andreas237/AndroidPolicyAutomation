@@ -13,6 +13,7 @@ bin/
 gen/
 out/
 ~*.xlsx
+~*.docx
 
 # Gradle files
 .gradle/
