@@ -1,0 +1,95 @@
+source: http://pactforthecure.com/privacy-policy/us.html
+
+
+Language English
+
+The University of North Carolina at Chapel Hill ("UNC") is committed to providing notice about the Personal Information (defined below) collected via the PPD ACT research study mobile application ("App"). The formal name of the research study is the "Genomics of Postpartum Depression - Action towards Causes and Treatment," and it is organized by the PACT Consortium and sponsored by UNC (the "Study"). To participate in the Study you will be required to sign a consent to participate ("Informed Consent").
+
+The App is an integral part of the Study. This "PPD ACT Privacy Policy" ("Privacy Policy") provides information about how we will collect, use, store and share Personal Information about Study participants who use the App ("you").
+
+The App will be used in different ways for two phases of the Study:
+
+    Phase I, PPD and PPP Questions: if you consent, during Phase I you will be asked through the App to answer questions to help Study researchers determine if you have ever experienced postpartum depression (PPD) or postpartum psychosis (PPP).
+    Phase II, DNA Sample & Genetic Testing: if you are eligible and invited to participate in Phase II, the App will send you that notification and obtain your Informed Consent to provide, through the mail, a sample of your genetic material (DNA) so that researchers can study whether there is a link between PPD, PPP and genetics. Your DNA would be obtained from a saliva (spit) sample.
+
+The App is available to you for free. You will not need to provide any payment information for the use of the App.
+
+We are not asking you to make any health decisions based on the use of the App. You should discuss health decisions directly with your healthcare provider.
+How will you consent to this Privacy Policy and the Informed Consent?
+
+The App will provide a link to this Privacy Policy. If you download or use the App, supply Personal Information or answers to questions through the App, or register for an account with us, that will be your consent to this Privacy Policy. Once you've got the App, you will be asked to sign the Informed Consent to participate in Phase I of the Study and will not be allowed to proceed in the Study unless you do sign. A copy of the Informed Consent you sign will be sent for your records to the email address you provide in the App. You can access or download a copy of this Privacy Policy by going to http://www.pactforthecure.com/privacy-policy/us.html.
+What does this Privacy Policy cover?
+
+This Privacy Policy covers our treatment of personally identifiable information and other information that might, or might not, personally identify you and is related to the Study. For ease of reference, we will call this information "Personal Information." This Privacy Policy does not apply to other research studies or other, unrelated activities conducted at UNC or to similar studies conducted at partner universities.
+
+The App contains links to external websites that provide resources for PPD support. This Privacy Policy does not cover, and we are not responsible for the privacy policies or practices of websites that may be accessed through these links. When following a link to another website, you should read that website's privacy policy and make sure that you agree with it.
+
+Your use of the App will allow you to provide us with Personal Information as outlined in the Informed Consent(s) and this Privacy Policy.
+
+The Study is designed for adult women. We do not knowingly collect or solicit Personal Information from anyone under the age of 18 and we do not wish to receive it. The Study is limited to participants who live in the United States and are 18 years old or older. In the event that we gain actual knowledge that we have collected Personal Information from a child under age 18, we will delete that information. If you are a parent or guardian and believe that we might have collected such information, please contact us using the contact information below.
+What information does the App collect?
+
+The purpose of the Study is to understand genetic risks of PPD and PPP. Phase I of the Study must first identify if you are eligible to participate by asking your comfort with using the English language on your smart device, gender, age and whether you have given live birth. If you are eligible to participate and you sign the Informed Consent, the Study will collect (through the App) personally identifiable information about you such as name, address, and email address. The App will also ask you about your pregnancy history and mood following childbirth, including questions about medical history and your psychological symptoms (e.g. anxiety) in the postpartum period.
+
+If you provide the above-described Personal Information and it is determined that you experienced PPD or PPP, you may be asked through the App and by email if you would like to participate in Phase II of the Study. As described above, Phase II involves you submitting a sample of DNA (collected from saliva you spit into a collection tube we mail to you) to help researchers determine how genes affect the development of PPD and PPP. You would be required to complete a second Informed Consent through the App to participate in Phase II. With your Informed Consent, your DNA sample will be reviewed for genetic markers (or "signposts") and re-sequenced to try to find any differences that women with PPD or PPP might have.
+
+You may choose not to provide us with certain information. You have the chance to skip any questions in the App that make you uncomfortable, to stop participation at any point, to decline to participate in Phase II of the Study, and to withdraw from the Study completely. Though refusal to provide some Personal Information may exclude you from participation in the Study, it will not affect your relationship with the research team or UNC.
+What else does the App collect?
+
+The App includes two tools that automatically collect certain information beyond that which you affirmatively provide. One tool collects information about crashes (Crashlytics) and one about use of the App (iTunes Connect). These tools work on an anonymous basis, without collecting personally identifiable information. Through these tools, the App may automatically receive anonymous technical information relating to your operating system, device, features used, content viewed and downloaded, whether crashes occurred, and the dates and times of your interactions with the App. We may internally use this information to understand, customize and generally improve user experience with the App and the Study.
+Push Notifications
+
+Once you provide Informed Consent in the App and enroll in the Study (if eligible), you will receive push notifications regarding the Study. "Push Notifications" are messages that are sent to your smart device within the App. Push Notifications may be sent to ask you to complete questions in the Study after your initial enrollment. You will also receive Push Notifications when we update the App with new questions or features asking you to complete these tasks and surveys, and the information you provide in response will be used and treated the same as other Personal Information you might provide in Phase I of the Study.
+
+The App will also send you Push Notifications and an email (to the email address you provide) throughout your participation in the Study, as necessary, to try and make sure that you know any new information gained during the Study that might affect your willingness to continue to participate. You can choose to receive or not receive updates about the Study and you have the option to control notification settings on your smart device (for example, to turn off any audible notification tone). Lastly, the App may send you a Push Notification and an email to invite you to participate in Phase II of the Study.
+What about security for Personal Information? How long will UNC keep it?
+
+All information that is collected through the App will be encrypted through encryption methods currently used at UNC and sent to a protected data server behind UNC's firewall. If you participate in Phase II of the Study, your DNA sample and genetic data will also be stored in a protected way at UNC. (See the section below on "Sharing" for information about storage of your DNA sample and genetic data at the National Institutes of Health).
+
+UNC will replace the direct identifiers you provide - like your name and address - with a code to help protect your identity. UNC will encrypt the direct identifiers and store them separately. Because the remaining information is coded, researchers using this information should not be readily able to identify which information pertains to you.
+
+UNC researchers will keep your Personal Information indefinitely, except if you withdraw from the Study, in which case your Personal Information, including your DNA sample, will be destroyed from UNC's records and repository. (See the section below on "Choices" for information about removal of your de-identified DNA sample and genetic data from the National Institutes of Health repositories). The only people who will have authorized access to the code set with your individual identity are UNC study personnel, who will retain the ability to re-identify your Personal Information if doing so is needed for research integrity purposes or legal purposes. UNC may also share your re-identified Personal Information with others at UNC who need to see such information to ensure that the research meets legal, regulatory or institutional requirements.
+
+You too can help with security. For example, access to the App on your smart device may be protected by a biometric authentication mechanism (such as Touch ID) or a passcode. You should take these or other steps to prevent unauthorized access to your smart device by protecting and limiting access to your smart device. We strongly recommend that you always use the most updated version of the operating system for your smart device. You should review the privacy and security settings often, and restrict any unnecessary access.
+
+No matter our efforts, we cannot guarantee complete security. Unauthorized entry or use, hardware or software failure, and other factors, may compromise the security of your Personal Information.
+Will UNC share any of the information it receives?
+
+The information collected by the App and through the DNA sampling kit will only be used for research purposes. Your name will never be used in publications or presentations when the results of the study become available.
+
+As described above, your Personal Information will be coded. The code will be stored separately and in a protected way. The only people who will have permission to access this code will be the UNC research team. We intend that the only time your identifiable information will be shared outside of UNC is when required by law. For example, we might believe disclosure is necessary to comply with a regulatory requirement, judicial proceeding, court order, or legal process served on us, or to protect the safety, rights, or property of UNC or the public.
+
+De-identified (coded) information about your experience with PPD or PPP, DNA, saliva, and genetic results will also be stored at a controlled repository at the U.S. National Institute of Mental Health. De-identified (coded) information about your experience with PPD or PPP and genetic results will also be stored in "dbGAaP," which is another controlled repository run by the U.S. National Institutes of Health ("NIH"). Your de-identified information may also be made available by the NIH to other qualified researchers studying genetic indicators of medical conditions, if those other researchers sign a contract with the NIH promising not to try to identify or contact you.
+What Personal Information can I access?
+
+Through the App, you may access the following information you've provided to us: name, mailing address, and email address.
+
+When you update information, however, we may maintain a copy of the unrevised information in our records to track the data entry into the Study. The information you can view and update may change as the App undergoes further development. Please note that any information that is automatically uploaded from the App (e.g., dates App used) cannot later be changed or updated. If you have any questions about viewing or updating information you have provided to us, please contact us using the contact information below.
+What choices do I have?
+
+You may choose not to install the App. If you choose not to install the App, you cannot participate in the Study.
+
+If you join the Study, you can choose not to answer any question in the App that makes you feel uncomfortable or that you do not want to answer. You can also withdraw from the Study (Phase I or Phase II) at any time by emailing the UNC researchers at pact.questions@med.unc.edu. When you withdraw from Phase I of the Study we will remove your Personal Information from the Study databases and, if you participated in and withdraw from Phase II of the Study, we will remove your DNA and genetic information from the UNC repository, though we may not be able to remove your de-identified information from research or publications that have already happened. If you withdraw from Phase II, we will also make efforts to remove your de-identified DNA and genetic results from the NIH repositories and ask the NIH to instruct other researchers who may have obtained controlled access to it to not include your data in their research though, again, this may not be able to affect the inclusion of your de-identified information in research that has already happened.
+Re-Contact
+
+Once the Study is over, we may use your Personal Information to contact you in the future, sometimes just to make sure we know your contact details are still accurate, sometimes to ask if you would be willing to participate in additional research opportunities. We will probably do this a few times per year.
+What limitations are there on my use of the App?
+
+By downloading and using the App, you agree that you will not do anything to interfere with or disrupt the operation of the App, will provide only accurate and current information through the App, and will not impersonate anyone else in your use of the App.
+
+You further agree not to transmit content that you do not have the right to transmit or that infringes the rights of any party, and you agree to use the App in compliance with all applicable laws. You understand that the App or portions of it may be subject to patent, copyright, trademark and other intellectual property protection and that the ownership of software and other intellectual property related to the App, as well the goodwill associated therewith, remains with UNC or its licensors. You agree that any improvements or other changes to the App or the Study itself are the sole property of UNC.
+Effective Date and Changes to this Privacy Policy
+
+This Privacy Policy is effective as of March 21, 2016. We may amend this Privacy Policy from time to time in our good faith discretion. New versions of this Privacy Policy are effective when they are posted to our website at the following link: http://www.pactforthecure.com/privacy-policy/us.html. Use of information we collect now is subject to the version of the Privacy Policy in effect at the time such information is used.
+Questions or concerns?
+
+If you have any questions or concerns regarding the topics addressed in this Privacy Policy, please send a message using the contact information below.
+
+Contact Information
+Email: pact.questions@med.unc.edu
+
+Address:
+Attention: PPD ACT Study Team, c/o Dr. Meltzer-Brody
+University of North Carolina at Chapel Hill
+Department of Psychiatry, Campus Box #7160
+Chapel Hill, NC 27599
