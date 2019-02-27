@@ -1,3 +1,6 @@
+# Password files
+note_4.txt
+
 # Built application files
 *.apk
 *.ap_
@@ -14,6 +17,7 @@ gen/
 out/
 ~*.xlsx
 ~*.docx
+.DS_Store
 
 # Gradle files
 .gradle/
