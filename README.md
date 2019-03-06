@@ -1,5 +1,3 @@
-Moved the following to /usr/local/bin and added chmod +x
-	apktool
-	apktool.jar (v 2.3.4)
-	baksmali.jar (v 2.2.5) 
+This project aims to compare Android applications' privacy policies to their actual implementation.
 
+Check out the **[wiki](https://github.com/Andreas237/AndroidPolicyAutomation/wiki)** for all the details!
