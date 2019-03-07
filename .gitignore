@@ -14,7 +14,7 @@ DecompileTestProject/
 
 
 # Built application files
-*.apk
+.apk
 *.ap_
 
 
