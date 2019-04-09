@@ -43,6 +43,7 @@ out/
 SRL_Parsed/
 ~*.xlsx
 ~*.docx
+ore
 .DS_Store
 
 
