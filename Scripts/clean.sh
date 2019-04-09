@@ -7,7 +7,7 @@
 ###########################################
 function getfilename {
         apk=$1
-        filename=$(echo $1 | sed "s/.apk//p" -n)
+        filename=$(echo $1 | sed -n "s/.apk//p")
 }
 
 function removedir {

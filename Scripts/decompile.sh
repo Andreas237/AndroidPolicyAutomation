@@ -2,11 +2,11 @@
 
 
 ############################################
-#		Part 0: Get APK Name	   #
-###########################################
+#		Part 0: Get APK Name	   							 #
+############################################
 function getfilename {
 	apk=$1
-	filename=$(echo $1 | sed "s/.apk//p" -n)
+	filename=$(echo $1 | sed -n "s/.apk//p")
 }
 
 function outputdir {
@@ -42,13 +42,13 @@ function decompilejar {
 	echo "A" | unzip -qqj "$filename/*.jar" -d "$filename/classfiles"
 }
 
-# The class files need to be decompiled 
+# The class files need to be decompiled
 # into .java files for searching
 function decompileclass {
 	echo "Decompiling the class files in $filename/classfiles, results in $filename/javafiles"
 	# read -n 1 -s -r -p "Press any key to continue"
 	for file in "$filename/classfiles/*[^$]*.class"; do
-		jad -sjava -d "$filename/javafiles/" $file 
+		jad -sjava -d "$filename/javafiles/" $file
 	done
 }
 
