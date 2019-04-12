@@ -7,6 +7,7 @@
 function getfilename {
 	apk=$1
 	filename=$(echo $1 | sed -n "s/.apk//p")
+	# Get rid of path: echo ~/Development/APKs/LibriVox_app.librivox.android.apk | sed "s/\(.*\/\)//g"
 }
 
 function outputdir {

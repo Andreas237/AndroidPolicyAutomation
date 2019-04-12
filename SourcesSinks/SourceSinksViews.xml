@@ -1,0 +1,9 @@
+<sinkSources>
+	<method signature="&lt;de.testApp.sourcetosink1.MainActivity: java.lang.String source()&gt;" category="NO_CATEGORY">
+		<return type="java.lang.String">
+			<accessPath isSource="true" isSink="false" length="0">
+			   	<!-- Wenn leer, dann primitiver Datentyp (int, double, String,...)-->
+			</accessPath>
+		</return>
+	</method>
+</sinkSources>
