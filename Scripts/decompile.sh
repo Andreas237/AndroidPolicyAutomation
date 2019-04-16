@@ -1,12 +1,23 @@
 #!/bin/bash
 
+############################################
+#		Instructions
+# 1 - Be in root directory of the project:
+#	/Users/andreasslovacek/Development/ResearchAsst2019/AndroidPolicyAutomation/ExtractedJars
+#
+# 2 -
+############################################
+
 
 ############################################
 #		Part 0: Get APK Name	   							 #
 ############################################
 function getfilename {
 	apk=$1
-	filename=$(echo $1 | sed -n "s/.apk//p")
+	filename=${apk##*/}
+	filename=${filename%.apk}
+	echo "filename name: $filename"
+	# filename=$(echo $1 | sed -n "s/.apk//p")
 	# Get rid of path: echo ~/Development/APKs/LibriVox_app.librivox.android.apk | sed "s/\(.*\/\)//g"
 }
 
@@ -23,9 +34,13 @@ function outputdir {
 # the output into the corresponding dir.
 function decompileapk {
 	tail="-dex2jar.jar"
+	err="-error.zip"
 	echo "Decompiling $apk"
-	./../Tools/dex2jar-2.0/d2j-dex2jar.sh $apk
-	mv "$filename$tail" "$filename"
+	../Tools/dex2jar-2.0/d2j-dex2jar.sh $apk
+
+	# Move the results to the designated directory
+	mv "${filename}$tail" "${filename}/"
+	mv "${filename}$err" "${filename}/"
 }
 
 
@@ -79,6 +94,6 @@ outputdir
 
 decompileapk
 
-decompilejar
+#decompilejar
 
-decompileclass
+#decompileclass

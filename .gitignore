@@ -5,9 +5,18 @@ apktool.jar
 
 
 
-# Apps to practice on
+# Libraries to download individually
+
+
+
+
+
+
+# My directories
 FavoriteToys/
 DecompileTestProject/
+APKs/
+#ExtractedJars/
 
 
 
