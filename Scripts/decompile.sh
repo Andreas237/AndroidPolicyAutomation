@@ -3,29 +3,43 @@
 ############################################
 #		Instructions
 # 1 - Be in root directory of the project:
-#	/Users/andreasslovacek/Development/ResearchAsst2019/AndroidPolicyAutomation/ExtractedJars
+#	~/Development/ResearchAsst2019/AndroidPolicyAutomation/ExtractedJars
 #
-# 2 -
+# 2 - Run with: ../Scripts/decompile.sh [Path/APK]
+#			Example:>> ../Scripts/decompile.sh ../APKs/Ibotta_com.ibotta.android.apk
 ############################################
 
 
 ############################################
 #		Part 0: Get APK Name	   							 #
 ############################################
+# Parse the input filename to strip path and
+# extension
 function getfilename {
 	apk=$1
 	filename=${apk##*/}
 	filename=${filename%.apk}
 	echo "filename name: $filename"
 	# filename=$(echo $1 | sed -n "s/.apk//p")
-	# Get rid of path: echo ~/Development/APKs/LibriVox_app.librivox.android.apk | sed "s/\(.*\/\)//g"
-}
+} # end function getfilename
 
+
+
+
+
+
+# Create a directory to store the output in,
+# based on the input APK name
 function outputdir {
 	echo "Creating/Replacing directory: $filename"
 	rm -rf "$filename"
 	mkdir "$filename"
-}
+} # end function outputdir
+
+
+
+
+
 
 ############################################
 #               Part 1:The APK             #
@@ -41,7 +55,7 @@ function decompileapk {
 	# Move the results to the designated directory
 	mv "${filename}$tail" "${filename}/"
 	mv "${filename}$err" "${filename}/"
-}
+} # end function decompileapk
 
 
 
@@ -51,22 +65,38 @@ function decompileapk {
 ###########################################
 #               Part 2: The Jar           #
 ###########################################
-# The jar must be decompiled.  In this pro-
-# ject we use JAD
+# The jar must be decompiled.  Unzip them
+# with standard unzip command and put the
+# resulting .class files in the
+# corresponding directory.
 function decompilejar {
-	echo "Unzipping $filename$tail"
+	echo "Unzipping ${filename}/$filename$tail"
 	echo "A" | unzip -qqj "$filename/*.jar" -d "$filename/classfiles"
-}
+} # end function decompilejar
+
+
+
+
+
 
 # The class files need to be decompiled
 # into .java files for searching
 function decompileclass {
+	echo "A"	# In response to "replace filename/classfiles/a.class? [y]es, [n]o, [A]ll, [N]one, [r]ename:"
 	echo "Decompiling the class files in $filename/classfiles, results in $filename/javafiles"
-	# read -n 1 -s -r -p "Press any key to continue"
-	for file in "$filename/classfiles/*[^$]*.class"; do
-		jad -sjava -d "$filename/javafiles/" $file
+
+
+	# Decompile every class file into its original .java form
+	for file in "${filename}/classfiles/"*[^$]*".class"; do
+		echo "Applying jad to "$file
+		# Check flags with >> jad --help
+		jad -sjava -a -o -r -safe -t -d "$filename/javafiles/" $file
+				# response to jad parsing asking to overwrite
 	done
-}
+} # end function decompileclass
+
+
+
 
 
 
@@ -94,6 +124,6 @@ outputdir
 
 decompileapk
 
-#decompilejar
+decompilejar
 
-#decompileclass
+decompileclass
