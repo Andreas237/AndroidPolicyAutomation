@@ -21,7 +21,7 @@ Here is how this project is organized, some folders omitted for clarity.
 
 
 ## After Running `decompile.sh`
-For example let's say you ran: ExtractedJars`>> ../Scripts/decompile.sh ../APKs/|--Ibotta_com.ibotta.android.apk`
+For example let's say you ran: `ExtractedJars >> ../Scripts/decompile.sh ../APKs/Ibotta_com.ibotta.android.apk`
 ```
 .
 |--APKS/
@@ -42,7 +42,7 @@ For example let's say you ran: ExtractedJars`>> ../Scripts/decompile.sh ../APKs/
 
 
 ## After Running `clean.sh`
-For example let's say you ran: `ExtractedJars>> ../Scripts/clean.sh ../APKs/|--Ibotta_com.ibotta.android.apk`
+For example let's say you ran: `ExtractedJars >> ../Scripts/clean.sh ../APKs/Ibotta_com.ibotta.android.apk`
 ```
 .
 |--APKS/
