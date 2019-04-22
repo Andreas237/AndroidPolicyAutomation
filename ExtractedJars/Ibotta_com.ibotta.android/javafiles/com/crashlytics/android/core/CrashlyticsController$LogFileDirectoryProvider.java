@@ -1,0 +1,53 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package com.crashlytics.android.core;
+
+import io.fabric.sdk.android.services.persistence.FileStore;
+import java.io.File;
+
+// Referenced classes of package com.crashlytics.android.core:
+//			CrashlyticsController
+
+private static final class CrashlyticsController$LogFileDirectoryProvider
+	implements LogFileManager.DirectoryProvider
+{
+
+	public File getLogFileDir()
+	{
+		File file = new File(rootFileStore.getFilesDir(), "log-files");
+	//    0    0:new             #23  <Class File>
+	//    1    3:dup             
+	//    2    4:aload_0         
+	//    3    5:getfield        #18  <Field FileStore rootFileStore>
+	//    4    8:invokeinterface #28  <Method File FileStore.getFilesDir()>
+	//    5   13:ldc1            #30  <String "log-files">
+	//    6   15:invokespecial   #33  <Method void File(File, String)>
+	//    7   18:astore_1        
+		if(!file.exists())
+	//*   8   19:aload_1         
+	//*   9   20:invokevirtual   #37  <Method boolean File.exists()>
+	//*  10   23:ifne            31
+			file.mkdirs();
+	//   11   26:aload_1         
+	//   12   27:invokevirtual   #40  <Method boolean File.mkdirs()>
+	//   13   30:pop             
+		return file;
+	//   14   31:aload_1         
+	//   15   32:areturn         
+	}
+
+	private final FileStore rootFileStore;
+
+	public CrashlyticsController$LogFileDirectoryProvider(FileStore filestore)
+	{
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #16  <Method void Object()>
+		rootFileStore = filestore;
+	//    2    4:aload_0         
+	//    3    5:aload_1         
+	//    4    6:putfield        #18  <Field FileStore rootFileStore>
+	//    5    9:return          
+	}
+}

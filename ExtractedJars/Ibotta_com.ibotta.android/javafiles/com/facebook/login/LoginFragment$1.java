@@ -1,0 +1,38 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package com.facebook.login;
+
+
+// Referenced classes of package com.facebook.login:
+//			LoginFragment
+
+class LoginFragment$1
+	implements mpletedListener
+{
+
+	public void onCompleted(lt lt)
+	{
+		LoginFragment.access$000(LoginFragment.this, lt);
+	//    0    0:aload_0         
+	//    1    1:getfield        #17  <Field LoginFragment this$0>
+	//    2    4:aload_1         
+	//    3    5:invokestatic    #27  <Method void LoginFragment.access$000(LoginFragment, LoginClient$Result)>
+	//    4    8:return          
+	}
+
+	final LoginFragment this$0;
+
+	LoginFragment$1()
+	{
+		this$0 = LoginFragment.this;
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:putfield        #17  <Field LoginFragment this$0>
+		super();
+	//    3    5:aload_0         
+	//    4    6:invokespecial   #20  <Method void Object()>
+	//    5    9:return          
+	}
+}

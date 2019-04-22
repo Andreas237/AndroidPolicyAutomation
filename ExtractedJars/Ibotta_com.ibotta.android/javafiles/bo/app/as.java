@@ -1,0 +1,47 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package bo.app;
+
+
+// Referenced classes of package bo.app:
+//			cc
+
+public final class as
+{
+
+	public as(String s, cc cc)
+	{
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #13  <Method void Object()>
+		b = s;
+	//    2    4:aload_0         
+	//    3    5:aload_1         
+	//    4    6:putfield        #15  <Field String b>
+		a = cc;
+	//    5    9:aload_0         
+	//    6   10:aload_2         
+	//    7   11:putfield        #17  <Field cc a>
+	//    8   14:return          
+	}
+
+	public String a()
+	{
+		return b;
+	//    0    0:aload_0         
+	//    1    1:getfield        #15  <Field String b>
+	//    2    4:areturn         
+	}
+
+	public cc b()
+	{
+		return a;
+	//    0    0:aload_0         
+	//    1    1:getfield        #17  <Field cc a>
+	//    2    4:areturn         
+	}
+
+	private cc a;
+	private final String b;
+}
