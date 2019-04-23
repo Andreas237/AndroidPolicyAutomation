@@ -1,0 +1,21 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package io.radar.shadow.dagger;
+
+import java.lang.annotation.Annotation;
+
+public interface Component
+	extends Annotation
+{
+	public static interface Builder
+		extends Annotation
+	{
+	}
+
+
+	public abstract Class[] dependencies();
+
+	public abstract Class[] modules();
+}

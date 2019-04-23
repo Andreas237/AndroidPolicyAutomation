@@ -1,0 +1,3354 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package android.support.v7.widget;
+
+import android.animation.ObjectAnimator;
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.graphics.*;
+import android.graphics.drawable.Drawable;
+import android.support.v4.graphics.drawable.a;
+import android.support.v4.view.ac;
+import android.support.v4.widget.ah;
+import android.support.v7.content.res.AppCompatResources;
+import android.support.v7.text.AllCapsTransformationMethod;
+import android.text.*;
+import android.text.method.TransformationMethod;
+import android.util.*;
+import android.view.*;
+import android.view.accessibility.AccessibilityEvent;
+import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.CompoundButton;
+import java.util.List;
+
+// Referenced classes of package android.support.v7.widget:
+//			TintTypedArray, DrawableUtils, ViewUtils
+
+public class SwitchCompat extends CompoundButton
+{
+
+	public SwitchCompat(Context context)
+	{
+		this(context, ((AttributeSet) (null)));
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:aconst_null     
+	//    3    3:invokespecial   #97  <Method void SwitchCompat(Context, AttributeSet)>
+	//    4    6:return          
+	}
+
+	public SwitchCompat(Context context, AttributeSet attributeset)
+	{
+		this(context, attributeset, android.support.v7.appcompat.R.attr.switchStyle);
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:aload_2         
+	//    3    3:getstatic       #102 <Field int android.support.v7.appcompat.R$attr.switchStyle>
+	//    4    6:invokespecial   #105 <Method void SwitchCompat(Context, AttributeSet, int)>
+	//    5    9:return          
+	}
+
+	public SwitchCompat(Context context, AttributeSet attributeset, int i)
+	{
+		super(context, attributeset, i);
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:aload_2         
+	//    3    3:iload_3         
+	//    4    4:invokespecial   #106 <Method void CompoundButton(Context, AttributeSet, int)>
+		mThumbTintList = null;
+	//    5    7:aload_0         
+	//    6    8:aconst_null     
+	//    7    9:putfield        #108 <Field ColorStateList mThumbTintList>
+		mThumbTintMode = null;
+	//    8   12:aload_0         
+	//    9   13:aconst_null     
+	//   10   14:putfield        #110 <Field android.graphics.PorterDuff$Mode mThumbTintMode>
+		mHasThumbTint = false;
+	//   11   17:aload_0         
+	//   12   18:iconst_0        
+	//   13   19:putfield        #112 <Field boolean mHasThumbTint>
+		mHasThumbTintMode = false;
+	//   14   22:aload_0         
+	//   15   23:iconst_0        
+	//   16   24:putfield        #114 <Field boolean mHasThumbTintMode>
+		mTrackTintList = null;
+	//   17   27:aload_0         
+	//   18   28:aconst_null     
+	//   19   29:putfield        #116 <Field ColorStateList mTrackTintList>
+		mTrackTintMode = null;
+	//   20   32:aload_0         
+	//   21   33:aconst_null     
+	//   22   34:putfield        #118 <Field android.graphics.PorterDuff$Mode mTrackTintMode>
+		mHasTrackTint = false;
+	//   23   37:aload_0         
+	//   24   38:iconst_0        
+	//   25   39:putfield        #120 <Field boolean mHasTrackTint>
+		mHasTrackTintMode = false;
+	//   26   42:aload_0         
+	//   27   43:iconst_0        
+	//   28   44:putfield        #122 <Field boolean mHasTrackTintMode>
+		mVelocityTracker = VelocityTracker.obtain();
+	//   29   47:aload_0         
+	//   30   48:invokestatic    #128 <Method VelocityTracker VelocityTracker.obtain()>
+	//   31   51:putfield        #130 <Field VelocityTracker mVelocityTracker>
+		mTempRect = new Rect();
+	//   32   54:aload_0         
+	//   33   55:new             #132 <Class Rect>
+	//   34   58:dup             
+	//   35   59:invokespecial   #134 <Method void Rect()>
+	//   36   62:putfield        #136 <Field Rect mTempRect>
+		mTextPaint = new TextPaint(1);
+	//   37   65:aload_0         
+	//   38   66:new             #138 <Class TextPaint>
+	//   39   69:dup             
+	//   40   70:iconst_1        
+	//   41   71:invokespecial   #141 <Method void TextPaint(int)>
+	//   42   74:putfield        #143 <Field TextPaint mTextPaint>
+		Object obj = ((Object) (getResources()));
+	//   43   77:aload_0         
+	//   44   78:invokevirtual   #147 <Method Resources getResources()>
+	//   45   81:astore          4
+		mTextPaint.density = ((Resources) (obj)).getDisplayMetrics().density;
+	//   46   83:aload_0         
+	//   47   84:getfield        #143 <Field TextPaint mTextPaint>
+	//   48   87:aload           4
+	//   49   89:invokevirtual   #153 <Method DisplayMetrics Resources.getDisplayMetrics()>
+	//   50   92:getfield        #158 <Field float DisplayMetrics.density>
+	//   51   95:putfield        #159 <Field float TextPaint.density>
+		attributeset = ((AttributeSet) (TintTypedArray.obtainStyledAttributes(context, attributeset, android.support.v7.appcompat.R.styleable.SwitchCompat, i, 0)));
+	//   52   98:aload_1         
+	//   53   99:aload_2         
+	//   54  100:getstatic       #164 <Field int[] android.support.v7.appcompat.R$styleable.SwitchCompat>
+	//   55  103:iload_3         
+	//   56  104:iconst_0        
+	//   57  105:invokestatic    #170 <Method TintTypedArray TintTypedArray.obtainStyledAttributes(Context, AttributeSet, int[], int, int)>
+	//   58  108:astore_2        
+		mThumbDrawable = ((TintTypedArray) (attributeset)).getDrawable(android.support.v7.appcompat.R.styleable.SwitchCompat_android_thumb);
+	//   59  109:aload_0         
+	//   60  110:aload_2         
+	//   61  111:getstatic       #173 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_android_thumb>
+	//   62  114:invokevirtual   #177 <Method Drawable TintTypedArray.getDrawable(int)>
+	//   63  117:putfield        #179 <Field Drawable mThumbDrawable>
+		obj = ((Object) (mThumbDrawable));
+	//   64  120:aload_0         
+	//   65  121:getfield        #179 <Field Drawable mThumbDrawable>
+	//   66  124:astore          4
+		if(obj != null)
+	//*  67  126:aload           4
+	//*  68  128:ifnull          137
+			((Drawable) (obj)).setCallback(((android.graphics.drawable.Drawable.Callback) (this)));
+	//   69  131:aload           4
+	//   70  133:aload_0         
+	//   71  134:invokevirtual   #185 <Method void Drawable.setCallback(android.graphics.drawable.Drawable$Callback)>
+		mTrackDrawable = ((TintTypedArray) (attributeset)).getDrawable(android.support.v7.appcompat.R.styleable.SwitchCompat_track);
+	//   72  137:aload_0         
+	//   73  138:aload_2         
+	//   74  139:getstatic       #188 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_track>
+	//   75  142:invokevirtual   #177 <Method Drawable TintTypedArray.getDrawable(int)>
+	//   76  145:putfield        #190 <Field Drawable mTrackDrawable>
+		obj = ((Object) (mTrackDrawable));
+	//   77  148:aload_0         
+	//   78  149:getfield        #190 <Field Drawable mTrackDrawable>
+	//   79  152:astore          4
+		if(obj != null)
+	//*  80  154:aload           4
+	//*  81  156:ifnull          165
+			((Drawable) (obj)).setCallback(((android.graphics.drawable.Drawable.Callback) (this)));
+	//   82  159:aload           4
+	//   83  161:aload_0         
+	//   84  162:invokevirtual   #185 <Method void Drawable.setCallback(android.graphics.drawable.Drawable$Callback)>
+		mTextOn = ((TintTypedArray) (attributeset)).getText(android.support.v7.appcompat.R.styleable.SwitchCompat_android_textOn);
+	//   85  165:aload_0         
+	//   86  166:aload_2         
+	//   87  167:getstatic       #193 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_android_textOn>
+	//   88  170:invokevirtual   #197 <Method CharSequence TintTypedArray.getText(int)>
+	//   89  173:putfield        #199 <Field CharSequence mTextOn>
+		mTextOff = ((TintTypedArray) (attributeset)).getText(android.support.v7.appcompat.R.styleable.SwitchCompat_android_textOff);
+	//   90  176:aload_0         
+	//   91  177:aload_2         
+	//   92  178:getstatic       #202 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_android_textOff>
+	//   93  181:invokevirtual   #197 <Method CharSequence TintTypedArray.getText(int)>
+	//   94  184:putfield        #204 <Field CharSequence mTextOff>
+		mShowText = ((TintTypedArray) (attributeset)).getBoolean(android.support.v7.appcompat.R.styleable.SwitchCompat_showText, true);
+	//   95  187:aload_0         
+	//   96  188:aload_2         
+	//   97  189:getstatic       #207 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_showText>
+	//   98  192:iconst_1        
+	//   99  193:invokevirtual   #211 <Method boolean TintTypedArray.getBoolean(int, boolean)>
+	//  100  196:putfield        #213 <Field boolean mShowText>
+		mThumbTextPadding = ((TintTypedArray) (attributeset)).getDimensionPixelSize(android.support.v7.appcompat.R.styleable.SwitchCompat_thumbTextPadding, 0);
+	//  101  199:aload_0         
+	//  102  200:aload_2         
+	//  103  201:getstatic       #216 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_thumbTextPadding>
+	//  104  204:iconst_0        
+	//  105  205:invokevirtual   #220 <Method int TintTypedArray.getDimensionPixelSize(int, int)>
+	//  106  208:putfield        #222 <Field int mThumbTextPadding>
+		mSwitchMinWidth = ((TintTypedArray) (attributeset)).getDimensionPixelSize(android.support.v7.appcompat.R.styleable.SwitchCompat_switchMinWidth, 0);
+	//  107  211:aload_0         
+	//  108  212:aload_2         
+	//  109  213:getstatic       #225 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_switchMinWidth>
+	//  110  216:iconst_0        
+	//  111  217:invokevirtual   #220 <Method int TintTypedArray.getDimensionPixelSize(int, int)>
+	//  112  220:putfield        #227 <Field int mSwitchMinWidth>
+		mSwitchPadding = ((TintTypedArray) (attributeset)).getDimensionPixelSize(android.support.v7.appcompat.R.styleable.SwitchCompat_switchPadding, 0);
+	//  113  223:aload_0         
+	//  114  224:aload_2         
+	//  115  225:getstatic       #230 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_switchPadding>
+	//  116  228:iconst_0        
+	//  117  229:invokevirtual   #220 <Method int TintTypedArray.getDimensionPixelSize(int, int)>
+	//  118  232:putfield        #232 <Field int mSwitchPadding>
+		mSplitTrack = ((TintTypedArray) (attributeset)).getBoolean(android.support.v7.appcompat.R.styleable.SwitchCompat_splitTrack, false);
+	//  119  235:aload_0         
+	//  120  236:aload_2         
+	//  121  237:getstatic       #235 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_splitTrack>
+	//  122  240:iconst_0        
+	//  123  241:invokevirtual   #211 <Method boolean TintTypedArray.getBoolean(int, boolean)>
+	//  124  244:putfield        #237 <Field boolean mSplitTrack>
+		obj = ((Object) (((TintTypedArray) (attributeset)).getColorStateList(android.support.v7.appcompat.R.styleable.SwitchCompat_thumbTint)));
+	//  125  247:aload_2         
+	//  126  248:getstatic       #240 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_thumbTint>
+	//  127  251:invokevirtual   #244 <Method ColorStateList TintTypedArray.getColorStateList(int)>
+	//  128  254:astore          4
+		if(obj != null)
+	//* 129  256:aload           4
+	//* 130  258:ifnull          272
+		{
+			mThumbTintList = ((ColorStateList) (obj));
+	//  131  261:aload_0         
+	//  132  262:aload           4
+	//  133  264:putfield        #108 <Field ColorStateList mThumbTintList>
+			mHasThumbTint = true;
+	//  134  267:aload_0         
+	//  135  268:iconst_1        
+	//  136  269:putfield        #112 <Field boolean mHasThumbTint>
+		}
+		obj = ((Object) (DrawableUtils.parseTintMode(((TintTypedArray) (attributeset)).getInt(android.support.v7.appcompat.R.styleable.SwitchCompat_thumbTintMode, -1), ((android.graphics.PorterDuff.Mode) (null)))));
+	//  137  272:aload_2         
+	//  138  273:getstatic       #247 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_thumbTintMode>
+	//  139  276:iconst_m1       
+	//  140  277:invokevirtual   #250 <Method int TintTypedArray.getInt(int, int)>
+	//  141  280:aconst_null     
+	//  142  281:invokestatic    #256 <Method android.graphics.PorterDuff$Mode DrawableUtils.parseTintMode(int, android.graphics.PorterDuff$Mode)>
+	//  143  284:astore          4
+		if(mThumbTintMode != obj)
+	//* 144  286:aload_0         
+	//* 145  287:getfield        #110 <Field android.graphics.PorterDuff$Mode mThumbTintMode>
+	//* 146  290:aload           4
+	//* 147  292:if_acmpeq       306
+		{
+			mThumbTintMode = ((android.graphics.PorterDuff.Mode) (obj));
+	//  148  295:aload_0         
+	//  149  296:aload           4
+	//  150  298:putfield        #110 <Field android.graphics.PorterDuff$Mode mThumbTintMode>
+			mHasThumbTintMode = true;
+	//  151  301:aload_0         
+	//  152  302:iconst_1        
+	//  153  303:putfield        #114 <Field boolean mHasThumbTintMode>
+		}
+		if(mHasThumbTint || mHasThumbTintMode)
+	//* 154  306:aload_0         
+	//* 155  307:getfield        #112 <Field boolean mHasThumbTint>
+	//* 156  310:ifne            320
+	//* 157  313:aload_0         
+	//* 158  314:getfield        #114 <Field boolean mHasThumbTintMode>
+	//* 159  317:ifeq            324
+			applyThumbTint();
+	//  160  320:aload_0         
+	//  161  321:invokespecial   #259 <Method void applyThumbTint()>
+		obj = ((Object) (((TintTypedArray) (attributeset)).getColorStateList(android.support.v7.appcompat.R.styleable.SwitchCompat_trackTint)));
+	//  162  324:aload_2         
+	//  163  325:getstatic       #262 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_trackTint>
+	//  164  328:invokevirtual   #244 <Method ColorStateList TintTypedArray.getColorStateList(int)>
+	//  165  331:astore          4
+		if(obj != null)
+	//* 166  333:aload           4
+	//* 167  335:ifnull          349
+		{
+			mTrackTintList = ((ColorStateList) (obj));
+	//  168  338:aload_0         
+	//  169  339:aload           4
+	//  170  341:putfield        #116 <Field ColorStateList mTrackTintList>
+			mHasTrackTint = true;
+	//  171  344:aload_0         
+	//  172  345:iconst_1        
+	//  173  346:putfield        #120 <Field boolean mHasTrackTint>
+		}
+		obj = ((Object) (DrawableUtils.parseTintMode(((TintTypedArray) (attributeset)).getInt(android.support.v7.appcompat.R.styleable.SwitchCompat_trackTintMode, -1), ((android.graphics.PorterDuff.Mode) (null)))));
+	//  174  349:aload_2         
+	//  175  350:getstatic       #265 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_trackTintMode>
+	//  176  353:iconst_m1       
+	//  177  354:invokevirtual   #250 <Method int TintTypedArray.getInt(int, int)>
+	//  178  357:aconst_null     
+	//  179  358:invokestatic    #256 <Method android.graphics.PorterDuff$Mode DrawableUtils.parseTintMode(int, android.graphics.PorterDuff$Mode)>
+	//  180  361:astore          4
+		if(mTrackTintMode != obj)
+	//* 181  363:aload_0         
+	//* 182  364:getfield        #118 <Field android.graphics.PorterDuff$Mode mTrackTintMode>
+	//* 183  367:aload           4
+	//* 184  369:if_acmpeq       383
+		{
+			mTrackTintMode = ((android.graphics.PorterDuff.Mode) (obj));
+	//  185  372:aload_0         
+	//  186  373:aload           4
+	//  187  375:putfield        #118 <Field android.graphics.PorterDuff$Mode mTrackTintMode>
+			mHasTrackTintMode = true;
+	//  188  378:aload_0         
+	//  189  379:iconst_1        
+	//  190  380:putfield        #122 <Field boolean mHasTrackTintMode>
+		}
+		if(mHasTrackTint || mHasTrackTintMode)
+	//* 191  383:aload_0         
+	//* 192  384:getfield        #120 <Field boolean mHasTrackTint>
+	//* 193  387:ifne            397
+	//* 194  390:aload_0         
+	//* 195  391:getfield        #122 <Field boolean mHasTrackTintMode>
+	//* 196  394:ifeq            401
+			applyTrackTint();
+	//  197  397:aload_0         
+	//  198  398:invokespecial   #268 <Method void applyTrackTint()>
+		i = ((TintTypedArray) (attributeset)).getResourceId(android.support.v7.appcompat.R.styleable.SwitchCompat_switchTextAppearance, 0);
+	//  199  401:aload_2         
+	//  200  402:getstatic       #271 <Field int android.support.v7.appcompat.R$styleable.SwitchCompat_switchTextAppearance>
+	//  201  405:iconst_0        
+	//  202  406:invokevirtual   #274 <Method int TintTypedArray.getResourceId(int, int)>
+	//  203  409:istore_3        
+		if(i != 0)
+	//* 204  410:iload_3         
+	//* 205  411:ifeq            420
+			setSwitchTextAppearance(context, i);
+	//  206  414:aload_0         
+	//  207  415:aload_1         
+	//  208  416:iload_3         
+	//  209  417:invokevirtual   #278 <Method void setSwitchTextAppearance(Context, int)>
+		((TintTypedArray) (attributeset)).recycle();
+	//  210  420:aload_2         
+	//  211  421:invokevirtual   #281 <Method void TintTypedArray.recycle()>
+		context = ((Context) (ViewConfiguration.get(context)));
+	//  212  424:aload_1         
+	//  213  425:invokestatic    #287 <Method ViewConfiguration ViewConfiguration.get(Context)>
+	//  214  428:astore_1        
+		mTouchSlop = ((ViewConfiguration) (context)).getScaledTouchSlop();
+	//  215  429:aload_0         
+	//  216  430:aload_1         
+	//  217  431:invokevirtual   #291 <Method int ViewConfiguration.getScaledTouchSlop()>
+	//  218  434:putfield        #293 <Field int mTouchSlop>
+		mMinFlingVelocity = ((ViewConfiguration) (context)).getScaledMinimumFlingVelocity();
+	//  219  437:aload_0         
+	//  220  438:aload_1         
+	//  221  439:invokevirtual   #296 <Method int ViewConfiguration.getScaledMinimumFlingVelocity()>
+	//  222  442:putfield        #298 <Field int mMinFlingVelocity>
+		refreshDrawableState();
+	//  223  445:aload_0         
+	//  224  446:invokevirtual   #301 <Method void refreshDrawableState()>
+		setChecked(isChecked());
+	//  225  449:aload_0         
+	//  226  450:aload_0         
+	//  227  451:invokevirtual   #305 <Method boolean isChecked()>
+	//  228  454:invokevirtual   #309 <Method void setChecked(boolean)>
+	//  229  457:return          
+	}
+
+	private void animateThumbToCheckedState(boolean flag)
+	{
+		float f;
+		if(flag)
+	//*   0    0:iload_1         
+	//*   1    1:ifeq            9
+			f = 1.0F;
+	//    2    4:fconst_1        
+	//    3    5:fstore_2        
+		else
+	//*   4    6:goto            11
+			f = 0.0F;
+	//    5    9:fconst_0        
+	//    6   10:fstore_2        
+		mPositionAnimator = ObjectAnimator.ofFloat(((Object) (this)), THUMB_POS, new float[] {
+			f
+		});
+	//    7   11:aload_0         
+	//    8   12:aload_0         
+	//    9   13:getstatic       #89  <Field Property THUMB_POS>
+	//   10   16:iconst_1        
+	//   11   17:newarray        float[]
+	//   12   19:dup             
+	//   13   20:iconst_0        
+	//   14   21:fload_2         
+	//   15   22:fastore         
+	//   16   23:invokestatic    #316 <Method ObjectAnimator ObjectAnimator.ofFloat(Object, Property, float[])>
+	//   17   26:putfield        #318 <Field ObjectAnimator mPositionAnimator>
+		mPositionAnimator.setDuration(250L);
+	//   18   29:aload_0         
+	//   19   30:getfield        #318 <Field ObjectAnimator mPositionAnimator>
+	//   20   33:ldc2w           #319 <Long 250L>
+	//   21   36:invokevirtual   #324 <Method ObjectAnimator ObjectAnimator.setDuration(long)>
+	//   22   39:pop             
+		if(android.os.Build.VERSION.SDK_INT >= 18)
+	//*  23   40:getstatic       #329 <Field int android.os.Build$VERSION.SDK_INT>
+	//*  24   43:bipush          18
+	//*  25   45:icmplt          56
+			mPositionAnimator.setAutoCancel(true);
+	//   26   48:aload_0         
+	//   27   49:getfield        #318 <Field ObjectAnimator mPositionAnimator>
+	//   28   52:iconst_1        
+	//   29   53:invokevirtual   #332 <Method void ObjectAnimator.setAutoCancel(boolean)>
+		mPositionAnimator.start();
+	//   30   56:aload_0         
+	//   31   57:getfield        #318 <Field ObjectAnimator mPositionAnimator>
+	//   32   60:invokevirtual   #335 <Method void ObjectAnimator.start()>
+	//   33   63:return          
+	}
+
+	private void applyThumbTint()
+	{
+		if(mThumbDrawable != null && (mHasThumbTint || mHasThumbTintMode))
+	//*   0    0:aload_0         
+	//*   1    1:getfield        #179 <Field Drawable mThumbDrawable>
+	//*   2    4:ifnull          90
+	//*   3    7:aload_0         
+	//*   4    8:getfield        #112 <Field boolean mHasThumbTint>
+	//*   5   11:ifne            21
+	//*   6   14:aload_0         
+	//*   7   15:getfield        #114 <Field boolean mHasThumbTintMode>
+	//*   8   18:ifeq            90
+		{
+			mThumbDrawable = mThumbDrawable.mutate();
+	//    9   21:aload_0         
+	//   10   22:aload_0         
+	//   11   23:getfield        #179 <Field Drawable mThumbDrawable>
+	//   12   26:invokevirtual   #339 <Method Drawable Drawable.mutate()>
+	//   13   29:putfield        #179 <Field Drawable mThumbDrawable>
+			if(mHasThumbTint)
+	//*  14   32:aload_0         
+	//*  15   33:getfield        #112 <Field boolean mHasThumbTint>
+	//*  16   36:ifeq            50
+				a.a(mThumbDrawable, mThumbTintList);
+	//   17   39:aload_0         
+	//   18   40:getfield        #179 <Field Drawable mThumbDrawable>
+	//   19   43:aload_0         
+	//   20   44:getfield        #108 <Field ColorStateList mThumbTintList>
+	//   21   47:invokestatic    #345 <Method void a.a(Drawable, ColorStateList)>
+			if(mHasThumbTintMode)
+	//*  22   50:aload_0         
+	//*  23   51:getfield        #114 <Field boolean mHasThumbTintMode>
+	//*  24   54:ifeq            68
+				a.a(mThumbDrawable, mThumbTintMode);
+	//   25   57:aload_0         
+	//   26   58:getfield        #179 <Field Drawable mThumbDrawable>
+	//   27   61:aload_0         
+	//   28   62:getfield        #110 <Field android.graphics.PorterDuff$Mode mThumbTintMode>
+	//   29   65:invokestatic    #348 <Method void a.a(Drawable, android.graphics.PorterDuff$Mode)>
+			if(mThumbDrawable.isStateful())
+	//*  30   68:aload_0         
+	//*  31   69:getfield        #179 <Field Drawable mThumbDrawable>
+	//*  32   72:invokevirtual   #351 <Method boolean Drawable.isStateful()>
+	//*  33   75:ifeq            90
+				mThumbDrawable.setState(getDrawableState());
+	//   34   78:aload_0         
+	//   35   79:getfield        #179 <Field Drawable mThumbDrawable>
+	//   36   82:aload_0         
+	//   37   83:invokevirtual   #355 <Method int[] getDrawableState()>
+	//   38   86:invokevirtual   #359 <Method boolean Drawable.setState(int[])>
+	//   39   89:pop             
+		}
+	//   40   90:return          
+	}
+
+	private void applyTrackTint()
+	{
+		if(mTrackDrawable != null && (mHasTrackTint || mHasTrackTintMode))
+	//*   0    0:aload_0         
+	//*   1    1:getfield        #190 <Field Drawable mTrackDrawable>
+	//*   2    4:ifnull          90
+	//*   3    7:aload_0         
+	//*   4    8:getfield        #120 <Field boolean mHasTrackTint>
+	//*   5   11:ifne            21
+	//*   6   14:aload_0         
+	//*   7   15:getfield        #122 <Field boolean mHasTrackTintMode>
+	//*   8   18:ifeq            90
+		{
+			mTrackDrawable = mTrackDrawable.mutate();
+	//    9   21:aload_0         
+	//   10   22:aload_0         
+	//   11   23:getfield        #190 <Field Drawable mTrackDrawable>
+	//   12   26:invokevirtual   #339 <Method Drawable Drawable.mutate()>
+	//   13   29:putfield        #190 <Field Drawable mTrackDrawable>
+			if(mHasTrackTint)
+	//*  14   32:aload_0         
+	//*  15   33:getfield        #120 <Field boolean mHasTrackTint>
+	//*  16   36:ifeq            50
+				a.a(mTrackDrawable, mTrackTintList);
+	//   17   39:aload_0         
+	//   18   40:getfield        #190 <Field Drawable mTrackDrawable>
+	//   19   43:aload_0         
+	//   20   44:getfield        #116 <Field ColorStateList mTrackTintList>
+	//   21   47:invokestatic    #345 <Method void a.a(Drawable, ColorStateList)>
+			if(mHasTrackTintMode)
+	//*  22   50:aload_0         
+	//*  23   51:getfield        #122 <Field boolean mHasTrackTintMode>
+	//*  24   54:ifeq            68
+				a.a(mTrackDrawable, mTrackTintMode);
+	//   25   57:aload_0         
+	//   26   58:getfield        #190 <Field Drawable mTrackDrawable>
+	//   27   61:aload_0         
+	//   28   62:getfield        #118 <Field android.graphics.PorterDuff$Mode mTrackTintMode>
+	//   29   65:invokestatic    #348 <Method void a.a(Drawable, android.graphics.PorterDuff$Mode)>
+			if(mTrackDrawable.isStateful())
+	//*  30   68:aload_0         
+	//*  31   69:getfield        #190 <Field Drawable mTrackDrawable>
+	//*  32   72:invokevirtual   #351 <Method boolean Drawable.isStateful()>
+	//*  33   75:ifeq            90
+				mTrackDrawable.setState(getDrawableState());
+	//   34   78:aload_0         
+	//   35   79:getfield        #190 <Field Drawable mTrackDrawable>
+	//   36   82:aload_0         
+	//   37   83:invokevirtual   #355 <Method int[] getDrawableState()>
+	//   38   86:invokevirtual   #359 <Method boolean Drawable.setState(int[])>
+	//   39   89:pop             
+		}
+	//   40   90:return          
+	}
+
+	private void cancelPositionAnimator()
+	{
+		ObjectAnimator objectanimator = mPositionAnimator;
+	//    0    0:aload_0         
+	//    1    1:getfield        #318 <Field ObjectAnimator mPositionAnimator>
+	//    2    4:astore_1        
+		if(objectanimator != null)
+	//*   3    5:aload_1         
+	//*   4    6:ifnull          13
+			objectanimator.cancel();
+	//    5    9:aload_1         
+	//    6   10:invokevirtual   #363 <Method void ObjectAnimator.cancel()>
+	//    7   13:return          
+	}
+
+	private void cancelSuperTouch(MotionEvent motionevent)
+	{
+		motionevent = MotionEvent.obtain(motionevent);
+	//    0    0:aload_1         
+	//    1    1:invokestatic    #370 <Method MotionEvent MotionEvent.obtain(MotionEvent)>
+	//    2    4:astore_1        
+		motionevent.setAction(3);
+	//    3    5:aload_1         
+	//    4    6:iconst_3        
+	//    5    7:invokevirtual   #373 <Method void MotionEvent.setAction(int)>
+		super.onTouchEvent(motionevent);
+	//    6   10:aload_0         
+	//    7   11:aload_1         
+	//    8   12:invokespecial   #377 <Method boolean CompoundButton.onTouchEvent(MotionEvent)>
+	//    9   15:pop             
+		motionevent.recycle();
+	//   10   16:aload_1         
+	//   11   17:invokevirtual   #378 <Method void MotionEvent.recycle()>
+	//   12   20:return          
+	}
+
+	private static float constrain(float f, float f1, float f2)
+	{
+		if(f < f1)
+	//*   0    0:fload_0         
+	//*   1    1:fload_1         
+	//*   2    2:fcmpg           
+	//*   3    3:ifge            8
+			return f1;
+	//    4    6:fload_1         
+	//    5    7:freturn         
+		f1 = f;
+	//    6    8:fload_0         
+	//    7    9:fstore_1        
+		if(f > f2)
+	//*   8   10:fload_0         
+	//*   9   11:fload_2         
+	//*  10   12:fcmpl           
+	//*  11   13:ifle            18
+			f1 = f2;
+	//   12   16:fload_2         
+	//   13   17:fstore_1        
+		return f1;
+	//   14   18:fload_1         
+	//   15   19:freturn         
+	}
+
+	private boolean getTargetCheckedState()
+	{
+		return mThumbPosition > 0.5F;
+	//    0    0:aload_0         
+	//    1    1:getfield        #383 <Field float mThumbPosition>
+	//    2    4:ldc2            #384 <Float 0.5F>
+	//    3    7:fcmpl           
+	//    4    8:ifle            13
+	//    5   11:iconst_1        
+	//    6   12:ireturn         
+	//    7   13:iconst_0        
+	//    8   14:ireturn         
+	}
+
+	private int getThumbOffset()
+	{
+		float f;
+		if(ViewUtils.isLayoutRtl(((android.view.View) (this))))
+	//*   0    0:aload_0         
+	//*   1    1:invokestatic    #391 <Method boolean ViewUtils.isLayoutRtl(android.view.View)>
+	//*   2    4:ifeq            17
+			f = 1.0F - mThumbPosition;
+	//    3    7:fconst_1        
+	//    4    8:aload_0         
+	//    5    9:getfield        #383 <Field float mThumbPosition>
+	//    6   12:fsub            
+	//    7   13:fstore_1        
+		else
+	//*   8   14:goto            22
+			f = mThumbPosition;
+	//    9   17:aload_0         
+	//   10   18:getfield        #383 <Field float mThumbPosition>
+	//   11   21:fstore_1        
+		return (int)(f * (float)getThumbScrollRange() + 0.5F);
+	//   12   22:fload_1         
+	//   13   23:aload_0         
+	//   14   24:invokespecial   #394 <Method int getThumbScrollRange()>
+	//   15   27:i2f             
+	//   16   28:fmul            
+	//   17   29:ldc2            #384 <Float 0.5F>
+	//   18   32:fadd            
+	//   19   33:f2i             
+	//   20   34:ireturn         
+	}
+
+	private int getThumbScrollRange()
+	{
+		Object obj = ((Object) (mTrackDrawable));
+	//    0    0:aload_0         
+	//    1    1:getfield        #190 <Field Drawable mTrackDrawable>
+	//    2    4:astore_1        
+		if(obj != null)
+	//*   3    5:aload_1         
+	//*   4    6:ifnull          71
+		{
+			Rect rect = mTempRect;
+	//    5    9:aload_0         
+	//    6   10:getfield        #136 <Field Rect mTempRect>
+	//    7   13:astore_2        
+			((Drawable) (obj)).getPadding(rect);
+	//    8   14:aload_1         
+	//    9   15:aload_2         
+	//   10   16:invokevirtual   #398 <Method boolean Drawable.getPadding(Rect)>
+	//   11   19:pop             
+			obj = ((Object) (mThumbDrawable));
+	//   12   20:aload_0         
+	//   13   21:getfield        #179 <Field Drawable mThumbDrawable>
+	//   14   24:astore_1        
+			if(obj != null)
+	//*  15   25:aload_1         
+	//*  16   26:ifnull          37
+				obj = ((Object) (DrawableUtils.getOpticalBounds(((Drawable) (obj)))));
+	//   17   29:aload_1         
+	//   18   30:invokestatic    #402 <Method Rect DrawableUtils.getOpticalBounds(Drawable)>
+	//   19   33:astore_1        
+			else
+	//*  20   34:goto            41
+				obj = ((Object) (DrawableUtils.INSETS_NONE));
+	//   21   37:getstatic       #405 <Field Rect DrawableUtils.INSETS_NONE>
+	//   22   40:astore_1        
+			return mSwitchWidth - mThumbWidth - rect.left - rect.right - ((Rect) (obj)).left - ((Rect) (obj)).right;
+	//   23   41:aload_0         
+	//   24   42:getfield        #407 <Field int mSwitchWidth>
+	//   25   45:aload_0         
+	//   26   46:getfield        #409 <Field int mThumbWidth>
+	//   27   49:isub            
+	//   28   50:aload_2         
+	//   29   51:getfield        #412 <Field int Rect.left>
+	//   30   54:isub            
+	//   31   55:aload_2         
+	//   32   56:getfield        #415 <Field int Rect.right>
+	//   33   59:isub            
+	//   34   60:aload_1         
+	//   35   61:getfield        #412 <Field int Rect.left>
+	//   36   64:isub            
+	//   37   65:aload_1         
+	//   38   66:getfield        #415 <Field int Rect.right>
+	//   39   69:isub            
+	//   40   70:ireturn         
+		} else
+		{
+			return 0;
+	//   41   71:iconst_0        
+	//   42   72:ireturn         
+		}
+	}
+
+	private boolean hitThumb(float f, float f1)
+	{
+		Drawable drawable = mThumbDrawable;
+	//    0    0:aload_0         
+	//    1    1:getfield        #179 <Field Drawable mThumbDrawable>
+	//    2    4:astore          13
+		boolean flag1 = false;
+	//    3    6:iconst_0        
+	//    4    7:istore          12
+		if(drawable == null)
+	//*   5    9:aload           13
+	//*   6   11:ifnonnull       16
+			return false;
+	//    7   14:iconst_0        
+	//    8   15:ireturn         
+		int k = getThumbOffset();
+	//    9   16:aload_0         
+	//   10   17:invokespecial   #419 <Method int getThumbOffset()>
+	//   11   20:istore          5
+		mThumbDrawable.getPadding(mTempRect);
+	//   12   22:aload_0         
+	//   13   23:getfield        #179 <Field Drawable mThumbDrawable>
+	//   14   26:aload_0         
+	//   15   27:getfield        #136 <Field Rect mTempRect>
+	//   16   30:invokevirtual   #398 <Method boolean Drawable.getPadding(Rect)>
+	//   17   33:pop             
+		int i = mSwitchTop;
+	//   18   34:aload_0         
+	//   19   35:getfield        #421 <Field int mSwitchTop>
+	//   20   38:istore_3        
+		int j = mTouchSlop;
+	//   21   39:aload_0         
+	//   22   40:getfield        #293 <Field int mTouchSlop>
+	//   23   43:istore          4
+		k = (mSwitchLeft + k) - j;
+	//   24   45:aload_0         
+	//   25   46:getfield        #423 <Field int mSwitchLeft>
+	//   26   49:iload           5
+	//   27   51:iadd            
+	//   28   52:iload           4
+	//   29   54:isub            
+	//   30   55:istore          5
+		int l = mThumbWidth;
+	//   31   57:aload_0         
+	//   32   58:getfield        #409 <Field int mThumbWidth>
+	//   33   61:istore          6
+		int i1 = mTempRect.left;
+	//   34   63:aload_0         
+	//   35   64:getfield        #136 <Field Rect mTempRect>
+	//   36   67:getfield        #412 <Field int Rect.left>
+	//   37   70:istore          7
+		int j1 = mTempRect.right;
+	//   38   72:aload_0         
+	//   39   73:getfield        #136 <Field Rect mTempRect>
+	//   40   76:getfield        #415 <Field int Rect.right>
+	//   41   79:istore          8
+		int k1 = mTouchSlop;
+	//   42   81:aload_0         
+	//   43   82:getfield        #293 <Field int mTouchSlop>
+	//   44   85:istore          9
+		int l1 = mSwitchBottom;
+	//   45   87:aload_0         
+	//   46   88:getfield        #425 <Field int mSwitchBottom>
+	//   47   91:istore          10
+		boolean flag = flag1;
+	//   48   93:iload           12
+	//   49   95:istore          11
+		if(f > (float)k)
+	//*  50   97:fload_1         
+	//*  51   98:iload           5
+	//*  52  100:i2f             
+	//*  53  101:fcmpl           
+	//*  54  102:ifle            161
+		{
+			flag = flag1;
+	//   55  105:iload           12
+	//   56  107:istore          11
+			if(f < (float)(l + k + i1 + j1 + k1))
+	//*  57  109:fload_1         
+	//*  58  110:iload           6
+	//*  59  112:iload           5
+	//*  60  114:iadd            
+	//*  61  115:iload           7
+	//*  62  117:iadd            
+	//*  63  118:iload           8
+	//*  64  120:iadd            
+	//*  65  121:iload           9
+	//*  66  123:iadd            
+	//*  67  124:i2f             
+	//*  68  125:fcmpg           
+	//*  69  126:ifge            161
+			{
+				flag = flag1;
+	//   70  129:iload           12
+	//   71  131:istore          11
+				if(f1 > (float)(i - j))
+	//*  72  133:fload_2         
+	//*  73  134:iload_3         
+	//*  74  135:iload           4
+	//*  75  137:isub            
+	//*  76  138:i2f             
+	//*  77  139:fcmpl           
+	//*  78  140:ifle            161
+				{
+					flag = flag1;
+	//   79  143:iload           12
+	//   80  145:istore          11
+					if(f1 < (float)(l1 + k1))
+	//*  81  147:fload_2         
+	//*  82  148:iload           10
+	//*  83  150:iload           9
+	//*  84  152:iadd            
+	//*  85  153:i2f             
+	//*  86  154:fcmpg           
+	//*  87  155:ifge            161
+						flag = true;
+	//   88  158:iconst_1        
+	//   89  159:istore          11
+				}
+			}
+		}
+		return flag;
+	//   90  161:iload           11
+	//   91  163:ireturn         
+	}
+
+	private Layout makeLayout(CharSequence charsequence)
+	{
+		TransformationMethod transformationmethod = mSwitchTransformationMethod;
+	//    0    0:aload_0         
+	//    1    1:getfield        #429 <Field TransformationMethod mSwitchTransformationMethod>
+	//    2    4:astore          4
+		CharSequence charsequence1 = charsequence;
+	//    3    6:aload_1         
+	//    4    7:astore_3        
+		if(transformationmethod != null)
+	//*   5    8:aload           4
+	//*   6   10:ifnull          23
+			charsequence1 = transformationmethod.getTransformation(charsequence, ((android.view.View) (this)));
+	//    7   13:aload           4
+	//    8   15:aload_1         
+	//    9   16:aload_0         
+	//   10   17:invokeinterface #435 <Method CharSequence TransformationMethod.getTransformation(CharSequence, android.view.View)>
+	//   11   22:astore_3        
+		charsequence = ((CharSequence) (mTextPaint));
+	//   12   23:aload_0         
+	//   13   24:getfield        #143 <Field TextPaint mTextPaint>
+	//   14   27:astore_1        
+		int i;
+		if(charsequence1 != null)
+	//*  15   28:aload_3         
+	//*  16   29:ifnull          46
+			i = (int)Math.ceil(Layout.getDesiredWidth(charsequence1, ((TextPaint) (charsequence))));
+	//   17   32:aload_3         
+	//   18   33:aload_1         
+	//   19   34:invokestatic    #441 <Method float Layout.getDesiredWidth(CharSequence, TextPaint)>
+	//   20   37:f2d             
+	//   21   38:invokestatic    #447 <Method double Math.ceil(double)>
+	//   22   41:d2i             
+	//   23   42:istore_2        
+		else
+	//*  24   43:goto            48
+			i = 0;
+	//   25   46:iconst_0        
+	//   26   47:istore_2        
+		return ((Layout) (new StaticLayout(charsequence1, ((TextPaint) (charsequence)), i, android.text.Layout.Alignment.ALIGN_NORMAL, 1.0F, 0.0F, true)));
+	//   27   48:new             #449 <Class StaticLayout>
+	//   28   51:dup             
+	//   29   52:aload_3         
+	//   30   53:aload_1         
+	//   31   54:iload_2         
+	//   32   55:getstatic       #455 <Field android.text.Layout$Alignment android.text.Layout$Alignment.ALIGN_NORMAL>
+	//   33   58:fconst_1        
+	//   34   59:fconst_0        
+	//   35   60:iconst_1        
+	//   36   61:invokespecial   #458 <Method void StaticLayout(CharSequence, TextPaint, int, android.text.Layout$Alignment, float, float, boolean)>
+	//   37   64:areturn         
+	}
+
+	private void setSwitchTypefaceByIndex(int i, int j)
+	{
+		Typeface typeface;
+		switch(i)
+	//*   0    0:iload_1         
+		{
+	//*   1    1:tableswitch     1 3: default 28
+	//	               1 47
+	//	               2 40
+	//	               3 33
+		default:
+			typeface = null;
+	//    2   28:aconst_null     
+	//    3   29:astore_3        
+			break;
+
+	//*   4   30:goto            51
+		case 3: // '\003'
+			typeface = Typeface.MONOSPACE;
+	//    5   33:getstatic       #465 <Field Typeface Typeface.MONOSPACE>
+	//    6   36:astore_3        
+			break;
+
+	//*   7   37:goto            51
+		case 2: // '\002'
+			typeface = Typeface.SERIF;
+	//    8   40:getstatic       #467 <Field Typeface Typeface.SERIF>
+	//    9   43:astore_3        
+			break;
+
+	//*  10   44:goto            51
+		case 1: // '\001'
+			typeface = Typeface.SANS_SERIF;
+	//   11   47:getstatic       #470 <Field Typeface Typeface.SANS_SERIF>
+	//   12   50:astore_3        
+			break;
+		}
+		setSwitchTypeface(typeface, j);
+	//   13   51:aload_0         
+	//   14   52:aload_3         
+	//   15   53:iload_2         
+	//   16   54:invokevirtual   #474 <Method void setSwitchTypeface(Typeface, int)>
+	//   17   57:return          
+	}
+
+	private void stopDrag(MotionEvent motionevent)
+	{
+		mTouchMode = 0;
+	//    0    0:aload_0         
+	//    1    1:iconst_0        
+	//    2    2:putfield        #477 <Field int mTouchMode>
+		int i = motionevent.getAction();
+	//    3    5:aload_1         
+	//    4    6:invokevirtual   #480 <Method int MotionEvent.getAction()>
+	//    5    9:istore_3        
+		boolean flag1 = true;
+	//    6   10:iconst_1        
+	//    7   11:istore          4
+		boolean flag;
+		if(i == 1 && isEnabled())
+	//*   8   13:iload_3         
+	//*   9   14:iconst_1        
+	//*  10   15:icmpne          30
+	//*  11   18:aload_0         
+	//*  12   19:invokevirtual   #483 <Method boolean isEnabled()>
+	//*  13   22:ifeq            30
+			flag = true;
+	//   14   25:iconst_1        
+	//   15   26:istore_3        
+		else
+	//*  16   27:goto            32
+			flag = false;
+	//   17   30:iconst_0        
+	//   18   31:istore_3        
+		boolean flag2 = isChecked();
+	//   19   32:aload_0         
+	//   20   33:invokevirtual   #305 <Method boolean isChecked()>
+	//   21   36:istore          5
+		if(flag)
+	//*  22   38:iload_3         
+	//*  23   39:ifeq            113
+		{
+			mVelocityTracker.computeCurrentVelocity(1000);
+	//   24   42:aload_0         
+	//   25   43:getfield        #130 <Field VelocityTracker mVelocityTracker>
+	//   26   46:sipush          1000
+	//   27   49:invokevirtual   #486 <Method void VelocityTracker.computeCurrentVelocity(int)>
+			float f = mVelocityTracker.getXVelocity();
+	//   28   52:aload_0         
+	//   29   53:getfield        #130 <Field VelocityTracker mVelocityTracker>
+	//   30   56:invokevirtual   #490 <Method float VelocityTracker.getXVelocity()>
+	//   31   59:fstore_2        
+			if(Math.abs(f) > (float)mMinFlingVelocity)
+	//*  32   60:fload_2         
+	//*  33   61:invokestatic    #494 <Method float Math.abs(float)>
+	//*  34   64:aload_0         
+	//*  35   65:getfield        #298 <Field int mMinFlingVelocity>
+	//*  36   68:i2f             
+	//*  37   69:fcmpl           
+	//*  38   70:ifle            104
+			{
+				if(ViewUtils.isLayoutRtl(((android.view.View) (this))) ? f >= 0.0F : f <= 0.0F)
+	//*  39   73:aload_0         
+	//*  40   74:invokestatic    #391 <Method boolean ViewUtils.isLayoutRtl(android.view.View)>
+	//*  41   77:ifeq            89
+	//*  42   80:fload_2         
+	//*  43   81:fconst_0        
+	//*  44   82:fcmpg           
+	//*  45   83:ifge            98
+	//*  46   86:goto            101
+	//*  47   89:fload_2         
+	//*  48   90:fconst_0        
+	//*  49   91:fcmpl           
+	//*  50   92:ifle            98
+	//*  51   95:goto            101
+					flag1 = false;
+	//   52   98:iconst_0        
+	//   53   99:istore          4
+			} else
+	//*  54  101:goto            117
+			{
+				flag1 = getTargetCheckedState();
+	//   55  104:aload_0         
+	//   56  105:invokespecial   #496 <Method boolean getTargetCheckedState()>
+	//   57  108:istore          4
+			}
+		} else
+	//*  58  110:goto            117
+		{
+			flag1 = flag2;
+	//   59  113:iload           5
+	//   60  115:istore          4
+		}
+		if(flag1 != flag2)
+	//*  61  117:iload           4
+	//*  62  119:iload           5
+	//*  63  121:icmpeq          129
+			playSoundEffect(0);
+	//   64  124:aload_0         
+	//   65  125:iconst_0        
+	//   66  126:invokevirtual   #499 <Method void playSoundEffect(int)>
+		setChecked(flag1);
+	//   67  129:aload_0         
+	//   68  130:iload           4
+	//   69  132:invokevirtual   #309 <Method void setChecked(boolean)>
+		cancelSuperTouch(motionevent);
+	//   70  135:aload_0         
+	//   71  136:aload_1         
+	//   72  137:invokespecial   #501 <Method void cancelSuperTouch(MotionEvent)>
+	//   73  140:return          
+	}
+
+	public void draw(Canvas canvas)
+	{
+		Rect rect = mTempRect;
+	//    0    0:aload_0         
+	//    1    1:getfield        #136 <Field Rect mTempRect>
+	//    2    4:astore          11
+		int j = mSwitchLeft;
+	//    3    6:aload_0         
+	//    4    7:getfield        #423 <Field int mSwitchLeft>
+	//    5   10:istore_3        
+		int i1 = mSwitchTop;
+	//    6   11:aload_0         
+	//    7   12:getfield        #421 <Field int mSwitchTop>
+	//    8   15:istore          5
+		int k1 = mSwitchRight;
+	//    9   17:aload_0         
+	//   10   18:getfield        #505 <Field int mSwitchRight>
+	//   11   21:istore          7
+		int j1 = mSwitchBottom;
+	//   12   23:aload_0         
+	//   13   24:getfield        #425 <Field int mSwitchBottom>
+	//   14   27:istore          6
+		int l = getThumbOffset() + j;
+	//   15   29:aload_0         
+	//   16   30:invokespecial   #419 <Method int getThumbOffset()>
+	//   17   33:iload_3         
+	//   18   34:iadd            
+	//   19   35:istore          4
+		Object obj = ((Object) (mThumbDrawable));
+	//   20   37:aload_0         
+	//   21   38:getfield        #179 <Field Drawable mThumbDrawable>
+	//   22   41:astore          10
+		if(obj != null)
+	//*  23   43:aload           10
+	//*  24   45:ifnull          58
+			obj = ((Object) (DrawableUtils.getOpticalBounds(((Drawable) (obj)))));
+	//   25   48:aload           10
+	//   26   50:invokestatic    #402 <Method Rect DrawableUtils.getOpticalBounds(Drawable)>
+	//   27   53:astore          10
+		else
+	//*  28   55:goto            63
+			obj = ((Object) (DrawableUtils.INSETS_NONE));
+	//   29   58:getstatic       #405 <Field Rect DrawableUtils.INSETS_NONE>
+	//   30   61:astore          10
+		Drawable drawable = mTrackDrawable;
+	//   31   63:aload_0         
+	//   32   64:getfield        #190 <Field Drawable mTrackDrawable>
+	//   33   67:astore          12
+		int i = l;
+	//   34   69:iload           4
+	//   35   71:istore_2        
+		if(drawable != null)
+	//*  36   72:aload           12
+	//*  37   74:ifnull          284
+		{
+			drawable.getPadding(rect);
+	//   38   77:aload           12
+	//   39   79:aload           11
+	//   40   81:invokevirtual   #398 <Method boolean Drawable.getPadding(Rect)>
+	//   41   84:pop             
+			int i2 = l + rect.left;
+	//   42   85:iload           4
+	//   43   87:aload           11
+	//   44   89:getfield        #412 <Field int Rect.left>
+	//   45   92:iadd            
+	//   46   93:istore          9
+			int l1;
+			if(obj != null)
+	//*  47   95:aload           10
+	//*  48   97:ifnull          253
+			{
+				i = j;
+	//   49  100:iload_3         
+	//   50  101:istore_2        
+				if(((Rect) (obj)).left > rect.left)
+	//*  51  102:aload           10
+	//*  52  104:getfield        #412 <Field int Rect.left>
+	//*  53  107:aload           11
+	//*  54  109:getfield        #412 <Field int Rect.left>
+	//*  55  112:icmple          129
+					i = j + (((Rect) (obj)).left - rect.left);
+	//   56  115:iload_3         
+	//   57  116:aload           10
+	//   58  118:getfield        #412 <Field int Rect.left>
+	//   59  121:aload           11
+	//   60  123:getfield        #412 <Field int Rect.left>
+	//   61  126:isub            
+	//   62  127:iadd            
+	//   63  128:istore_2        
+				if(((Rect) (obj)).top > rect.top)
+	//*  64  129:aload           10
+	//*  65  131:getfield        #508 <Field int Rect.top>
+	//*  66  134:aload           11
+	//*  67  136:getfield        #508 <Field int Rect.top>
+	//*  68  139:icmple          160
+					j = (((Rect) (obj)).top - rect.top) + i1;
+	//   69  142:aload           10
+	//   70  144:getfield        #508 <Field int Rect.top>
+	//   71  147:aload           11
+	//   72  149:getfield        #508 <Field int Rect.top>
+	//   73  152:isub            
+	//   74  153:iload           5
+	//   75  155:iadd            
+	//   76  156:istore_3        
+				else
+	//*  77  157:goto            163
+					j = i1;
+	//   78  160:iload           5
+	//   79  162:istore_3        
+				l = k1;
+	//   80  163:iload           7
+	//   81  165:istore          4
+				if(((Rect) (obj)).right > rect.right)
+	//*  82  167:aload           10
+	//*  83  169:getfield        #415 <Field int Rect.right>
+	//*  84  172:aload           11
+	//*  85  174:getfield        #415 <Field int Rect.right>
+	//*  86  177:icmple          196
+					l = k1 - (((Rect) (obj)).right - rect.right);
+	//   87  180:iload           7
+	//   88  182:aload           10
+	//   89  184:getfield        #415 <Field int Rect.right>
+	//   90  187:aload           11
+	//   91  189:getfield        #415 <Field int Rect.right>
+	//   92  192:isub            
+	//   93  193:isub            
+	//   94  194:istore          4
+				if(((Rect) (obj)).bottom > rect.bottom)
+	//*  95  196:aload           10
+	//*  96  198:getfield        #511 <Field int Rect.bottom>
+	//*  97  201:aload           11
+	//*  98  203:getfield        #511 <Field int Rect.bottom>
+	//*  99  206:icmple          237
+				{
+					l1 = j1 - (((Rect) (obj)).bottom - rect.bottom);
+	//  100  209:iload           6
+	//  101  211:aload           10
+	//  102  213:getfield        #511 <Field int Rect.bottom>
+	//  103  216:aload           11
+	//  104  218:getfield        #511 <Field int Rect.bottom>
+	//  105  221:isub            
+	//  106  222:isub            
+	//  107  223:istore          8
+					k1 = i;
+	//  108  225:iload_2         
+	//  109  226:istore          7
+					i = l1;
+	//  110  228:iload           8
+	//  111  230:istore_2        
+					l1 = j;
+	//  112  231:iload_3         
+	//  113  232:istore          8
+				} else
+	//* 114  234:goto            267
+				{
+					l1 = j1;
+	//  115  237:iload           6
+	//  116  239:istore          8
+					k1 = i;
+	//  117  241:iload_2         
+	//  118  242:istore          7
+					i = l1;
+	//  119  244:iload           8
+	//  120  246:istore_2        
+					l1 = j;
+	//  121  247:iload_3         
+	//  122  248:istore          8
+				}
+			} else
+	//* 123  250:goto            267
+			{
+				l1 = i1;
+	//  124  253:iload           5
+	//  125  255:istore          8
+				i = j1;
+	//  126  257:iload           6
+	//  127  259:istore_2        
+				l = k1;
+	//  128  260:iload           7
+	//  129  262:istore          4
+				k1 = j;
+	//  130  264:iload_3         
+	//  131  265:istore          7
+			}
+			mTrackDrawable.setBounds(k1, l1, l, i);
+	//  132  267:aload_0         
+	//  133  268:getfield        #190 <Field Drawable mTrackDrawable>
+	//  134  271:iload           7
+	//  135  273:iload           8
+	//  136  275:iload           4
+	//  137  277:iload_2         
+	//  138  278:invokevirtual   #515 <Method void Drawable.setBounds(int, int, int, int)>
+			i = i2;
+	//  139  281:iload           9
+	//  140  283:istore_2        
+		}
+		obj = ((Object) (mThumbDrawable));
+	//  141  284:aload_0         
+	//  142  285:getfield        #179 <Field Drawable mThumbDrawable>
+	//  143  288:astore          10
+		if(obj != null)
+	//* 144  290:aload           10
+	//* 145  292:ifnull          359
+		{
+			((Drawable) (obj)).getPadding(rect);
+	//  146  295:aload           10
+	//  147  297:aload           11
+	//  148  299:invokevirtual   #398 <Method boolean Drawable.getPadding(Rect)>
+	//  149  302:pop             
+			int k = i - rect.left;
+	//  150  303:iload_2         
+	//  151  304:aload           11
+	//  152  306:getfield        #412 <Field int Rect.left>
+	//  153  309:isub            
+	//  154  310:istore_3        
+			i = i + mThumbWidth + rect.right;
+	//  155  311:iload_2         
+	//  156  312:aload_0         
+	//  157  313:getfield        #409 <Field int mThumbWidth>
+	//  158  316:iadd            
+	//  159  317:aload           11
+	//  160  319:getfield        #415 <Field int Rect.right>
+	//  161  322:iadd            
+	//  162  323:istore_2        
+			mThumbDrawable.setBounds(k, i1, i, j1);
+	//  163  324:aload_0         
+	//  164  325:getfield        #179 <Field Drawable mThumbDrawable>
+	//  165  328:iload_3         
+	//  166  329:iload           5
+	//  167  331:iload_2         
+	//  168  332:iload           6
+	//  169  334:invokevirtual   #515 <Method void Drawable.setBounds(int, int, int, int)>
+			obj = ((Object) (getBackground()));
+	//  170  337:aload_0         
+	//  171  338:invokevirtual   #518 <Method Drawable getBackground()>
+	//  172  341:astore          10
+			if(obj != null)
+	//* 173  343:aload           10
+	//* 174  345:ifnull          359
+				a.a(((Drawable) (obj)), k, i1, i, j1);
+	//  175  348:aload           10
+	//  176  350:iload_3         
+	//  177  351:iload           5
+	//  178  353:iload_2         
+	//  179  354:iload           6
+	//  180  356:invokestatic    #521 <Method void a.a(Drawable, int, int, int, int)>
+		}
+		super.draw(canvas);
+	//  181  359:aload_0         
+	//  182  360:aload_1         
+	//  183  361:invokespecial   #523 <Method void CompoundButton.draw(Canvas)>
+	//  184  364:return          
+	}
+
+	public void drawableHotspotChanged(float f, float f1)
+	{
+		if(android.os.Build.VERSION.SDK_INT >= 21)
+	//*   0    0:getstatic       #329 <Field int android.os.Build$VERSION.SDK_INT>
+	//*   1    3:bipush          21
+	//*   2    5:icmplt          14
+			super.drawableHotspotChanged(f, f1);
+	//    3    8:aload_0         
+	//    4    9:fload_1         
+	//    5   10:fload_2         
+	//    6   11:invokespecial   #527 <Method void CompoundButton.drawableHotspotChanged(float, float)>
+		Drawable drawable = mThumbDrawable;
+	//    7   14:aload_0         
+	//    8   15:getfield        #179 <Field Drawable mThumbDrawable>
+	//    9   18:astore_3        
+		if(drawable != null)
+	//*  10   19:aload_3         
+	//*  11   20:ifnull          29
+			a.a(drawable, f, f1);
+	//   12   23:aload_3         
+	//   13   24:fload_1         
+	//   14   25:fload_2         
+	//   15   26:invokestatic    #530 <Method void a.a(Drawable, float, float)>
+		drawable = mTrackDrawable;
+	//   16   29:aload_0         
+	//   17   30:getfield        #190 <Field Drawable mTrackDrawable>
+	//   18   33:astore_3        
+		if(drawable != null)
+	//*  19   34:aload_3         
+	//*  20   35:ifnull          44
+			a.a(drawable, f, f1);
+	//   21   38:aload_3         
+	//   22   39:fload_1         
+	//   23   40:fload_2         
+	//   24   41:invokestatic    #530 <Method void a.a(Drawable, float, float)>
+	//   25   44:return          
+	}
+
+	protected void drawableStateChanged()
+	{
+		super.drawableStateChanged();
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #533 <Method void CompoundButton.drawableStateChanged()>
+		int ai[] = getDrawableState();
+	//    2    4:aload_0         
+	//    3    5:invokevirtual   #355 <Method int[] getDrawableState()>
+	//    4    8:astore_3        
+		Drawable drawable = mThumbDrawable;
+	//    5    9:aload_0         
+	//    6   10:getfield        #179 <Field Drawable mThumbDrawable>
+	//    7   13:astore          4
+		boolean flag1 = false;
+	//    8   15:iconst_0        
+	//    9   16:istore_2        
+		boolean flag = flag1;
+	//   10   17:iload_2         
+	//   11   18:istore_1        
+		if(drawable != null)
+	//*  12   19:aload           4
+	//*  13   21:ifnull          43
+		{
+			flag = flag1;
+	//   14   24:iload_2         
+	//   15   25:istore_1        
+			if(drawable.isStateful())
+	//*  16   26:aload           4
+	//*  17   28:invokevirtual   #351 <Method boolean Drawable.isStateful()>
+	//*  18   31:ifeq            43
+				flag = false | drawable.setState(ai);
+	//   19   34:iconst_0        
+	//   20   35:aload           4
+	//   21   37:aload_3         
+	//   22   38:invokevirtual   #359 <Method boolean Drawable.setState(int[])>
+	//   23   41:ior             
+	//   24   42:istore_1        
+		}
+		drawable = mTrackDrawable;
+	//   25   43:aload_0         
+	//   26   44:getfield        #190 <Field Drawable mTrackDrawable>
+	//   27   47:astore          4
+		flag1 = flag;
+	//   28   49:iload_1         
+	//   29   50:istore_2        
+		if(drawable != null)
+	//*  30   51:aload           4
+	//*  31   53:ifnull          75
+		{
+			flag1 = flag;
+	//   32   56:iload_1         
+	//   33   57:istore_2        
+			if(drawable.isStateful())
+	//*  34   58:aload           4
+	//*  35   60:invokevirtual   #351 <Method boolean Drawable.isStateful()>
+	//*  36   63:ifeq            75
+				flag1 = flag | drawable.setState(ai);
+	//   37   66:iload_1         
+	//   38   67:aload           4
+	//   39   69:aload_3         
+	//   40   70:invokevirtual   #359 <Method boolean Drawable.setState(int[])>
+	//   41   73:ior             
+	//   42   74:istore_2        
+		}
+		if(flag1)
+	//*  43   75:iload_2         
+	//*  44   76:ifeq            83
+			invalidate();
+	//   45   79:aload_0         
+	//   46   80:invokevirtual   #536 <Method void invalidate()>
+	//   47   83:return          
+	}
+
+	public int getCompoundPaddingLeft()
+	{
+		if(!ViewUtils.isLayoutRtl(((android.view.View) (this))))
+	//*   0    0:aload_0         
+	//*   1    1:invokestatic    #391 <Method boolean ViewUtils.isLayoutRtl(android.view.View)>
+	//*   2    4:ifne            12
+			return super.getCompoundPaddingLeft();
+	//    3    7:aload_0         
+	//    4    8:invokespecial   #539 <Method int CompoundButton.getCompoundPaddingLeft()>
+	//    5   11:ireturn         
+		int j = super.getCompoundPaddingLeft() + mSwitchWidth;
+	//    6   12:aload_0         
+	//    7   13:invokespecial   #539 <Method int CompoundButton.getCompoundPaddingLeft()>
+	//    8   16:aload_0         
+	//    9   17:getfield        #407 <Field int mSwitchWidth>
+	//   10   20:iadd            
+	//   11   21:istore_2        
+		int i = j;
+	//   12   22:iload_2         
+	//   13   23:istore_1        
+		if(!TextUtils.isEmpty(getText()))
+	//*  14   24:aload_0         
+	//*  15   25:invokevirtual   #542 <Method CharSequence getText()>
+	//*  16   28:invokestatic    #548 <Method boolean TextUtils.isEmpty(CharSequence)>
+	//*  17   31:ifne            41
+			i = j + mSwitchPadding;
+	//   18   34:iload_2         
+	//   19   35:aload_0         
+	//   20   36:getfield        #232 <Field int mSwitchPadding>
+	//   21   39:iadd            
+	//   22   40:istore_1        
+		return i;
+	//   23   41:iload_1         
+	//   24   42:ireturn         
+	}
+
+	public int getCompoundPaddingRight()
+	{
+		if(ViewUtils.isLayoutRtl(((android.view.View) (this))))
+	//*   0    0:aload_0         
+	//*   1    1:invokestatic    #391 <Method boolean ViewUtils.isLayoutRtl(android.view.View)>
+	//*   2    4:ifeq            12
+			return super.getCompoundPaddingRight();
+	//    3    7:aload_0         
+	//    4    8:invokespecial   #551 <Method int CompoundButton.getCompoundPaddingRight()>
+	//    5   11:ireturn         
+		int j = super.getCompoundPaddingRight() + mSwitchWidth;
+	//    6   12:aload_0         
+	//    7   13:invokespecial   #551 <Method int CompoundButton.getCompoundPaddingRight()>
+	//    8   16:aload_0         
+	//    9   17:getfield        #407 <Field int mSwitchWidth>
+	//   10   20:iadd            
+	//   11   21:istore_2        
+		int i = j;
+	//   12   22:iload_2         
+	//   13   23:istore_1        
+		if(!TextUtils.isEmpty(getText()))
+	//*  14   24:aload_0         
+	//*  15   25:invokevirtual   #542 <Method CharSequence getText()>
+	//*  16   28:invokestatic    #548 <Method boolean TextUtils.isEmpty(CharSequence)>
+	//*  17   31:ifne            41
+			i = j + mSwitchPadding;
+	//   18   34:iload_2         
+	//   19   35:aload_0         
+	//   20   36:getfield        #232 <Field int mSwitchPadding>
+	//   21   39:iadd            
+	//   22   40:istore_1        
+		return i;
+	//   23   41:iload_1         
+	//   24   42:ireturn         
+	}
+
+	public boolean getShowText()
+	{
+		return mShowText;
+	//    0    0:aload_0         
+	//    1    1:getfield        #213 <Field boolean mShowText>
+	//    2    4:ireturn         
+	}
+
+	public boolean getSplitTrack()
+	{
+		return mSplitTrack;
+	//    0    0:aload_0         
+	//    1    1:getfield        #237 <Field boolean mSplitTrack>
+	//    2    4:ireturn         
+	}
+
+	public int getSwitchMinWidth()
+	{
+		return mSwitchMinWidth;
+	//    0    0:aload_0         
+	//    1    1:getfield        #227 <Field int mSwitchMinWidth>
+	//    2    4:ireturn         
+	}
+
+	public int getSwitchPadding()
+	{
+		return mSwitchPadding;
+	//    0    0:aload_0         
+	//    1    1:getfield        #232 <Field int mSwitchPadding>
+	//    2    4:ireturn         
+	}
+
+	public CharSequence getTextOff()
+	{
+		return mTextOff;
+	//    0    0:aload_0         
+	//    1    1:getfield        #204 <Field CharSequence mTextOff>
+	//    2    4:areturn         
+	}
+
+	public CharSequence getTextOn()
+	{
+		return mTextOn;
+	//    0    0:aload_0         
+	//    1    1:getfield        #199 <Field CharSequence mTextOn>
+	//    2    4:areturn         
+	}
+
+	public Drawable getThumbDrawable()
+	{
+		return mThumbDrawable;
+	//    0    0:aload_0         
+	//    1    1:getfield        #179 <Field Drawable mThumbDrawable>
+	//    2    4:areturn         
+	}
+
+	public int getThumbTextPadding()
+	{
+		return mThumbTextPadding;
+	//    0    0:aload_0         
+	//    1    1:getfield        #222 <Field int mThumbTextPadding>
+	//    2    4:ireturn         
+	}
+
+	public ColorStateList getThumbTintList()
+	{
+		return mThumbTintList;
+	//    0    0:aload_0         
+	//    1    1:getfield        #108 <Field ColorStateList mThumbTintList>
+	//    2    4:areturn         
+	}
+
+	public android.graphics.PorterDuff.Mode getThumbTintMode()
+	{
+		return mThumbTintMode;
+	//    0    0:aload_0         
+	//    1    1:getfield        #110 <Field android.graphics.PorterDuff$Mode mThumbTintMode>
+	//    2    4:areturn         
+	}
+
+	public Drawable getTrackDrawable()
+	{
+		return mTrackDrawable;
+	//    0    0:aload_0         
+	//    1    1:getfield        #190 <Field Drawable mTrackDrawable>
+	//    2    4:areturn         
+	}
+
+	public ColorStateList getTrackTintList()
+	{
+		return mTrackTintList;
+	//    0    0:aload_0         
+	//    1    1:getfield        #116 <Field ColorStateList mTrackTintList>
+	//    2    4:areturn         
+	}
+
+	public android.graphics.PorterDuff.Mode getTrackTintMode()
+	{
+		return mTrackTintMode;
+	//    0    0:aload_0         
+	//    1    1:getfield        #118 <Field android.graphics.PorterDuff$Mode mTrackTintMode>
+	//    2    4:areturn         
+	}
+
+	public void jumpDrawablesToCurrentState()
+	{
+		super.jumpDrawablesToCurrentState();
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #569 <Method void CompoundButton.jumpDrawablesToCurrentState()>
+		Object obj = ((Object) (mThumbDrawable));
+	//    2    4:aload_0         
+	//    3    5:getfield        #179 <Field Drawable mThumbDrawable>
+	//    4    8:astore_1        
+		if(obj != null)
+	//*   5    9:aload_1         
+	//*   6   10:ifnull          17
+			((Drawable) (obj)).jumpToCurrentState();
+	//    7   13:aload_1         
+	//    8   14:invokevirtual   #572 <Method void Drawable.jumpToCurrentState()>
+		obj = ((Object) (mTrackDrawable));
+	//    9   17:aload_0         
+	//   10   18:getfield        #190 <Field Drawable mTrackDrawable>
+	//   11   21:astore_1        
+		if(obj != null)
+	//*  12   22:aload_1         
+	//*  13   23:ifnull          30
+			((Drawable) (obj)).jumpToCurrentState();
+	//   14   26:aload_1         
+	//   15   27:invokevirtual   #572 <Method void Drawable.jumpToCurrentState()>
+		obj = ((Object) (mPositionAnimator));
+	//   16   30:aload_0         
+	//   17   31:getfield        #318 <Field ObjectAnimator mPositionAnimator>
+	//   18   34:astore_1        
+		if(obj != null && ((ObjectAnimator) (obj)).isStarted())
+	//*  19   35:aload_1         
+	//*  20   36:ifnull          58
+	//*  21   39:aload_1         
+	//*  22   40:invokevirtual   #575 <Method boolean ObjectAnimator.isStarted()>
+	//*  23   43:ifeq            58
+		{
+			mPositionAnimator.end();
+	//   24   46:aload_0         
+	//   25   47:getfield        #318 <Field ObjectAnimator mPositionAnimator>
+	//   26   50:invokevirtual   #578 <Method void ObjectAnimator.end()>
+			mPositionAnimator = null;
+	//   27   53:aload_0         
+	//   28   54:aconst_null     
+	//   29   55:putfield        #318 <Field ObjectAnimator mPositionAnimator>
+		}
+	//   30   58:return          
+	}
+
+	protected int[] onCreateDrawableState(int i)
+	{
+		int ai[] = super.onCreateDrawableState(i + 1);
+	//    0    0:aload_0         
+	//    1    1:iload_1         
+	//    2    2:iconst_1        
+	//    3    3:iadd            
+	//    4    4:invokespecial   #582 <Method int[] CompoundButton.onCreateDrawableState(int)>
+	//    5    7:astore_2        
+		if(isChecked())
+	//*   6    8:aload_0         
+	//*   7    9:invokevirtual   #305 <Method boolean isChecked()>
+	//*   8   12:ifeq            23
+			mergeDrawableStates(ai, CHECKED_STATE_SET);
+	//    9   15:aload_2         
+	//   10   16:getstatic       #92  <Field int[] CHECKED_STATE_SET>
+	//   11   19:invokestatic    #586 <Method int[] mergeDrawableStates(int[], int[])>
+	//   12   22:pop             
+		return ai;
+	//   13   23:aload_2         
+	//   14   24:areturn         
+	}
+
+	protected void onDraw(Canvas canvas)
+	{
+		super.onDraw(canvas);
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:invokespecial   #589 <Method void CompoundButton.onDraw(Canvas)>
+		Object obj = ((Object) (mTempRect));
+	//    3    5:aload_0         
+	//    4    6:getfield        #136 <Field Rect mTempRect>
+	//    5    9:astore          9
+		Drawable drawable = mTrackDrawable;
+	//    6   11:aload_0         
+	//    7   12:getfield        #190 <Field Drawable mTrackDrawable>
+	//    8   15:astore          11
+		if(drawable != null)
+	//*   9   17:aload           11
+	//*  10   19:ifnull          33
+			drawable.getPadding(((Rect) (obj)));
+	//   11   22:aload           11
+	//   12   24:aload           9
+	//   13   26:invokevirtual   #398 <Method boolean Drawable.getPadding(Rect)>
+	//   14   29:pop             
+		else
+	//*  15   30:goto            38
+			((Rect) (obj)).setEmpty();
+	//   16   33:aload           9
+	//   17   35:invokevirtual   #592 <Method void Rect.setEmpty()>
+		int l = mSwitchTop;
+	//   18   38:aload_0         
+	//   19   39:getfield        #421 <Field int mSwitchTop>
+	//   20   42:istore          4
+		int i1 = mSwitchBottom;
+	//   21   44:aload_0         
+	//   22   45:getfield        #425 <Field int mSwitchBottom>
+	//   23   48:istore          5
+		int j1 = ((Rect) (obj)).top;
+	//   24   50:aload           9
+	//   25   52:getfield        #508 <Field int Rect.top>
+	//   26   55:istore          6
+		int k1 = ((Rect) (obj)).bottom;
+	//   27   57:aload           9
+	//   28   59:getfield        #511 <Field int Rect.bottom>
+	//   29   62:istore          7
+		Object obj1 = ((Object) (mThumbDrawable));
+	//   30   64:aload_0         
+	//   31   65:getfield        #179 <Field Drawable mThumbDrawable>
+	//   32   68:astore          10
+		if(drawable != null)
+	//*  33   70:aload           11
+	//*  34   72:ifnull          168
+			if(mSplitTrack && obj1 != null)
+	//*  35   75:aload_0         
+	//*  36   76:getfield        #237 <Field boolean mSplitTrack>
+	//*  37   79:ifeq            162
+	//*  38   82:aload           10
+	//*  39   84:ifnull          162
+			{
+				Rect rect = DrawableUtils.getOpticalBounds(((Drawable) (obj1)));
+	//   40   87:aload           10
+	//   41   89:invokestatic    #402 <Method Rect DrawableUtils.getOpticalBounds(Drawable)>
+	//   42   92:astore          12
+				((Drawable) (obj1)).copyBounds(((Rect) (obj)));
+	//   43   94:aload           10
+	//   44   96:aload           9
+	//   45   98:invokevirtual   #596 <Method void Drawable.copyBounds(Rect)>
+				obj.left = ((Rect) (obj)).left + rect.left;
+	//   46  101:aload           9
+	//   47  103:aload           9
+	//   48  105:getfield        #412 <Field int Rect.left>
+	//   49  108:aload           12
+	//   50  110:getfield        #412 <Field int Rect.left>
+	//   51  113:iadd            
+	//   52  114:putfield        #412 <Field int Rect.left>
+				obj.right = ((Rect) (obj)).right - rect.right;
+	//   53  117:aload           9
+	//   54  119:aload           9
+	//   55  121:getfield        #415 <Field int Rect.right>
+	//   56  124:aload           12
+	//   57  126:getfield        #415 <Field int Rect.right>
+	//   58  129:isub            
+	//   59  130:putfield        #415 <Field int Rect.right>
+				int i = canvas.save();
+	//   60  133:aload_1         
+	//   61  134:invokevirtual   #601 <Method int Canvas.save()>
+	//   62  137:istore_2        
+				canvas.clipRect(((Rect) (obj)), android.graphics.Region.Op.DIFFERENCE);
+	//   63  138:aload_1         
+	//   64  139:aload           9
+	//   65  141:getstatic       #607 <Field android.graphics.Region$Op android.graphics.Region$Op.DIFFERENCE>
+	//   66  144:invokevirtual   #611 <Method boolean Canvas.clipRect(Rect, android.graphics.Region$Op)>
+	//   67  147:pop             
+				drawable.draw(canvas);
+	//   68  148:aload           11
+	//   69  150:aload_1         
+	//   70  151:invokevirtual   #612 <Method void Drawable.draw(Canvas)>
+				canvas.restoreToCount(i);
+	//   71  154:aload_1         
+	//   72  155:iload_2         
+	//   73  156:invokevirtual   #615 <Method void Canvas.restoreToCount(int)>
+			} else
+	//*  74  159:goto            168
+			{
+				drawable.draw(canvas);
+	//   75  162:aload           11
+	//   76  164:aload_1         
+	//   77  165:invokevirtual   #612 <Method void Drawable.draw(Canvas)>
+			}
+		int k = canvas.save();
+	//   78  168:aload_1         
+	//   79  169:invokevirtual   #601 <Method int Canvas.save()>
+	//   80  172:istore_3        
+		if(obj1 != null)
+	//*  81  173:aload           10
+	//*  82  175:ifnull          184
+			((Drawable) (obj1)).draw(canvas);
+	//   83  178:aload           10
+	//   84  180:aload_1         
+	//   85  181:invokevirtual   #612 <Method void Drawable.draw(Canvas)>
+		if(getTargetCheckedState())
+	//*  86  184:aload_0         
+	//*  87  185:invokespecial   #496 <Method boolean getTargetCheckedState()>
+	//*  88  188:ifeq            200
+			obj = ((Object) (mOnLayout));
+	//   89  191:aload_0         
+	//   90  192:getfield        #617 <Field Layout mOnLayout>
+	//   91  195:astore          9
+		else
+	//*  92  197:goto            206
+			obj = ((Object) (mOffLayout));
+	//   93  200:aload_0         
+	//   94  201:getfield        #619 <Field Layout mOffLayout>
+	//   95  204:astore          9
+		if(obj != null)
+	//*  96  206:aload           9
+	//*  97  208:ifnull          342
+		{
+			int ai[] = getDrawableState();
+	//   98  211:aload_0         
+	//   99  212:invokevirtual   #355 <Method int[] getDrawableState()>
+	//  100  215:astore          11
+			ColorStateList colorstatelist = mTextColors;
+	//  101  217:aload_0         
+	//  102  218:getfield        #621 <Field ColorStateList mTextColors>
+	//  103  221:astore          12
+			if(colorstatelist != null)
+	//* 104  223:aload           12
+	//* 105  225:ifnull          243
+				mTextPaint.setColor(colorstatelist.getColorForState(ai, 0));
+	//  106  228:aload_0         
+	//  107  229:getfield        #143 <Field TextPaint mTextPaint>
+	//  108  232:aload           12
+	//  109  234:aload           11
+	//  110  236:iconst_0        
+	//  111  237:invokevirtual   #627 <Method int ColorStateList.getColorForState(int[], int)>
+	//  112  240:invokevirtual   #630 <Method void TextPaint.setColor(int)>
+			mTextPaint.drawableState = ai;
+	//  113  243:aload_0         
+	//  114  244:getfield        #143 <Field TextPaint mTextPaint>
+	//  115  247:aload           11
+	//  116  249:putfield        #633 <Field int[] TextPaint.drawableState>
+			int j;
+			if(obj1 != null)
+	//* 117  252:aload           10
+	//* 118  254:ifnull          279
+			{
+				obj1 = ((Object) (((Drawable) (obj1)).getBounds()));
+	//  119  257:aload           10
+	//  120  259:invokevirtual   #637 <Method Rect Drawable.getBounds()>
+	//  121  262:astore          10
+				j = ((Rect) (obj1)).left + ((Rect) (obj1)).right;
+	//  122  264:aload           10
+	//  123  266:getfield        #412 <Field int Rect.left>
+	//  124  269:aload           10
+	//  125  271:getfield        #415 <Field int Rect.right>
+	//  126  274:iadd            
+	//  127  275:istore_2        
+			} else
+	//* 128  276:goto            284
+			{
+				j = getWidth();
+	//  129  279:aload_0         
+	//  130  280:invokevirtual   #640 <Method int getWidth()>
+	//  131  283:istore_2        
+			}
+			j /= 2;
+	//  132  284:iload_2         
+	//  133  285:iconst_2        
+	//  134  286:idiv            
+	//  135  287:istore_2        
+			int l1 = ((Layout) (obj)).getWidth() / 2;
+	//  136  288:aload           9
+	//  137  290:invokevirtual   #641 <Method int Layout.getWidth()>
+	//  138  293:iconst_2        
+	//  139  294:idiv            
+	//  140  295:istore          8
+			l = (l + j1 + (i1 - k1)) / 2;
+	//  141  297:iload           4
+	//  142  299:iload           6
+	//  143  301:iadd            
+	//  144  302:iload           5
+	//  145  304:iload           7
+	//  146  306:isub            
+	//  147  307:iadd            
+	//  148  308:iconst_2        
+	//  149  309:idiv            
+	//  150  310:istore          4
+			i1 = ((Layout) (obj)).getHeight() / 2;
+	//  151  312:aload           9
+	//  152  314:invokevirtual   #644 <Method int Layout.getHeight()>
+	//  153  317:iconst_2        
+	//  154  318:idiv            
+	//  155  319:istore          5
+			canvas.translate(j - l1, l - i1);
+	//  156  321:aload_1         
+	//  157  322:iload_2         
+	//  158  323:iload           8
+	//  159  325:isub            
+	//  160  326:i2f             
+	//  161  327:iload           4
+	//  162  329:iload           5
+	//  163  331:isub            
+	//  164  332:i2f             
+	//  165  333:invokevirtual   #647 <Method void Canvas.translate(float, float)>
+			((Layout) (obj)).draw(canvas);
+	//  166  336:aload           9
+	//  167  338:aload_1         
+	//  168  339:invokevirtual   #648 <Method void Layout.draw(Canvas)>
+		}
+		canvas.restoreToCount(k);
+	//  169  342:aload_1         
+	//  170  343:iload_3         
+	//  171  344:invokevirtual   #615 <Method void Canvas.restoreToCount(int)>
+	//  172  347:return          
+	}
+
+	public void onInitializeAccessibilityEvent(AccessibilityEvent accessibilityevent)
+	{
+		super.onInitializeAccessibilityEvent(accessibilityevent);
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:invokespecial   #652 <Method void CompoundButton.onInitializeAccessibilityEvent(AccessibilityEvent)>
+		accessibilityevent.setClassName("android.widget.Switch");
+	//    3    5:aload_1         
+	//    4    6:ldc1            #8   <String "android.widget.Switch">
+	//    5    8:invokevirtual   #658 <Method void AccessibilityEvent.setClassName(CharSequence)>
+	//    6   11:return          
+	}
+
+	public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilitynodeinfo)
+	{
+		super.onInitializeAccessibilityNodeInfo(accessibilitynodeinfo);
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:invokespecial   #662 <Method void CompoundButton.onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo)>
+		accessibilitynodeinfo.setClassName("android.widget.Switch");
+	//    3    5:aload_1         
+	//    4    6:ldc1            #8   <String "android.widget.Switch">
+	//    5    8:invokevirtual   #665 <Method void AccessibilityNodeInfo.setClassName(CharSequence)>
+		CharSequence charsequence;
+		if(isChecked())
+	//*   6   11:aload_0         
+	//*   7   12:invokevirtual   #305 <Method boolean isChecked()>
+	//*   8   15:ifeq            26
+			charsequence = mTextOn;
+	//    9   18:aload_0         
+	//   10   19:getfield        #199 <Field CharSequence mTextOn>
+	//   11   22:astore_2        
+		else
+	//*  12   23:goto            31
+			charsequence = mTextOff;
+	//   13   26:aload_0         
+	//   14   27:getfield        #204 <Field CharSequence mTextOff>
+	//   15   30:astore_2        
+		if(!TextUtils.isEmpty(charsequence))
+	//*  16   31:aload_2         
+	//*  17   32:invokestatic    #548 <Method boolean TextUtils.isEmpty(CharSequence)>
+	//*  18   35:ifne            93
+		{
+			CharSequence charsequence1 = accessibilitynodeinfo.getText();
+	//   19   38:aload_1         
+	//   20   39:invokevirtual   #666 <Method CharSequence AccessibilityNodeInfo.getText()>
+	//   21   42:astore_3        
+			if(TextUtils.isEmpty(charsequence1))
+	//*  22   43:aload_3         
+	//*  23   44:invokestatic    #548 <Method boolean TextUtils.isEmpty(CharSequence)>
+	//*  24   47:ifeq            56
+			{
+				accessibilitynodeinfo.setText(charsequence);
+	//   25   50:aload_1         
+	//   26   51:aload_2         
+	//   27   52:invokevirtual   #669 <Method void AccessibilityNodeInfo.setText(CharSequence)>
+				return;
+	//   28   55:return          
+			}
+			StringBuilder stringbuilder = new StringBuilder();
+	//   29   56:new             #671 <Class StringBuilder>
+	//   30   59:dup             
+	//   31   60:invokespecial   #672 <Method void StringBuilder()>
+	//   32   63:astore          4
+			stringbuilder.append(charsequence1);
+	//   33   65:aload           4
+	//   34   67:aload_3         
+	//   35   68:invokevirtual   #676 <Method StringBuilder StringBuilder.append(CharSequence)>
+	//   36   71:pop             
+			stringbuilder.append(' ');
+	//   37   72:aload           4
+	//   38   74:bipush          32
+	//   39   76:invokevirtual   #679 <Method StringBuilder StringBuilder.append(char)>
+	//   40   79:pop             
+			stringbuilder.append(charsequence);
+	//   41   80:aload           4
+	//   42   82:aload_2         
+	//   43   83:invokevirtual   #676 <Method StringBuilder StringBuilder.append(CharSequence)>
+	//   44   86:pop             
+			accessibilitynodeinfo.setText(((CharSequence) (stringbuilder)));
+	//   45   87:aload_1         
+	//   46   88:aload           4
+	//   47   90:invokevirtual   #669 <Method void AccessibilityNodeInfo.setText(CharSequence)>
+		}
+	//   48   93:return          
+	}
+
+	protected void onLayout(boolean flag, int i, int j, int k, int l)
+	{
+		super.onLayout(flag, i, j, k, l);
+	//    0    0:aload_0         
+	//    1    1:iload_1         
+	//    2    2:iload_2         
+	//    3    3:iload_3         
+	//    4    4:iload           4
+	//    5    6:iload           5
+	//    6    8:invokespecial   #683 <Method void CompoundButton.onLayout(boolean, int, int, int, int)>
+		Drawable drawable = mThumbDrawable;
+	//    7   11:aload_0         
+	//    8   12:getfield        #179 <Field Drawable mThumbDrawable>
+	//    9   15:astore          6
+		i = 0;
+	//   10   17:iconst_0        
+	//   11   18:istore_2        
+		if(drawable != null)
+	//*  12   19:aload           6
+	//*  13   21:ifnull          101
+		{
+			Rect rect = mTempRect;
+	//   14   24:aload_0         
+	//   15   25:getfield        #136 <Field Rect mTempRect>
+	//   16   28:astore          6
+			Object obj = ((Object) (mTrackDrawable));
+	//   17   30:aload_0         
+	//   18   31:getfield        #190 <Field Drawable mTrackDrawable>
+	//   19   34:astore          7
+			if(obj != null)
+	//*  20   36:aload           7
+	//*  21   38:ifnull          52
+				((Drawable) (obj)).getPadding(rect);
+	//   22   41:aload           7
+	//   23   43:aload           6
+	//   24   45:invokevirtual   #398 <Method boolean Drawable.getPadding(Rect)>
+	//   25   48:pop             
+			else
+	//*  26   49:goto            57
+				rect.setEmpty();
+	//   27   52:aload           6
+	//   28   54:invokevirtual   #592 <Method void Rect.setEmpty()>
+			obj = ((Object) (DrawableUtils.getOpticalBounds(mThumbDrawable)));
+	//   29   57:aload_0         
+	//   30   58:getfield        #179 <Field Drawable mThumbDrawable>
+	//   31   61:invokestatic    #402 <Method Rect DrawableUtils.getOpticalBounds(Drawable)>
+	//   32   64:astore          7
+			j = Math.max(0, ((Rect) (obj)).left - rect.left);
+	//   33   66:iconst_0        
+	//   34   67:aload           7
+	//   35   69:getfield        #412 <Field int Rect.left>
+	//   36   72:aload           6
+	//   37   74:getfield        #412 <Field int Rect.left>
+	//   38   77:isub            
+	//   39   78:invokestatic    #686 <Method int Math.max(int, int)>
+	//   40   81:istore_3        
+			i = Math.max(0, ((Rect) (obj)).right - rect.right);
+	//   41   82:iconst_0        
+	//   42   83:aload           7
+	//   43   85:getfield        #415 <Field int Rect.right>
+	//   44   88:aload           6
+	//   45   90:getfield        #415 <Field int Rect.right>
+	//   46   93:isub            
+	//   47   94:invokestatic    #686 <Method int Math.max(int, int)>
+	//   48   97:istore_2        
+		} else
+	//*  49   98:goto            103
+		{
+			j = 0;
+	//   50  101:iconst_0        
+	//   51  102:istore_3        
+		}
+		if(ViewUtils.isLayoutRtl(((android.view.View) (this))))
+	//*  52  103:aload_0         
+	//*  53  104:invokestatic    #391 <Method boolean ViewUtils.isLayoutRtl(android.view.View)>
+	//*  54  107:ifeq            134
+		{
+			k = getPaddingLeft() + j;
+	//   55  110:aload_0         
+	//   56  111:invokevirtual   #689 <Method int getPaddingLeft()>
+	//   57  114:iload_3         
+	//   58  115:iadd            
+	//   59  116:istore          4
+			l = (mSwitchWidth + k) - j - i;
+	//   60  118:aload_0         
+	//   61  119:getfield        #407 <Field int mSwitchWidth>
+	//   62  122:iload           4
+	//   63  124:iadd            
+	//   64  125:iload_3         
+	//   65  126:isub            
+	//   66  127:iload_2         
+	//   67  128:isub            
+	//   68  129:istore          5
+		} else
+	//*  69  131:goto            160
+		{
+			l = getWidth() - getPaddingRight() - i;
+	//   70  134:aload_0         
+	//   71  135:invokevirtual   #640 <Method int getWidth()>
+	//   72  138:aload_0         
+	//   73  139:invokevirtual   #692 <Method int getPaddingRight()>
+	//   74  142:isub            
+	//   75  143:iload_2         
+	//   76  144:isub            
+	//   77  145:istore          5
+			k = (l - mSwitchWidth) + j + i;
+	//   78  147:iload           5
+	//   79  149:aload_0         
+	//   80  150:getfield        #407 <Field int mSwitchWidth>
+	//   81  153:isub            
+	//   82  154:iload_3         
+	//   83  155:iadd            
+	//   84  156:iload_2         
+	//   85  157:iadd            
+	//   86  158:istore          4
+		}
+		i = getGravity() & 0x70;
+	//   87  160:aload_0         
+	//   88  161:invokevirtual   #695 <Method int getGravity()>
+	//   89  164:bipush          112
+	//   90  166:iand            
+	//   91  167:istore_2        
+		if(i != 16)
+	//*  92  168:iload_2         
+	//*  93  169:bipush          16
+	//*  94  171:icmpeq          215
+		{
+			if(i != 80)
+	//*  95  174:iload_2         
+	//*  96  175:bipush          80
+	//*  97  177:icmpeq          195
+			{
+				i = getPaddingTop();
+	//   98  180:aload_0         
+	//   99  181:invokevirtual   #698 <Method int getPaddingTop()>
+	//  100  184:istore_2        
+				j = mSwitchHeight + i;
+	//  101  185:aload_0         
+	//  102  186:getfield        #700 <Field int mSwitchHeight>
+	//  103  189:iload_2         
+	//  104  190:iadd            
+	//  105  191:istore_3        
+			} else
+	//* 106  192:goto            247
+			{
+				j = getHeight() - getPaddingBottom();
+	//  107  195:aload_0         
+	//  108  196:invokevirtual   #701 <Method int getHeight()>
+	//  109  199:aload_0         
+	//  110  200:invokevirtual   #704 <Method int getPaddingBottom()>
+	//  111  203:isub            
+	//  112  204:istore_3        
+				i = j - mSwitchHeight;
+	//  113  205:iload_3         
+	//  114  206:aload_0         
+	//  115  207:getfield        #700 <Field int mSwitchHeight>
+	//  116  210:isub            
+	//  117  211:istore_2        
+			}
+		} else
+	//* 118  212:goto            247
+		{
+			i = ((getPaddingTop() + getHeight()) - getPaddingBottom()) / 2;
+	//  119  215:aload_0         
+	//  120  216:invokevirtual   #698 <Method int getPaddingTop()>
+	//  121  219:aload_0         
+	//  122  220:invokevirtual   #701 <Method int getHeight()>
+	//  123  223:iadd            
+	//  124  224:aload_0         
+	//  125  225:invokevirtual   #704 <Method int getPaddingBottom()>
+	//  126  228:isub            
+	//  127  229:iconst_2        
+	//  128  230:idiv            
+	//  129  231:istore_2        
+			j = mSwitchHeight;
+	//  130  232:aload_0         
+	//  131  233:getfield        #700 <Field int mSwitchHeight>
+	//  132  236:istore_3        
+			i -= j / 2;
+	//  133  237:iload_2         
+	//  134  238:iload_3         
+	//  135  239:iconst_2        
+	//  136  240:idiv            
+	//  137  241:isub            
+	//  138  242:istore_2        
+			j += i;
+	//  139  243:iload_3         
+	//  140  244:iload_2         
+	//  141  245:iadd            
+	//  142  246:istore_3        
+		}
+		mSwitchLeft = k;
+	//  143  247:aload_0         
+	//  144  248:iload           4
+	//  145  250:putfield        #423 <Field int mSwitchLeft>
+		mSwitchTop = i;
+	//  146  253:aload_0         
+	//  147  254:iload_2         
+	//  148  255:putfield        #421 <Field int mSwitchTop>
+		mSwitchBottom = j;
+	//  149  258:aload_0         
+	//  150  259:iload_3         
+	//  151  260:putfield        #425 <Field int mSwitchBottom>
+		mSwitchRight = l;
+	//  152  263:aload_0         
+	//  153  264:iload           5
+	//  154  266:putfield        #505 <Field int mSwitchRight>
+	//  155  269:return          
+	}
+
+	public void onMeasure(int i, int j)
+	{
+		if(mShowText)
+	//*   0    0:aload_0         
+	//*   1    1:getfield        #213 <Field boolean mShowText>
+	//*   2    4:ifeq            45
+		{
+			if(mOnLayout == null)
+	//*   3    7:aload_0         
+	//*   4    8:getfield        #617 <Field Layout mOnLayout>
+	//*   5   11:ifnonnull       26
+				mOnLayout = makeLayout(mTextOn);
+	//    6   14:aload_0         
+	//    7   15:aload_0         
+	//    8   16:aload_0         
+	//    9   17:getfield        #199 <Field CharSequence mTextOn>
+	//   10   20:invokespecial   #707 <Method Layout makeLayout(CharSequence)>
+	//   11   23:putfield        #617 <Field Layout mOnLayout>
+			if(mOffLayout == null)
+	//*  12   26:aload_0         
+	//*  13   27:getfield        #619 <Field Layout mOffLayout>
+	//*  14   30:ifnonnull       45
+				mOffLayout = makeLayout(mTextOff);
+	//   15   33:aload_0         
+	//   16   34:aload_0         
+	//   17   35:aload_0         
+	//   18   36:getfield        #204 <Field CharSequence mTextOff>
+	//   19   39:invokespecial   #707 <Method Layout makeLayout(CharSequence)>
+	//   20   42:putfield        #619 <Field Layout mOffLayout>
+		}
+		Object obj = ((Object) (mTempRect));
+	//   21   45:aload_0         
+	//   22   46:getfield        #136 <Field Rect mTempRect>
+	//   23   49:astore          9
+		Drawable drawable = mThumbDrawable;
+	//   24   51:aload_0         
+	//   25   52:getfield        #179 <Field Drawable mThumbDrawable>
+	//   26   55:astore          10
+		int j1 = 0;
+	//   27   57:iconst_0        
+	//   28   58:istore          6
+		int k;
+		int l;
+		if(drawable != null)
+	//*  29   60:aload           10
+	//*  30   62:ifnull          105
+		{
+			drawable.getPadding(((Rect) (obj)));
+	//   31   65:aload           10
+	//   32   67:aload           9
+	//   33   69:invokevirtual   #398 <Method boolean Drawable.getPadding(Rect)>
+	//   34   72:pop             
+			l = mThumbDrawable.getIntrinsicWidth() - ((Rect) (obj)).left - ((Rect) (obj)).right;
+	//   35   73:aload_0         
+	//   36   74:getfield        #179 <Field Drawable mThumbDrawable>
+	//   37   77:invokevirtual   #710 <Method int Drawable.getIntrinsicWidth()>
+	//   38   80:aload           9
+	//   39   82:getfield        #412 <Field int Rect.left>
+	//   40   85:isub            
+	//   41   86:aload           9
+	//   42   88:getfield        #415 <Field int Rect.right>
+	//   43   91:isub            
+	//   44   92:istore          4
+			k = mThumbDrawable.getIntrinsicHeight();
+	//   45   94:aload_0         
+	//   46   95:getfield        #179 <Field Drawable mThumbDrawable>
+	//   47   98:invokevirtual   #713 <Method int Drawable.getIntrinsicHeight()>
+	//   48  101:istore_3        
+		} else
+	//*  49  102:goto            110
+		{
+			l = 0;
+	//   50  105:iconst_0        
+	//   51  106:istore          4
+			k = 0;
+	//   52  108:iconst_0        
+	//   53  109:istore_3        
+		}
+		int i1;
+		if(mShowText)
+	//*  54  110:aload_0         
+	//*  55  111:getfield        #213 <Field boolean mShowText>
+	//*  56  114:ifeq            146
+			i1 = Math.max(mOnLayout.getWidth(), mOffLayout.getWidth()) + mThumbTextPadding * 2;
+	//   57  117:aload_0         
+	//   58  118:getfield        #617 <Field Layout mOnLayout>
+	//   59  121:invokevirtual   #641 <Method int Layout.getWidth()>
+	//   60  124:aload_0         
+	//   61  125:getfield        #619 <Field Layout mOffLayout>
+	//   62  128:invokevirtual   #641 <Method int Layout.getWidth()>
+	//   63  131:invokestatic    #686 <Method int Math.max(int, int)>
+	//   64  134:aload_0         
+	//   65  135:getfield        #222 <Field int mThumbTextPadding>
+	//   66  138:iconst_2        
+	//   67  139:imul            
+	//   68  140:iadd            
+	//   69  141:istore          5
+		else
+	//*  70  143:goto            149
+			i1 = 0;
+	//   71  146:iconst_0        
+	//   72  147:istore          5
+		mThumbWidth = Math.max(i1, l);
+	//   73  149:aload_0         
+	//   74  150:iload           5
+	//   75  152:iload           4
+	//   76  154:invokestatic    #686 <Method int Math.max(int, int)>
+	//   77  157:putfield        #409 <Field int mThumbWidth>
+		drawable = mTrackDrawable;
+	//   78  160:aload_0         
+	//   79  161:getfield        #190 <Field Drawable mTrackDrawable>
+	//   80  164:astore          10
+		if(drawable != null)
+	//*  81  166:aload           10
+	//*  82  168:ifnull          191
+		{
+			drawable.getPadding(((Rect) (obj)));
+	//   83  171:aload           10
+	//   84  173:aload           9
+	//   85  175:invokevirtual   #398 <Method boolean Drawable.getPadding(Rect)>
+	//   86  178:pop             
+			l = mTrackDrawable.getIntrinsicHeight();
+	//   87  179:aload_0         
+	//   88  180:getfield        #190 <Field Drawable mTrackDrawable>
+	//   89  183:invokevirtual   #713 <Method int Drawable.getIntrinsicHeight()>
+	//   90  186:istore          4
+		} else
+	//*  91  188:goto            200
+		{
+			((Rect) (obj)).setEmpty();
+	//   92  191:aload           9
+	//   93  193:invokevirtual   #592 <Method void Rect.setEmpty()>
+			l = j1;
+	//   94  196:iload           6
+	//   95  198:istore          4
+		}
+		int l1 = ((Rect) (obj)).left;
+	//   96  200:aload           9
+	//   97  202:getfield        #412 <Field int Rect.left>
+	//   98  205:istore          8
+		int k1 = ((Rect) (obj)).right;
+	//   99  207:aload           9
+	//  100  209:getfield        #415 <Field int Rect.right>
+	//  101  212:istore          7
+		obj = ((Object) (mThumbDrawable));
+	//  102  214:aload_0         
+	//  103  215:getfield        #179 <Field Drawable mThumbDrawable>
+	//  104  218:astore          9
+		j1 = k1;
+	//  105  220:iload           7
+	//  106  222:istore          6
+		i1 = l1;
+	//  107  224:iload           8
+	//  108  226:istore          5
+		if(obj != null)
+	//* 109  228:aload           9
+	//* 110  230:ifnull          264
+		{
+			obj = ((Object) (DrawableUtils.getOpticalBounds(((Drawable) (obj)))));
+	//  111  233:aload           9
+	//  112  235:invokestatic    #402 <Method Rect DrawableUtils.getOpticalBounds(Drawable)>
+	//  113  238:astore          9
+			i1 = Math.max(l1, ((Rect) (obj)).left);
+	//  114  240:iload           8
+	//  115  242:aload           9
+	//  116  244:getfield        #412 <Field int Rect.left>
+	//  117  247:invokestatic    #686 <Method int Math.max(int, int)>
+	//  118  250:istore          5
+			j1 = Math.max(k1, ((Rect) (obj)).right);
+	//  119  252:iload           7
+	//  120  254:aload           9
+	//  121  256:getfield        #415 <Field int Rect.right>
+	//  122  259:invokestatic    #686 <Method int Math.max(int, int)>
+	//  123  262:istore          6
+		}
+		i1 = Math.max(mSwitchMinWidth, mThumbWidth * 2 + i1 + j1);
+	//  124  264:aload_0         
+	//  125  265:getfield        #227 <Field int mSwitchMinWidth>
+	//  126  268:aload_0         
+	//  127  269:getfield        #409 <Field int mThumbWidth>
+	//  128  272:iconst_2        
+	//  129  273:imul            
+	//  130  274:iload           5
+	//  131  276:iadd            
+	//  132  277:iload           6
+	//  133  279:iadd            
+	//  134  280:invokestatic    #686 <Method int Math.max(int, int)>
+	//  135  283:istore          5
+		k = Math.max(l, k);
+	//  136  285:iload           4
+	//  137  287:iload_3         
+	//  138  288:invokestatic    #686 <Method int Math.max(int, int)>
+	//  139  291:istore_3        
+		mSwitchWidth = i1;
+	//  140  292:aload_0         
+	//  141  293:iload           5
+	//  142  295:putfield        #407 <Field int mSwitchWidth>
+		mSwitchHeight = k;
+	//  143  298:aload_0         
+	//  144  299:iload_3         
+	//  145  300:putfield        #700 <Field int mSwitchHeight>
+		super.onMeasure(i, j);
+	//  146  303:aload_0         
+	//  147  304:iload_1         
+	//  148  305:iload_2         
+	//  149  306:invokespecial   #715 <Method void CompoundButton.onMeasure(int, int)>
+		if(getMeasuredHeight() < k)
+	//* 150  309:aload_0         
+	//* 151  310:invokevirtual   #718 <Method int getMeasuredHeight()>
+	//* 152  313:iload_3         
+	//* 153  314:icmpge          326
+			setMeasuredDimension(getMeasuredWidthAndState(), k);
+	//  154  317:aload_0         
+	//  155  318:aload_0         
+	//  156  319:invokevirtual   #721 <Method int getMeasuredWidthAndState()>
+	//  157  322:iload_3         
+	//  158  323:invokevirtual   #724 <Method void setMeasuredDimension(int, int)>
+	//  159  326:return          
+	}
+
+	public void onPopulateAccessibilityEvent(AccessibilityEvent accessibilityevent)
+	{
+		super.onPopulateAccessibilityEvent(accessibilityevent);
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:invokespecial   #727 <Method void CompoundButton.onPopulateAccessibilityEvent(AccessibilityEvent)>
+		CharSequence charsequence;
+		if(isChecked())
+	//*   3    5:aload_0         
+	//*   4    6:invokevirtual   #305 <Method boolean isChecked()>
+	//*   5    9:ifeq            20
+			charsequence = mTextOn;
+	//    6   12:aload_0         
+	//    7   13:getfield        #199 <Field CharSequence mTextOn>
+	//    8   16:astore_2        
+		else
+	//*   9   17:goto            25
+			charsequence = mTextOff;
+	//   10   20:aload_0         
+	//   11   21:getfield        #204 <Field CharSequence mTextOff>
+	//   12   24:astore_2        
+		if(charsequence != null)
+	//*  13   25:aload_2         
+	//*  14   26:ifnull          40
+			accessibilityevent.getText().add(((Object) (charsequence)));
+	//   15   29:aload_1         
+	//   16   30:invokevirtual   #730 <Method List AccessibilityEvent.getText()>
+	//   17   33:aload_2         
+	//   18   34:invokeinterface #736 <Method boolean List.add(Object)>
+	//   19   39:pop             
+	//   20   40:return          
+	}
+
+	public boolean onTouchEvent(MotionEvent motionevent)
+	{
+		mVelocityTracker.addMovement(motionevent);
+	//    0    0:aload_0         
+	//    1    1:getfield        #130 <Field VelocityTracker mVelocityTracker>
+	//    2    4:aload_1         
+	//    3    5:invokevirtual   #739 <Method void VelocityTracker.addMovement(MotionEvent)>
+		switch(motionevent.getActionMasked())
+	//*   4    8:aload_1         
+	//*   5    9:invokevirtual   #742 <Method int MotionEvent.getActionMasked()>
+		{
+		default:
+			break;
+
+	//*   6   12:tableswitch     0 3: default 44
+	//	               0 283
+	//	               1 247
+	//	               2 47
+	//	               3 247
+	//*   7   44:goto            324
+		case 2: // '\002'
+			switch(mTouchMode)
+	//*   8   47:aload_0         
+	//*   9   48:getfield        #477 <Field int mTouchMode>
+			{
+	//*  10   51:tableswitch     0 2: default 76
+	//	               0 324
+	//	               1 174
+	//	               2 79
+	//*  11   76:goto            324
+			case 2: // '\002'
+				float f6 = motionevent.getX();
+	//   12   79:aload_1         
+	//   13   80:invokevirtual   #745 <Method float MotionEvent.getX()>
+	//   14   83:fstore          4
+				int i = getThumbScrollRange();
+	//   15   85:aload_0         
+	//   16   86:invokespecial   #394 <Method int getThumbScrollRange()>
+	//   17   89:istore          5
+				float f = f6 - mTouchX;
+	//   18   91:fload           4
+	//   19   93:aload_0         
+	//   20   94:getfield        #747 <Field float mTouchX>
+	//   21   97:fsub            
+	//   22   98:fstore_2        
+				if(i != 0)
+	//*  23   99:iload           5
+	//*  24  101:ifeq            113
+					f /= i;
+	//   25  104:fload_2         
+	//   26  105:iload           5
+	//   27  107:i2f             
+	//   28  108:fdiv            
+	//   29  109:fstore_2        
+				else
+	//*  30  110:goto            128
+				if(f > 0.0F)
+	//*  31  113:fload_2         
+	//*  32  114:fconst_0        
+	//*  33  115:fcmpl           
+	//*  34  116:ifle            124
+					f = 1.0F;
+	//   35  119:fconst_1        
+	//   36  120:fstore_2        
+				else
+	//*  37  121:goto            128
+					f = -1F;
+	//   38  124:ldc2            #748 <Float -1F>
+	//   39  127:fstore_2        
+				float f3 = f;
+	//   40  128:fload_2         
+	//   41  129:fstore_3        
+				if(ViewUtils.isLayoutRtl(((android.view.View) (this))))
+	//*  42  130:aload_0         
+	//*  43  131:invokestatic    #391 <Method boolean ViewUtils.isLayoutRtl(android.view.View)>
+	//*  44  134:ifeq            140
+					f3 = -f;
+	//   45  137:fload_2         
+	//   46  138:fneg            
+	//   47  139:fstore_3        
+				f = constrain(mThumbPosition + f3, 0.0F, 1.0F);
+	//   48  140:aload_0         
+	//   49  141:getfield        #383 <Field float mThumbPosition>
+	//   50  144:fload_3         
+	//   51  145:fadd            
+	//   52  146:fconst_0        
+	//   53  147:fconst_1        
+	//   54  148:invokestatic    #750 <Method float constrain(float, float, float)>
+	//   55  151:fstore_2        
+				if(f != mThumbPosition)
+	//*  56  152:fload_2         
+	//*  57  153:aload_0         
+	//*  58  154:getfield        #383 <Field float mThumbPosition>
+	//*  59  157:fcmpl           
+	//*  60  158:ifeq            172
+				{
+					mTouchX = f6;
+	//   61  161:aload_0         
+	//   62  162:fload           4
+	//   63  164:putfield        #747 <Field float mTouchX>
+					setThumbPosition(f);
+	//   64  167:aload_0         
+	//   65  168:fload_2         
+	//   66  169:invokevirtual   #754 <Method void setThumbPosition(float)>
+				}
+				return true;
+	//   67  172:iconst_1        
+	//   68  173:ireturn         
+
+			case 1: // '\001'
+				float f1 = motionevent.getX();
+	//   69  174:aload_1         
+	//   70  175:invokevirtual   #745 <Method float MotionEvent.getX()>
+	//   71  178:fstore_2        
+				float f4 = motionevent.getY();
+	//   72  179:aload_1         
+	//   73  180:invokevirtual   #757 <Method float MotionEvent.getY()>
+	//   74  183:fstore_3        
+				if(Math.abs(f1 - mTouchX) > (float)mTouchSlop || Math.abs(f4 - mTouchY) > (float)mTouchSlop)
+	//*  75  184:fload_2         
+	//*  76  185:aload_0         
+	//*  77  186:getfield        #747 <Field float mTouchX>
+	//*  78  189:fsub            
+	//*  79  190:invokestatic    #494 <Method float Math.abs(float)>
+	//*  80  193:aload_0         
+	//*  81  194:getfield        #293 <Field int mTouchSlop>
+	//*  82  197:i2f             
+	//*  83  198:fcmpl           
+	//*  84  199:ifgt            220
+	//*  85  202:fload_3         
+	//*  86  203:aload_0         
+	//*  87  204:getfield        #759 <Field float mTouchY>
+	//*  88  207:fsub            
+	//*  89  208:invokestatic    #494 <Method float Math.abs(float)>
+	//*  90  211:aload_0         
+	//*  91  212:getfield        #293 <Field int mTouchSlop>
+	//*  92  215:i2f             
+	//*  93  216:fcmpl           
+	//*  94  217:ifle            324
+				{
+					mTouchMode = 2;
+	//   95  220:aload_0         
+	//   96  221:iconst_2        
+	//   97  222:putfield        #477 <Field int mTouchMode>
+					getParent().requestDisallowInterceptTouchEvent(true);
+	//   98  225:aload_0         
+	//   99  226:invokevirtual   #763 <Method ViewParent getParent()>
+	//  100  229:iconst_1        
+	//  101  230:invokeinterface #768 <Method void ViewParent.requestDisallowInterceptTouchEvent(boolean)>
+					mTouchX = f1;
+	//  102  235:aload_0         
+	//  103  236:fload_2         
+	//  104  237:putfield        #747 <Field float mTouchX>
+					mTouchY = f4;
+	//  105  240:aload_0         
+	//  106  241:fload_3         
+	//  107  242:putfield        #759 <Field float mTouchY>
+					return true;
+	//  108  245:iconst_1        
+	//  109  246:ireturn         
+				}
+				break;
+			}
+			break;
+
+		case 1: // '\001'
+		case 3: // '\003'
+			if(mTouchMode == 2)
+	//* 110  247:aload_0         
+	//* 111  248:getfield        #477 <Field int mTouchMode>
+	//* 112  251:iconst_2        
+	//* 113  252:icmpne          268
+			{
+				stopDrag(motionevent);
+	//  114  255:aload_0         
+	//  115  256:aload_1         
+	//  116  257:invokespecial   #770 <Method void stopDrag(MotionEvent)>
+				super.onTouchEvent(motionevent);
+	//  117  260:aload_0         
+	//  118  261:aload_1         
+	//  119  262:invokespecial   #377 <Method boolean CompoundButton.onTouchEvent(MotionEvent)>
+	//  120  265:pop             
+				return true;
+	//  121  266:iconst_1        
+	//  122  267:ireturn         
+			}
+			mTouchMode = 0;
+	//  123  268:aload_0         
+	//  124  269:iconst_0        
+	//  125  270:putfield        #477 <Field int mTouchMode>
+			mVelocityTracker.clear();
+	//  126  273:aload_0         
+	//  127  274:getfield        #130 <Field VelocityTracker mVelocityTracker>
+	//  128  277:invokevirtual   #773 <Method void VelocityTracker.clear()>
+			break;
+	//  129  280:goto            324
+
+		case 0: // '\0'
+			float f2 = motionevent.getX();
+	//  130  283:aload_1         
+	//  131  284:invokevirtual   #745 <Method float MotionEvent.getX()>
+	//  132  287:fstore_2        
+			float f5 = motionevent.getY();
+	//  133  288:aload_1         
+	//  134  289:invokevirtual   #757 <Method float MotionEvent.getY()>
+	//  135  292:fstore_3        
+			if(isEnabled() && hitThumb(f2, f5))
+	//* 136  293:aload_0         
+	//* 137  294:invokevirtual   #483 <Method boolean isEnabled()>
+	//* 138  297:ifeq            324
+	//* 139  300:aload_0         
+	//* 140  301:fload_2         
+	//* 141  302:fload_3         
+	//* 142  303:invokespecial   #775 <Method boolean hitThumb(float, float)>
+	//* 143  306:ifeq            324
+			{
+				mTouchMode = 1;
+	//  144  309:aload_0         
+	//  145  310:iconst_1        
+	//  146  311:putfield        #477 <Field int mTouchMode>
+				mTouchX = f2;
+	//  147  314:aload_0         
+	//  148  315:fload_2         
+	//  149  316:putfield        #747 <Field float mTouchX>
+				mTouchY = f5;
+	//  150  319:aload_0         
+	//  151  320:fload_3         
+	//  152  321:putfield        #759 <Field float mTouchY>
+			}
+			break;
+		}
+		return super.onTouchEvent(motionevent);
+	//  153  324:aload_0         
+	//  154  325:aload_1         
+	//  155  326:invokespecial   #377 <Method boolean CompoundButton.onTouchEvent(MotionEvent)>
+	//  156  329:ireturn         
+	}
+
+	public void setChecked(boolean flag)
+	{
+		super.setChecked(flag);
+	//    0    0:aload_0         
+	//    1    1:iload_1         
+	//    2    2:invokespecial   #776 <Method void CompoundButton.setChecked(boolean)>
+		flag = isChecked();
+	//    3    5:aload_0         
+	//    4    6:invokevirtual   #305 <Method boolean isChecked()>
+	//    5    9:istore_1        
+		if(getWindowToken() != null && ac.x(((android.view.View) (this))))
+	//*   6   10:aload_0         
+	//*   7   11:invokevirtual   #780 <Method android.os.IBinder getWindowToken()>
+	//*   8   14:ifnull          30
+	//*   9   17:aload_0         
+	//*  10   18:invokestatic    #785 <Method boolean ac.x(android.view.View)>
+	//*  11   21:ifeq            30
+		{
+			animateThumbToCheckedState(flag);
+	//   12   24:aload_0         
+	//   13   25:iload_1         
+	//   14   26:invokespecial   #787 <Method void animateThumbToCheckedState(boolean)>
+			return;
+	//   15   29:return          
+		}
+		cancelPositionAnimator();
+	//   16   30:aload_0         
+	//   17   31:invokespecial   #789 <Method void cancelPositionAnimator()>
+		float f;
+		if(flag)
+	//*  18   34:iload_1         
+	//*  19   35:ifeq            43
+			f = 1.0F;
+	//   20   38:fconst_1        
+	//   21   39:fstore_2        
+		else
+	//*  22   40:goto            45
+			f = 0.0F;
+	//   23   43:fconst_0        
+	//   24   44:fstore_2        
+		setThumbPosition(f);
+	//   25   45:aload_0         
+	//   26   46:fload_2         
+	//   27   47:invokevirtual   #754 <Method void setThumbPosition(float)>
+	//   28   50:return          
+	}
+
+	public void setCustomSelectionActionModeCallback(android.view.ActionMode.Callback callback)
+	{
+		super.setCustomSelectionActionModeCallback(ah.a(((android.widget.TextView) (this)), callback));
+	//    0    0:aload_0         
+	//    1    1:aload_0         
+	//    2    2:aload_1         
+	//    3    3:invokestatic    #796 <Method android.view.ActionMode$Callback ah.a(android.widget.TextView, android.view.ActionMode$Callback)>
+	//    4    6:invokespecial   #798 <Method void CompoundButton.setCustomSelectionActionModeCallback(android.view.ActionMode$Callback)>
+	//    5    9:return          
+	}
+
+	public void setShowText(boolean flag)
+	{
+		if(mShowText != flag)
+	//*   0    0:aload_0         
+	//*   1    1:getfield        #213 <Field boolean mShowText>
+	//*   2    4:iload_1         
+	//*   3    5:icmpeq          17
+		{
+			mShowText = flag;
+	//    4    8:aload_0         
+	//    5    9:iload_1         
+	//    6   10:putfield        #213 <Field boolean mShowText>
+			requestLayout();
+	//    7   13:aload_0         
+	//    8   14:invokevirtual   #802 <Method void requestLayout()>
+		}
+	//    9   17:return          
+	}
+
+	public void setSplitTrack(boolean flag)
+	{
+		mSplitTrack = flag;
+	//    0    0:aload_0         
+	//    1    1:iload_1         
+	//    2    2:putfield        #237 <Field boolean mSplitTrack>
+		invalidate();
+	//    3    5:aload_0         
+	//    4    6:invokevirtual   #536 <Method void invalidate()>
+	//    5    9:return          
+	}
+
+	public void setSwitchMinWidth(int i)
+	{
+		mSwitchMinWidth = i;
+	//    0    0:aload_0         
+	//    1    1:iload_1         
+	//    2    2:putfield        #227 <Field int mSwitchMinWidth>
+		requestLayout();
+	//    3    5:aload_0         
+	//    4    6:invokevirtual   #802 <Method void requestLayout()>
+	//    5    9:return          
+	}
+
+	public void setSwitchPadding(int i)
+	{
+		mSwitchPadding = i;
+	//    0    0:aload_0         
+	//    1    1:iload_1         
+	//    2    2:putfield        #232 <Field int mSwitchPadding>
+		requestLayout();
+	//    3    5:aload_0         
+	//    4    6:invokevirtual   #802 <Method void requestLayout()>
+	//    5    9:return          
+	}
+
+	public void setSwitchTextAppearance(Context context, int i)
+	{
+		context = ((Context) (TintTypedArray.obtainStyledAttributes(context, i, android.support.v7.appcompat.R.styleable.TextAppearance)));
+	//    0    0:aload_1         
+	//    1    1:iload_2         
+	//    2    2:getstatic       #808 <Field int[] android.support.v7.appcompat.R$styleable.TextAppearance>
+	//    3    5:invokestatic    #811 <Method TintTypedArray TintTypedArray.obtainStyledAttributes(Context, int, int[])>
+	//    4    8:astore_1        
+		ColorStateList colorstatelist = ((TintTypedArray) (context)).getColorStateList(android.support.v7.appcompat.R.styleable.TextAppearance_android_textColor);
+	//    5    9:aload_1         
+	//    6   10:getstatic       #814 <Field int android.support.v7.appcompat.R$styleable.TextAppearance_android_textColor>
+	//    7   13:invokevirtual   #244 <Method ColorStateList TintTypedArray.getColorStateList(int)>
+	//    8   16:astore          4
+		if(colorstatelist != null)
+	//*   9   18:aload           4
+	//*  10   20:ifnull          32
+			mTextColors = colorstatelist;
+	//   11   23:aload_0         
+	//   12   24:aload           4
+	//   13   26:putfield        #621 <Field ColorStateList mTextColors>
+		else
+	//*  14   29:goto            40
+			mTextColors = getTextColors();
+	//   15   32:aload_0         
+	//   16   33:aload_0         
+	//   17   34:invokevirtual   #817 <Method ColorStateList getTextColors()>
+	//   18   37:putfield        #621 <Field ColorStateList mTextColors>
+		i = ((TintTypedArray) (context)).getDimensionPixelSize(android.support.v7.appcompat.R.styleable.TextAppearance_android_textSize, 0);
+	//   19   40:aload_1         
+	//   20   41:getstatic       #820 <Field int android.support.v7.appcompat.R$styleable.TextAppearance_android_textSize>
+	//   21   44:iconst_0        
+	//   22   45:invokevirtual   #220 <Method int TintTypedArray.getDimensionPixelSize(int, int)>
+	//   23   48:istore_2        
+		if(i != 0)
+	//*  24   49:iload_2         
+	//*  25   50:ifeq            80
+		{
+			float f = i;
+	//   26   53:iload_2         
+	//   27   54:i2f             
+	//   28   55:fstore_3        
+			if(f != mTextPaint.getTextSize())
+	//*  29   56:fload_3         
+	//*  30   57:aload_0         
+	//*  31   58:getfield        #143 <Field TextPaint mTextPaint>
+	//*  32   61:invokevirtual   #823 <Method float TextPaint.getTextSize()>
+	//*  33   64:fcmpl           
+	//*  34   65:ifeq            80
+			{
+				mTextPaint.setTextSize(f);
+	//   35   68:aload_0         
+	//   36   69:getfield        #143 <Field TextPaint mTextPaint>
+	//   37   72:fload_3         
+	//   38   73:invokevirtual   #826 <Method void TextPaint.setTextSize(float)>
+				requestLayout();
+	//   39   76:aload_0         
+	//   40   77:invokevirtual   #802 <Method void requestLayout()>
+			}
+		}
+		setSwitchTypefaceByIndex(((TintTypedArray) (context)).getInt(android.support.v7.appcompat.R.styleable.TextAppearance_android_typeface, -1), ((TintTypedArray) (context)).getInt(android.support.v7.appcompat.R.styleable.TextAppearance_android_textStyle, -1));
+	//   41   80:aload_0         
+	//   42   81:aload_1         
+	//   43   82:getstatic       #829 <Field int android.support.v7.appcompat.R$styleable.TextAppearance_android_typeface>
+	//   44   85:iconst_m1       
+	//   45   86:invokevirtual   #250 <Method int TintTypedArray.getInt(int, int)>
+	//   46   89:aload_1         
+	//   47   90:getstatic       #832 <Field int android.support.v7.appcompat.R$styleable.TextAppearance_android_textStyle>
+	//   48   93:iconst_m1       
+	//   49   94:invokevirtual   #250 <Method int TintTypedArray.getInt(int, int)>
+	//   50   97:invokespecial   #834 <Method void setSwitchTypefaceByIndex(int, int)>
+		if(((TintTypedArray) (context)).getBoolean(android.support.v7.appcompat.R.styleable.TextAppearance_textAllCaps, false))
+	//*  51  100:aload_1         
+	//*  52  101:getstatic       #837 <Field int android.support.v7.appcompat.R$styleable.TextAppearance_textAllCaps>
+	//*  53  104:iconst_0        
+	//*  54  105:invokevirtual   #211 <Method boolean TintTypedArray.getBoolean(int, boolean)>
+	//*  55  108:ifeq            129
+			mSwitchTransformationMethod = ((TransformationMethod) (new AllCapsTransformationMethod(getContext())));
+	//   56  111:aload_0         
+	//   57  112:new             #839 <Class AllCapsTransformationMethod>
+	//   58  115:dup             
+	//   59  116:aload_0         
+	//   60  117:invokevirtual   #843 <Method Context getContext()>
+	//   61  120:invokespecial   #845 <Method void AllCapsTransformationMethod(Context)>
+	//   62  123:putfield        #429 <Field TransformationMethod mSwitchTransformationMethod>
+		else
+	//*  63  126:goto            134
+			mSwitchTransformationMethod = null;
+	//   64  129:aload_0         
+	//   65  130:aconst_null     
+	//   66  131:putfield        #429 <Field TransformationMethod mSwitchTransformationMethod>
+		((TintTypedArray) (context)).recycle();
+	//   67  134:aload_1         
+	//   68  135:invokevirtual   #281 <Method void TintTypedArray.recycle()>
+	//   69  138:return          
+	}
+
+	public void setSwitchTypeface(Typeface typeface)
+	{
+		if(mTextPaint.getTypeface() != null && !mTextPaint.getTypeface().equals(((Object) (typeface))) || mTextPaint.getTypeface() == null && typeface != null)
+	//*   0    0:aload_0         
+	//*   1    1:getfield        #143 <Field TextPaint mTextPaint>
+	//*   2    4:invokevirtual   #850 <Method Typeface TextPaint.getTypeface()>
+	//*   3    7:ifnull          24
+	//*   4   10:aload_0         
+	//*   5   11:getfield        #143 <Field TextPaint mTextPaint>
+	//*   6   14:invokevirtual   #850 <Method Typeface TextPaint.getTypeface()>
+	//*   7   17:aload_1         
+	//*   8   18:invokevirtual   #853 <Method boolean Typeface.equals(Object)>
+	//*   9   21:ifeq            38
+	//*  10   24:aload_0         
+	//*  11   25:getfield        #143 <Field TextPaint mTextPaint>
+	//*  12   28:invokevirtual   #850 <Method Typeface TextPaint.getTypeface()>
+	//*  13   31:ifnonnull       55
+	//*  14   34:aload_1         
+	//*  15   35:ifnull          55
+		{
+			mTextPaint.setTypeface(typeface);
+	//   16   38:aload_0         
+	//   17   39:getfield        #143 <Field TextPaint mTextPaint>
+	//   18   42:aload_1         
+	//   19   43:invokevirtual   #857 <Method Typeface TextPaint.setTypeface(Typeface)>
+	//   20   46:pop             
+			requestLayout();
+	//   21   47:aload_0         
+	//   22   48:invokevirtual   #802 <Method void requestLayout()>
+			invalidate();
+	//   23   51:aload_0         
+	//   24   52:invokevirtual   #536 <Method void invalidate()>
+		}
+	//   25   55:return          
+	}
+
+	public void setSwitchTypeface(Typeface typeface, int i)
+	{
+		float f = 0.0F;
+	//    0    0:fconst_0        
+	//    1    1:fstore_3        
+		boolean flag = false;
+	//    2    2:iconst_0        
+	//    3    3:istore          5
+		if(i > 0)
+	//*   4    5:iload_2         
+	//*   5    6:ifle            96
+		{
+			if(typeface == null)
+	//*   6    9:aload_1         
+	//*   7   10:ifnonnull       21
+				typeface = Typeface.defaultFromStyle(i);
+	//    8   13:iload_2         
+	//    9   14:invokestatic    #861 <Method Typeface Typeface.defaultFromStyle(int)>
+	//   10   17:astore_1        
+			else
+	//*  11   18:goto            27
+				typeface = Typeface.create(typeface, i);
+	//   12   21:aload_1         
+	//   13   22:iload_2         
+	//   14   23:invokestatic    #865 <Method Typeface Typeface.create(Typeface, int)>
+	//   15   26:astore_1        
+			setSwitchTypeface(typeface);
+	//   16   27:aload_0         
+	//   17   28:aload_1         
+	//   18   29:invokevirtual   #867 <Method void setSwitchTypeface(Typeface)>
+			int j;
+			if(typeface != null)
+	//*  19   32:aload_1         
+	//*  20   33:ifnull          45
+				j = typeface.getStyle();
+	//   21   36:aload_1         
+	//   22   37:invokevirtual   #870 <Method int Typeface.getStyle()>
+	//   23   40:istore          4
+			else
+	//*  24   42:goto            48
+				j = 0;
+	//   25   45:iconst_0        
+	//   26   46:istore          4
+			i = ~j & i;
+	//   27   48:iload           4
+	//   28   50:iconst_m1       
+	//   29   51:ixor            
+	//   30   52:iload_2         
+	//   31   53:iand            
+	//   32   54:istore_2        
+			typeface = ((Typeface) (mTextPaint));
+	//   33   55:aload_0         
+	//   34   56:getfield        #143 <Field TextPaint mTextPaint>
+	//   35   59:astore_1        
+			if((i & 1) != 0)
+	//*  36   60:iload_2         
+	//*  37   61:iconst_1        
+	//*  38   62:iand            
+	//*  39   63:ifeq            69
+				flag = true;
+	//   40   66:iconst_1        
+	//   41   67:istore          5
+			((TextPaint) (typeface)).setFakeBoldText(flag);
+	//   42   69:aload_1         
+	//   43   70:iload           5
+	//   44   72:invokevirtual   #873 <Method void TextPaint.setFakeBoldText(boolean)>
+			typeface = ((Typeface) (mTextPaint));
+	//   45   75:aload_0         
+	//   46   76:getfield        #143 <Field TextPaint mTextPaint>
+	//   47   79:astore_1        
+			if((i & 2) != 0)
+	//*  48   80:iload_2         
+	//*  49   81:iconst_2        
+	//*  50   82:iand            
+	//*  51   83:ifeq            90
+				f = -0.25F;
+	//   52   86:ldc2            #874 <Float -0.25F>
+	//   53   89:fstore_3        
+			((TextPaint) (typeface)).setTextSkewX(f);
+	//   54   90:aload_1         
+	//   55   91:fload_3         
+	//   56   92:invokevirtual   #877 <Method void TextPaint.setTextSkewX(float)>
+			return;
+	//   57   95:return          
+		} else
+		{
+			mTextPaint.setFakeBoldText(false);
+	//   58   96:aload_0         
+	//   59   97:getfield        #143 <Field TextPaint mTextPaint>
+	//   60  100:iconst_0        
+	//   61  101:invokevirtual   #873 <Method void TextPaint.setFakeBoldText(boolean)>
+			mTextPaint.setTextSkewX(0.0F);
+	//   62  104:aload_0         
+	//   63  105:getfield        #143 <Field TextPaint mTextPaint>
+	//   64  108:fconst_0        
+	//   65  109:invokevirtual   #877 <Method void TextPaint.setTextSkewX(float)>
+			setSwitchTypeface(typeface);
+	//   66  112:aload_0         
+	//   67  113:aload_1         
+	//   68  114:invokevirtual   #867 <Method void setSwitchTypeface(Typeface)>
+			return;
+	//   69  117:return          
+		}
+	}
+
+	public void setTextOff(CharSequence charsequence)
+	{
+		mTextOff = charsequence;
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:putfield        #204 <Field CharSequence mTextOff>
+		requestLayout();
+	//    3    5:aload_0         
+	//    4    6:invokevirtual   #802 <Method void requestLayout()>
+	//    5    9:return          
+	}
+
+	public void setTextOn(CharSequence charsequence)
+	{
+		mTextOn = charsequence;
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:putfield        #199 <Field CharSequence mTextOn>
+		requestLayout();
+	//    3    5:aload_0         
+	//    4    6:invokevirtual   #802 <Method void requestLayout()>
+	//    5    9:return          
+	}
+
+	public void setThumbDrawable(Drawable drawable)
+	{
+		Drawable drawable1 = mThumbDrawable;
+	//    0    0:aload_0         
+	//    1    1:getfield        #179 <Field Drawable mThumbDrawable>
+	//    2    4:astore_2        
+		if(drawable1 != null)
+	//*   3    5:aload_2         
+	//*   4    6:ifnull          14
+			drawable1.setCallback(((android.graphics.drawable.Drawable.Callback) (null)));
+	//    5    9:aload_2         
+	//    6   10:aconst_null     
+	//    7   11:invokevirtual   #185 <Method void Drawable.setCallback(android.graphics.drawable.Drawable$Callback)>
+		mThumbDrawable = drawable;
+	//    8   14:aload_0         
+	//    9   15:aload_1         
+	//   10   16:putfield        #179 <Field Drawable mThumbDrawable>
+		if(drawable != null)
+	//*  11   19:aload_1         
+	//*  12   20:ifnull          28
+			drawable.setCallback(((android.graphics.drawable.Drawable.Callback) (this)));
+	//   13   23:aload_1         
+	//   14   24:aload_0         
+	//   15   25:invokevirtual   #185 <Method void Drawable.setCallback(android.graphics.drawable.Drawable$Callback)>
+		requestLayout();
+	//   16   28:aload_0         
+	//   17   29:invokevirtual   #802 <Method void requestLayout()>
+	//   18   32:return          
+	}
+
+	void setThumbPosition(float f)
+	{
+		mThumbPosition = f;
+	//    0    0:aload_0         
+	//    1    1:fload_1         
+	//    2    2:putfield        #383 <Field float mThumbPosition>
+		invalidate();
+	//    3    5:aload_0         
+	//    4    6:invokevirtual   #536 <Method void invalidate()>
+	//    5    9:return          
+	}
+
+	public void setThumbResource(int i)
+	{
+		setThumbDrawable(AppCompatResources.getDrawable(getContext(), i));
+	//    0    0:aload_0         
+	//    1    1:aload_0         
+	//    2    2:invokevirtual   #843 <Method Context getContext()>
+	//    3    5:iload_1         
+	//    4    6:invokestatic    #887 <Method Drawable AppCompatResources.getDrawable(Context, int)>
+	//    5    9:invokevirtual   #889 <Method void setThumbDrawable(Drawable)>
+	//    6   12:return          
+	}
+
+	public void setThumbTextPadding(int i)
+	{
+		mThumbTextPadding = i;
+	//    0    0:aload_0         
+	//    1    1:iload_1         
+	//    2    2:putfield        #222 <Field int mThumbTextPadding>
+		requestLayout();
+	//    3    5:aload_0         
+	//    4    6:invokevirtual   #802 <Method void requestLayout()>
+	//    5    9:return          
+	}
+
+	public void setThumbTintList(ColorStateList colorstatelist)
+	{
+		mThumbTintList = colorstatelist;
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:putfield        #108 <Field ColorStateList mThumbTintList>
+		mHasThumbTint = true;
+	//    3    5:aload_0         
+	//    4    6:iconst_1        
+	//    5    7:putfield        #112 <Field boolean mHasThumbTint>
+		applyThumbTint();
+	//    6   10:aload_0         
+	//    7   11:invokespecial   #259 <Method void applyThumbTint()>
+	//    8   14:return          
+	}
+
+	public void setThumbTintMode(android.graphics.PorterDuff.Mode mode)
+	{
+		mThumbTintMode = mode;
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:putfield        #110 <Field android.graphics.PorterDuff$Mode mThumbTintMode>
+		mHasThumbTintMode = true;
+	//    3    5:aload_0         
+	//    4    6:iconst_1        
+	//    5    7:putfield        #114 <Field boolean mHasThumbTintMode>
+		applyThumbTint();
+	//    6   10:aload_0         
+	//    7   11:invokespecial   #259 <Method void applyThumbTint()>
+	//    8   14:return          
+	}
+
+	public void setTrackDrawable(Drawable drawable)
+	{
+		Drawable drawable1 = mTrackDrawable;
+	//    0    0:aload_0         
+	//    1    1:getfield        #190 <Field Drawable mTrackDrawable>
+	//    2    4:astore_2        
+		if(drawable1 != null)
+	//*   3    5:aload_2         
+	//*   4    6:ifnull          14
+			drawable1.setCallback(((android.graphics.drawable.Drawable.Callback) (null)));
+	//    5    9:aload_2         
+	//    6   10:aconst_null     
+	//    7   11:invokevirtual   #185 <Method void Drawable.setCallback(android.graphics.drawable.Drawable$Callback)>
+		mTrackDrawable = drawable;
+	//    8   14:aload_0         
+	//    9   15:aload_1         
+	//   10   16:putfield        #190 <Field Drawable mTrackDrawable>
+		if(drawable != null)
+	//*  11   19:aload_1         
+	//*  12   20:ifnull          28
+			drawable.setCallback(((android.graphics.drawable.Drawable.Callback) (this)));
+	//   13   23:aload_1         
+	//   14   24:aload_0         
+	//   15   25:invokevirtual   #185 <Method void Drawable.setCallback(android.graphics.drawable.Drawable$Callback)>
+		requestLayout();
+	//   16   28:aload_0         
+	//   17   29:invokevirtual   #802 <Method void requestLayout()>
+	//   18   32:return          
+	}
+
+	public void setTrackResource(int i)
+	{
+		setTrackDrawable(AppCompatResources.getDrawable(getContext(), i));
+	//    0    0:aload_0         
+	//    1    1:aload_0         
+	//    2    2:invokevirtual   #843 <Method Context getContext()>
+	//    3    5:iload_1         
+	//    4    6:invokestatic    #887 <Method Drawable AppCompatResources.getDrawable(Context, int)>
+	//    5    9:invokevirtual   #898 <Method void setTrackDrawable(Drawable)>
+	//    6   12:return          
+	}
+
+	public void setTrackTintList(ColorStateList colorstatelist)
+	{
+		mTrackTintList = colorstatelist;
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:putfield        #116 <Field ColorStateList mTrackTintList>
+		mHasTrackTint = true;
+	//    3    5:aload_0         
+	//    4    6:iconst_1        
+	//    5    7:putfield        #120 <Field boolean mHasTrackTint>
+		applyTrackTint();
+	//    6   10:aload_0         
+	//    7   11:invokespecial   #268 <Method void applyTrackTint()>
+	//    8   14:return          
+	}
+
+	public void setTrackTintMode(android.graphics.PorterDuff.Mode mode)
+	{
+		mTrackTintMode = mode;
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:putfield        #118 <Field android.graphics.PorterDuff$Mode mTrackTintMode>
+		mHasTrackTintMode = true;
+	//    3    5:aload_0         
+	//    4    6:iconst_1        
+	//    5    7:putfield        #122 <Field boolean mHasTrackTintMode>
+		applyTrackTint();
+	//    6   10:aload_0         
+	//    7   11:invokespecial   #268 <Method void applyTrackTint()>
+	//    8   14:return          
+	}
+
+	public void toggle()
+	{
+		setChecked(isChecked() ^ true);
+	//    0    0:aload_0         
+	//    1    1:aload_0         
+	//    2    2:invokevirtual   #305 <Method boolean isChecked()>
+	//    3    5:iconst_1        
+	//    4    6:ixor            
+	//    5    7:invokevirtual   #309 <Method void setChecked(boolean)>
+	//    6   10:return          
+	}
+
+	protected boolean verifyDrawable(Drawable drawable)
+	{
+		return super.verifyDrawable(drawable) || drawable == mThumbDrawable || drawable == mTrackDrawable;
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:invokespecial   #905 <Method boolean CompoundButton.verifyDrawable(Drawable)>
+	//    3    5:ifne            29
+	//    4    8:aload_1         
+	//    5    9:aload_0         
+	//    6   10:getfield        #179 <Field Drawable mThumbDrawable>
+	//    7   13:if_acmpeq       29
+	//    8   16:aload_1         
+	//    9   17:aload_0         
+	//   10   18:getfield        #190 <Field Drawable mTrackDrawable>
+	//   11   21:if_acmpne       27
+	//   12   24:goto            29
+	//   13   27:iconst_0        
+	//   14   28:ireturn         
+	//   15   29:iconst_1        
+	//   16   30:ireturn         
+	}
+
+	private static final String ACCESSIBILITY_EVENT_CLASS_NAME = "android.widget.Switch";
+	private static final int CHECKED_STATE_SET[] = {
+		0x10100a0
+	};
+	private static final int MONOSPACE = 3;
+	private static final int SANS = 1;
+	private static final int SERIF = 2;
+	private static final int THUMB_ANIMATION_DURATION = 250;
+	private static final Property THUMB_POS = new _cls1(java/lang/Float, "thumbPos");
+	private static final int TOUCH_MODE_DOWN = 1;
+	private static final int TOUCH_MODE_DRAGGING = 2;
+	private static final int TOUCH_MODE_IDLE = 0;
+	private boolean mHasThumbTint;
+	private boolean mHasThumbTintMode;
+	private boolean mHasTrackTint;
+	private boolean mHasTrackTintMode;
+	private int mMinFlingVelocity;
+	private Layout mOffLayout;
+	private Layout mOnLayout;
+	ObjectAnimator mPositionAnimator;
+	private boolean mShowText;
+	private boolean mSplitTrack;
+	private int mSwitchBottom;
+	private int mSwitchHeight;
+	private int mSwitchLeft;
+	private int mSwitchMinWidth;
+	private int mSwitchPadding;
+	private int mSwitchRight;
+	private int mSwitchTop;
+	private TransformationMethod mSwitchTransformationMethod;
+	private int mSwitchWidth;
+	private final Rect mTempRect;
+	private ColorStateList mTextColors;
+	private CharSequence mTextOff;
+	private CharSequence mTextOn;
+	private final TextPaint mTextPaint;
+	private Drawable mThumbDrawable;
+	float mThumbPosition;
+	private int mThumbTextPadding;
+	private ColorStateList mThumbTintList;
+	private android.graphics.PorterDuff.Mode mThumbTintMode;
+	private int mThumbWidth;
+	private int mTouchMode;
+	private int mTouchSlop;
+	private float mTouchX;
+	private float mTouchY;
+	private Drawable mTrackDrawable;
+	private ColorStateList mTrackTintList;
+	private android.graphics.PorterDuff.Mode mTrackTintMode;
+	private VelocityTracker mVelocityTracker;
+
+	static 
+	{
+	//    0    0:new             #79  <Class SwitchCompat$1>
+	//    1    3:dup             
+	//    2    4:ldc1            #81  <Class Float>
+	//    3    6:ldc1            #83  <String "thumbPos">
+	//    4    8:invokespecial   #87  <Method void SwitchCompat$1(Class, String)>
+	//    5   11:putstatic       #89  <Field Property THUMB_POS>
+	//    6   14:iconst_1        
+	//    7   15:newarray        int[]
+	//    8   17:dup             
+	//    9   18:iconst_0        
+	//   10   19:ldc1            #90  <Int 0x10100a0>
+	//   11   21:iastore         
+	//   12   22:putstatic       #92  <Field int[] CHECKED_STATE_SET>
+	//*  13   25:return          
+	}
+
+	private class _cls1 extends Property
+	{
+
+		public Float get(SwitchCompat switchcompat)
+		{
+			return Float.valueOf(switchcompat.mThumbPosition);
+		//    0    0:aload_1         
+		//    1    1:getfield        #17  <Field float SwitchCompat.mThumbPosition>
+		//    2    4:invokestatic    #23  <Method Float Float.valueOf(float)>
+		//    3    7:areturn         
+		}
+
+		public volatile Object get(Object obj)
+		{
+			return ((Object) (get((SwitchCompat)obj)));
+		//    0    0:aload_0         
+		//    1    1:aload_1         
+		//    2    2:checkcast       #13  <Class SwitchCompat>
+		//    3    5:invokevirtual   #26  <Method Float get(SwitchCompat)>
+		//    4    8:areturn         
+		}
+
+		public void set(SwitchCompat switchcompat, Float float1)
+		{
+			switchcompat.setThumbPosition(float1.floatValue());
+		//    0    0:aload_1         
+		//    1    1:aload_2         
+		//    2    2:invokevirtual   #32  <Method float Float.floatValue()>
+		//    3    5:invokevirtual   #36  <Method void SwitchCompat.setThumbPosition(float)>
+		//    4    8:return          
+		}
+
+		public volatile void set(Object obj, Object obj1)
+		{
+			set((SwitchCompat)obj, (Float)obj1);
+		//    0    0:aload_0         
+		//    1    1:aload_1         
+		//    2    2:checkcast       #13  <Class SwitchCompat>
+		//    3    5:aload_2         
+		//    4    6:checkcast       #19  <Class Float>
+		//    5    9:invokevirtual   #39  <Method void set(SwitchCompat, Float)>
+		//    6   12:return          
+		}
+
+		_cls1(Class class1, String s)
+		{
+			super(class1, s);
+		//    0    0:aload_0         
+		//    1    1:aload_1         
+		//    2    2:aload_2         
+		//    3    3:invokespecial   #8   <Method void Property(Class, String)>
+		//    4    6:return          
+		}
+	}
+
+}
