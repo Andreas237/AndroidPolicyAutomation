@@ -1,0 +1,280 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package android.support.v7.widget;
+
+import java.util.Arrays;
+
+// Referenced classes of package android.support.v7.widget:
+//			GapWorker, RecyclerView, AdapterHelper
+
+static class GapWorker$LayoutPrefetchRegistryImpl
+	implements etchRegistry
+{
+
+	public void addPosition(int i, int j)
+	{
+		if(i < 0)
+	//*   0    0:iload_1         
+	//*   1    1:ifge            14
+			throw new IllegalArgumentException("Layout positions must be non-negative");
+	//    2    4:new             #24  <Class IllegalArgumentException>
+	//    3    7:dup             
+	//    4    8:ldc1            #26  <String "Layout positions must be non-negative">
+	//    5   10:invokespecial   #29  <Method void IllegalArgumentException(String)>
+	//    6   13:athrow          
+		if(j < 0)
+	//*   7   14:iload_2         
+	//*   8   15:ifge            28
+			throw new IllegalArgumentException("Pixel distance must be non-negative");
+	//    9   18:new             #24  <Class IllegalArgumentException>
+	//   10   21:dup             
+	//   11   22:ldc1            #31  <String "Pixel distance must be non-negative">
+	//   12   24:invokespecial   #29  <Method void IllegalArgumentException(String)>
+	//   13   27:athrow          
+		int k = mCount * 2;
+	//   14   28:aload_0         
+	//   15   29:getfield        #33  <Field int mCount>
+	//   16   32:iconst_2        
+	//   17   33:imul            
+	//   18   34:istore_3        
+		if(mPrefetchArray == null)
+	//*  19   35:aload_0         
+	//*  20   36:getfield        #35  <Field int[] mPrefetchArray>
+	//*  21   39:ifnonnull       60
+		{
+			mPrefetchArray = new int[4];
+	//   22   42:aload_0         
+	//   23   43:iconst_4        
+	//   24   44:newarray        int[]
+	//   25   46:putfield        #35  <Field int[] mPrefetchArray>
+			Arrays.fill(mPrefetchArray, -1);
+	//   26   49:aload_0         
+	//   27   50:getfield        #35  <Field int[] mPrefetchArray>
+	//   28   53:iconst_m1       
+	//   29   54:invokestatic    #41  <Method void Arrays.fill(int[], int)>
+		} else
+	//*  30   57:goto            98
+		if(k >= mPrefetchArray.length)
+	//*  31   60:iload_3         
+	//*  32   61:aload_0         
+	//*  33   62:getfield        #35  <Field int[] mPrefetchArray>
+	//*  34   65:arraylength     
+	//*  35   66:icmplt          98
+		{
+			int ai[] = mPrefetchArray;
+	//   36   69:aload_0         
+	//   37   70:getfield        #35  <Field int[] mPrefetchArray>
+	//   38   73:astore          4
+			mPrefetchArray = new int[k * 2];
+	//   39   75:aload_0         
+	//   40   76:iload_3         
+	//   41   77:iconst_2        
+	//   42   78:imul            
+	//   43   79:newarray        int[]
+	//   44   81:putfield        #35  <Field int[] mPrefetchArray>
+			System.arraycopy(((Object) (ai)), 0, ((Object) (mPrefetchArray)), 0, ai.length);
+	//   45   84:aload           4
+	//   46   86:iconst_0        
+	//   47   87:aload_0         
+	//   48   88:getfield        #35  <Field int[] mPrefetchArray>
+	//   49   91:iconst_0        
+	//   50   92:aload           4
+	//   51   94:arraylength     
+	//   52   95:invokestatic    #47  <Method void System.arraycopy(Object, int, Object, int, int)>
+		}
+		mPrefetchArray[k] = i;
+	//   53   98:aload_0         
+	//   54   99:getfield        #35  <Field int[] mPrefetchArray>
+	//   55  102:iload_3         
+	//   56  103:iload_1         
+	//   57  104:iastore         
+		mPrefetchArray[k + 1] = j;
+	//   58  105:aload_0         
+	//   59  106:getfield        #35  <Field int[] mPrefetchArray>
+	//   60  109:iload_3         
+	//   61  110:iconst_1        
+	//   62  111:iadd            
+	//   63  112:iload_2         
+	//   64  113:iastore         
+		mCount = mCount + 1;
+	//   65  114:aload_0         
+	//   66  115:aload_0         
+	//   67  116:getfield        #33  <Field int mCount>
+	//   68  119:iconst_1        
+	//   69  120:iadd            
+	//   70  121:putfield        #33  <Field int mCount>
+	//   71  124:return          
+	}
+
+	void clearPrefetchPositions()
+	{
+		if(mPrefetchArray != null)
+	//*   0    0:aload_0         
+	//*   1    1:getfield        #35  <Field int[] mPrefetchArray>
+	//*   2    4:ifnull          15
+			Arrays.fill(mPrefetchArray, -1);
+	//    3    7:aload_0         
+	//    4    8:getfield        #35  <Field int[] mPrefetchArray>
+	//    5   11:iconst_m1       
+	//    6   12:invokestatic    #41  <Method void Arrays.fill(int[], int)>
+		mCount = 0;
+	//    7   15:aload_0         
+	//    8   16:iconst_0        
+	//    9   17:putfield        #33  <Field int mCount>
+	//   10   20:return          
+	}
+
+	void collectPrefetchPositionsFromView(RecyclerView recyclerview, boolean flag)
+	{
+		mCount = 0;
+	//    0    0:aload_0         
+	//    1    1:iconst_0        
+	//    2    2:putfield        #33  <Field int mCount>
+		if(mPrefetchArray != null)
+	//*   3    5:aload_0         
+	//*   4    6:getfield        #35  <Field int[] mPrefetchArray>
+	//*   5    9:ifnull          20
+			Arrays.fill(mPrefetchArray, -1);
+	//    6   12:aload_0         
+	//    7   13:getfield        #35  <Field int[] mPrefetchArray>
+	//    8   16:iconst_m1       
+	//    9   17:invokestatic    #41  <Method void Arrays.fill(int[], int)>
+		RecyclerView.LayoutManager layoutmanager = recyclerview.mLayout;
+	//   10   20:aload_1         
+	//   11   21:getfield        #56  <Field RecyclerView$LayoutManager RecyclerView.mLayout>
+	//   12   24:astore_3        
+		if(recyclerview.mAdapter != null && layoutmanager != null && layoutmanager.isItemPrefetchEnabled())
+	//*  13   25:aload_1         
+	//*  14   26:getfield        #60  <Field RecyclerView$Adapter RecyclerView.mAdapter>
+	//*  15   29:ifnull          127
+	//*  16   32:aload_3         
+	//*  17   33:ifnull          127
+	//*  18   36:aload_3         
+	//*  19   37:invokevirtual   #66  <Method boolean RecyclerView$LayoutManager.isItemPrefetchEnabled()>
+	//*  20   40:ifeq            127
+		{
+			if(flag)
+	//*  21   43:iload_2         
+	//*  22   44:ifeq            72
+			{
+				if(!recyclerview.mAdapterHelper.hasPendingUpdates())
+	//*  23   47:aload_1         
+	//*  24   48:getfield        #70  <Field AdapterHelper RecyclerView.mAdapterHelper>
+	//*  25   51:invokevirtual   #75  <Method boolean AdapterHelper.hasPendingUpdates()>
+	//*  26   54:ifne            96
+					layoutmanager.collectInitialPrefetchPositions(recyclerview.mAdapter.getItemCount(), ((etchRegistry) (this)));
+	//   27   57:aload_3         
+	//   28   58:aload_1         
+	//   29   59:getfield        #60  <Field RecyclerView$Adapter RecyclerView.mAdapter>
+	//   30   62:invokevirtual   #81  <Method int RecyclerView$Adapter.getItemCount()>
+	//   31   65:aload_0         
+	//   32   66:invokevirtual   #85  <Method void RecyclerView$LayoutManager.collectInitialPrefetchPositions(int, RecyclerView$LayoutManager$LayoutPrefetchRegistry)>
+			} else
+	//*  33   69:goto            96
+			if(!recyclerview.hasPendingAdapterUpdates())
+	//*  34   72:aload_1         
+	//*  35   73:invokevirtual   #88  <Method boolean RecyclerView.hasPendingAdapterUpdates()>
+	//*  36   76:ifne            96
+				layoutmanager.collectAdjacentPrefetchPositions(mPrefetchDx, mPrefetchDy, recyclerview.mState, ((etchRegistry) (this)));
+	//   37   79:aload_3         
+	//   38   80:aload_0         
+	//   39   81:getfield        #90  <Field int mPrefetchDx>
+	//   40   84:aload_0         
+	//   41   85:getfield        #92  <Field int mPrefetchDy>
+	//   42   88:aload_1         
+	//   43   89:getfield        #96  <Field RecyclerView$State RecyclerView.mState>
+	//   44   92:aload_0         
+	//   45   93:invokevirtual   #100 <Method void RecyclerView$LayoutManager.collectAdjacentPrefetchPositions(int, int, RecyclerView$State, RecyclerView$LayoutManager$LayoutPrefetchRegistry)>
+			if(mCount > layoutmanager.mPrefetchMaxCountObserved)
+	//*  46   96:aload_0         
+	//*  47   97:getfield        #33  <Field int mCount>
+	//*  48  100:aload_3         
+	//*  49  101:getfield        #103 <Field int RecyclerView$LayoutManager.mPrefetchMaxCountObserved>
+	//*  50  104:icmple          127
+			{
+				layoutmanager.mPrefetchMaxCountObserved = mCount;
+	//   51  107:aload_3         
+	//   52  108:aload_0         
+	//   53  109:getfield        #33  <Field int mCount>
+	//   54  112:putfield        #103 <Field int RecyclerView$LayoutManager.mPrefetchMaxCountObserved>
+				layoutmanager.mPrefetchMaxObservedInInitialPrefetch = flag;
+	//   55  115:aload_3         
+	//   56  116:iload_2         
+	//   57  117:putfield        #107 <Field boolean RecyclerView$LayoutManager.mPrefetchMaxObservedInInitialPrefetch>
+				recyclerview.mRecycler.updateViewCacheSize();
+	//   58  120:aload_1         
+	//   59  121:getfield        #111 <Field RecyclerView$Recycler RecyclerView.mRecycler>
+	//   60  124:invokevirtual   #116 <Method void RecyclerView$Recycler.updateViewCacheSize()>
+			}
+		}
+	//   61  127:return          
+	}
+
+	boolean lastPrefetchIncludedPosition(int i)
+	{
+		if(mPrefetchArray != null)
+	//*   0    0:aload_0         
+	//*   1    1:getfield        #35  <Field int[] mPrefetchArray>
+	//*   2    4:ifnull          40
+		{
+			int k = mCount;
+	//    3    7:aload_0         
+	//    4    8:getfield        #33  <Field int mCount>
+	//    5   11:istore_3        
+			for(int j = 0; j < k * 2; j += 2)
+	//*   6   12:iconst_0        
+	//*   7   13:istore_2        
+	//*   8   14:iload_2         
+	//*   9   15:iload_3         
+	//*  10   16:iconst_2        
+	//*  11   17:imul            
+	//*  12   18:icmpge          40
+				if(mPrefetchArray[j] == i)
+	//*  13   21:aload_0         
+	//*  14   22:getfield        #35  <Field int[] mPrefetchArray>
+	//*  15   25:iload_2         
+	//*  16   26:iaload          
+	//*  17   27:iload_1         
+	//*  18   28:icmpne          33
+					return true;
+	//   19   31:iconst_1        
+	//   20   32:ireturn         
+
+	//   21   33:iload_2         
+	//   22   34:iconst_2        
+	//   23   35:iadd            
+	//   24   36:istore_2        
+		}
+	//*  25   37:goto            14
+		return false;
+	//   26   40:iconst_0        
+	//   27   41:ireturn         
+	}
+
+	void setPrefetchVector(int i, int j)
+	{
+		mPrefetchDx = i;
+	//    0    0:aload_0         
+	//    1    1:iload_1         
+	//    2    2:putfield        #90  <Field int mPrefetchDx>
+		mPrefetchDy = j;
+	//    3    5:aload_0         
+	//    4    6:iload_2         
+	//    5    7:putfield        #92  <Field int mPrefetchDy>
+	//    6   10:return          
+	}
+
+	int mCount;
+	int mPrefetchArray[];
+	int mPrefetchDx;
+	int mPrefetchDy;
+
+	GapWorker$LayoutPrefetchRegistryImpl()
+	{
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #19  <Method void Object()>
+	//    2    4:return          
+	}
+}

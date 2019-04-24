@@ -53,9 +53,32 @@ function decompileapk {
 	../Tools/dex2jar-2.0/d2j-dex2jar.sh $apk
 
 	# Move the results to the designated directory
-	mv "${filename}$tail" "${filename}/"
-	mv "${filename}$err" "${filename}/"
+	echo "Attempting to move: ${filename}$tail" "${filename}/"
+	if [ -f ${filename}$tail ]
+	then
+		mv "${filename}$tail" "${filename}/"
+	fi
+
+
+	echo "Attempting to move: ${filename}$err" "${filename}/"
+	if [ -f ${filename}$err ]
+	then
+		mv "${filename}$err" "${filename}/"
+	fi
 } # end function decompileapk
+
+
+
+
+
+
+# Manifest.xml is not available through dex2jar.  Therefore use Apktool to get
+# the manifest and all other resources it can.  Will strip down for efficiency
+# later.
+function getmanifest {
+	echo "Running Apktool"
+	apktool d -o "$filename" $apk
+} # end function getmanifest
 
 
 
@@ -120,7 +143,8 @@ function decompileclass {
 
 getfilename $1
 
-outputdir
+getmanifest
+# outputdir # remove this to test if `getmanifest` will do this in place
 
 decompileapk
 

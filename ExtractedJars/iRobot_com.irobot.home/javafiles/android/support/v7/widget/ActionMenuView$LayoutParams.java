@@ -1,0 +1,69 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package android.support.v7.widget;
+
+import android.content.Context;
+import android.util.AttributeSet;
+
+// Referenced classes of package android.support.v7.widget:
+//			ActionMenuView
+
+public static class ActionMenuView$LayoutParams extends ams
+{
+
+	public boolean a;
+	public int b;
+	public int c;
+	public boolean d;
+	public boolean e;
+	boolean f;
+
+	public ActionMenuView$LayoutParams(int i, int j)
+	{
+		super(i, j);
+	//    0    0:aload_0         
+	//    1    1:iload_1         
+	//    2    2:iload_2         
+	//    3    3:invokespecial   #20  <Method void LinearLayoutCompat$LayoutParams(int, int)>
+		a = false;
+	//    4    6:aload_0         
+	//    5    7:iconst_0        
+	//    6    8:putfield        #22  <Field boolean a>
+	//    7   11:return          
+	}
+
+	public ActionMenuView$LayoutParams(Context context, AttributeSet attributeset)
+	{
+		super(context, attributeset);
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:aload_2         
+	//    3    3:invokespecial   #26  <Method void LinearLayoutCompat$LayoutParams(Context, AttributeSet)>
+	//    4    6:return          
+	}
+
+	public ActionMenuView$LayoutParams(ActionMenuView$LayoutParams actionmenuview$layoutparams)
+	{
+		super(((android.view.ViewGroup.LayoutParams) (actionmenuview$layoutparams)));
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:invokespecial   #30  <Method void LinearLayoutCompat$LayoutParams(android.view.ViewGroup$LayoutParams)>
+		a = actionmenuview$layoutparams.a;
+	//    3    5:aload_0         
+	//    4    6:aload_1         
+	//    5    7:getfield        #22  <Field boolean a>
+	//    6   10:putfield        #22  <Field boolean a>
+	//    7   13:return          
+	}
+
+	public ActionMenuView$LayoutParams(android.view.ViewGroup.LayoutParams layoutparams)
+	{
+		super(layoutparams);
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:invokespecial   #30  <Method void LinearLayoutCompat$LayoutParams(android.view.ViewGroup$LayoutParams)>
+	//    3    5:return          
+	}
+}

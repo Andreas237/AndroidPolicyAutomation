@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><script type="text/javascript" src="EULA-China_files/706cd0579b.txt"></script><script src="EULA-China_files/nr-1026.js"></script><script type="text/javascript" async="" src="EULA-China_files/ga.txt"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"706cd0579b","applicationID":"6462503","transactionName":"YVVWZkJQVhYCAEcIDVgfYUBZHmMSBgFACBZTbRteVVZZCUwHXAIXW1VaRkMeEkpJTBlOSA==","queueTime":0,"applicationTime":15,"ttGuid":"4CAA77FC0A226008","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQ4AV1FXGwUEUlNXBwI="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];n.exports=u;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(m,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>
+	
+</title>
+    
+    <style type="text/css">
+        @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=20d74cc5-7f7c-49a7-80ae-fa2f389c550d");
+        @font-face {
+            font-family:"HarmoniaSans W02";
+            src:url("/Base/Includes/fonts/e048affc-431d-4a34-8354-95bf77980524.eot?#iefix");
+            src:url("/Base/Includes/fonts/e048affc-431d-4a34-8354-95bf77980524.eot?#iefix") format("eot"),url("/Base/Includes/fonts/f7fe53a8-6bb7-4a74-8035-6037ca032dae.woff") format("woff"),url("/Base/Includes/fonts/13572ed5-3afa-444d-811f-31cecef749f9.ttf") format("truetype"),url("/Base/Includes/fonts/6ea4c030-eaeb-4d8f-be5f-836c38b0b496.svg#6ea4c030-eaeb-4d8f-be5f-836c38b0b496") format("svg");
+        }
+        @font-face{
+            font-family:"HarmoniaSans W02 SemiBd";
+            src:url("/Base/Includes/fonts/9ad7f3ab-733c-412a-8253-9f60e724f2ff.eot?#iefix");
+            src:url("/Base/Includes/fonts/9ad7f3ab-733c-412a-8253-9f60e724f2ff.eot?#iefix") format("eot"),url("/Base/Includes/fonts/85757b72-744c-412a-8ae0-914b3e7ad674.woff") format("woff"),url("/Base/Includes/fonts/5342ef4c-d3a6-421b-a241-a2034b77d33b.ttf") format("truetype"),url("/Base/Includes/fonts/88a20b43-84b7-401f-a31f-3c05903b0ae2.svg#88a20b43-84b7-401f-a31f-3c05903b0ae2") format("svg");
+        }
+        @font-face{
+            font-family:"HarmoniaSans W02 Bold";
+            src:url("/Base/Includes/fonts/c79712e5-cb83-4ce5-a81e-af7d5e0d6acf.eot?#iefix");
+            src:url("/Base/Includes/fonts/c79712e5-cb83-4ce5-a81e-af7d5e0d6acf.eot?#iefix") format("eot"),url("/Base/Includes/fonts/8db1a098-0880-4cc9-a664-3dfd08033690.woff") format("woff"),url("/Base/Includes/fonts/50a9b845-5e61-4458-8e5c-12c45a4f6b92.ttf") format("truetype"),url("/Base/Includes/fonts/dc775a7d-1a20-425d-b034-6426b746d851.svg#dc775a7d-1a20-425d-b034-6426b746d851") format("svg");
+        }
+
+        body { font-family:"HarmoniaSans W02"; margin: auto; font-size: 18px; color: #000; }
+        h1 { font-weight: bold; font-size: 28px; padding: 0; margin: 0; }
+        h2, h3 { padding: 0; margin: 0; }
+        h2 { font-weight: bold; font-size: 24px; }
+        h3 { font-family: "HarmoniaSans W02 SemiBd"; font-size: 20px; padding-top: 5px; }
+        a { color: #64a70b; text-decoration: none;}
+        .header { border-bottom: 1px solid #ebebeb; text-align: center; }
+        .header a { border: 0; display: inline-block; padding: 15px; }
+        .header img {vertical-align: middle;}
+        .wrapper { padding: 30px 20px; }
+        .section { clear: both; overflow: auto; border-top: 1px solid #ebebeb; padding: 15px 0 0 0; }
+        .section div.image { float: left; margin: 5px 10px 0 0; width: 24px; }
+        .section div.text { float: left; }
+        .section ul { list-style-type: none; padding: 0 0 15px 0; margin: 0; line-height: 30px; }
+
+        @media only screen and (min-width : 320px) and (max-width: 480px) {
+            .section div.text { max-width: 246px; }
+			.wrapper { max-width: 460px; overflow: hidden; }
+        }
+    </style>
+
+
+
+    
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1517202-1']);
+        _gaq.push(['_setDomainName', '.irobot.com']);
+        _gaq.push(['_trackPageview']);
+        (function () { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script>
+<meta name="keywords"><meta name="description"><meta name="robots" content="NOODP"></head>
+<body>
+    <form method="post" action="/Legal/Documents/Asia-Pacific/China/Legal-Documents/EULA.aspx?sc_lang=zh-CN" id="form1">
+<div class="aspNetHidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwODA2MDU1MDEPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCAWRkoQZtlON37QyfpTfiB3TRd8gYuXc=" type="hidden">
+</div>
+
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D502927D" type="hidden">
+</div>
+        <div class="wrapper">
+            <div id="phcontent_0_ctl00_pnPageContent" class="pageContent">
+	
+    <h1 id="phcontent_0_ctl00_pageTitleH1" class="title_shadow">用户协议 - 中国</h1>
+    <p><strong>重要通知： [使用本产品] [打开包装] 前请仔细阅读</strong></p>
+<p>本许可协议（以下简称“许可”）是您（以下简称“被许可人”或“您”）与 iRobot Corporation 
+（以下简称“iRobot”或“我们”）（地址：8 Crosby Drive, Bedford, Massachusetts 01730 
+USA）之间签订的法律协议，本协议针对 iRobot 设备（以下简称“iRobot 
+设备”）上的预安装软件、图形、外观、界面、内容或数据，包括随后安装在 iRobot 设备上的任何可下载的更新（以下简称“软件材料”），随 
+iRobot 设备一同提供的任何相关介质、印刷材料和在线文档（以下简称“文档”），以及 iRobot 所拥有的 iRobot 设备中或与 
+iRobot 设备相关的知识产权（包括软件材料或文件）（统称为“iRobot 知识产权”）而签订。 </p>
+<p>[打开包装] [使用本产品] 即表示您同意受本许可条款的约束。&nbsp; 如果您不同意本许可的条款，则我们将不会向您许可 IROBOT 
+知识产权，且您必须 [依据 irobot.cn 上所列的 IROBOT 退货政策，] 立即将 IROBOT 
+设备连同所有随附文档包装完好无损地退回给您购买本产品的零售商或者寄至 IROBOT CORPORATION（地址见下方），以获取退款。</p>
+<p>您的以下行为将受到服务条款约束： (a) 位于 [] 和 [] 子域的网站（均称为“网站”），(b) 
+通过网站获得的服务（以及对其进行的所有更新）（以下简称“网站服务”），以及 (c) 
+某些可下载至您的移动设备的软件（以及对其进行的所有更新）（以下简称“移动软件”）。 您购买的本产品（除 iRobot 知识产权外）适用 
+iRobot 有限保修条款，该条款随 iRobot 设备一同提供。 
+本最终用户许可协议并不约束您对网站、网站服务或移动软件的使用行为，也不约束您对本产品（除 iRobot 知识产权外）的购买行为。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">1)&nbsp;&nbsp; 许可的授予和许可范围</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">a)&nbsp;&nbsp;&nbsp; 依据本许可的条款，iRobot 特此授予您在中华人民共和国（以下简称“中国”）使用 iRobot 的非独占性、有限许可（不包括分许可权利）。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">b)&nbsp;&nbsp; 该许可是单一设备许可，只允许您使用与一台 iRobot 设备有关的 iRobot 知识产权。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">c)&nbsp;&nbsp;&nbsp; 您可以进行以下行为：</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 只可在将 iRobot 设备用于非商业性目的时使用 iRobot 的相关知识产权，且不得脱离 iRobot 设备将此知识产权独立用于任何其他目的；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">ii)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 接受并使用由 iRobot 不时提供的所有免费补充性软件代码或 iRobot 知识产权的更新；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">iii)&nbsp;&nbsp;&nbsp;&nbsp; 为实现许可允许的使用行为而使用任意文档，并根据合法使用 iRobot 设备或文档的实际需要，制作任意数量的文档副本。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">2)&nbsp;&nbsp; 被许可人的承诺</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">a)&nbsp;&nbsp;&nbsp; 除本许可明确规定或任何当地法律允许的情况之外，您承诺：</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不得复制 iRobot 知识产权，除非此类复制伴随正常使用 iRobot 设备发生，或是为制作备份或运行安全而制作拷贝；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">ii)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不得出租、分发、租借、再许可、出借、翻译、合并、改动、变化或修改 iRobot 知识产权；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">iii)&nbsp;&nbsp;&nbsp;&nbsp; 不得更改或修改 iRobot 知识产权的全部或任意部分内容，也不得允许 iRobot 知识产权或其中任意部分与任何其他程序或设备合并，或并入其中，iRobot 设备正常使用的附带结果除外。</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">iv)&nbsp;&nbsp;&nbsp;&nbsp;
+ 不得反汇编、反编译、反向工程 iRobot 
+知识产权的全部或任意部分内容，或根据其创造衍生作品，也不得尝试进行此类任意行为，除非（根据适用法律法规规定）此类行为在实现 iRobot 
+知识产权与其他软件程序间的互操作性时起到关键作用而不能被禁止；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">v)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 为了合法地使用 iRobot 知识产权和 iRobot 设备并遵守所有适用的当地、国家或国际法律法规，尤其是，您在使用时不得出现以下行为： </p>
+<p class="ListParagraph1" style="margin-left: 1in; text-indent: -22.35pt;">(1)&nbsp;&nbsp; 侵犯任何人的任何版权、数据库权利、商标权以及任何其他知识产权；</p>
+<p class="ListParagraph1" style="margin-left: 1in; text-indent: -22.35pt;">(2)&nbsp;&nbsp; 试图欺骗他人，或违反应向第三方履行的任何法律义务（如合约义务或保密义务），或进行任何违法活动；</p>
+<p class="ListParagraph1" style="margin-left: 1in; text-indent: -22.35pt;">(3)&nbsp;&nbsp; 威胁、诽谤、侮辱他人或侵犯他人隐私，恼扰他人、为他人造成不便或不必要的焦虑，或试图骚扰、打搅、为难、恐吓或激怒他人；</p>
+<p class="ListParagraph1" style="margin-left: 1in; text-indent: -22.35pt;">(4)&nbsp;&nbsp; 冒充任何人、谎报身份或谎称与任何人存在关联，或使他人误认为他们是我们中的一员（而事实与之相反）；或者</p>
+<p class="ListParagraph1" style="margin-left: 1in; text-indent: -22.35pt;">(5)&nbsp;&nbsp; 非法干扰或扰乱任何网络或电信系统。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">b)&nbsp;&nbsp;
+ 尽管存在上述规定，但如果您向其他人转让 iRobot 设备的所有权，您可以向该方一次性永久转让本协议规定的使用 iRobot 
+知识产权的权利，但您需遵守以下规定： (i) 转让必须包括您的 iRobot 设备并转让您基于本许可获得的所有权利；(ii) 您不得再持有 
+iRobot 知识产权的任何副本，包括存储在计算机或其他存储设备上的副本；以及 (iii) 您应告知接受 iRobot 
+设备的一方本协议的条款和条件，并明确告知该方对 iRobot 知识产权的使用将受到这些条款和条件的约束。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">3)&nbsp;&nbsp; 自动软件更新</p>
+<p class="ListParagraph1" style="margin-left: 0.25in;">iRobot 
+会不时开发补丁、漏洞修复程序、更新、升级和其他修改以提升或修改 iRobot 知识产权的性能（以下简称“更新”）。 
+这些更新可能会在不经另行通知或征得额外同意的情况下自动安装。 您同意自动安装更新。 如果您不想更新，请停止使用 iRobot 设备。 
+您确认您可能需要按要求安装更新以使用 iRobot 设备和 iRobot 知识产权，并且您同意立即安装 iRobot 提供的任何更新。 
+在更新后继续使用 iRobot 设备将视为您继续同意本许可。 </p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">4)&nbsp;&nbsp; 第三方材料</p>
+<p style="margin-left: 0.25in;">iRobot 
+设备的某些要素可能包含或包括第三方的软件和其他专属材料（以下简称“第三方材料”）。 第三方材料经 iRobot 
+许可，且任何第三方材料中的全部知识产权均仍是其各自所有者和被许可人的财产。 
+除非我们另行通知，否则将依据本许可中包含的相同条款为您授予第三方材料的许可。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">5)&nbsp;&nbsp; 第三方服务</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">a)&nbsp;&nbsp;&nbsp; iRobot 设备和 iRobot 知识产权允许使用某些第三方服务和网站（以下简称“第三方服务”）。 使用第三方服务需要互联网接入并要求您接受额外条款。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">b)&nbsp;&nbsp;
+ 请注意，我们不运行或控制第三方服务或者您在使用此类第三方服务的过程中接触的任意内容或数据。 
+您通过第三方服务与第三方之间的往来仅属于您与第三方之间的关系。&nbsp; 
+因此，您在与此类第三方打交道时，您须按照他们的条款和政策，而非我们的。 与任何第三方的任何问题或交易相关的投诉、质疑和索赔都应指向该第三方。 </p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">c)&nbsp;&nbsp;&nbsp; 关于您对任意第三方服务的使用，我们不提供任何保证，也不承担任何责任（不论是签署合约、侵权或其他情况）。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">6)&nbsp;&nbsp; 开源<em></em></p>
+<p class="ListParagraph1" style="margin-left: 0.25in;">产品软件中包括的某些软件受“开源”
+或“免费软件”许可（以下简称“开源软件”）的约束。 部分开源软件由第三方拥有。 开源软件不受本最终用户许可协议的条款和条件的约束。 
+相反，各个开源软件根据此类开源软件随附的最终用户许可的条款授予许可。 
+对于开源软件的适用最终用户许可的条款和条件，本最终用户许可协议中的任何内容均不得限制您在这些条款和条件下的权利，也不授予您逾越这些条款和条件的权
+利。 如果任何许可要求某个开源软件，请通过下面列出的电子邮件或邮寄地址向 iRobot 发送书面申请，iRobot 将提供此开源软件以及 
+iRobot 对该开源软件的修改。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">7)&nbsp;&nbsp; 知识产权</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">a)&nbsp;&nbsp;&nbsp;
+ 您确认 iRobot 知识产权的所有知识产权在全世界均属于 iRobot，iRobot 
+知识产权的权利仅是许可给您（而非售予您），以及除了本许可中各条款规定的您对这些权利的使用权外，您无权使用 iRobot 知识产权。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">b)&nbsp;&nbsp;
+ iRobot 知识产权的完整性受技术保护措施 (TPM) 的保护，��确保 iRobot 知识产权中的知识产权（包括版权）不会被滥用。 
+您不得尝试以任何方式消除或绕过此类技术保护措施，也不得应用、制造、进口、分发、销售、为租金出租、主动提供、为销售或出租而展示或广告，或为私人或商
+业目的而占有，以及实施其唯一合理目的是旨在促进未经授权消除或绕过此类 TPM 的任何行为。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">8)&nbsp;&nbsp; 保修和责任</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">a)&nbsp;&nbsp;&nbsp; 您承认：</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iRobot 知识产权并非为满足您的个人需求而开发，因此应由您负责确保 iRobot 知识产权的设施及功能满足您的要求；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">ii)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 您应承担使用 iRobot 设备和为此类使用所做决策的全部责任，而且使用 iRobot 设备带来的风险由您自己承担；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -32.7pt;">iii)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iRobot 知识产权可能出现错误或故障，您的使用可能因此类错误或故障而中断或受影响；</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">b)&nbsp;&nbsp; 因此，iRobot 知识产权和第三方材料以“原样”原则提供给您，而且我们不会对 iRobot 知识产权或第三方材料的性能、质量或适合性做出任何类型的保证、声明、条件或承诺。 </p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">c)&nbsp;&nbsp;&nbsp; 除本许可规定外，在适用法律所允许的最大范围内，将排除所有保证、声明、条件以及任何法律或法规默示的所有其他条款。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">9)&nbsp;&nbsp; 许可人的责任</p>
+<p class="ListParagraph1" style="margin-left: 0.25in;">iRobot 在本许可（或任意附属合同）下或与本许可（或任意附属合同）有关的最高总计责任，在任何情况下应不得超过您为 iRobot 设备支付的价格，不论合同、侵权（疏忽大意）或其他任何形式。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">10) 终止</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">a)&nbsp;&nbsp;&nbsp; 如果您实质性或持续违反本许可的条款，且在收到要求您补救违约行为的书面通知后十四 (14) 天内未采取补救措施（如果可以补救），则 iRobot 可向您发出书面通知，立即终止本许可。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">b)&nbsp;&nbsp; 无论因何种原因终止：</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本许可授予您的所有权利都将停止；且</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">ii)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 您必须停止本许可授权您执行的所有活动。 </p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">11) 出口合规性</p>
+<p class="ListParagraph1" style="margin-left: 0.25in;">iRobot 知识产权和相关技术受美国出口管控法的约束，且可能受其他国家/地区的进出口法规约束。 您同意遵守所有适用于您的法律法规。 </p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">12) 权利和义务的转移</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">a)&nbsp;&nbsp;&nbsp; 本许可对您和我们以及双方各自的接替者和转让具有约束力。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">b)&nbsp;&nbsp; 在本许可有效期内，我们可以随时转移、转让、收费、转包或以其他方式处理本许可或我们在本许可下的权利或义务。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">13) 通知</p>
+<p style="margin-left: 0.25in;">您向 iRobot 发出的所有通知必须发至位于 <a href="https://global.irobot.com/">global.irobot.com</a>&nbsp;
+的 iRobot。iRobot 可能向您在 iRobot 注册的电子邮件 [或邮寄] 地址发送通知。 通知视为在发送电子邮件的二十四 (24) 
+小时后或者邮寄任何信函的三 (3) 天后被妥善送达和接收。 
+要证明任何通知已送达，只需证明信函的地址正确、已盖邮戳且送至邮局，或者电子邮件已发至收件人的特定电子邮件地址。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">14) 许可人控制外的事件</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">a)&nbsp;&nbsp;&nbsp; 对于因超出合理控制范围之外的事件（以下简称“不可抗力事件”）而导致未履行或延迟履行本许可下的任何义务，iRobot 将不承担任何责任或义务。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">b)&nbsp;&nbsp; 不可抗力事件包含超出我们合理控制范围之外的任何行为、事件、未发生、不作为或事故，特别包括（但不限于）以下情况：</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 罢工、停工或其他劳工行为；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">ii)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 民众骚乱、暴动、入侵、恐怖袭击或恐怖袭击的威胁、战争（无论是否声明）或战争威胁或战争准备；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">iii)&nbsp;&nbsp;&nbsp;&nbsp; 失火、爆炸、暴风雨、水灾、地震、建筑物沉降、传染病或其他自然灾害；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">iv)&nbsp;&nbsp;&nbsp;&nbsp; 铁路、船运、飞机、汽车运输或其他公共或私人运输方式的无法使用；</p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">v)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公共或私人电信网络无法使用； </p>
+<p class="ListParagraph1" style="margin-left: 49.65pt; text-indent: -28.35pt;">vi)&nbsp;&nbsp;&nbsp;&nbsp; 任何政府的任何法案、法令、法规、规定或限制。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">c)&nbsp;&nbsp;&nbsp;
+ iRobot 对本许可下各义务的履行在不可抗力事件持续期间被视为暂停，我们将为履行该时间段内的义务而延长许可时间。 
+我们将通过合理努力使不可抗力事件结束，或找到一个解决方案以在不可抗力事件期间继续履行本许可下的义务。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">15) 弃权</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">a)&nbsp;&nbsp;&nbsp; 如果在本许可有效期内，我们要求您严格履行本许可下的义务，或者如果我们未行使本许可下拥有的任何权利或救济，这并不构成对此类权利或救济的弃权，且也不构成免除您在本许可下的此类义务。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">b)&nbsp;&nbsp; 因任何违约行为导致的弃权均不构成对后续违约行为的弃权。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">c)&nbsp;&nbsp;&nbsp; 我们对这些条款和条件的任何弃权只有在明确声明为弃权且书面通知您之后才会生效。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">16) 可分割性</p>
+<p style="margin-left: 0.25in;">如果本许可条款的任何部分被主管当局判为无效、非法或不可执行，则此部分条款、条件或规定将与剩余条款、条件及规定分割，剩余条款、条件及规定在法律允许的最大范围内继续有效。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">17) 完整协议</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">a)&nbsp;&nbsp;&nbsp; 本许可与其中明确提及的任意文档构成我们之间的完整协议，并取代之前我们之间关于 iRobot 知识产权许可的任何约定、谅解或协议。</p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">b)&nbsp;&nbsp; 我们双方均确认，签订本许可（及其中提及的文档）后，我们中任一方均不得依据任何人（无论是否为本许可的当事方）的任意陈述、声明、担保或保证（以下简称“声明”），除非本许可或这些文档中有明确规定。 </p>
+<p class="ListParagraph1" style="margin-left: 21.3pt; text-indent: -21.3pt;">c)&nbsp;&nbsp;&nbsp; 双方均同意，我们享有的因声明而起或与声明相关的唯一权利和补救措施应是本许可中提供的针对合同违约的权利和补救措施。</p>
+<p class="ListParagraph1" style="margin-left: 0.25in; text-indent: -0.25in;">18) 法律</p>
+<p style="margin-left: 0.25in;">本许可、其标的物或组成内容（包括非合约纠纷或索赔）应受中国法律管辖并依据中国法律解释。</p>
+<br>
+
+</div>
+
+        </div>
+    </form>
+
+
+</body></html>

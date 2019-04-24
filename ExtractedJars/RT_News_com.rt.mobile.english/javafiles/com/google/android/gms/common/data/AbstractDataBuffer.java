@@ -1,0 +1,115 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package com.google.android.gms.common.data;
+
+import android.os.Bundle;
+import java.util.Iterator;
+
+// Referenced classes of package com.google.android.gms.common.data:
+//			DataBuffer, DataHolder, DataBufferIterator, SingleRefDataBufferIterator
+
+public abstract class AbstractDataBuffer
+	implements DataBuffer
+{
+
+	protected AbstractDataBuffer(DataHolder dataholder)
+	{
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #14  <Method void Object()>
+		mDataHolder = dataholder;
+	//    2    4:aload_0         
+	//    3    5:aload_1         
+	//    4    6:putfield        #16  <Field DataHolder mDataHolder>
+	//    5    9:return          
+	}
+
+	public final void close()
+	{
+		release();
+	//    0    0:aload_0         
+	//    1    1:invokevirtual   #22  <Method void release()>
+	//    2    4:return          
+	}
+
+	public abstract Object get(int i);
+
+	public int getCount()
+	{
+		if(mDataHolder == null)
+	//*   0    0:aload_0         
+	//*   1    1:getfield        #16  <Field DataHolder mDataHolder>
+	//*   2    4:ifnonnull       9
+			return 0;
+	//    3    7:iconst_0        
+	//    4    8:ireturn         
+		else
+			return mDataHolder.getCount();
+	//    5    9:aload_0         
+	//    6   10:getfield        #16  <Field DataHolder mDataHolder>
+	//    7   13:invokevirtual   #31  <Method int DataHolder.getCount()>
+	//    8   16:ireturn         
+	}
+
+	public Bundle getMetadata()
+	{
+		return mDataHolder.getMetadata();
+	//    0    0:aload_0         
+	//    1    1:getfield        #16  <Field DataHolder mDataHolder>
+	//    2    4:invokevirtual   #35  <Method Bundle DataHolder.getMetadata()>
+	//    3    7:areturn         
+	}
+
+	public boolean isClosed()
+	{
+		return mDataHolder == null || mDataHolder.isClosed();
+	//    0    0:aload_0         
+	//    1    1:getfield        #16  <Field DataHolder mDataHolder>
+	//    2    4:ifnull          22
+	//    3    7:aload_0         
+	//    4    8:getfield        #16  <Field DataHolder mDataHolder>
+	//    5   11:invokevirtual   #39  <Method boolean DataHolder.isClosed()>
+	//    6   14:ifeq            20
+	//    7   17:goto            22
+	//    8   20:iconst_0        
+	//    9   21:ireturn         
+	//   10   22:iconst_1        
+	//   11   23:ireturn         
+	}
+
+	public Iterator iterator()
+	{
+		return ((Iterator) (new DataBufferIterator(((DataBuffer) (this)))));
+	//    0    0:new             #43  <Class DataBufferIterator>
+	//    1    3:dup             
+	//    2    4:aload_0         
+	//    3    5:invokespecial   #46  <Method void DataBufferIterator(DataBuffer)>
+	//    4    8:areturn         
+	}
+
+	public void release()
+	{
+		if(mDataHolder != null)
+	//*   0    0:aload_0         
+	//*   1    1:getfield        #16  <Field DataHolder mDataHolder>
+	//*   2    4:ifnull          14
+			mDataHolder.close();
+	//    3    7:aload_0         
+	//    4    8:getfield        #16  <Field DataHolder mDataHolder>
+	//    5   11:invokevirtual   #50  <Method void DataHolder.close()>
+	//    6   14:return          
+	}
+
+	public Iterator singleRefIterator()
+	{
+		return ((Iterator) (new SingleRefDataBufferIterator(((DataBuffer) (this)))));
+	//    0    0:new             #53  <Class SingleRefDataBufferIterator>
+	//    1    3:dup             
+	//    2    4:aload_0         
+	//    3    5:invokespecial   #54  <Method void SingleRefDataBufferIterator(DataBuffer)>
+	//    4    8:areturn         
+	}
+
+	protected final DataHolder mDataHolder;
+}

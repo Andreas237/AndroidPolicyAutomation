@@ -1,0 +1,49 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package com.google.android.gms.wearable.internal;
+
+import com.google.android.gms.common.api.Status;
+
+// Referenced classes of package com.google.android.gms.wearable.internal:
+//			zzby
+
+public static class zzby$zzb
+	implements com.google.android.gms.wearable.i.SendMessageResult
+{
+
+	public int getRequestId()
+	{
+		return zzaKE;
+	//    0    0:aload_0         
+	//    1    1:getfield        #22  <Field int zzaKE>
+	//    2    4:ireturn         
+	}
+
+	public Status getStatus()
+	{
+		return zzair;
+	//    0    0:aload_0         
+	//    1    1:getfield        #20  <Field Status zzair>
+	//    2    4:areturn         
+	}
+
+	private final int zzaKE;
+	private final Status zzair;
+
+	public zzby$zzb(Status status, int i)
+	{
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #18  <Method void Object()>
+		zzair = status;
+	//    2    4:aload_0         
+	//    3    5:aload_1         
+	//    4    6:putfield        #20  <Field Status zzair>
+		zzaKE = i;
+	//    5    9:aload_0         
+	//    6   10:iload_2         
+	//    7   11:putfield        #22  <Field int zzaKE>
+	//    8   14:return          
+	}
+}

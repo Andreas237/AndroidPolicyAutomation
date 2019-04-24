@@ -1,0 +1,295 @@
+{
+	"version": "1.0.0.1",
+	"titleBeanConfigs": [{
+		"url": "huaweim.miaomore.com",
+		"leftBtn": "arrow",
+		"rightBtn": "more",
+		"shopcarUrl": "",
+		"featureUrl": "https://healthrecommend.hicloud.com/miniShop/html/homePage.html",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "healthrecommend.hicloud.com/miniShop/",
+		"leftBtn": "arrow",
+		"rightBtn": "more",
+		"shopcarUrl": "",
+		"featureUrl": "https://healthrecommend.hicloud.com/miniShop/html/homePage.html",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "miaohealth.net",
+		"leftBtn": "arrow",
+		"rightBtn": "more",
+		"shopcarUrl": "",
+		"featureUrl": "https://healthrecommend.hicloud.com/miniShop/html/homePage.html",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "healthrecommend.hicloud.com/healthMallPlat/vmall/",
+		"leftBtn": "arrow",
+		"rightBtn": "more",
+		"shopcarUrl": "",
+		"featureUrl": "https://healthrecommend.hicloud.com/miniShop/html/homePage.html",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "https://cashier.vmall.com/cashier/m/index.htm",
+		"leftBtn": "x",
+		"rightBtn": "more",
+		"shopcarUrl": "",
+		"featureUrl": "https://healthrecommend.hicloud.com/miniShop/html/homePage.html",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "healthrecommend.hicloud.com/messageH5/",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "messagecenter.hicloud.com/messageH5/html/",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "messagecenter.hicloud.com/messageH5/sleephtml/",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "messagecenter.hicloud.com/breathePractice/",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "vmall.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "healthactivity.hicloud.com",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "achievement.hicloud.com",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "heartide.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "jinxiang.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "boohee.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "boohee.cn",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "zhongan.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "pingan.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "alipay.com",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "unionpay.com",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "95516.com",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "tenpay.com",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "chunyuyisheng.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "codoon.com",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "guahao.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "idata-power.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "healthrecommend.hicloud.com/heartIndex/",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "ptbchina.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "inveno.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "wenjuan.net",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "sojump.com",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "wenjuan.com",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "mikecrm.com",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "wjx.top",
+		"leftBtn": "x",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "ctrip.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	},
+	{
+		"url": "weixin.sleepeazz.com",
+		"leftBtn": "arrow",
+		"rightBtn": "",
+		"shopcarUrl": "",
+		"featureUrl": "",
+		"orderManagerUrl": ""
+	}],
+	"urlBean": {
+		"orderManagerUrl": "",
+		"kaKaExchangeUrl": "https://mlhwm.miaohealth.net/#/integralcenter"
+	}
+}

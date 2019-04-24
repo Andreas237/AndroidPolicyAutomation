@@ -1,0 +1,182 @@
+{
+	"application": {
+		"name": "healthcloud",
+		"services": ["com.huawei.health","healthcloud"],
+		"cacheControl": 86400
+	},
+	"services": {
+		"com.huawei.health": {
+			"routeBy": "reg_country",
+			"servings": [{
+				"countryGroup": "DR1",
+				"addresses": {
+					"newVersionUrl": "https://query.hwcloudtest.cn/ring/v2/CheckEx.action?ruleAttr=true",
+					"biOperation": "https://metrics1.data.hicloud.com:6447",
+					"agreementservice": "https://terms1.hicloud.com/agreementservice/user",
+					"getLatestVersion": "https://configserver.hicloud.com/servicesupport/updateserver/getLatestVersion",
+					"getBatchPluginUrl": "https://configserver.hicloud.com/servicesupport/updateserver/data/",
+					"userInfoAgreement": "https://setting.hicloud.com/AccountServer/IUserInfoMng/getAgreement?Version=10000",
+					"getToken":"https://api.cloud.huawei.com"
+				}
+			},
+			{
+				"countryGroup": "DR2",
+				"addresses": {
+					"newVersionUrl": "",
+					"biOperation": "https://metrics3.data.hicloud.com:6447",
+					"agreementservice": "https://terms3.hicloud.com/agreementservice/user",
+					"getLatestVersion": "https://configserver-dra.platform.hicloud.com/servicesupport/updateserver/getLatestVersion",
+					"getBatchPluginUrl": "https://configserver-dra.platform.hicloud.com/servicesupport/updateserver/data/",
+					"userInfoAgreement": "",
+					"getToken":""
+				}
+			},
+			{
+				"countryGroup": "DR3",
+				"addresses": {
+					"newVersionUrl": "",
+					"biOperation": "https://metrics2.data.hicloud.com:6447",
+					"agreementservice": "https://terms7.hicloud.com/agreementservice/user",
+					"getLatestVersion": "https://configserver-dre.platform.hicloud.com/servicesupport/updateserver/getLatestVersion",
+					"getBatchPluginUrl": "https://configserver-dre.platform.hicloud.com/servicesupport/updateserver/data/",
+					"userInfoAgreement": "",
+					"getToken":""
+				}
+			},
+			{
+				"countryGroup":"DR4",
+				"addresses":{
+					"userInfoAgreement":"",
+					"getToken":"",
+					"biOperation":"https://metrics5.data.hicloud.com:6447",
+					"getBatchPluginUrl":"https://configserver-dra.platform.hicloud.com/servicesupport/updateserver/data/",
+					"newVersionUrl":"",
+					"agreementservice":"https://terms-drru.platform.hicloud.com/agreementservice/user",
+					"getLatestVersion":"https://configserver.hicloud.com/servicesupport/updateserver/getLatestVersion"
+				}
+			},
+			{
+				"countryGroup":"DR5",
+				"addresses":{
+					"userInfoAgreement":"",
+					"getToken":"",
+					"biOperation":"https://metrics4.data.hicloud.com:6447",
+					"getBatchPluginUrl":"https://configserver-dra.platform.hicloud.com/servicesupport/updateserver/data/",
+					"newVersionUrl":"",
+					"agreementservice":"https://terms-drsx.platform.hicloud.com/agreementservice/user",
+					"getLatestVersion":"https://configserver.hicloud.com/servicesupport/updateserver/getLatestVersion"
+				}
+			}]
+		},
+		"healthcloud": {
+			"routeBy": "reg_country",
+			"servings": [{
+				"countryGroup": "DR1",
+				"addresses": {
+					"healthRecommendUrl": "https://healthrecommend.hicloud.com",
+					"activityUrl": "https://healthactivity.hicloud.com",
+					"messageCenterUrl": "https://messagecenter.hicloud.com",
+					"sportSuggestUrl": "https://sportsuggest.hicloud.com/sportsuggest/app",
+					"achievementUrl": "https://achievement.hicloud.com",
+					"healthCloudUrl": "https://healthdata.hicloud.com",
+					"socialCloudUrl": "https://moments.hicloud.com/socialcloud-web",
+					"socialCloudProfileUrl": "https://sportprofile.hicloud.com/socialcloud-web",
+					"socialCloudRankUrl": "https://sportranking.hicloud.com/socialcloud-web",
+					"healthDeviceUrl":"https://healthDeviceAgent-drcn.things.hicloud.com",
+					"healthAPPToDeviceUrl":"healthDevice-drcn.things.hicloud.com"
+				}
+			},
+			{
+				"countryGroup": "DR2",
+				"addresses": {
+					"healthCloudUrl":"https://sportdata-dra.things.hicloud.com",
+					"achievementUrl":"https://achievement-dra.things.hicloud.com"
+
+				}
+			},
+			{
+				"countryGroup": "DR3",
+				"addresses": {
+					"sportSuggestUrl":"https://sportsuggest-dre.things.hicloud.com/sportsuggest/app",
+				    "achievementUrl": "https://achievement-dre.things.hicloud.com",
+				    "healthCloudUrl": "https://sportdata-dre.things.hicloud.com"
+				}
+			}]
+		}
+		
+	},
+	"countryGroups": {
+        "DR1": {
+            "name": "China",
+            "countries": [
+                "CN"
+            ],
+            "description": "China zone"
+        },
+        "DR2": {
+            "name": "Asian-African-Latin American Cloud",
+            "countries": [
+                "MY",
+                "SG",
+                "ZA"
+            ],
+            "description": "Asian-African-Latin American Cloud zone"
+        },
+        "DR3": {
+            "name": "Europe",
+            "countries": [
+                "AL",
+                "AT",
+                "BA",
+                "BE",
+                "BG",
+                "CH",
+                "CY",
+                "CZ",
+                "DE",
+                "DK",
+                "EE",
+                "ES",
+                "FI",
+                "FR",
+                "GB",
+                "GR",
+                "HR",
+                "HU",
+                "IE",
+                "IS",
+                "IT",
+                "LT",
+                "LU",
+                "LV",
+                "MD",
+                "ME",
+                "MK",
+                "NL",
+                "NO",
+                "PL",
+                "PT",
+                "RO",
+                "RS",
+                "SE",
+                "SI",
+                "SK"
+            ],
+            "description": "Europe zone"
+        },
+        "DR4": {
+            "name": "Russia",
+            "countries": [
+                "RU"
+            ],
+            "description": "Russia zone"
+        },
+        "DR5": {
+            "name": "A2",
+            "countries": [
+                "IR"
+            ],
+            "description": "A2 zone"
+        }
+    }
+}

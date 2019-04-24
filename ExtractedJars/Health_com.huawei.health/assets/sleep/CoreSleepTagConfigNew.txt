@@ -1,0 +1,405 @@
+﻿{
+    "sleepZoneConfig": {
+        "banner": [
+            {
+                "name": "睡眠问卷",
+                "img": "pic_sleepknowledge_banner_bg.png",
+                "imgSquare": "../source/image/Sleep_assessment_banner.png",
+                "url": "https://messagecenter.hicloud.com/messageH5/sleephtml/QuestionnaireFrontpage.html"
+            },
+            {
+                "name": "午间小睡",
+                "img": "pic_Sleepevaluation_banner_bg.png",
+                "imgSquare": "../source/image/Midday_1440.png",
+                "url": "https://messagecenter.hicloud.com/messageH5/sleephtml/sleepAudioPlayer.html?ID=5?INDEX=0"
+            },
+            {
+                "name": "工间小憩",
+                "img": "pic_Sleepdata_banner_bg.png",
+                "imgSquare": "../source/image/Breaks_1440.png",
+                "url": "https://messagecenter.hicloud.com/messageH5/sleephtml/sleepAudioPlayer.html?ID=5?INDEX=1"
+            }
+        ],
+        "infoList": [
+			{
+                "name": "了解睡眠，了解自己",
+                "img": "pic_sleepknowledge_4.jpg",
+                "imgSquare": "../source/image/pic_1440480.png",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=515317638&idx=6&sn=93c8dc3e02dedaf73d321541ba5c4dbd&scene=19#wechat_redirect",
+                "time": "2018-06-13"
+            },
+            {
+                "name": "《2017中国睡眠质量报告》 华为运动健康重磅发布！",
+                "img": "pic_sleepknowledge.png",
+                "imgSquare": "../source/image/pic_1440480.png",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=515316342&idx=4&sn=922fa39f456edaccb97b8994c8586057&scene=19#wechat_redirect",
+                "time": "2018-01-17"
+            },
+            {
+                "name": "世界正在惩罚晚睡的人，测测你的“睡商”有多高 ",
+                "img": "pic_sleepknowledge_2.png",
+                "imgSquare": "../source/image/pic2_1440480.jpg",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=515315593&idx=8&sn=120a1a8c13b5dc34c961f3c965cc9cd7&scene=19#wechat_redirect",
+                "time": "2017-08-07"
+            },
+            {
+                "name": "做梦多，睡不好的一定要看完本文！！！",
+                "img": "pic_sleepknowledge_2.png",
+                "imgSquare": "../source/image/pic3_1440480_1_nomoredream.jpg",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=2662800076&idx=6&sn=4a4f162140c34ae576bf64d2969cf990&chksm=8bcded5dbcba644b15f0514e0daca8d7580d10eaf770a9adfc28818bd6e5a3846c54a7b5babb#rd",
+                "time": "2017-11-10"
+            },
+            {
+                "name": "漫画科普|神奇的生物钟",
+                "img": "pic_sleepknowledge_3.png",
+                "imgSquare": "../source/image/pic4_1440480_2_magicclock.jpg",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=2662800204&idx=3&sn=8456853328a5d065d3a57c8c47dd515d&chksm=8bcdecddbcba65cb04fe0e664fc1b8ac52ea828011b364cf69552b1f76f1ae41341b8c144ebb#rd",
+                "time": "2017-11-22"
+            },
+            {
+                "name": "睡眠漫画 | 第三期 睡眠超人的熊猫眼 ",
+                "img": "../source/image/pic5_1312320_3_superman.png",
+                "imgSquare": "../source/image/pic5_1440480_3_superman.jpg",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=515316648&idx=7&sn=d9bfc9ed364d187405e82a73738e6057&scene=19#wechat_redirect",
+                "time": "2017-12-11"
+            },
+            {
+                "name": "睡眠漫画 | 第四期 中午睡一下吧！",
+                "img": "../source/image/pic6_1312320_4_haveanap.png",
+                "imgSquare": "../source/image/pic6_1440480_4_haveanap.jpg",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=515316648&idx=8&sn=75bacdb731f73030f09218e4187fb895&scene=19#wechat_redirect",
+                "time": "2017-12-11"
+            },
+            {
+                "name": "睡够8小时还没精神，一定是你没做好这6件小事 ",
+                "img": "../source/image/pic7_1312320.png",
+                "imgSquare": "../source/image/pic7_1440480.jpg",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=515315867&idx=3&sn=75f98d2785388f69c0cb3098926e0ebc&scene=19#wechat_redirect",
+                "time": "2017-09-13"
+            },
+            {
+                "name": "缺觉一周，700多种基因改变！23点以后才睡的人危险了……",
+                "img": "../source/image/pic8_1312320.png",
+                "imgSquare": "../source/image/pic8_1440480.jpg",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=515316125&idx=7&sn=40965c33a764f661c61a01eb61d96b58&scene=19#wechat_redirect",
+                "time": "2017-09-29"
+            },
+            {
+                "name": "救命帖！睡眠专家分享20个“快速入睡”的绝招",
+                "img": "../source/image/pic9_1440480.png",
+                "imgSquare": "../source/image/pic9_1440480.jpg",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=515316202&idx=2&sn=ef95613c4beda3f9e16544781cf5f733&scene=19#wechat_redirect",
+                "time": "2017-10-16"
+            },
+            {
+                "name": " 趴着睡居然把胳膊睡残了？论午睡姿势的重要性",
+                "img": "../source/image/pic10_1312320.png",
+                "imgSquare": "../source/image/pic10_1440480.jpg",
+                "url": "https://mp.weixin.qq.com/s?__biz=MzA5ODY0ODgzMA==&mid=515316607&idx=3&sn=5b8f4d71ac5b2fae92725bf3862dcb14&scene=19#wechat_redirect",
+                "time": "2017-12-01"
+            }
+        ],
+        "serviceList": [
+            {
+                "name": "夜雨促眠",
+                "img": "pic_service_yeyucumian.png",
+                "imgSquare": "../source/image/1.png",
+                "url": "https://www.heartide.com/huawei/#/recommend/1",
+                "description": "睡前静心冥想，提升睡眠质量",
+                "type": "NaturalSound",
+                "style": "入睡困难",
+                "model": "0"
+            },
+            {
+                "name": "脑波促眠",
+                "img": "pic_service_naobocumian.png",
+                "imgSquare": "../source/image/5-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/recommend/2",
+                "description": "睡前静心冥想，提升睡眠质量",
+                "type": "NaturalSound",
+                "style": "入睡困难",
+                "model": "0"
+            },
+            {
+                "name": "呼吸之间—睡前小冥想",
+                "img": "pic_service_huxizhijian.png",
+                "imgSquare": "../source/image/2-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/146",
+                "description": "睡前静心冥想，提升睡眠质量",
+                "type": "music",
+                "style": "入睡困难",
+                "model": "0"
+            },
+            {
+                "name": "478宁静促眠呼吸法",
+                "img": "pic_service_478ningjingcumianhuxifa.png",
+                "imgSquare": "../source/image/3-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/56",
+                "description": "睡前呼吸训练，帮您快速入睡",
+                "type": "music",
+                "style": "入睡困难",
+                "model": "0"
+            },
+            {
+                "name": "青青草色-睡前小冥想",
+                "img": "pic_service_qingqingcaose.png",
+                "imgSquare": "../source/image/4-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/145",
+                "description": "睡前冥想静心，令您拥有香甜的深睡眠",
+                "type": "music",
+                "style": "入睡困难",
+                "model": "0"
+            },
+            {
+                "name": "睡前垫上拉伸",
+                "img": "pic_service_shuiqiandianshanglashen.png",
+                "imgSquare": "../source/image/W008_1440_480.png",
+                "url": "W008",
+                "type": "sport",
+                "style": "入睡困难",
+                "description": "睡前舒缓放松，改善夜间易醒",
+                "model": "0"
+            },
+            {
+                "name": "夜深安睡",
+                "img": "pic_service_shenyeanshui.png",
+                "imgSquare": "../source/image/Night_1440.png",
+                "url": "https://messagecenter.hicloud.com/messageH5/sleephtml/sleepAudioPlayer.html?ID=1?INDEX=0",
+                "type": "Mindfulness",
+                "style": "入睡困难",
+                "description": "睡前舒缓放松，改善夜间易醒",
+                "model": "0"
+            },
+            {
+                "name": "睡前垫上拉伸",
+                "img": "pic_service_shuiqiandianshanglashen.png",
+                "imgSquare": "../source/image/W008_1440_480.png",
+                "url": "W008",
+                "type": "sport",
+                "style": "夜间易醒",
+                "description": "睡前舒缓放松，改善夜间易醒",
+                "model": "1"
+            },
+            {
+                "name": "冥想静心",
+                "img": "pic_service_minxiangjingxin.png",
+                "imgSquare": "../source/image/9-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/recommend/23",
+                "type": "NaturalSound",
+                "description": "睡前舒缓放松，改善夜间易醒",
+                "style": "睡眠浅",
+                "model": "2"
+            },
+            {
+                "name": "深度睡眠引导练习",
+                "img": "pic_service_shendushuimianyindaolianxi.png",
+                "imgSquare": "../source/image/6-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/128",
+                "description": "睡前引导练习，令您拥有香甜的深睡眠",
+                "type": "music",
+                "style": "睡眠浅",
+                "model": "2"
+            },
+            {
+                "name": "快速放松引导练习",
+                "img": "pic_service_kuaisufangsongyindaolianxi.png",
+                "imgSquare": "../source/image/7-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/141",
+                "description": "睡前引导练习，令您拥有香甜的深睡眠",
+                "type": "music",
+                "style": "睡眠浅",
+                "model": "2"
+            },
+            {
+                "name": "恢复精力放松法",
+                "img": "pic_service_huifujinglifangsongfa.png",
+                "imgSquare": "../source/image/8-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/124",
+                "description": "早晨激活身体，精神饱满新一天",
+                "type": "music",
+                "style": "睡眠浅",
+                "model": "2"
+            },
+            {
+                "name": "夜深安睡",
+                "img": "pic_service_shenyeanshui.png",
+                "imgSquare": "../source/image/Night_1440.png",
+                "url": "https://messagecenter.hicloud.com/messageH5/sleephtml/sleepAudioPlayer.html?ID=1?INDEX=0",
+                "description": "睡前舒缓放松，改善夜间易醒",
+                "type": "Mindfulness",
+                "style": "睡眠浅",
+                "model": "2"
+            },
+            {
+                "name": "HIIT全身激活初级",
+                "img": "pic_service_HIITquanshenjihuochuji.png",
+                "imgSquare": "../source/image/L032_1440_480.png",
+                "url": "L032",
+                "type": "sport",
+                "description": "早晨激活身体，精神饱满新一天",
+                "style": "睡眠浅",
+                "model": "2"
+            },
+            {
+                "name": "HIIT全身激活进阶",
+                "img": "pic_service_HIITquanshenjihuojinjie.png",
+                "imgSquare": "../source/image/L033_1440_480.png",
+                "url": "L033",
+                "type": "sport",
+                "description": "早晨激活身体，精神饱满新一天",
+                "style": "睡眠浅",
+                "model": "2"
+            },
+            {
+                "name": "HIIT全身激活强化",
+                "img": "pic_service_HIITquanshenjihuoqianghua.png",
+                "imgSquare": "../source/image/L034_1440_480.png",
+                "url": "L034",
+                "type": "sport",
+                "description": "早晨激活身体，精神饱满新一天",
+                "style": "睡眠浅",
+                "model": "2"
+            },
+            {
+                "name": "轻冥想 - 雪景想象",
+                "img": "pic_service_xuejingxiangxiang.png",
+                "imgSquare": "../source/image/10-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/53",
+                "description": "睡前静心冥想，缓解多梦症状",
+                "type": "music",
+                "style": "多梦",
+                "model": "3"
+            },
+            {
+                "name": "肌肉松弛法-压力舒缓",
+                "img": "pic_service_jirousongchifa.png",
+                "imgSquare": "../source/image/11-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/127",
+                "description": "睡前压力舒缓，缓解多梦症状",
+                "type": "music",
+                "style": "多梦",
+                "model": "3"
+            },
+            {
+                "name": "情景想象减压",
+                "img": "pic_service_qingjingxiangxiangjianya.png",
+                "imgSquare": "../source/image/12-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/123",
+                "description": "睡前冥想静心，令您拥有香甜的深睡眠",
+                "style": "多梦",
+                "type": "music",
+                "model": "3"
+            },
+            {
+                "name": "交替放松法-去除焦虑",
+                "img": "pic_service_jiaotifangsongfa.png",
+                "imgSquare": "../source/image/13-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/129",
+                "description": "睡前压力舒缓，令您拥有香甜的深睡眠",
+                "style": "多梦",
+                "type": "music",
+                "model": "3"
+            },
+            {
+                "name": "减压舒缓",
+                "img": "pic_service_jianyashuhuan.png",
+                "imgSquare": "../source/image/W014_037__1440.png",
+                "url": "W014",
+                "description": "睡前压力舒缓，令您拥有香甜的深睡眠",
+                "style": "多梦",
+                "type": "sport",
+                "model": "3"
+            },
+            {
+                "name": "活力早晨",
+                "img": "pic_service_huolizaochen.png",
+                "imgSquare": "../source/image/14-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/recommend/4",
+                "description": "早晨激活身体，精神饱满新一天",
+                "style": "早醒",
+                "type": "NaturalSound",
+                "model": "4"
+            },
+            {
+                "name": "清晨唤醒训练",
+                "img": "pic_service_qingchenhuanxingxunlian.png",
+                "imgSquare": "../source/image/w011_1440.png",
+                "url": "W011",
+                "description": "早晨激活身体，精神饱满新一天",
+                "style": "早醒",
+                "type": "sport",
+                "model": "4"
+            },
+            {
+                "name": "TABATA初级",
+                "img": "pic_service_TABATAchuji.png",
+                "imgSquare": "../source/image/L035_1440_480.png",
+                "url": "L035",
+                "description": "早晨激活身体，精神饱满新一天",
+                "style": "打呼噜",
+                "type": "sport",
+                "model": "5"
+            },
+            {
+                "name": "TABATA进阶",
+                "img": "pic_service_TABATAjinjie.png",
+                "imgSquare": "../source/image/W011_1440_480.png",
+                "url": "L036",
+                "description": "早晨激活身体，精神饱满新一天",
+                "style": "打呼噜",
+                "type": "sport",
+                "model": "5"
+            },
+            {
+                "name": "TABATA强化",
+                "img": "pic_service_TABATAqianghua.png",
+                "imgSquare": "../source/image/S033_1440_480.png",
+                "url": "L037",
+                "description": "早晨激活身体，精神饱满新一天",
+                "style": "打呼噜",
+                "type": "sport",
+                "model": "5"
+            },
+            {
+                "name": "午间小睡",
+                "img": "pic_service_wujianxiaoshui.png",
+                "imgSquare": "../source/image/Midday_1440.png",
+                "url": "https://messagecenter.hicloud.com/messageH5/sleephtml/sleepAudioPlayer.html?ID=5?INDEX=0",
+                "description": "早晨激活身体，精神饱满新一天",
+                "type": "Mindfulness",
+                "style": "日间症状",
+                "model": "6"
+            },
+            {
+                "name": "工间小憩",
+                "img": "pic_service_gongjianxiaoqi.png",
+                "imgSquare": "../source/image/Breaks_1440.png",
+                "url": "https://messagecenter.hicloud.com/messageH5/sleephtml/sleepAudioPlayer.html?ID=5?INDEX=1",
+                "description": "早晨激活身体，精神饱满新一天",
+                "type": "Mindfulness",
+                "style": "日间症状",
+                "model": "6"
+            },
+            {
+                "name": "午间睡眠放松",
+                "img": "pic_service_wujianshuimianfangsong.png",
+                "imgSquare": "../source/image/15-1.jpg",
+                "url": "https://www.heartide.com/huawei/#/voice/147",
+                "description": "早晨激活身体，精神饱满新一天",
+                "style": "日间症状",
+                "type": "music",
+                "model": "6"
+            },
+            {
+                "name": "倒班助眠",
+                "img": "pic_service_daobanzhumian.png",
+                "imgSquare": "../source/image/Shift_1440.png",
+                "url": "https://messagecenter.hicloud.com/messageH5/sleephtml/sleepAudioPlayer.html?ID=0?INDEX=0",
+                "description": "早晨激活身体，精神饱满新一天",
+                "type": "Mindfulness",
+                "style": "日间症状",
+                "model": "6"
+            }
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products time="2017-12-25 17:09:00" ver="1.0.1.002">
+    <!--宝莱特上臂式血压计-->
+    <product ver="1.2" hash="AA7AF53C11B168CDAD4B455063536DDBEBB4537A42F8589B7AC6F83B6C6AFCFF" res_uri="" fileId="f3ba0c71-38e0-45fb-a7a1-4fb7388323d7_new" id="f3ba0c71-38e0-45fb-a7a1-4fb7388323d7"/>
+    <!--鱼跃蓝牙血糖仪-->
+    <product ver="1.0" hash="753AD71CBF424416D3DB44D247E2325CF6E15835F57B8F1DC5F0D420A72B616A" res_uri="" fileId="29308156-f677-41fc-a622-ceea3be1a0c6_new" id="29308156-f677-41fc-a622-ceea3be1a0c6"/>
+    <!--鱼跃腕式电子血压计-->
+    <product ver="1.0" hash="7707AF5F9A2AE889C00C458118CCDB121AC612435C862D4DB0FC96AF64C0DEEF" res_uri="" fileId="4a5218f8-dcff-47a0-acb7-3c4048006ca5_new" id="4a5218f8-dcff-47a0-acb7-3c4048006ca5"/>
+    <!--AM16耳机-->
+    <product ver="2.0" hash="D806829579D26583EAD8B62CCAFEAF44EB5BA8D79D8073A185C7183D8E531F36" res_uri="" fileId="6d5416d9-2167-41df-ab10-c492e152b44f_new_v1.1" id="6d5416d9-2167-41df-ab10-c492e152b44f"/>
+    <!--华为体脂秤海外版本-->
+    <product ver="1.2" hash="B45508F3ADABC9FD82D918EE729DD4CD852CBBFFA1C6F1A85DFDAF584421CF69" res_uri="" fileId="33123f39-7fc1-420b-9882-a4b0d6c61100_new_v1.1" id="33123f39-7fc1-420b-9882-a4b0d6c61100"/>
+    <!--荣耀体脂秤海外版本-->
+    <product ver="1.2" hash="153C563C3E5178BF6FBBCF082E1112FCF954A9AC7D185A7411D8882A2FAA10FB" res_uri="" fileId="ccd1f0f8-8c57-4bd7-a884-0ef38482f15f_new_v1.1" id="ccd1f0f8-8c57-4bd7-a884-0ef38482f15f"/>
+    <!--华为智能体脂秤-云版-->
+    <product ver="1.0" hash="468FFA333FD8158A7C649FF14E00E2AE95C4252C6EDA3AB5185C8A86A7BF3D19" res_uri="" fileId="e4b0b1d5-2003-4d88-8b5f-c4f64542040b_new_v1.1" id="e4b0b1d5-2003-4d88-8b5f-c4f64542040b"/>
+    <!--荣耀智能体脂秤2 AI版-->
+    <product ver="1.0" hash="58FCFB92F77F678AF3AE122CBF75BDF307C78972993ED65F34492C3D1BBD11BA" res_uri="" fileId="a8ba095d-4123-43c4-a30a-0240011c58de_new_v1.1" id="a8ba095d-4123-43c4-a30a-0240011c58de"/>
+</products>

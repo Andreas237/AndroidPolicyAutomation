@@ -1,0 +1,34 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package android.support.v7.widget;
+
+import android.support.v7.view.menu.h;
+
+// Referenced classes of package android.support.v7.widget:
+//			ActionMenuView
+
+private static class ActionMenuView$b
+	implements android.support.v7.view.menu.o.a
+{
+
+	public void a(h h, boolean flag)
+	{
+	//    0    0:return          
+	}
+
+	public boolean a(h h)
+	{
+		return false;
+	//    0    0:iconst_0        
+	//    1    1:ireturn         
+	}
+
+	ActionMenuView$b()
+	{
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #13  <Method void Object()>
+	//    2    4:return          
+	}
+}

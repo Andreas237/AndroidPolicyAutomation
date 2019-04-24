@@ -1,0 +1,156 @@
+.class Lcom/huawei/ui/main/stories/soical/NewSocialFragment$b;
+.super Landroid/content/BroadcastReceiver;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/huawei/ui/main/stories/soical/NewSocialFragment;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = "b"
+.end annotation
+
+
+# instance fields
+.field final synthetic e:Lcom/huawei/ui/main/stories/soical/NewSocialFragment;
+
+
+# direct methods
+.method constructor <init>(Lcom/huawei/ui/main/stories/soical/NewSocialFragment;)V
+    .locals 0
+
+    .line 1498
+    iput-object p1, p0, Lcom/huawei/ui/main/stories/soical/NewSocialFragment$b;->e:Lcom/huawei/ui/main/stories/soical/NewSocialFragment;
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
+
+    .line 1501
+    const/4 v0, 0x0
+
+    if-eq v0, p2, :cond_0
+
+    iget-object v0, p0, Lcom/huawei/ui/main/stories/soical/NewSocialFragment$b;->e:Lcom/huawei/ui/main/stories/soical/NewSocialFragment;
+
+    invoke-static {v0}, Lcom/huawei/ui/main/stories/soical/NewSocialFragment;->k(Lcom/huawei/ui/main/stories/soical/NewSocialFragment;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lo/dbf;->b(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 1502
+    :cond_0
+    const-string v0, "UIDV_SocialFragment"
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "Enter SocialReceiver return 1"
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    invoke-static {v0, v1}, Lo/dho;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 1503
+    return-void
+
+    .line 1505
+    :cond_1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 1507
+    if-eqz v4, :cond_4
+
+    .line 1508
+    const-string v0, "main_social_red_dot_friend_show"
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 1509
+    const-string v0, "UIDV_SocialFragment"
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "Enter MAIN_SOCIAL_RED_DOT_FRIEND_SHOW   dot"
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    invoke-static {v0, v1}, Lo/dho;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 1511
+    :cond_2
+    const-string v0, "main_social_red_dot_friend_dismiss"
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 1512
+    const-string v0, "UIDV_SocialFragment"
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "Enter MAIN_SOCIAL_RED_DOT_FRIEND_DISMISS  hide dot"
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    invoke-static {v0, v1}, Lo/dho;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 1515
+    :cond_3
+    const-string v0, "UIDV_SocialFragment"
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "Enter SocialReceiver  default"
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    invoke-static {v0, v1}, Lo/dho;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 1519
+    :cond_4
+    :goto_0
+    return-void
+.end method

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageRes lan = "zh">
+
+<WeeklyReport>
+<steps min="10000">
+<level1>哇塞，超赞</level1>
+<level2>人和人的差距就是那么大，别人只能仰视喽</level2>
+</steps>
+<steps min="5000">
+<level1>棒棒哒</level1>
+<level2>慢慢走向人生巅峰，给自己点个赞</level2>
+</steps>
+<steps min="3000">
+<level1>不错哦</level1>
+<level2>不积跬步无以至千里，再接再励哦</level2>
+</steps>
+<steps min="1000">
+<level1>要加油哦</level1>
+<level2>无志之人常立志，请加油哦</level2>
+</steps>
+<steps min="0">
+<level1>懒虫</level1>
+<level2>久懒成疾，要坚决抵制，下周要动起来哦</level2>
+</steps>
+</WeeklyReport>
+
+<MonthlyReport>
+<steps min="10000">
+<level1>哇塞，超赞</level1>
+<level2>运动是一种生活态度，坚持是一种美德，GO</level2>
+</steps>
+<steps min="5000">
+<level1>棒棒哒</level1>
+<level2>正能量每一天，生活美美哒，下个月继续</level2>
+</steps>
+<steps min="3000">
+<level1>不错哦</level1>
+<level2>每天进步一点点就是棒棒哒，下个月要加油哦</level2>
+</steps>
+<steps min="1000">
+<level1>要加油哦</level1>
+<level2>改变生活从运动开始，下个月要运动哦</level2>
+</steps>
+<steps min="0">
+<level1>懒虫</level1>
+<level2>久懒成疾，要坚决抵制，下个月动起来哦</level2>
+</steps>
+</MonthlyReport>
+
+</LanguageRes>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups ver="2.0.1.324" time="2017-12-25 17:09:00">
+    <group kind="HDK_WEIGHT" name="IDS_device_group_name_weight_scale" icon="ic_list_balance">
+        <list view="home">
+            <!--华为体脂秤-->
+            <product id="33123f39-7fc1-420b-9882-a4b0d6c61100" ver="1.2" fileId="33123f39-7fc1-420b-9882-a4b0d6c61100_new_v1.1" res_uri="" hash="B45508F3ADABC9FD82D918EE729DD4CD852CBBFFA1C6F1A85DFDAF584421CF69"/>
+            <!--荣耀体脂秤-->
+            <product id="ccd1f0f8-8c57-4bd7-a884-0ef38482f15f" ver="1.2" fileId="ccd1f0f8-8c57-4bd7-a884-0ef38482f15f_new_v1.1" res_uri="" hash="153C563C3E5178BF6FBBCF082E1112FCF954A9AC7D185A7411D8882A2FAA10FB"/>
+        </list>
+        <list view="more"/>
+    </group>
+    <group kind="HDK_HEART_RATE" name="IDS_device_group_name_pulse_scale" icon="ic_list_heart_rate">
+        <list view="home">
+            <!--荣耀手表 S1-->
+            <product id="9323f6b7-b459-44f4-a698-988d1769832a" ver="3.0" res_uri="" hash="D904796712D90B07349DA9813727EABD26151085A2EB08289D24FE8C97B7F8F0"/>
+            <!--捷波朗运动蓝牙耳机-->
+            <product id="f83a5e21-3686-42f8-9a13-7296172a7ced" ver="3.0" res_uri="" hash="5ADCB62047AF3AA1F579B97A145B877A0CD3257D18E5950350CC70293EA8872A"/>
+            <!--Suunto 颂拓蓝牙心率带-->
+            <product id="79da9d7e-561c-4e14-8a6b-b1d5dc07198a" ver="3.0" res_uri="" hash="58F3CF2B58ED5E9660D5D2C19C7D222FCDD91E428748559F1F0D72944CC021D7"/>
+            <!--Polar H7 蓝牙心率胸带-->
+            <product id="fe33600f-dbb2-4382-9417-21ab8eeb6e42" ver="3.0" res_uri="" hash="830FFF160BF0D9056F7FF47CC7AEF2F49CD9749FA5BC955A13C7B83E3EEA9466"/>
+        </list>
+        <list view="more"/>
+    </group>
+</groups>

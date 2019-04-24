@@ -1,0 +1,27 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: Health_Service_com.sec.android.service.health.apk
+compressionType: false
+doNotCompress:
+- arsc
+- so
+- webp
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '19'
+  targetSdkVersion: '19'
+sharedLibrary: false
+sparseResources: true
+unknownFiles:
+  SEC-INF/buildConfirm.crt: '8'
+  SEC-INF/buildinfo.xml: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.4.0
+versionInfo:
+  versionCode: '214003'
+  versionName: 2.1.4.003

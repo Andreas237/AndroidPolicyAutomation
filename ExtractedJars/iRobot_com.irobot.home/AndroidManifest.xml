@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.irobot.home">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <application android:allowBackup="true" android:fullBackupContent="@xml/aspen_backup_rules" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.irobot.home.IRobotApplication_" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <activity android:label="@string/app_name" android:name="com.irobot.home.SplashActivity_" android:resizeableActivity="false" android:screenOrientation="sensorPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="global.irobot.com" android:path="/login" android:scheme="http"/>
+                <data android:host="global.irobot.com" android:path="/login" android:scheme="https"/>
+                <data android:host="ca.authoring.irobot.com" android:path="/login" android:scheme="http"/>
+                <data android:host="ca.authoring.irobot.com" android:path="/login" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/welcome" android:name="com.irobot.home.AppWelcomeActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BaseSetupActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/braavajet_series" android:name="com.irobot.home.BraavaSetupActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/connect_braava_jet" android:name="com.irobot.home.BraavaSetupConnectActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.Roomba900SetupActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/select_robot_to_register" android:name="com.irobot.home.PickABraavaActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.VideoHelpActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.RobotCleanActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BugFixedActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.ScheduleTableViewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.PersistentScheduleActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.PersistentScheduleCreateActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.AboutSmartMapsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.MapPrivacyActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.GoToMapPrivacyActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.NameFloorPlanActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.TrainRobotActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.MoppingRobotSmartMapIntroductionActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:alwaysRetainTaskState="true" android:label="" android:name="com.irobot.home.BroadcastSetupActivity_" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:alwaysRetainTaskState="true" android:name="com.irobot.home.LocalOtaHttpsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:alwaysRetainTaskState="true" android:name="com.irobot.home.OtaMqttActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/troubleshooting" android:name="com.irobot.home.TroubleshootingSetup1Activity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.TroubleshootingSetup2Activity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.TroubleshootPersistentMapActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.TroubleshootMapDetailActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:alwaysRetainTaskState="true" android:name="com.irobot.home.CustomerRegistrationActivity_" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="" android:name="com.irobot.home.RoombaAddRobotSetupActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.RobotSettingsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.WifiSettingsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.DetailedWifiSettingsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.PartsDetailListActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BaseRobotLanguageListActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:alwaysRetainTaskState="true" android:name="com.irobot.home.RoombaV1LanguageListActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:alwaysRetainTaskState="true" android:name="com.irobot.home.RoombaV2LanguageListActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.AboutRobotTableViewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.AboutDockListActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:launchMode="singleTask" android:name="com.irobot.home.BugReportActivity_" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.irobot.home.PersistentMapFeedbackActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.DuplicateRegionNameActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.EnterRegionTypeActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.ResetTableViewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.RemoveButtonActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.AboutAppTableViewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.CarpetBoostSettingsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.CleaningPassSettingsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.WebViewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/title_activity_video_view" android:name="com.irobot.home.VideoViewActivity_" android:screenOrientation="fullSensor"/>
+        <activity android:name="com.irobot.home.BaseHelpTableActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.RoombaHelpTableViewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.RobotCleaningPreferencesActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.QuestionsListActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.ContactTableViewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/invalid_robot_password_activity_title" android:name="com.irobot.home.InvalidRobotPasswordActivity_" android:theme="@style/ActivityDialog">
+            <intent-filter>
+                <action android:name="com.irobot.home.InvalidRobotPasswordActivity_"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/set_up_new_braavajet" android:name="com.irobot.home.BraavaSetupWelcomeActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.LanguagePickerActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.MoreTableViewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.HistoryActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.MissionDetailsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.HistoryInfoActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.DeveloperActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.ShowLogcatActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.LogStreamActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.MaintenanceCategoryActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/add_a_robot" android:name="com.irobot.home.SelectRobotTypeActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BaseCleanActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BraavaCleanActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BraavaMoreTableViewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BraavaPrefsTableActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BraavaPadSettingsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BraavaAboutRobotActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BraavaSoftwareUpdateActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BraavaSpotCleanActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BraavaHelpTableViewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.CountryPickerActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/accounts_my_account" android:launchMode="singleTask" android:name="com.irobot.home.AccountLoginActivity_" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.irobot.home.MapCustomizationActivity_" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.irobot.home.MapCustomizationEditInfoActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.MapCustomizationCompleteActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.SmartMapTipsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.MapCustomizationIntroductionActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.MapGettingStartedActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.MapFirstCleaningActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.TrainingModeIntroActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.OneMoreTrainingRunActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.FloorPlanActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.ChooseRegionsToCleanActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/create_account_title" android:name="com.irobot.home.CreateAccountOrLoginActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.RobotSoftwareUpdateActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/account" android:name="com.irobot.home.AccountOverviewActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BetaIntroductionActivity_" android:noHistory="true" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BetaFeaturesActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BinBehaviorActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.BetaIdeasActivity_" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="stateUnchanged"/>
+        <activity android:name="com.irobot.home.BetaFeatureDetailActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.WifiMapFeedbackActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.WiFiInfoActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="@string/manage_account" android:name="com.irobot.home.AccountSettingsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.PrivacySettingsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.NotificationSettingsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.SanMarinoCareMaintenanceActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.UpdateAccountProfileActivity_" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.irobot.home.UpdateAccountPasswordActivity_" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.gigya.socialize.android.ui.HostActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:allowTaskReparenting="true" android:launchMode="singleTask" android:name="com.gigya.socialize.android.login.providers.WebLoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="gsapi" android:scheme="com.irobot.home"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/terms_and_policies_page_title" android:name="com.irobot.home.LegalTermsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.OnDemandOtaActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.NotificationDetailsActivity_" android:screenOrientation="sensorPortrait"/>
+        <activity android:name="com.irobot.home.CustomVideoWebViewActivity_"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="67e385152627b1bdcbf45e0722df20b2c500276e"/>
+        <service android:exported="false" android:name="com.irobot.home.service.RobotUploadService"/>
+        <service android:exported="false" android:name="com.irobot.home.notifications.IRobotFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.irobot.home.help.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_path"/>
+        </provider>
+        <receiver android:exported="false" android:name="com.irobot.home.notifications.PushyMessageReceiver">
+            <intent-filter>
+                <action android:name="pushy.me"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="me.pushy.sdk.receivers.PushyUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="me.pushy.sdk.receivers.PushyBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.irobot.home.util.TimeChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="me.pushy.sdk.services.PushySocketService"/>
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.irobot.home.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <provider android:authorities="com.irobot.home.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
+        <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT"/>
+    </application>
+</manifest>

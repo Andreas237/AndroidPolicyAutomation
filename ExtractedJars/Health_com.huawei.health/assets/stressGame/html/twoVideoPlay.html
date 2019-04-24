@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+/*      屏蔽系统用户选择 */
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+    }
+    html,body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width:100%;
+        /*object-fit:fill;*/
+    }
+    #firPage{
+        position:relative;
+        left:0;
+        top:0;
+        width:204px;
+        height:135px;
+        display:none;
+    }
+    video{
+        height:100%;
+        width:100%;
+        position: absolute;
+        left:0;
+        bottom: 0;
+     /* object-fit:fill;*/
+        display: none;
+        z-index: 2;
+        transform:translateZ(0);
+        -webkit-transform:translateZ(0);
+    }
+    video::-webkit-media-controls-start-playback-button{
+        display:none;
+    }
+    audio{
+        height:0;
+        width: 0;
+        position: absolute;
+        left:0;
+        bottom: 0;
+        }
+    #status{
+        position: absolute;
+        left:0.25rem;
+        top:0.25rem;
+        width: 50%;
+        height: 0.5rem;
+        line-height:0.5rem;
+        font-size:15px;
+        font-family:normal;
+        color: #ffffff;
+        display: none;
+    }
+    #count_down{
+        position: absolute;
+        right:0.25rem;
+        top: 0.25rem;
+        height: 0.5rem;
+        line-height:0.5rem;
+        font-size:15px;
+        color: #ffffff;
+        display:none;
+    }
+    #successHtml,#failHtml{
+        width:100%;
+        height:100%;
+        display: none;
+    }
+    #img{
+        position:fixed;
+        top:0;
+        left:0;
+        width:204px;
+        height:135px;
+        display:none;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="../source/css/fail.css"/>
+<link rel="stylesheet" type="text/css" href="../source/css/success.css"/>
+
+</head>
+<body onresize ="setFullScreen()" >
+    <div id ="firPage"  >
+        <video id = "firVideo" src = ""  poster=""></video>
+        <video id=  "secVideo" src = "" ></video>
+        <audio id=  "embed"    src = ""></audio>
+    </div>
+    <img id="img" src = "">
+    <div id="status">表现很棒，当前很放松</div>
+    <div id="count_down"> &lt; 3min</div>
+    <div id="successHtml" >
+        <div class="color">
+            <div class="topBlack"></div>
+            <div class="radar">
+                <div id="radar"></div>
+                <div id="phone">
+                    <p id="success_status">放松状态</p>
+                    <img id="success_img" src="/data/data/com.huawei.health/files/stress/audiosBase/ic_public_info2.png">
+                </div>
+            </div>
+            <div class="text">
+                <p id="scoreText">放松效果</p>
+                <p id="score"><span id="successScore"></span><span id="scoreMin">分</span></p>
+                <p id="language"></p>
+                <button id="success_btn" type="button" onclick="doOK();">再来一次</button>
+            </div>
+            <div class="bottomBlack"></div>
+        </div>
+    </div>
+    <div id="failHtml" >
+        <div class="content">
+            <div class="topBlack"></div>
+            <div class="watch">
+                <img id="watchImg" src = ""/>
+            </div>
+            <div class="fail_reason">
+                <p class="verdict">很抱歉，游戏过程中未获取到足够数据，无法评估游戏结果。</p>
+                <p>请确认：</p>
+                <p>1.设备与手机之间保持蓝牙连接</p>
+                <p>2.设备已正确佩戴</p>
+                <p>3.游戏过程中腕部保持静止</p>
+            </div>
+            </div>
+        <button id="fail_button" class="fail_button" type="button" onclick="doOK();">重新开始</button>
+        <div class="bottomBlack"></div>
+    </div>
+    <script type="text/javascript" src="/data/data/com.huawei.health/files/stress/audiosBase/jquery-3.2.1.min.js" ></script>
+    <script type="text/javascript" src="/data/data/com.huawei.health/files/stress/audiosBase/echarts.min.js"> </script>
+    <script type="text/javascript" src="../source/js/fail.js"></script>
+    <script type="text/javascript" src="../source/js/success.js"></script>
+    <script type="text/javascript" src="../source/js/flexible.js"></script>
+    <script type="text/javascript" src="../source/js/log.js"></script>
+    <script type="text/javascript">
+        document.onreadystatechange  = loadingChange
+        function loadingChange(){
+            if(document.readyState =="complete"){
+                printInfo("此时页面已经全部加载成功");
+                setFullScreen();
+                // $("#firVideo").show();
+                $("#count_down").show();
+                count_down_start();//倒计时开启
+            }
+        }
+        printInfo("js  start")
+        var fullScreenTimer = setInterval(function(){
+            setFullScreen();
+        },500)
+        //video铺满全屏
+        function setFullScreen(){
+            printInfo("进入设置全屏函数")
+            var screenHeight = document.documentElement.clientHeight;
+            var videoHeight = $("#firPage").height();
+            var screenWidth = document.documentElement.clientWidth;
+            var videoWidth = $("#firPage").width();
+            $("#firPage").css("top",(screenHeight-videoHeight+1)/2);
+            $("#firPage").css("left",(screenWidth-videoWidth+1)/2);
+            //printInfo("铺满全屏")
+            $("#firPage").css("transform","scale("+(screenWidth/videoWidth+0.01)+","+(screenHeight/videoHeight+0.01)+")")
+            $("#firPage").css("webkitTransform","scale("+(screenWidth/videoWidth+0.01)+","+(screenHeight/videoHeight+0.01)+")")
+            $("#img").css("top",(screenHeight-videoHeight+1)/2);
+            $("#img").css("left",(screenWidth-videoWidth+1)/2);
+            //printInfo("铺满全屏")
+            $("#img").css("transform","scale("+(screenWidth/videoWidth+0.01)+","+(screenHeight/videoHeight+0.01)+")")
+            $("#img").css("webkitTransform","scale("+(screenWidth/videoWidth+0.01)+","+(screenHeight/videoHeight+0.01)+")")
+        }
+        var videoStartTime = Date.parse(new Date())
+        printDebug("videoStartTime "+videoStartTime)
+        var mForwardStateAry = [] //步经数组
+        var bubbleChartRetFlag;
+        var successRetFlag = 0;
+        var displayResultFlag =0;
+        var calmAry= [];
+        var controlAry = [];
+        var fluencyAry = [] ;
+        var stabilizationAry=[];
+        var resistAry=[];
+        var grade=0;
+        var score=0;
+        var mForwardState;
+        var count = 0; //视频的状态值
+        var increaseVideoSrc = [] //正向视频数组
+        var decreaseVideoSrc = [] //逆向视频数组
+        var bestCount=0;//最好状态
+        var baseUrl="/data/data/com.huawei.health/files/stress/audiosBase/"; //基本路径
+        var  count_down_start_timer;//状态栏显示定时器
+        var isSuccessPageCount = 0;
+        var isLocalStorageFlag = false;//判断是否需要将数据缓存到缓存localStorage里面
+        var isOccurWaiting = false;
+        for (var i=1;i<=34;i++){
+            //正向素材视频  起始素材  1
+            if(i<34){
+                increaseVideoSrc.push(baseUrl+"video_"+i+".mp4");
+            }
+            //反向素材视频  起始素材  video_
+            decreaseVideoSrc.push(baseUrl+"video_"+(i+999)+".mp4");
+        }
+        $("#firVideo").get(0).src = decreaseVideoSrc[0];
+        $("#secVideo").get(0).src = decreaseVideoSrc[0];
+        //封面图数组
+        var imgSrcAry=[];
+        for(var i=0;i<=34;i++){
+            if(i<=33){
+                imgSrcAry.push(baseUrl+i+".jpg");
+            }else{
+                imgSrcAry.push(baseUrl+"cover.png");
+                imgSrcAry.push(baseUrl+"watch.png");
+                imgSrcAry.push(baseUrl+"blueTooth.png");
+                imgSrcAry.push(baseUrl+"adorn.png");
+                imgSrcAry.push(baseUrl+"sit.png");
+            }
+        }
+        $("#img").get(0).src = imgSrcAry[0];
+        $("#embed").get(0).src = baseUrl+"introduce_words.mp3";
+        //修改完字体再返回页面
+        function resultData(param){
+                localStorage.clear()
+                printInfo("home键之后解析的jsonResult:"+param);
+                var jsonstr;
+                try{
+                    jsonstr	 = JSON.parse(param);
+                    printInfo("jsonstr "+jsonstr);
+                    //将数据保存到缓存中
+                    isSuccessPageCount = jsonstr.isSuccessPageCount
+                    displayResultFlag  = jsonstr.displayResultFlag
+                    successRetFlag     = jsonstr.successRetFlag
+                    isLocalStorageFlag = jsonstr.isLocalStorageFlag
+                    grade = jsonstr.grade
+                    score = jsonstr.score
+                    localStorage.setItem("vidoePlayTime",jsonstr.vidoePlayTime)
+                    localStorage.setItem("calm",jsonstr.calm)
+                    localStorage.setItem("control",jsonstr.control)
+                    localStorage.setItem("fluency",jsonstr.fluency)
+                    localStorage.setItem("stabilization",jsonstr.stabilization)
+                    localStorage.setItem("resist",jsonstr.resist)
+                    localStorage.setItem("grade",jsonstr.grade)
+                    localStorage.setItem("score",jsonstr.score)
+                    localStorage.setItem("bestCountImg",jsonstr.bestCountImg)
+                    jumpPage(100);
+                }catch(e){
+                    printInfo("parse jsonStr is error "+ e);
+                    //此种情况为开始游戏没有数据传输
+                    jumpPage(100);
+                    }
+        }
+        //android每四秒调用的接口
+        function algResult(param){
+            clearInterval(fullScreenTimer)
+            printInfo("4s接口jsonResult:"+param);
+            //printInfo("解析的字符串为："+JSON.stringify(param));
+            var jsonStr;
+            try{
+                jsonStr	 = JSON.parse(param);
+                printInfo("jsonstr "+jsonStr);
+                //如果isLocalStorageFlag=true代表已经跳转页面，不需要再保存数据
+                if(!isLocalStorageFlag){
+                    //步经值
+                    changeMForwardState(jsonStr.mForwardState)
+                    //长时间状态的判定
+                    realTimeRemind(jsonStr.RealTimeRemind)
+                    //气泡值
+                    changeBubbleChartRetFlag(jsonStr.BubbleChartRetFlag)
+                    //算法正确与否
+                    changeSuccessRetFlag(jsonStr.SuccessRetFlag);
+                    //是否展示结果页面
+                    changeDisplayResultFlag(jsonStr.DisplayResultFlag)
+                    if(1 == jsonStr.BubbleChartRetFlag){
+                        changeRadar(jsonStr);
+                    }
+                    //等级
+                    mGrade(jsonStr.mGrade)
+                    //分数
+                    mScore(jsonStr.mScore)
+                }
+            }catch(e){
+                printInfo("4s Timer parse jsonStr is error "+ e);
+            }
+        }
+        //步经接口
+        function changeMForwardState(param){
+            printInfo("mForwardState："+param);
+            mForwardStateAry.push(param);
+            return mForwardStateAry;
+        }
+        //长时间状态的判定
+        //var realTimeRemind;
+        function realTimeRemind(param){
+            printInfo("param:"+param)
+            if(1 == param){
+                printDebug("Present a good state");
+                $("#status").html("当前状态很棒，请保持");
+                $("#status").show();
+                var statusTimer =setTimeout(function(){
+                    printDebug("status disappear")
+                    $("#status").hide();
+                    clearTimeout(statusTimer)
+                }, 2000)
+            }else if( -1== param ){
+                printDebug("Present a bad state")
+                $("#status").html("请保持有节奏的呼吸，慢慢地吸气和呼气");
+                $("#status").show();
+                var statTimer = setTimeout(function(){
+                    printDebug("status disappear")
+                    $("#status").hide();
+                    clearTimeout(statTimer)
+                }, 2000)
+            }
+        }
+        //播放停止接口
+        function measureEnd(param){
+            printInfo("stop："+param)
+                //跳转结果页面
+                jumpPage(param);
+        }
+            function changeSuccessRetFlag(param){
+            printInfo("successRetFlag："+param)
+            if(param == 1){
+                successRetFlag=param;
+            }
+            return successRetFlag;
+        }
+        //是否展示结果页面
+        function changeDisplayResultFlag(param){
+            printInfo("DisplayResultFlag："+param)
+            if(param == 1){
+                displayResultFlag=param;
+            }
+            return displayResultFlag;
+        }
+        //改变雷达图的五个元素
+        function changeRadar(param){
+            calmAry.push(param.calm);
+            controlAry.push(param.control)
+            fluencyAry.push(param.fluency);
+            stabilizationAry.push(param.stabilization);
+            resistAry.push(param.resist);
+        }
+        //平静0-1
+        function calm(param){
+            printInfo("calm："+param)
+            if(1==bubbleChartRetFlag){
+                calmAry.push(param);
+            }
+            //return calmAry;
+            return calmAry;
+        }
+        //控制0~1.5
+        function control(param){
+            printInfo("control："+param)
+            if(1==bubbleChartRetFlag){
+            controlAry.push(param);
+            }
+            return controlAry;
+        }
+        //流畅0~1
+        function fluency(param){
+            printInfo("fluency："+param)
+            if(bubbleChartRetFlag==1){
+                fluencyAry.push(param);
+            }
+            return fluencyAry;
+        }
+        //稳定0-1
+        function stabilization(param){
+            printInfo("stabilization："+param)
+            if(1==bubbleChartRetFlag){
+                stabilizationAry.push(param);
+            }
+            return stabilizationAry;
+        }
+        //对抗0~1
+        function resist(param){
+            if(1==bubbleChartRetFlag){
+            resistAry.push(param);
+            }
+            printInfo("resist："+param)
+            return resistAry;
+        }
+        //气泡值
+        function changeBubbleChartRetFlag(param){
+            if(1==param){
+                bubbleChartRetFlag=param;
+            }else{
+                bubbleChartRetFlag=0;
+            }
+            printInfo("BubbleChartRetFlag："+param)
+            return bubbleChartRetFlag;
+        }
+        //总分数
+        function mGrade(param){
+            printInfo("grade:"+param)
+            grade =param;
+            return grade;
+        }
+        //总等级
+        function mScore(param){
+            printInfo("score:"+param)
+            score = param;
+            return score;
+        }
+        var isCacheFlagTimer;
+        var firVideoDelayTimer;
+        var secVideoDelayTimer;
+        var loadingTimer;
+        $("#firVideo").get(0).addEventListener("playing",firVideoFnc,false);
+        function firVideoFnc(){
+            printInfo("播放器1播放时间："+(new Date()).getSeconds()+"秒"+(new Date()).getMilliseconds()+"毫秒   "+$("#firVideo").get(0).style.display)
+            if(!isOccurWaiting){
+                clearTimeout(isCacheFlagTimer)
+                clearTimeout(firVideoDelayTimer);
+                clearTimeout(loadingTimer);
+                printDebug("count"+count)
+                printInfo("此时播放开始播放的路径为:"+$("#firVideo").get(0).src+"此时播放器1的状态："+$("#firVideo").get(0).style.display);
+                printInfo("此时播放2的路径为:"+$("#secVideo").get(0).src);
+                loadingTimer  =setTimeout(function(){
+                    if(mForwardStateAry.length == 0){
+                        printDebug("No data is delivered at this time")
+                        $("#secVideo").get(0).src=decreaseVideoSrc[count];
+                        mForwardState = -1;
+                    }else {
+                        if(mForwardStateAry[mForwardStateAry.length-1]==1){
+                            printInfo("进入正向缓存")
+                            if(count<33){
+                                $("#secVideo").get(0).src=increaseVideoSrc[count];
+                            }
+                            printDebug("this.src"+$("#secVideo").get(0).src)
+                            mForwardState = 1;
+                        }else {
+                            printInfo("进入逆向缓存")
+                            $("#secVideo").get(0).src = decreaseVideoSrc[count];
+                            mForwardState = -1;
+                        }
+                    }
+                    printInfo("缓冲后播放器2的路径$('#secVideo').get(0).src"+$("#secVideo").get(0).src);
+                    // $("#secVideo").get(0).poster = imgSrcAry[count];
+                    $("#secVideo").get(0).load();
+                    printInfo("资源加载成功")
+                }, 2500)
+                //4s后开始播放第二个素材
+                isCacheFlagTimer = setTimeout(function(){
+                    printInfo("second video cache before start :"+$("#secVideo").get(0).buffered.start(0)+" end: "+$("#secVideo").get(0).buffered.end(0))
+                    //$("#secVideo").get(0).style.zIndex = -100;
+                    $("#secVideo").get(0).style.zIndex = 1;
+                    $("#secVideo").get(0).style.display = "block";
+                    isOccurWaiting = false;
+                    $("#secVideo").get(0).play();
+                    printInfo("此时  视频2播放的位置为"+$("#secVideo").get(0).currentTime)
+                    printInfo("second video cache after start :"+$("#secVideo").get(0).buffered.start(0)+" end: "+$("#secVideo").get(0).buffered.end(0))
+                },4000)
+                firVideoDelayTimer = setTimeout(function(){
+                    $("#firVideo").get(0).pause();
+                    //防止卡顿
+                    printInfo("second video cache start :"+$("#secVideo").get(0).buffered.start(0)+" end: "+$("#secVideo").get(0).buffered.end(0))
+                    printInfo("进入防止卡顿定时器")
+                    printInfo($("#firVideo").get(0).ended)
+                    if(!$("#firVideo").get(0).ended){
+                        if(mForwardState ==1){
+                            count++;
+                        }else {
+                            count--
+                        }
+                        if(count<0){
+                            count=0
+                        }
+                        printInfo("this video is stop")
+                        //$("#firVideo").get(0).style.display ="none";
+                        //changeZIndex($("#firVideo").get(0));
+                        //$("#secVideo").get(0).style.zIndex = 0;
+                        //$("#secVideo").get(0).style.display = "block"
+                        //$("#secVideo").get(0).play();
+                        $("#secVideo").get(0).style.zIndex = 2;
+                        $("#firVideo").get(0).style.zIndex = 1 ;
+                    }
+                    clearTimeout(firVideoDelayTimer)
+                }, 5400)
+            }else{
+                printInfo("播放器期间发生了waiting事件")
+            }
+        }
+        //倒计时开启
+        var count_down_start = function(){
+            printInfo("Enter the countdown")
+            count_down_start_timer=setInterval(function(){
+                isSuccessPageCount++;
+                if(isSuccessPageCount==60){
+                    $("#count_down").html("&lt; 2min");
+                }else if(isSuccessPageCount==120){
+                    $("#count_down").html("&lt; 1min");
+                }else if(isSuccessPageCount==180){
+                    jumpPage(100);
+                    clearInterval(count_down_start_timer)
+                }
+            },1000)
+        }
+        $("#firVideo").get(0).addEventListener("ended",firVideoEndFnc,false);
+        function firVideoEndFnc(){
+            printInfo("播放器2当前播放时间："+$("#secVideo").get(0).currentTime);
+            printInfo("second video cache start :"+$("#secVideo").get(0).buffered.start(0)+" end: "+$("#secVideo").get(0).buffered.end(0))
+            clearTimeout(firVideoDelayTimer)
+            printInfo("the first video is ended")
+            if(bestCount<count){//为了取得精彩瞬间
+                bestCount =count;
+                printInfo("bestCount"+bestCount)
+            }
+            if(count>=33){
+                printInfo("Listen to this video as the last video")
+                printInfo("jump page")
+                jumpPage(100);
+            }else{
+                if(mForwardState ==1){
+                    count++;
+                }else {
+                    count--
+                }
+                if(count<0){
+                    count=0
+                }
+                printInfo("count:"+count)
+                $("#firVideo").get(0).style.zIndex = 1;
+                $("#secVideo").get(0).style.zIndex = 2;
+            }
+        }
+        $("#firVideo").get(0).onpause = function(){
+            printInfo("this first video pause")
+            printInfo("$('#firVideo').get(0).currentTime"+$("#firVideo").get(0).currentTime)
+        }
+        $("#secVideo").get(0).onpause = function(){
+            printInfo("this second video pause")
+            printInfo("$('#secVideo').get(0).currentTime"+$("#secVideo").get(0).currentTime)
+        }
+        $("#firVideo").get(0).onerror = function(){
+            printInfo("$('#firVideo').get(0).src : "+$('#firVideo').get(0).src);
+            printInfo("$('#firVideo').get(0).error.code "+$("#firVideo").get(0).error.code)
+            printInfo("this first video is error")
+            //jumpPage(100);
+        };
+        $("#secVideo").get(0).onerror = function(){
+            //一开始肯定没发加载路径  所以不管他
+            var nowTime = (Date.parse(new Date())-videoStartTime)/1000;
+            if(nowTime<3){
+                printDebug("this time is not sign out");
+                return;
+            }else{
+                printInfo("$('#secVideo').get(0).error.code："+$("#secVideo").get(0).error.code)
+                printInfo("this second video is error ")
+                // jumpPage(100);
+            }
+        };
+        $("#embed").get(0).onended = function(){
+            printInfo("this embed ended");
+            if(!isLocalStorageFlag){
+                jumpPage(100)
+            }
+        }
+        $("#embed").get(0).onerror = function(){
+            printInfo("此时系统音频的错误类型："+$("#embed").get(0).error.code)
+            if(!isLocalStorageFlag){
+                jumpPage(100)
+            }
+        }
+        $("#firVideo").get(0).onemptied = function(){
+            printInfo("this first video is emptied")
+        }
+        $("#secVideo").get(0).onemptied = function(){
+            printInfo("this second video isemptied")
+        }
+        $("#firVideo").get(0).onstalled = function(){
+            printInfo("the first video fails to get the resource ")
+            jumpPage(100);
+        }
+        $("#secVideo").get(0).onstalled = function(){
+            printInfo("the second video fails to get the resource")
+            jumpPage(100);
+        }
+        //播放器1播放，封面图消失
+        $("#firVideo").get(0).addEventListener("timeupdate",UpdateTimeFnc);
+        function UpdateTimeFnc(){
+            var firCurTime = $("#firVideo").get(0).currentTime;
+            if(firCurTime>0.5){
+            clearInterval(fullScreenTimer);
+                printInfo("删除绝对定位图片")
+                $("#img").hide();
+                $("#img").remove();
+                $("#firVideo").get(0).style.zIndex = 2;
+            //    $("#firPage").get(0).style.display ="block";
+            //    $("#firVideo").get(0).style.display = "block";
+                $("#firVideo").get(0).removeEventListener("timeupdate",UpdateTimeFnc);
+            }
+        }
+        $("#secVideo").get(0).addEventListener("playing",secVideoFnc,false);
+        function secVideoFnc(){
+            printInfo("播放器2播放时间："+(new Date()).getSeconds()+"秒"+(new Date()).getMilliseconds()+"毫秒   "+$("#secVideo").get(0).style.display)
+            var nowTime1 = (Date.parse(new Date())-videoStartTime)/1000;
+            printInfo("播放时间"+nowTime1)
+            if(!isOccurWaiting&&nowTime1>3){
+                clearTimeout(secVideoDelayTimer);;
+                printInfo("the second video begin play")
+                clearTimeout(loadingTimer);
+                clearTimeout(isCacheFlagTimer)
+                printInfo("count"+count)
+                printInfo("此时播放开始播放的路径为:$('#secVideo').get(0).src"+$("#secVideo").get(0).src)
+                printInfo("此时播放器1的路径$('#firVideo').get(0).src"+$("#firVideo").get(0).src)
+                loadingTimer  =setTimeout(function(){
+                    if(mForwardStateAry.length == 0){
+                        printDebug("No data is delivered at this time")
+                        mForwardState = -1;
+                        $("#firVideo").get(0).src = decreaseVideoSrc[count];
+                    }else {
+                        if(mForwardStateAry[mForwardStateAry.length-1]==1){
+                            printInfo("进入正向缓存")
+                            if(count<33){
+                                $("#firVideo").get(0).src=increaseVideoSrc[count];
+                            }
+                            mForwardState = 1;
+                        }else {
+                            mForwardState = -1;
+                            printInfo("进入逆向缓存")
+                            $("#firVideo").get(0).src = decreaseVideoSrc[count]
+                        }
+                    }
+                    printInfo("$(缓冲后播放器1在路径'#firVideo').get(0).src "+$("#firVideo").get(0).src)
+                    printInfo("start cache")
+                    $("#firVideo").get(0).load();
+                    printInfo("Successful loading of resources");
+                }, 2500)
+                isCacheFlagTimer = setTimeout(function(){
+                    printInfo("first video cache before start :"+$("#firVideo").get(0).buffered.start(0)+" end: "+$("#firVideo").get(0).buffered.end(0))
+                    //$("#firVideo").get(0).style.zIndex=-100;
+                    isOccurWaiting = false;
+                    $("#firVideo").get(0).style.zIndex = 1;
+                    $("#firVideo").get(0).play();
+                    printInfo("此时  视频1播放的位置为"+$("#firVideo").get(0).currentTime)
+                    printInfo("first video cache after start :"+$("#firVideo").get(0).buffered.start(0)+" end: "+$("#firVideo").get(0).buffered.end(0))				
+                },4000)
+
+                secVideoDelayTimer = setTimeout(function(){
+                    $("#secVideo").get(0).pause();
+                    printInfo("first video cache start :"+$("#firVideo").get(0).buffered.start(0)+" end: "+$("#firVideo").get(0).buffered.end(0))
+                    //防止卡顿
+                    printInfo("此时播放器2停止，播放器1即将播放")
+                    printInfo("进入防止卡顿定时器")
+                    if(!$("#secVideo").get(0).ended){
+                        if(mForwardState ==1){
+                            count++;
+                        }else {
+                            count--
+                        }
+                        if(count<0){
+                            count=0
+                        }
+                        printInfo("The player pause at this time")
+                        //$("#firVideo").get(0).style.zIndex = 0;
+                        // $("#firVideo").get(0).style.display = "block"
+                        //$("#secVideo").get(0).style.display ="none";
+                        // changeZIndex($("#secVideo").get(0));
+                        //$("#firVideo").get(0).play();
+                        $("#firVideo").get(0).style.zIndex = 2;
+                        $("#secVideo").get(0).style.zIndex = 1;
+                    }
+                    clearTimeout(secVideoDelayTimer)
+                }, 5300)
+            }else{
+                printInfo("时间未到  暂停播放器2或者发生了waiting事件")
+                $("#secVideo").get(0).pause();
+            }
+        }
+        $("#secVideo").get(0).addEventListener("ended",secVideoEndFnc,false);
+        function secVideoEndFnc(){
+            printInfo("播放器1当前播放时间："+$("#firVideo").get(0).currentTime);
+            printInfo("first video cache start :"+$("#firVideo").get(0).buffered.start(0)+" end: "+$("#firVideo").get(0).buffered.end(0))
+            printInfo("the second video ended")
+            clearTimeout(secVideoDelayTimer)
+            if(bestCount<count){//为了取得精彩瞬间
+                bestCount =count;
+                printInfo("bestCount"+bestCount)
+            }
+            if(count>=33){
+                printInfo("Listen to this video as the last video")
+                printInfo("jump page")
+                jumpPage(100);
+            }else{
+                if(mForwardState ==1){
+                    count++;
+                }else {
+                    count--
+                }
+                if(count<0){
+                    count=0
+                }
+                printDebug("count:"+count)
+                //$("#firVideo").get(0).style.zIndex= 0 ;
+                // $("#firVideo").get(0).style.display="block";
+                //changeZIndex($("#secVideo").get(0));
+                //$("#firVideo").get(0).play();
+                $("#firVideo").get(0).style.zIndex = 2;
+                $("#secVideo").get(0).style.zIndex = 1;
+            }
+        }
+        //改变播放器的层级，延迟300ms消失
+        var changeZIndex = function(video){
+            printInfo("Player delay disappearing "+video)
+            printDebug("video.style.zIndex:"+video.style.zIndex)
+            video.style.zIndex = -2;
+            var _zIndexTimer = setTimeout(function(){
+                video.style.display = "none";
+                printInfo("此时进入changeZindex播放器状态："+video.style.display)
+                video.style.zIndex = 0;
+                clearTimeout(_zIndexTimer);
+            }, 100)
+        }
+        var vidoePlayTime = 0;
+        var jumpPage  = function(param){
+            clearInterval(fullScreenTimer)
+            printInfo("此时接到跳转命令："+Date.parse(new Date()))
+            var pageId ;
+            vidoePlayTime = (Date.parse(new Date())-videoStartTime)/1000;
+            printDebug("video play  "+vidoePlayTime);
+            //利用localStorage传参数
+            if(!isLocalStorageFlag){
+                isLocalStorageFlag=true;
+                printInfo("将数据缓存到缓存localstorage里面")
+                localStorage.setItem("vidoePlayTime",vidoePlayTime)
+                localStorage.setItem("calm",calmAry[calmAry.length-1])
+                localStorage.setItem("control",controlAry[controlAry.length-1])
+                localStorage.setItem("fluency",fluencyAry[fluencyAry.length-1])
+                localStorage.setItem("stabilization",stabilizationAry[stabilizationAry.length-1])
+                localStorage.setItem("resist",resistAry[resistAry.length-1]);
+                localStorage.setItem("grade",grade)
+                localStorage.setItem("score",score)
+                localStorage.setItem("bestCountImg",imgSrcAry[bestCount])
+            }
+            if(param ==300){ //此时发生异常，直接退到生物反馈界面
+                printInfo("视频中途退出")
+                $("#embed").get(0).pause();
+                $("#embed").get(0).src = "";
+                clearTimeout(firVideoDelayTimer)
+                clearTimeout(secVideoDelayTimer)
+                clearTimeout(loadingTimer);
+                clearInterval(count_down_start_timer);
+                //此时不跳结果页面
+                return false;
+            }else {
+                if(isSuccessPageCount >= 136&&displayResultFlag == 1 && successRetFlag == 1 ){
+                    printInfo("isSuccessPageCount "+isSuccessPageCount)
+                    printDebug("走这里路径8")
+                        pageId = "successHtml";
+                        printInfo("success page")
+						callAndroid(200);//返回键
+                }else{
+                    pageId = "failHtml";
+                    printInfo("fail page")
+					callAndroid(300);//返回键
+                }
+            }
+            printDebug(" "+pageId)
+            
+            var saveJsonToAndroid = '{"isSuccessPageCount":'+isSuccessPageCount+',"displayResultFlag":'+displayResultFlag+',"successRetFlag":'+successRetFlag+',"isLocalStorageFlag":'+true+',"vidoePlayTime":'+vidoePlayTime+',"calm":'+localStorage.getItem("calm")+',"control":'+localStorage.getItem("control")+',"fluency":'+localStorage.getItem("fluency")+',"stabilization":'+localStorage.getItem("stabilization")
+                                    +',"resist":'+localStorage.getItem("resist")+',"grade":'+grade+',"score":'+score+',"bestCountImg":"'+imgSrcAry[bestCount]+'"}'
+            //将缓存数据保存到android
+            saveLocalStorage(saveJsonToAndroid);
+            $("#firVideo").get(0).pause();
+            $("#secVideo").get(0).pause();
+            $("#firVideo").get(0).removeEventListener("playing",firVideoFnc ,false);
+            $("#secVideo").get(0).removeEventListener("ended",secVideoFnc ,false);
+            $("#firVideo").get(0).removeEventListener("playing",firVideoEndFnc ,false);
+            $("#secVideo").get(0).removeEventListener("ended",secVideoEndFnc ,false);
+            printDebug("走这里")
+            clearTimeout(firVideoDelayTimer)
+            clearTimeout(secVideoDelayTimer)
+            clearTimeout(loadingTimer);
+            clearInterval(count_down_start_timer);
+            clearTimeout(isCacheFlagTimer);
+            $("#embed").get(0).pause();
+            $("#firPage").hide();
+            $("#status").hide();
+            $("#count_down").hide();
+            $("#embed").get(0).src = "";
+            if("successHtml" === pageId){
+                $("#failHtml").hide();
+                jumpSuccessPage();
+            }else{
+                $("#successHtml").hide();
+                jupgeIsBigCD()
+                setBackground();
+                jumpFailPage();
+            }
+            $("#"+pageId).show();
+            printDebug("走这里");
+            return false;
+        }
+        //与安卓交互
+        function callAndroid(param){
+            printInfo("Transmission data to android")
+            var shareValue=param;
+            window.android.sharePage(shareValue);
+        }
+        //将字符串传递给android保存起来
+        function saveLocalStorage(param){
+            printInfo("save data to android")
+            var shareValues =param;
+            window.android.saveResultData(shareValues);
+        }
+        //监控video的各种事件
+        var eventTester = function(e){
+            printDebug("进入播放器一监听事件")
+            $("#firVideo").get(0).addEventListener(e,function(){
+                printInfo("the first video "+e);
+                isOccurWaiting = true;
+                if($("#firVideo").get(0).currentTime<4){
+                    printInfo("此时播放器2位置小于4s")
+                    $("#firVideo").get(0).play();
+                }else{
+                    $("#firVideo").get(0).pause();
+                }
+            },false);
+            $("#secVideo").get(0).addEventListener(e,function(){
+                isOccurWaiting = true;
+                printInfo("the second video "+e);
+                if($("#secVideo").get(0).currentTime<4){
+                    printInfo("此时播放器2位置小于4s")
+                    $("#secVideo").get(0).play();
+                }else{
+                    $("#secVideo").get(0).pause();
+                }
+            },false);
+        }
+        //跳转成功页面
+        var jumpSuccessPage = function(){
+            //适配大溪地
+            jupgeBidCD();
+            //设置body背景图
+            setBackground();
+            //绑定点击事件
+            $("#success_img").on("click",function(){
+            printDebug("shield的长度"+$("shield"))
+                if(!$("#shield").length){
+                    alert();
+                    printDebug("进入重写alert")
+                }
+            });
+            //根据分数来建议
+            drawText();
+            //画雷达图
+            drawRadar();
+        }
+
+        eventTester("waiting")
+        function doOK(){
+            printDebug("完成")
+            callAndroid(100);
+        }
+        //进度条消失，图片显现
+        function pageInitFinish(param){
+            printInfo("the progressBar was disappered");
+            if("true" === param){
+                $("#img").show();
+                $("#firPage").get(0).style.display ="block";
+                $("#firVideo").get(0).style.display = "block";
+                $("#secVideo").get(0).style.zIndex = -1 ;
+                $("#firVideo").get(0).style.zIndex = -1 ;
+            }
+        }
+    </script>
+</body>
+</html>

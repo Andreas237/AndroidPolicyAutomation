@@ -1,11 +1,7 @@
-# Tools that are too big to push to github
-apktool.jar
-
-
-
-
-
-# Libraries to download individually
+#Smali Code won't be analyzed as of 2019.04.24
+smali/
+res/
+lib/
 
 
 

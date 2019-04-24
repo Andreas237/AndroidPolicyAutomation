@@ -1,0 +1,231 @@
+.class Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d$1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/huawei/hwbasemgr/IBaseResponseCallback;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d;->d(Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;Landroid/os/Message;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic b:Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;
+
+.field final synthetic c:Ljava/lang/String;
+
+.field final synthetic e:Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d;
+
+
+# direct methods
+.method constructor <init>(Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d;Ljava/lang/String;Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;)V
+    .locals 0
+
+    .line 3860
+    iput-object p1, p0, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d$1;->e:Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d;
+
+    iput-object p2, p0, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d$1;->c:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d$1;->b:Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onResponse(ILjava/lang/Object;)V
+    .locals 8
+
+    .line 3863
+    const/4 v4, 0x0
+
+    .line 3864
+    const/4 v0, 0x0
+
+    if-ne v0, p1, :cond_1
+
+    instance-of v0, p2, Ljava/util/List;
+
+    if-eqz v0, :cond_1
+
+    .line 3865
+    move-object v5, p2
+
+    check-cast v5, Ljava/util/List;
+
+    .line 3866
+    const/4 v6, 0x0
+
+    :goto_0
+    invoke-interface {v5}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v6, v0, :cond_1
+
+    .line 3867
+    invoke-interface {v5, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v7, v0
+
+    check-cast v7, Lcom/huawei/hwcommonmodel/fitnessdatatype/FitnessTotalData;
+
+    .line 3868
+    invoke-virtual {v7}, Lcom/huawei/hwcommonmodel/fitnessdatatype/FitnessTotalData;->getSportType()I
+
+    move-result v0
+
+    const/16 v1, 0xdd
+
+    if-ne v1, v0, :cond_0
+
+    .line 3869
+    invoke-virtual {v7}, Lcom/huawei/hwcommonmodel/fitnessdatatype/FitnessTotalData;->getSteps()I
+
+    move-result v4
+
+    .line 3870
+    goto :goto_1
+
+    .line 3866
+    :cond_0
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    .line 3874
+    :cond_1
+    :goto_1
+    const-string v0, "UIME_PersonalCenterFragment"
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "wechat_total_step = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    invoke-static {v0, v1}, Lo/dho;->d(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 3875
+    const-string v5, ""
+
+    .line 3876
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d$1;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "#"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "#"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 3878
+    const-string v0, "UIME_PersonalCenterFragment"
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "MESSAGE_ID_GETQRCODETICKET jumpToHwPublic trdTicket = "
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    const/4 v2, 0x1
+
+    aput-object v5, v1, v2
+
+    invoke-static {v0, v1}, Lo/dho;->d(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 3879
+    iget-object v0, p0, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d$1;->b:Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;
+
+    invoke-static {v0}, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;->k(Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;)Lo/fit;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Lo/fit;->a(Ljava/lang/String;)V
+
+    .line 3881
+    iget-object v0, p0, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d$1;->b:Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;
+
+    invoke-static {v0}, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;->K(Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment$d$1;->b:Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;
+
+    invoke-static {v0}, Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;->k(Lcom/huawei/ui/main/stories/userProfile/activity/PersonalCenterFragment;)Lo/fit;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lo/fit;->a()V
+
+    .line 3882
+    :cond_2
+    return-void
+.end method

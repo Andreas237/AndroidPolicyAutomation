@@ -1,0 +1,190 @@
+.class public Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;
+.super Ljava/lang/Object;
+.source "RetailerFragment.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Fragments"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments$Mapper;
+    }
+.end annotation
+
+
+# instance fields
+.field private volatile $hashCode:I
+
+.field private volatile $hashCodeMemoized:Z
+
+.field private volatile $toString:Ljava/lang/String;
+
+.field final buttonInfoFragment:Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;
+    .annotation runtime Ljavax/annotation/Nonnull;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;)V
+    .locals 1
+    .param p1    # Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;
+        .annotation runtime Ljavax/annotation/Nonnull;
+        .end annotation
+    .end param
+
+    .line 908
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "buttonInfoFragment == null"
+
+    .line 909
+    invoke-static {p1, v0}, Lcom/apollographql/apollo/api/internal/Utils;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;
+
+    iput-object p1, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->buttonInfoFragment:Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public buttonInfoFragment()Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;
+    .locals 1
+    .annotation runtime Ljavax/annotation/Nonnull;
+    .end annotation
+
+    .line 913
+    iget-object v0, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->buttonInfoFragment:Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    .line 943
+    :cond_0
+    instance-of v0, p1, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;
+
+    if-eqz v0, :cond_1
+
+    .line 944
+    check-cast p1, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;
+
+    .line 945
+    iget-object v0, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->buttonInfoFragment:Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;
+
+    iget-object p1, p1, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->buttonInfoFragment:Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;
+
+    invoke-virtual {v0, p1}, Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public hashCode()I
+    .locals 2
+
+    .line 952
+    iget-boolean v0, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->$hashCodeMemoized:Z
+
+    if-nez v0, :cond_0
+
+    const v0, 0xf4243
+
+    .line 955
+    iget-object v1, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->buttonInfoFragment:Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;
+
+    invoke-virtual {v1}, Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;->hashCode()I
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    .line 956
+    iput v0, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->$hashCode:I
+
+    const/4 v0, 0x1
+
+    .line 957
+    iput-boolean v0, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->$hashCodeMemoized:Z
+
+    .line 959
+    :cond_0
+    iget v0, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->$hashCode:I
+
+    return v0
+.end method
+
+.method public marshaller()Lcom/apollographql/apollo/api/ResponseFieldMarshaller;
+    .locals 1
+
+    .line 917
+    new-instance v0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments$1;
+
+    invoke-direct {v0, p0}, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments$1;-><init>(Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;)V
+
+    return-object v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    .line 930
+    iget-object v0, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->$toString:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    .line 931
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Fragments{buttonInfoFragment="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->buttonInfoFragment:Lcom/ibotta/android/graphql/fragment/ButtonInfoFragment;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->$toString:Ljava/lang/String;
+
+    .line 935
+    :cond_0
+    iget-object v0, p0, Lcom/ibotta/android/graphql/fragment/RetailerFragment$Button_info$Fragments;->$toString:Ljava/lang/String;
+
+    return-object v0
+.end method

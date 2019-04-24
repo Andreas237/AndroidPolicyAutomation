@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="auto" package="com.ibotta.android" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="com.ibotta.android.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <permission android:name="com.ibotta.android.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:name="com.ibotta.android.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.ibotta.android.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:allowBackup="false" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@mipmap/launcher_icon" android:label="@string/app_name" android:largeHeap="true" android:logo="@drawable/a_header_logo" android:name="com.ibotta.android.App" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@style/Theme">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="com.ibotta.android.activity.routing.RoutingActivity" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="ibotta-app"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.ibotta.com" android:scheme="http"/>
+                <data android:host="www.ibotta.com" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="email.ibotta.com" android:scheme="http"/>
+                <data android:host="email.ibotta.com" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="s.ibotta.com" android:scheme="http"/>
+                <data android:host="s.ibotta.com" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="o.ibotta.com" android:scheme="http"/>
+                <data android:host="o.ibotta.com" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="links.ibotta.com" android:scheme="http"/>
+                <data android:host="links.ibotta.com" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="liferewarded.ibotta.com" android:scheme="http"/>
+                <data android:host="liferewarded.ibotta.com" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="ibotta.com" android:pathPattern="/account.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/account.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/bonuses.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/bonuses.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/buyable-gift-card.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/buyable-gift-card.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/connect-loyalty.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/connect-loyalty.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/contact/.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/contact/.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/help.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/help.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/how.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/how.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/module.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/module.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/rebates.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/rebates.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/referral.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/referral.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/retailer/.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/retailer/.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/teamwork.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/teamwork.*" android:scheme="https"/>
+                <data android:host="ibotta.com" android:pathPattern="/unlocked.*" android:scheme="http"/>
+                <data android:host="ibotta.com" android:pathPattern="/unlocked.*" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="com.ibotta.android.mvp.ui.activity.appsflyer.AppsFlyerRoutingActivity" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="ibotta.onelink.me" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.ibotta.android.mvp.ui.activity.engagement.routing.EngagementRoutingActivity" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Activity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.ibotta.android.mvp.ui.activity.permissions.PermissionsGateActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TransparentBG"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/setting_debug_menu" android:name="com.ibotta.android.mvp.ui.activity.debug.DebugMenuActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/more_debug_general" android:name="com.ibotta.android.mvp.ui.activity.debug.settings.DebugSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TransparentBG"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.debug.routes.DebugRoutesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TransparentBG" android:title="@string/activity_debug_routes_title"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/activity_debug_feature_flags_title" android:name="com.ibotta.android.mvp.ui.activity.debug.feature.DebugFeatureFlagsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/activity_debug_feature_flag_title" android:name="com.ibotta.android.mvp.ui.activity.debug.feature.detail.DebugFeatureFlagActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/activity_redeem_title" android:name="com.ibotta.android.mvp.ui.activity.redeem.picker.RedeemRetailersActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.ibotta.android.mvp.ui.activity.video.VideoActivity" android:theme="@style/Theme.Activity.Fullscreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.activity.browser.CustomTabsBrowserActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="ibotta"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.activity.browser.WebViewBrowserActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.ibotta.android.mvp.ui.activity.redeem.capture.ReceiptCaptureActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.Fullscreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:name="com.ibotta.android.mvp.ui.activity.redeem.windfall.WindfallReceiptCaptureActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.Fullscreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.ibotta.android.mvp.ui.activity.redeem.post.PostCaptureActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.Fullscreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.ibotta.android.mvp.ui.activity.redeem.receipt.VerifyWizardActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.DialogBG"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/activity_invite_title" android:name="com.ibotta.android.mvp.ui.activity.invitefriends.InviteFriendsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TransparentBG" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.ibotta.android.mvp.ui.activity.notifications.detail.NotificationDetailActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TransparentBG"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/activity_friends_like_title" android:name="com.ibotta.android.mvp.ui.activity.notifications.friends.FriendsLikeActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TransparentBG"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/activity_test_radar_geofence_title" android:name="com.ibotta.android.mvp.ui.activity.debug.geofence.radar.TestRadarGeofenceActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.appboy.ui.AppboyWebViewActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="com.ibotta.android.mvp.ui.activity.launch.LaunchActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.login.LoginActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.password.ForgotPasswordActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.register.RegistrationActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.ibotta.android.mvp.ui.activity.featured.FeaturedActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/activity_settings_title" android:name="com.ibotta.android.mvp.ui.activity.settings.UpdateProfileActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.category.CategoryGalleryActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.gallery.GalleryActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.spotlight.SpotlightActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Modal" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:launchMode="singleTask" android:name="com.ibotta.android.mvp.ui.activity.account.AccountActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:launchMode="singleTask" android:name="com.ibotta.android.mvp.ui.activity.earnings.myearnings.MyEarningsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.receipt.ReceiptViewerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:launchMode="singleTask" android:name="com.ibotta.android.mvp.ui.activity.myoffers.main.MyOffersActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.myoffers.retailer.MyOffersGalleryActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.bonus.BonusesPickerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.ibotta.android.mvp.ui.activity.find.FindRebatesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.bonus.BonusDetailActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.settings.SettingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.favorites.MyFavoritesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.engagement.EngagementActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.debug.engagements.DebugEngagementsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.redeem.reqs.RedeemReqsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.redeem.verify.VerifiedRebatesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.redeem.add.VerifyRebatesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.redeem.quantity.ChangeQuantityActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.redeem.submit.SubmitReceiptActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.settings.connectedaccounts.ConnectedAccountsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.scan.verify.VerifyScanActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.Fullscreen" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.scan.loyalty.LoyaltyScanActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.Fullscreen" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.scan.any.AnyProductScanActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.Fullscreen" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.settings.preferences.PreferencesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.scan.receipt.ReceiptScanActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.Fullscreen" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.settings.verify.VerifyDeviceActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.settings.verify.phonenumber.VerifyPhoneNumberActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.settings.verify.code.VerifyCodeActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.settings.verify.VerifyDeviceCompleteActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.cantfind.retailer.CantFindItRetailerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.cantfind.map.RetailerMapActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.addupc.AddUpcActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.account.withdraw.WithdrawActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.account.withdraw.cashaccount.LinkCashAccountActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.account.withdraw.cashout.CashOutActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.account.withdraw.paypal.PayPalConnectActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.account.withdraw.giftcard.GiftCardActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.account.withdraw.giftcard.terms.GiftCardTermsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.notifications.NotificationsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.earnings.EarningsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.earningsdetail.EarningsDetailActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.lifetimevsteammates.teammates.TeammatesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.lifetimevsteammates.teammate.TeammateActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.mcomm.escort.MCommEscortActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.Fullscreen" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.learnmore.LearnMoreActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.seasonal.SeasonalActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.morestores.MoreStoresActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.personalize.PersonalStoresActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.loyalty.show.LoyaltyCardShowActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.loyalty.add.LoyaltyCardAddActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.loyalty.instructions.LoyaltyCardInstructionsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.product.ProductActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Modal" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.module.ModuleActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.help.HelpCenterActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TransparentBG" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.offer.LinkedOfferActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TransparentBG.Fullscreen" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.teamwork.TeamworkActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.im.login.ImLoginActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.im.connect.ImConnectActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.im.terms.ImTermsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.im.error.ImErrorActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.im.connected.ImConnectedActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.pwi.v2.home.PwiHomeActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TransparentBG" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.pwi.v2.card.PwiCardInputActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.pwi.v2.barcode.PwiBarcodeActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Modal" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.pwi.buy.PurchaseBgcActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TranslucentWindow.WhiteBg" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.pwi.confirm.BgcConfirmActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TranslucentWindow.WhiteBg" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.deal.DealActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Modal" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.pwi.wallet.WalletActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.ibotta.android.mvp.ui.activity.pwi.v2.wallet.WalletV2Activity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.content.ContentDetailActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Modal" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.content.list.PwiRetailerListActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.pwi.onboarding.PwiOnboardingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TranslucentWindow.WhiteBg" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="" android:name="com.ibotta.android.mvp.ui.activity.pwi.routing.PwiRoutingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity.TransparentBG" android:windowSoftInputMode="adjustPan"/>
+        <service android:exported="false" android:name="com.ibotta.android.service.push.FcmIntentService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.ibotta.android.service.fcm.FcmTokenCaptureService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.ibotta.android.service.location.LocationUpdateService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.ibotta.android.service.work.ScheduledWorkService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.ibotta.android.service.api.InBackgroundApiWorkService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.ibotta.android.service.api.InForegroundApiWorkService"/>
+        <service android:exported="false" android:name="com.ibotta.android.service.pixel.PixelTrackingService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.ibotta.android.service.debug.DebugOverlayService"/>
+        <receiver android:name="com.ibotta.android.receiver.push.FcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.ibotta.android"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.appboy.AppboyFcmReceiver" android:permission="com.google.android.c2dm.permission.SEND"/>
+        <receiver android:exported="true" android:name="com.ibotta.android.receiver.InstallReferrerReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.usebutton.sdk.internal.receivers.InstallReferrerReceiver"/>
+        <receiver android:name="com.ibotta.android.receiver.BatteryReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ibotta.android.receiver.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ibotta.android.receiver.LocationProviderChangedReceiver">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ibotta.android.receiver.LocationChangeReceiver"/>
+        <receiver android:name="com.ibotta.android.receiver.cache.CacheClearReceiver"/>
+        <receiver android:name="com.ibotta.android.receiver.NetworkChangeReceiver"/>
+        <receiver android:name="com.ibotta.android.receiver.work.ScheduledWorkReceiver"/>
+        <receiver android:exported="false" android:name="com.ibotta.android.receiver.push.BrazeBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.ibotta.android.intent.APPBOY_PUSH_RECEIVED"/>
+                <action android:name="com.ibotta.android.intent.APPBOY_NOTIFICATION_OPENED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.ibotta.android.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.ibotta.android.images.ImageFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
+        </provider>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/google_maps_api_key"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="dc40c44cb8a7b7e85667ffb2f2b73d46eb747f69"/>
+        <meta-data android:name="com.usebutton.applicationid" android:value="@string/button_app_id"/>
+        <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.ibotta.android.location.geofence.radar.RadarReceiverImpl">
+            <intent-filter>
+                <action android:name="io.radar.sdk.RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.launchdarkly.android.PollingUpdater"/>
+        <receiver android:enabled="true" android:name="com.launchdarkly.android.ConnectivityReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="orientation|screenLayout" android:name="com.usebutton.sdk.internal.InstallCardActivity" android:theme="@style/BtnTheme.ButtonDialog"/>
+        <activity android:configChanges="orientation|screenLayout" android:name="com.usebutton.sdk.internal.GroupedInventoryCardActivity" android:theme="@style/BtnTheme.ButtonDialog"/>
+        <activity android:configChanges="orientation|screenLayout" android:name="com.usebutton.sdk.internal.SingleProductCardActivity" android:screenOrientation="portrait" android:theme="@style/BtnTheme.ButtonDialog"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize" android:name="com.usebutton.sdk.internal.WebViewActivity" android:theme="@style/BtnTheme.ButtonFullScreen"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize" android:name="com.usebutton.sdk.internal.AuthChallengeActivity" android:theme="@style/BtnTheme.ButtonAuthChallenge"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize" android:name="com.usebutton.sdk.internal.InstallSheetActivity" android:theme="@style/BtnTheme.ButtonMerchantAction"/>
+        <receiver android:exported="true" android:name="com.usebutton.sdk.internal.receivers.LocaleChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.usebutton.sdk.internal.receivers.InstallNotificationReceiver"/>
+        <receiver android:enabled="true" android:exported="false" android:name="io.radar.sdk.internal.LocationReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="io.radar.sdk.LocationReceiver.GEOFENCE_TRANSITIONED"/>
+                <action android:name="io.radar.sdk.LocationReceiver.LOCATIONS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.ibotta.android.radarinitprovider" android:exported="false" android:name="io.radar.sdk.internal.RadarInitProvider"/>
+        <activity android:name="com.stripe.android.view.AddSourceActivity" android:theme="@style/StripeDefaultTheme" android:windowSoftInputMode="stateVisible"/>
+        <activity android:name="com.stripe.android.view.PaymentMethodsActivity" android:theme="@style/StripeDefaultTheme"/>
+        <activity android:name="com.stripe.android.view.PaymentFlowActivity" android:theme="@style/StripeDefaultTheme"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity"/>
+        <activity android:name="com.appboy.ui.activities.AppboyFeedActivity"/>
+        <activity android:name="com.appboy.ui.activities.AppboyContentCardsActivity"/>
+        <activity android:name="com.appboy.push.AppboyNotificationRoutingActivity"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.ibotta.android"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.microblink.CameraScanActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <provider android:authorities="com.ibotta.android.ReceiptSdkInitProvider" android:exported="false" android:name="com.microblink.ReceiptSdkInitProvider"/>
+        <provider android:authorities="com.ibotta.android.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.PhoneNumberActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.ConfirmationCodeActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.LoginCodeActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.PinCodeActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.FailureActivity" android:taskAffinity="com.digits.sdk.android"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.ContactsActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.PhoneNumberActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.ConfirmationCodeActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.LoginCodeActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.FailureActionBarActivity" android:taskAffinity="com.digits.sdk.android"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.ContactsActionBarActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.digits.sdk.android.PinCodeActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <service android:enabled="true" android:exported="false" android:name="com.digits.sdk.android.ContactsUploadService"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:icon="@drawable/tw__transparent" android:label="@string/kit_name" android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity"/>
+        <activity android:name="net.hockeyapp.android.UpdateActivity"/>
+        <activity android:name="net.hockeyapp.android.FeedbackActivity"/>
+        <activity android:name="net.hockeyapp.android.PaintActivity"/>
+        <activity android:name="net.hockeyapp.android.LoginActivity"/>
+        <activity android:name="net.hockeyapp.android.ExpiryInfoActivity"/>
+        <provider android:authorities="com.ibotta.android.lifecycle-trojan" android:exported="false" android:multiprocess="true" android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"/>
+        <provider android:authorities="com.ibotta.android.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <provider android:authorities="com.ibotta.android.MarketingInitProvider" android:exported="false" android:name="com.facebook.marketing.internal.MarketingInitProvider"/>
+        <provider android:authorities="com.ibotta.android.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.appboy.receivers.AppboyActionReceiver"/>
+    </application>
+</manifest>

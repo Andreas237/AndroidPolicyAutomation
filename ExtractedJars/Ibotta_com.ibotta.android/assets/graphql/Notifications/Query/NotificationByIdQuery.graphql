@@ -1,0 +1,21 @@
+query NotificationByIdQuery ($id: Long!) {
+  getShopperNotificationById(id: $id) {
+      id,
+      customerId,
+      message,
+      context,
+      iconUrl,
+      status,
+      createdAt,
+      updatedAt,
+      appData,
+      amount,
+      displayType,
+      displayId,
+      itemId,
+      itemType,
+      messageKey,
+      messageReplacements,
+      notificationTime
+  }
+}

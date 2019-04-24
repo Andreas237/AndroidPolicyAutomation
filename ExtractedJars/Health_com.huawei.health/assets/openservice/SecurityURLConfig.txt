@@ -1,0 +1,175 @@
+{
+	"module_name": "securityURLList",
+	"module_ver": "1.0.1.010",
+	"module_type": 1,
+	"securityURLList": [
+		{
+			"serviceID": "A_bohe",
+			"URLList": [
+				"https://nice.boohee.com/"
+			]
+		},
+		{
+			"serviceID": "A_bububao",
+			"URLList": [
+				"https://run.zhongan.com/"
+			]
+		},
+		{
+			"serviceID": "A_shumian",
+			"URLList": [
+				"https://www.heartide.com/"
+			]
+		},
+		{
+			"serviceID": "A_chunyu",
+			"URLList": [
+				"https://www.chunyuyisheng.com/cooperation/wap/search_doctor_page"
+			]
+		},
+		{
+			"serviceID": "shudongli",
+			"URLList": [
+				"https://hw.idata-power.com/"
+			]
+		},
+		{
+			"serviceID": "HMS*咕咚",
+			"URLList": [
+				"HEALTH_LOGIN#https://race.codoon.com/huaw/h5/index.html"
+			]
+		},
+		{
+			"serviceID": "weiyi",
+			"URLList": [
+				"https://huawei.wy.guahao.com/"
+			]
+		},
+		{
+			"serviceID": "HMS*众安保险",
+			"URLList": [
+				"HEALTH_LOGIN#https://run.zhongan.com/channel_docking/huawei"
+			]
+		},
+		{
+			"serviceID": "dongbao",
+			"URLList": [
+				"https://m.health.pingan.com/share/idb/index.html?openChannel=huaweiSportHealth"
+			]
+		},
+		{
+			"serviceID": "xiecheng",
+			"URLList": [
+				"https://m.ctrip.com/webapp/"
+			]
+		},
+		{
+			"serviceID": "white_service",
+			"URLList": [
+				"https://healthactivity.hicloud.com/",
+				"https://healthrecommend.hicloud.com/",
+				"https://achievement.hicloud.com/",
+				"https://messagecenter.hicloud.com/",
+				"https://health.vmall.com/"
+			]
+		},
+		{
+			"serviceID": "BI_url",
+			"URLList": [
+				"BI_ZIXUN#https://mp.weixin.qq.com",
+				"BI_ZIXUN#http://www.newrank.cn/",
+				"BI_ZIXUN#https://xiumi.us/",
+				"BI_ZIXUN#http://www.json.cn/",
+				"BI_ZIXUN#https://v.qq.com/",
+				"BI_ACT#https://healthactivity.hicloud.com/",
+				"BI_ACT#https://www.sojump.com/",
+				"BI_ACT#https://www.wenjuan.com",
+				"BI_ACT#http://www.mikecrm.com/",
+				"BI_SHOP#https://huaweim.miaomore.com/",
+				"BI_SHOP#https://healthrecommend.hicloud.com/miniShop/",
+				"BI_SERVER#https://nice.boohee.com/",
+				"BI_SERVER#https://www.heartide.com/huawei/",
+				"BI_SERVER#https://run-test.zhongan.com/channel_docking/huawei",
+				"BI_SERVER#https://www.chunyuyisheng.com/cooperation/",
+				"BI_SERVER#https://www.chunyuyisheng.com/cooperation/wap/search_doctor_page/",
+				"BI_SERVER#https://hw.idata-power.com/",
+				"BI_SHOP#http://hwlf.hwcloudtest.cn:10180/miniShop/html/",
+				"BI_SHOP#https://huaweimtest.miaomore.com/",
+				"BI_ACT#http://hwlf.hwcloudtest.cn:10180/web/html/"
+			]
+		},
+		{
+			"serviceID": "HWWHITEULR",
+			"URLList": [
+				"HWWHITEULR#hicloud.com",
+				"HWWHITEULR#heartide.com",
+				"HWWHITEULR#boohee.com",
+				"HWWHITEULR#boohee.cn",
+				"HWWHITEULR#zhongan.com",
+				"HWWHITEULR#chunyuyisheng.com",
+				"HWWHITEULR#alipay.com",
+				"HWWHITEULR#unionpay.com",
+				"HWWHITEULR#95516.com",
+				"HWWHITEULR#miaomore.com",
+				"HWWHITEULR#qq.com",
+				"HWWHITEULR#newrank.cn",
+				"HWWHITEULR#xiumi.us",
+				"HWWHITEULR#json.cn",
+				"HWWHITEULR#sojump.com",
+				"HWWHITEULR#sojump.hk",
+				"HWWHITEULR#wenjuan.com",
+				"HWWHITEULR#wenjuan.in",
+				"HWWHITEULR#mikecrm.com",
+				"HWWHITEULR#nike.com",
+				"HWWHITEULR#vmall.com",
+				"HWWHITEULR#weixinbridge.com",
+				"HWWHITEULR#psy-1.com",
+				"HWWHITEULR#codoon.com",
+				"HWWHITEULR#cardniu.com",
+				"HWWHITEULR#miaohealth.net",
+				"HWWHITEULR#tenpay.com",
+				"HWWHITEULR#wenjuan.net",
+				"HWWHITEULR#socialmaster.cn",
+				"HWWHITEULR#guahao.com",
+				"HWWHITEULR#guahao-inc.com",
+				"HWWHITEULR#huawei.com",
+				"HWWHITEULR#wjx.cn",
+				"HWWHITEULR#idata-power.com",
+				"HWWHITEULR#baidu.com",
+				"HWWHITEULR#117.78.34.25",
+				"HWWHITEULR#hwlf.hwcloudtest.cn",
+				"HWWHITEULR#socialmaster.cn",
+				"HWWHITEULR#guahao.com",
+				"HWWHITEULR#guahao-inc.com",
+				"HWWHITEULR#jinxiang.com",
+				"HWWHITEULR#techbrood.com",
+				"HWWHITEULR#wjx.top",
+				"HWWHITEULR#hao123.com",
+				"HWWHITEULR#sina.com",
+				"HWWHITEULR#sobot.com",
+				"HWWHITEULR#huawei.com",
+				"HWWHITEULR#jenk.gd.cn",
+				"HWWHITEULR#zhanbudashi.com",
+				"HWWHITEULR#mokous.com",
+				"HWWHITEULR#weixin.qq.com",
+				"HWWHITEULR#diaochapai.com",
+				"HWWHITEULR#psychicspet.com",
+				"HWWHITEULR#jd.com",
+				"HWWHITEULR#pingan.com",
+				"HWWHITEULR#inveno.com",
+				"HWWHITEULR#ptbchina.com",
+				"HWWHITEULR#ctrip.com",
+				"HWWHITEULR#c-ctrip.com",
+				"HWWHITEULR#hwcloudtest.cn:10180",
+				"HWWHITEULR#weixin.sleepeazz.com",
+				"HWWHITEULR#inveno.com"
+			]
+		},
+		{
+			"serviceID": "HEALTHSCHEME",
+			"URLList": [
+				"HEALTHSCHEME#{\"schemeName\" : \"fdmoneyany:\",\"pkgName\" : \"com.mymoney\",\"isJumpMarket\" : \"true\"}"
+			]
+		}
+	]
+}

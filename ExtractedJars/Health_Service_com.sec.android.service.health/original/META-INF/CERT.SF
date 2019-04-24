@@ -1,0 +1,26 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+X-Android-APK-Signed: 2
+SHA-256-Digest-Manifest: Zojo1E44ydgsy6ybNmr4871ibl1BKElpSfqeX2qW7C4=
+
+Name: AndroidManifest.xml
+SHA-256-Digest: YYwCRBvd3QXZSXzL0qB2nsBv48OT9AO74PdhqIqWeQ8=
+
+Name: SEC-INF/buildConfirm.crt
+SHA-256-Digest: P3ynqIdbDmwF1PsNloTMDkK1dQ1IUV/iAEjaKUKMbUg=
+
+Name: SEC-INF/buildinfo.xml
+SHA-256-Digest: Zky6sSfPsxPpfrhoqaIaUlDj5gtOn2J4YT1AJKK+BrQ=
+
+Name: lib/armeabi/libPlatformStrings.so
+SHA-256-Digest: DJ5JavkSXmAkYm/HQG9IuWocphi0hVHG5r0Cqyg+qnI=
+
+Name: resources.arsc
+SHA-256-Digest: ye8TsiswvcIaBE00vfp08XLLiauOKie0FncicCgNOJ8=
+
+Name: classes.dex
+SHA-256-Digest: vQ2LOMMFUF8pgIObDoBjR9VZPtbnDZmANuUxwZvZWyg=
+
+Name: res/drawable-xxxhdpi-v4/s_health_service_icon.webp
+SHA-256-Digest: 0i4ysyrRD8FIHd88n0DFbJN/7LhYHpss1gGN73+d19A=
+

@@ -1,0 +1,32 @@
+.class public interface abstract Lcom/huawei/nfc/carrera/logic/cardoperate/response/RequestVerifyCodeCallback;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final REQUEST_RESULT_FAILED_CARD_NULLIFIED:I = -0x4
+
+.field public static final REQUEST_RESULT_FAILED_CONNECTION_UNAVAILABLE:I = -0x3
+
+.field public static final REQUEST_RESULT_FAILED_CONN_UNAVAILABLE:I = -0x6
+
+.field public static final REQUEST_RESULT_FAILED_CONTACT_BANK:I = -0x9
+
+.field public static final REQUEST_RESULT_FAILED_CONTACT_BANK_CALLING_CENTER:I = -0x8
+
+.field public static final REQUEST_RESULT_FAILED_EXCEED_TIMES:I = -0x1
+
+.field public static final REQUEST_RESULT_FAILED_NO_NETWORK:I = -0x2
+
+.field public static final REQUEST_RESULT_FAILED_OTHER_ERRORS:I = -0x63
+
+.field public static final REQUEST_RESULT_FAILED_PERSONLIZING_CARD_ERR:I = -0x7
+
+.field public static final REQUEST_RESULT_REPEAT_ACTIVATION:I = -0x5
+
+.field public static final REQUEST_RESULT_SUCCESS:I = 0x0
+
+
+# virtual methods
+.method public abstract requestResultCallback(ILjava/lang/String;)V
+.end method

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sec.android.service.health" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
+    <uses-permission android:name="com.samsung.permission.SSENSOR"/>
+    <uses-permission android:name="com.samsung.permission.SSENSOR_HRM_RAW_PPG"/>
+    <uses-permission android:name="com.sec.android.SAMSUNG_AASASERVICE"/>
+    <permission android:description="@string/permission" android:label="PACKAGE_INSTALL" android:name="com.sec.android.service.health.permission.PackageInstall" android:protectionLevel="normal"/>
+    <permission android:description="@string/permission" android:label="SECURE_STORAGE" android:name="com.sec.android.securestorage.permission.SECURE_STORAGE" android:protectionLevel="normal"/>
+    <application android:allowBackup="true" android:debuggable="false" android:icon="@drawable/s_health_service_icon" android:label="@string/app_name">
+        <meta-data android:name="libn" android:value="/vendor/lib/libsecure_storage_jni.so"/>
+        <meta-data android:name="lib64n" android:value="/vendor/lib64/libsecure_storage_jni.so"/>
+        <meta-data android:name="lib" android:value="/system/lib/libsecure_storage_jni.so"/>
+        <meta-data android:name="lib64" android:value="/system/lib64/libsecure_storage_jni.so"/>
+        <service android:enabled="true" android:exported="true" android:label=".sensor.PrivilegeSensorService" android:name="com.sec.android.service.health.sensor.PrivilegeSensorService">
+            <intent-filter>
+                <action android:name="com.sec.android.service.health.sensor.PrivilegeSensorService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:label=".AutoRunService" android:name="com.sec.android.service.health.autorun.AutoRunService">
+            <intent-filter>
+                <action android:name="com.sec.android.service.health.autorun.ModeControl"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.sec.android.service.health.cp.TrustZoneSecurityProvider" android:exported="true" android:name="com.sec.android.service.health.cp.TrustZoneSecurityProvider"/>
+        <provider android:authorities="com.sec.android.service.health.cp.MigrationCpProvider" android:exported="true" android:name="com.sec.android.service.health.cp.MigrationCpProvider"/>
+        <service android:exported="true" android:name="com.sec.android.sensor.framework.SensorService">
+            <intent-filter>
+                <action android:name="com.sec.android.sensor.framework.CONNECT_PRIVILEGED_SENSOR_SERVICE"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

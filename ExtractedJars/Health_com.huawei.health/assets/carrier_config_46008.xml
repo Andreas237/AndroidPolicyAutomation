@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <carrier_config>
+        <AuthenType>2</AuthenType>
+        <CDMURL>https://hdh.10086.cn:8075/yhdk/appserver/v2.0/user/service</CDMURL>
+        <ESURL>https://zdnlpz.yhdzd.chinamobile.com:9191/</ESURL>
+        <BSFURL>http://bsf.mnc%1$s.mcc%2$s.pub.3gppnetwork.org:8080</BSFURL>
+        <SMDPURL>LPA:1$esim.yhdzd.chinamobile.com:8015$</SMDPURL>
+    </carrier_config>
+</carrier_config_list>

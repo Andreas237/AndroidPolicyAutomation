@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 问题反馈SDK的主题信息BEGIN -->
+    <color name="feedback_text_color1">#FF000000</color>
+    <color name="feedback_text_color2">#80000000</color>
+    <color name="feedback_text_color_75">#C0000000</color>
+    <color name="feedback_text_color3">#4C000000</color>
+    <color name="feedback_highlight_color_old">#28c0c6</color>
+    <color name="feedback_record_listview_title">#f1f1f1</color>
+    <color name="feedback_question_type_color">#f0460e</color>
+    <color name="feedback_highlight_color">#039BE5</color>
+    <color name="feedback_highlight_color_disable">#4D039BE5</color>
+    <color name="feedback_highlight_color_disable_old">#3328c0c6</color>
+    <color name="feedback_blue_disable">#3323a7d9</color>
+    <color name="feedback_smarthelper_textview_bg">#fff0f0f0</color>
+    <color name="feedback_black_10">#19000000</color>
+    <color name="feedback_smarthelper_user_textview_bg">#ff039BE5</color>
+    <color name="feedback_black_03">#07000000</color>
+    <color name="feedback_spannable_click_color">#FF0064CC</color>
+    <color name="feedback_text_color_data">#80000000</color>
+    <color name="feedback_text_color_customer_service">#FF000000</color>
+    <color name="emui_functional_blue">#4151A4</color>
+    <color name="emui_accent">#5965E1</color>
+    <!-- 问题反馈SDK的主题信息END -->
+
+</resources>

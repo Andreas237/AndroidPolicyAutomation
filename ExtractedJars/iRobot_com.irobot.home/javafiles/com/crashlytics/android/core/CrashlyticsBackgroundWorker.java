@@ -1,0 +1,248 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package com.crashlytics.android.core;
+
+import android.os.Looper;
+import b.a.a.a.c;
+import b.a.a.a.l;
+import java.util.concurrent.*;
+
+class CrashlyticsBackgroundWorker
+{
+
+	public CrashlyticsBackgroundWorker(ExecutorService executorservice)
+	{
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #15  <Method void Object()>
+		executorService = executorservice;
+	//    2    4:aload_0         
+	//    3    5:aload_1         
+	//    4    6:putfield        #17  <Field ExecutorService executorService>
+	//    5    9:return          
+	}
+
+	Future submit(final Runnable runnable)
+	{
+		try
+		{
+			runnable = ((Runnable) (executorService.submit(new Runnable() {
+
+				public void run()
+				{
+					try
+					{
+						runnable.run();
+				//    0    0:aload_0         
+				//    1    1:getfield        #21  <Field Runnable val$runnable>
+				//    2    4:invokeinterface #30  <Method void Runnable.run()>
+						return;
+				//    3    9:return          
+					}
+					catch(Exception exception)
+				//*   4   10:astore_1        
+					{
+						c.g().e("CrashlyticsCore", "Failed to execute task.", ((Throwable) (exception)));
+				//    5   11:invokestatic    #36  <Method l c.g()>
+				//    6   14:ldc1            #38  <String "CrashlyticsCore">
+				//    7   16:ldc1            #40  <String "Failed to execute task.">
+				//    8   18:aload_1         
+				//    9   19:invokeinterface #46  <Method void l.e(String, String, Throwable)>
+					}
+				//   10   24:return          
+				}
+
+				final CrashlyticsBackgroundWorker this$0;
+				final Runnable val$runnable;
+
+			
+			{
+				this$0 = CrashlyticsBackgroundWorker.this;
+			//    0    0:aload_0         
+			//    1    1:aload_1         
+			//    2    2:putfield        #19  <Field CrashlyticsBackgroundWorker this$0>
+				runnable = runnable1;
+			//    3    5:aload_0         
+			//    4    6:aload_2         
+			//    5    7:putfield        #21  <Field Runnable val$runnable>
+				super();
+			//    6   10:aload_0         
+			//    7   11:invokespecial   #24  <Method void Object()>
+			//    8   14:return          
+			}
+			}
+)));
+	//    0    0:aload_0         
+	//    1    1:getfield        #17  <Field ExecutorService executorService>
+	//    2    4:new             #6   <Class CrashlyticsBackgroundWorker$1>
+	//    3    7:dup             
+	//    4    8:aload_0         
+	//    5    9:aload_1         
+	//    6   10:invokespecial   #25  <Method void CrashlyticsBackgroundWorker$1(CrashlyticsBackgroundWorker, Runnable)>
+	//    7   13:invokeinterface #29  <Method Future ExecutorService.submit(Runnable)>
+	//    8   18:astore_1        
+		}
+	//*   9   19:aload_1         
+	//*  10   20:areturn         
+	//*  11   21:invokestatic    #35  <Method l c.g()>
+	//*  12   24:ldc1            #37  <String "CrashlyticsCore">
+	//*  13   26:ldc1            #39  <String "Executor is shut down because we're handling a fatal crash.">
+	//*  14   28:invokeinterface #45  <Method void l.a(String, String)>
+	//*  15   33:aconst_null     
+	//*  16   34:areturn         
+		// Misplaced declaration of an exception variable
+		catch(final Runnable runnable)
+		{
+			c.g().a("CrashlyticsCore", "Executor is shut down because we're handling a fatal crash.");
+			return null;
+		}
+		return ((Future) (runnable));
+	//*  17   35:astore_1        
+	//*  18   36:goto            21
+	}
+
+	Future submit(final Callable callable)
+	{
+		try
+		{
+			callable = ((Callable) (executorService.submit(new Callable() {
+
+				public Object call()
+				{
+					Object obj;
+					try
+					{
+						obj = callable.call();
+				//    0    0:aload_0         
+				//    1    1:getfield        #22  <Field Callable val$callable>
+				//    2    4:invokeinterface #32  <Method Object Callable.call()>
+				//    3    9:astore_1        
+					}
+				//*   4   10:aload_1         
+				//*   5   11:areturn         
+					catch(Exception exception)
+				//*   6   12:astore_1        
+					{
+						c.g().e("CrashlyticsCore", "Failed to execute task.", ((Throwable) (exception)));
+				//    7   13:invokestatic    #38  <Method l c.g()>
+				//    8   16:ldc1            #40  <String "CrashlyticsCore">
+				//    9   18:ldc1            #42  <String "Failed to execute task.">
+				//   10   20:aload_1         
+				//   11   21:invokeinterface #48  <Method void l.e(String, String, Throwable)>
+						return ((Object) (null));
+				//   12   26:aconst_null     
+				//   13   27:areturn         
+					}
+					return obj;
+				}
+
+				final CrashlyticsBackgroundWorker this$0;
+				final Callable val$callable;
+
+			
+			{
+				this$0 = CrashlyticsBackgroundWorker.this;
+			//    0    0:aload_0         
+			//    1    1:aload_1         
+			//    2    2:putfield        #20  <Field CrashlyticsBackgroundWorker this$0>
+				callable = callable1;
+			//    3    5:aload_0         
+			//    4    6:aload_2         
+			//    5    7:putfield        #22  <Field Callable val$callable>
+				super();
+			//    6   10:aload_0         
+			//    7   11:invokespecial   #25  <Method void Object()>
+			//    8   14:return          
+			}
+			}
+)));
+	//    0    0:aload_0         
+	//    1    1:getfield        #17  <Field ExecutorService executorService>
+	//    2    4:new             #8   <Class CrashlyticsBackgroundWorker$2>
+	//    3    7:dup             
+	//    4    8:aload_0         
+	//    5    9:aload_1         
+	//    6   10:invokespecial   #51  <Method void CrashlyticsBackgroundWorker$2(CrashlyticsBackgroundWorker, Callable)>
+	//    7   13:invokeinterface #53  <Method Future ExecutorService.submit(Callable)>
+	//    8   18:astore_1        
+		}
+	//*   9   19:aload_1         
+	//*  10   20:areturn         
+	//*  11   21:invokestatic    #35  <Method l c.g()>
+	//*  12   24:ldc1            #37  <String "CrashlyticsCore">
+	//*  13   26:ldc1            #39  <String "Executor is shut down because we're handling a fatal crash.">
+	//*  14   28:invokeinterface #45  <Method void l.a(String, String)>
+	//*  15   33:aconst_null     
+	//*  16   34:areturn         
+		// Misplaced declaration of an exception variable
+		catch(final Callable callable)
+		{
+			c.g().a("CrashlyticsCore", "Executor is shut down because we're handling a fatal crash.");
+			return null;
+		}
+		return ((Future) (callable));
+	//*  17   35:astore_1        
+	//*  18   36:goto            21
+	}
+
+	Object submitAndWait(Callable callable)
+	{
+		try
+		{
+			if(Looper.getMainLooper() == Looper.myLooper())
+	//*   0    0:invokestatic    #64  <Method Looper Looper.getMainLooper()>
+	//*   1    3:invokestatic    #67  <Method Looper Looper.myLooper()>
+	//*   2    6:if_acmpne       31
+				return executorService.submit(callable).get(4L, TimeUnit.SECONDS);
+	//    3    9:aload_0         
+	//    4   10:getfield        #17  <Field ExecutorService executorService>
+	//    5   13:aload_1         
+	//    6   14:invokeinterface #53  <Method Future ExecutorService.submit(Callable)>
+	//    7   19:ldc2w           #68  <Long 4L>
+	//    8   22:getstatic       #75  <Field TimeUnit TimeUnit.SECONDS>
+	//    9   25:invokeinterface #81  <Method Object Future.get(long, TimeUnit)>
+	//   10   30:areturn         
+			callable = ((Callable) (executorService.submit(callable).get()));
+	//   11   31:aload_0         
+	//   12   32:getfield        #17  <Field ExecutorService executorService>
+	//   13   35:aload_1         
+	//   14   36:invokeinterface #53  <Method Future ExecutorService.submit(Callable)>
+	//   15   41:invokeinterface #84  <Method Object Future.get()>
+	//   16   46:astore_1        
+		}
+	//*  17   47:aload_1         
+	//*  18   48:areturn         
+	//*  19   49:astore_1        
+	//*  20   50:invokestatic    #35  <Method l c.g()>
+	//*  21   53:ldc1            #37  <String "CrashlyticsCore">
+	//*  22   55:ldc1            #86  <String "Failed to execute task.">
+	//*  23   57:aload_1         
+	//*  24   58:invokeinterface #90  <Method void l.e(String, String, Throwable)>
+	//*  25   63:aconst_null     
+	//*  26   64:areturn         
+	//*  27   65:invokestatic    #35  <Method l c.g()>
+	//*  28   68:ldc1            #37  <String "CrashlyticsCore">
+	//*  29   70:ldc1            #39  <String "Executor is shut down because we're handling a fatal crash.">
+	//*  30   72:invokeinterface #45  <Method void l.a(String, String)>
+	//*  31   77:aconst_null     
+	//*  32   78:areturn         
+		// Misplaced declaration of an exception variable
+		catch(Callable callable)
+		{
+			c.g().a("CrashlyticsCore", "Executor is shut down because we're handling a fatal crash.");
+			return ((Object) (null));
+		}
+		// Misplaced declaration of an exception variable
+		catch(Callable callable)
+		{
+			c.g().e("CrashlyticsCore", "Failed to execute task.", ((Throwable) (callable)));
+			return ((Object) (null));
+		}
+		return ((Object) (callable));
+	//*  33   79:astore_1        
+	//*  34   80:goto            65
+	}
+
+	private final ExecutorService executorService;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups ver="2.0.1.328" time="2017-12-25 17:09:00">
+    <group kind="HDK_WEIGHT" name="IDS_device_group_name_weight_scale" icon="ic_list_balance">
+        <list view="home">
+            <!--荣耀体脂秤-->
+            <product id="7a1063dd-0e0f-4a72-9939-461476ff0259" ver="3.0" res_uri="" hash="EE237FC94303687DCAB67C4B2F4572FFAA9AD22053D6EFA920B053E343EA0EB1"/>
+			<!--华为智能体脂秤-->
+            <product id="34fa0346-d46c-439d-9cb0-2f696618846b" ver="1.1" res_uri="" hash="B6D9ED57700F978041309F854686B4E689E66DA5C2813F0B681812F928F7265B"/>
+            <!--云康宝智能体脂秤-->
+            <product id="578d0675-cece-4426-bf28-43ce31eb7b5d" ver="3.0" res_uri="" hash="2A4014AADBDE3F324C2E5F1122A2D9F9CA23A84C819DB3B8E98DD567B6FEB514"/>
+            <!--有品智能体脂秤 S1/S2-->
+            <product id="6ab08ad8-753b-4dd9-bf3a-798a0a1d81bf" ver="3.0" res_uri="" hash="28346425514D13996D5A6FF9ED2D3A9E20D9C366F0F77DAC9F0F40B712E0A17A"/>
+            <!--有品智能体脂秤 S1 pro-->
+            <product id="9684a253-0fb5-4560-8fa3-b925163f8b67" ver="3.0" res_uri="" hash="FAFB22282601942E24B4C5D88AC4FF7DD94194C1DCC92323CE8D43D84D126B2D"/>
+        </list>
+        <list view="more"/>
+    </group>
+    <group kind="HDK_BLOOD_SUGAR" name="IDS_device_group_name_blood_glucose_scale" icon="ic_list_blood_glucose_meter">
+        <list view="home">
+            <!--强生稳豪助手-->
+            <product id="e570b133-357b-4b49-b894-600a27a0e826" ver="3.0" res_uri="" hash="FBA60C4DBFC5BA02F29232028D82531376E77047B74CE461F983711F95CD310C"/>
+            <!--糖护士手机血糖仪-->
+            <product id="9bf158ba-49b0-46aa-9fdf-ed75da1569cf" ver="3.0" res_uri="" hash="B9B5DBA9B81B664444ADAC92A1A10DBB662577FDD3C82F81E081A9A63B420023"/>
+        </list>
+        <list view="more"/>
+    </group>
+    <group kind="HDK_BLOOD_PRESSURE" name="IDS_device_group_name_blood_pressure_scale" icon="ic_list_blood_pressure">
+        <list view="home">
+            <!--欧姆龙智能蓝牙血压计-->
+            <product id="408553b8-0535-4561-8dbf-55c2bbd61b77" ver="3.0" res_uri="" hash="33A36F03C8F0823C2E26217A315F82CBB813F109B84F60DB641B57AFF61B8091"/>
+            <!--鱼跃血压计-->
+            <product id="c647e381-165c-44d2-8e7b-6339c7904fde" ver="3.0" res_uri="" hash="6585D9831DC714B1F1A8041F9928A536B6403E149237456BCF484EB887F46124"/>
+            <!--康康移动智能血压计-->
+            <product id="4ff7df35-c532-4247-ab42-12b260917bc0" ver="3.0" res_uri="" hash="961137C04C99C2370BBE64CB1A715D817E798B0E75B60B37CB288A464F009620"/>
+            <!--欧姆龙电子血压计 HEM-7081-IT-->
+            <product id="825c82bd-84fe-44a0-9884-6a764bd73183" ver="3.0" res_uri="" hash="0BB18B51123B33E0FDB10E94C782B03DB55DB5C052EFCB2371BBBED3E9D6D1A9"/>
+            <!--木木无线智能血压计-->
+            <product id="54af062d-b049-4880-beda-f0cbe64e9205" ver="3.0" res_uri="" hash="0B388B1E779F99F669EB75ABF4E88DA35E54D4333DD837D5C8843D0C288ADF83"/>
+        </list>
+        <list view="more"/>
+    </group>
+    <group kind="HDK_HEART_RATE" name="IDS_device_group_name_pulse_scale" icon="ic_list_heart_rate">
+        <list view="home">
+            <!--荣耀手表 S1-->
+            <product id="9323f6b7-b459-44f4-a698-988d1769832a" ver="3.0" res_uri="" hash="D904796712D90B07349DA9813727EABD26151085A2EB08289D24FE8C97B7F8F0"/>
+            <!--捷波朗运动蓝牙耳机-->
+            <product id="f83a5e21-3686-42f8-9a13-7296172a7ced" ver="3.0" res_uri="" hash="5ADCB62047AF3AA1F579B97A145B877A0CD3257D18E5950350CC70293EA8872A"/>
+            <!--Suunto 颂拓蓝牙心率带-->
+            <product id="79da9d7e-561c-4e14-8a6b-b1d5dc07198a" ver="3.0" res_uri="" hash="58F3CF2B58ED5E9660D5D2C19C7D222FCDD91E428748559F1F0D72944CC021D7"/>
+            <!--Polar H7 蓝牙心率胸带-->
+            <product id="fe33600f-dbb2-4382-9417-21ab8eeb6e42" ver="3.0" res_uri="" hash="830FFF160BF0D9056F7FF47CC7AEF2F49CD9749FA5BC955A13C7B83E3EEA9466"/>
+            <!--荣耀心晴耳机-->
+            <product id="6d5416d9-2167-41df-ab10-c492e152b44f" ver="2.0" res_uri="" hash="D806829579D26583EAD8B62CCAFEAF44EB5BA8D79D8073A185C7183D8E531F36"/>
+        </list>
+        <list view="more"/>
+    </group>
+</groups>

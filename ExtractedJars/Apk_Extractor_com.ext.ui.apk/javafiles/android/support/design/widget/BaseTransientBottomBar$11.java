@@ -1,0 +1,71 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package android.support.design.widget;
+
+import android.animation.ValueAnimator;
+import android.support.v4.view.ViewCompat;
+
+// Referenced classes of package android.support.design.widget:
+//			BaseTransientBottomBar
+
+class BaseTransientBottomBar$11
+	implements android.animation.teListener
+{
+
+	public void onAnimationUpdate(ValueAnimator valueanimator)
+	{
+		int i = ((Integer)valueanimator.getAnimatedValue()).intValue();
+	//    0    0:aload_1         
+	//    1    1:invokevirtual   #33  <Method Object ValueAnimator.getAnimatedValue()>
+	//    2    4:checkcast       #35  <Class Integer>
+	//    3    7:invokevirtual   #39  <Method int Integer.intValue()>
+	//    4   10:istore_2        
+		if(BaseTransientBottomBar.access$100())
+	//*   5   11:invokestatic    #43  <Method boolean BaseTransientBottomBar.access$100()>
+	//*   6   14:ifeq            39
+			ViewCompat.offsetTopAndBottom(((android.view.View) (mView)), i - mPreviousAnimatedIntValue);
+	//    7   17:aload_0         
+	//    8   18:getfield        #19  <Field BaseTransientBottomBar this$0>
+	//    9   21:getfield        #47  <Field BaseTransientBottomBar$SnackbarBaseLayout BaseTransientBottomBar.mView>
+	//   10   24:iload_2         
+	//   11   25:aload_0         
+	//   12   26:getfield        #24  <Field int mPreviousAnimatedIntValue>
+	//   13   29:isub            
+	//   14   30:invokestatic    #53  <Method void ViewCompat.offsetTopAndBottom(android.view.View, int)>
+		else
+	//*  15   33:aload_0         
+	//*  16   34:iload_2         
+	//*  17   35:putfield        #24  <Field int mPreviousAnimatedIntValue>
+	//*  18   38:return          
+			mView.setTranslationY(i);
+	//   19   39:aload_0         
+	//   20   40:getfield        #19  <Field BaseTransientBottomBar this$0>
+	//   21   43:getfield        #47  <Field BaseTransientBottomBar$SnackbarBaseLayout BaseTransientBottomBar.mView>
+	//   22   46:iload_2         
+	//   23   47:i2f             
+	//   24   48:invokevirtual   #59  <Method void BaseTransientBottomBar$SnackbarBaseLayout.setTranslationY(float)>
+		mPreviousAnimatedIntValue = i;
+	//*  25   51:goto            33
+	}
+
+	private int mPreviousAnimatedIntValue;
+	final BaseTransientBottomBar this$0;
+
+	BaseTransientBottomBar$11()
+	{
+		this$0 = BaseTransientBottomBar.this;
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:putfield        #19  <Field BaseTransientBottomBar this$0>
+		super();
+	//    3    5:aload_0         
+	//    4    6:invokespecial   #22  <Method void Object()>
+		mPreviousAnimatedIntValue = 0;
+	//    5    9:aload_0         
+	//    6   10:iconst_0        
+	//    7   11:putfield        #24  <Field int mPreviousAnimatedIntValue>
+	//    8   14:return          
+	}
+}

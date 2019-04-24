@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageRes lan = "zh">
+
+<WeeklyReport>
+<steps min="10000">
+<level1>Amazing</level1>
+<level2>Courage and resolution are the spirit and soul of virtue.</level2>
+</steps>
+<steps min="5000">
+<level1>Excellent</level1>
+<level2>Each man is the architect of his own fate.</level2>
+</steps>
+<steps min="3000">
+<level1>Good</level1>
+<level2>Good is good, but better carries it.</level2>
+</steps>
+<steps min="1000">
+<level1>So-So</level1>
+<level2>A little exercise, much health.</level2>
+</steps>
+<steps min="0">
+<level1>Lazybones</level1>
+<level2>The first step is as good as half over.</level2>
+</steps>
+</WeeklyReport>
+
+<MonthlyReport>
+<steps min="10000">
+<level1>Amazing</level1>
+<level2>Courage and resolution are the spirit and soul of virtue.</level2>
+</steps>
+<steps min="5000">
+<level1>Excellent</level1>
+<level2>Each man is the architect of his own fate.</level2>
+</steps>
+<steps min="3000">
+<level1>Good</level1>
+<level2>Good is good, but better carries it.</level2>
+</steps>
+<steps min="1000">
+<level1>So-So</level1>
+<level2>A little exercise, much health.</level2>
+</steps>
+<steps min="0">
+<level1>Lazybones</level1>
+<level2>The first step is as good as half over.</level2>
+</steps>
+</MonthlyReport>
+
+</LanguageRes>

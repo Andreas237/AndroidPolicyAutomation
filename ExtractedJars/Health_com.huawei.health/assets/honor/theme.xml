@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 问题反馈SDK的主题信息BEGIN -->
+	<color name="feedback_blue">#23a7d9</color>
+    <color name="feedback_title_bar_unnormal_color">#0D000000</color>
+    <color name="feedback_transparent">#00000000</color>
+    <color name="feedback_white">#FFFFFF</color>
+    <color name="feedback_light_white">#55FFFFFF</color>
+    <color name="feedback_divideline">#26000000</color>
+    <color name="feedback_background">#f7f7f7</color>
+    <color name="feedback_text_color1">#FF000000</color>
+    <color name="feedback_text_color2">#80000000</color>
+    <color name="feedback_text_color_75">#C0000000</color>
+    <color name="feedback_text_color3">#4C000000</color>
+	<color name="feedback_highlight_color_old">#28c0c6</color>
+	<color name="feedback_record_listview_title">#f1f1f1</color>
+	<color name="feedback_question_type_color">#f0460e</color>
+	<color name="feedback_highlight_color">#00acc1</color>
+	<color name="feedback_highlight_color_disable">#3300ACC1</color>
+	<color name="feedback_highlight_color_disable_old">#3328c0c6</color>
+	<color name="feedback_blue_disable">#3323a7d9</color>
+	<color name="feedback_smarthelper_textview_bg">#f0f0f0</color>
+	<color name="feedback_black_10">#19000000</color>
+	<color name="feedback_smarthelper_user_textview_bg">#00ACC1</color>
+	<color name="feedback_black_03">#07000000</color>
+	<color name="feedback_spannable_click_color">#00838f</color>
+	<color name="feedback_text_color_data">#80000000</color>
+	<color name="feedback_text_color_customer_service">#FF000000</color>
+	<color name="emui_functional_blue">#0084A5</color>
+	<color name="emui_accent">#00B5E2</color>
+	<!-- 问题反馈SDK的主题信息END -->
+
+</resources>

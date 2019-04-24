@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.pactforcure.app" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.pactforcure.app.core.BackboneApplication" android:supportsRtl="true" android:theme="@style/Theme.BackboneApp">
+        <activity android:name="com.pactforcure.app.ui.SurveyActivity" android:screenOrientation="portrait" android:theme="@style/Theme.BackboneApp.Survey"/>
+        <activity android:name="org.researchstack.backbone.ui.ViewTaskActivity" android:screenOrientation="portrait" android:theme="@style/Theme.BackboneApp.Survey" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/app_name" android:name="org.researchstack.backbone.ui.ViewWebDocumentActivity" android:theme="@style/Theme.BackboneApp.Survey"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="3b8ccdd839967c6710004536e55ec1dfbce014b5"/>
+        <activity android:name="com.pactforcure.app.ui.LandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.MainActivity" android:screenOrientation="portrait" android:theme="@style/Theme.BackboneApp.Survey"/>
+        <activity android:name="com.pactforcure.app.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.SuicidalityActivity" android:screenOrientation="portrait" android:theme="@style/Theme.BackboneApp.Survey"/>
+        <activity android:name="com.pactforcure.app.ui.PpdResultsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.BackboneApp.Survey"/>
+        <activity android:name="com.pactforcure.app.ui.SettingsActivity" android:parentActivityName="com.pactforcure.app.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.SelectStudyActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.NotEligibleActivity" android:parentActivityName="com.pactforcure.app.ui.SelectStudyActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.LaunchActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.pactforcure.app.core.JobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.pactforcure.app.core.GcmJobService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.pactforcure.app.ui.DemographicsFormActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.AccountFormActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.InterpretingEpdsScoreResourceActivity" android:parentActivityName="com.pactforcure.app.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.ContactUsResourceActivity" android:parentActivityName="com.pactforcure.app.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.PostpartumDepressionResourceActivity" android:parentActivityName="com.pactforcure.app.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.SuicidePreventionResourceActivity" android:parentActivityName="com.pactforcure.app.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.TipOfTheWeekResourceActivity" android:parentActivityName="com.pactforcure.app.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.SpreadTheWordResourceActivity" android:parentActivityName="com.pactforcure.app.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.DnaConsentActivity" android:parentActivityName="com.pactforcure.app.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.ParticipantAddressFormActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.DnaCollectionActivity" android:parentActivityName="com.pactforcure.app.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.pactforcure.app.ui.LoginActivity" android:parentActivityName="com.pactforcure.app.ui.MainActivity" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.pactforcure.app.ui.MainActivity"/>
+        </activity>
+        <activity android:name="com.pactforcure.app.ui.LogoutSuccessActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.pactforcure.app.ui.ResetPasswordActivity" android:parentActivityName="com.pactforcure.app.ui.LoginActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.pactforcure.app.ui.SetPasswordActivity" android:screenOrientation="portrait"/>
+        <receiver android:exported="false" android:name="com.pactforcure.app.tip.TipOfTheWeekAlarmReceiver"/>
+        <receiver android:name="com.pactforcure.app.core.OnBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIME_CHANGED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="android.support.VERSION" android:value="26.0.2"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

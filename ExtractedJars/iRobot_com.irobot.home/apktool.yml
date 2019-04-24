@@ -1,0 +1,296 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: iRobot_com.irobot.home.apk
+compressionType: false
+doNotCompress:
+- arsc
+- assets/pmaps.icons/missionmapcanceled.png
+- assets/pmaps.icons/missionmapdirt.png
+- assets/pmaps.icons/missionmapdock.png
+- assets/pmaps.icons/missionmapelpasorobot.png
+- assets/pmaps.icons/missionmaperror.png
+- assets/pmaps.icons/missionmapondock.png
+- assets/pmaps.icons/missionmapsanmarinorobot.png
+- assets/pmaps.icons/missionmapsohorobot.png
+- assets/pmaps.icons/missionmapsuccess.png
+- res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+- png
+- res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+- res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+- res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_list_focused_holo.9.png
+- res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png
+- res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png
+- res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png
+- res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+- res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png
+- res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+- res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png
+- res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+- webp
+- res/drawable-hdpi-v4/bubble_blue_bottom_center.9.png
+- res/drawable-hdpi-v4/bubble_blue_bottom_left.9.png
+- res/drawable-hdpi-v4/bubble_blue_bottom_right.9.png
+- res/drawable-hdpi-v4/bubble_blue_top_left.9.png
+- res/drawable-hdpi-v4/bubble_blue_top_right.9.png
+- res/drawable-hdpi-v4/com_mixpanel_android_square_dropshadow.9.png
+- res/drawable-hdpi-v4/com_mixpanel_android_square_nodropshadow.9.png
+- res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png
+- res/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png
+- res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png
+- res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png
+- res/drawable-hdpi-v4/notification_bg_low_normal.9.png
+- res/drawable-hdpi-v4/notification_bg_low_pressed.9.png
+- res/drawable-hdpi-v4/notification_bg_normal.9.png
+- res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png
+- res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+- res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+- res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_list_focused_holo.9.png
+- res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png
+- res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png
+- res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png
+- res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+- res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png
+- res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+- res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png
+- res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/bubble_blue_bottom_center.9.png
+- res/drawable-mdpi-v4/bubble_blue_bottom_left.9.png
+- res/drawable-mdpi-v4/bubble_blue_bottom_right.9.png
+- res/drawable-mdpi-v4/bubble_blue_top_left.9.png
+- res/drawable-mdpi-v4/bubble_blue_top_right.9.png
+- res/drawable-mdpi-v4/com_mixpanel_android_square_dropshadow.9.png
+- res/drawable-mdpi-v4/com_mixpanel_android_square_nodropshadow.9.png
+- res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png
+- res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png
+- res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png
+- res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png
+- res/drawable-mdpi-v4/notification_bg_low_normal.9.png
+- res/drawable-mdpi-v4/notification_bg_low_pressed.9.png
+- res/drawable-mdpi-v4/notification_bg_normal.9.png
+- res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png
+- res/drawable-nodpi-v4/com_mixpanel_android_rounded_bottom.9.png
+- res/drawable-nodpi-v4/com_mixpanel_android_rounded_bottom_selected.9.png
+- res/drawable-nodpi-v4/com_mixpanel_android_rounded_top.9.png
+- res/drawable-nodpi-v4/com_mixpanel_android_rounded_top_selected.9.png
+- res/drawable-nodpi-v4/com_mixpanel_android_square.9.png
+- res/drawable-nodpi-v4/com_mixpanel_android_square_selected.9.png
+- res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+- res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+- res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_list_focused_holo.9.png
+- res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png
+- res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png
+- res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png
+- res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+- res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png
+- res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+- res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png
+- res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/bubble_blue_bottom_center.9.png
+- res/drawable-xhdpi-v4/bubble_blue_bottom_left.9.png
+- res/drawable-xhdpi-v4/bubble_blue_bottom_right.9.png
+- res/drawable-xhdpi-v4/bubble_blue_top_left.9.png
+- res/drawable-xhdpi-v4/bubble_blue_top_right.9.png
+- res/drawable-xhdpi-v4/com_mixpanel_android_square_dropshadow.9.png
+- res/drawable-xhdpi-v4/com_mixpanel_android_square_nodropshadow.9.png
+- res/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png
+- res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png
+- res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png
+- res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png
+- res/drawable-xhdpi-v4/notification_bg_low_normal.9.png
+- res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png
+- res/drawable-xhdpi-v4/notification_bg_normal.9.png
+- res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png
+- res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+- res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+- res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png
+- res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png
+- res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png
+- res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png
+- res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+- res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png
+- res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+- res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png
+- res/drawable-xxhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/bubble_blue_bottom_center.9.png
+- res/drawable-xxhdpi-v4/bubble_blue_bottom_left.9.png
+- res/drawable-xxhdpi-v4/bubble_blue_bottom_right.9.png
+- res/drawable-xxhdpi-v4/bubble_blue_top_left.9.png
+- res/drawable-xxhdpi-v4/bubble_blue_top_right.9.png
+- res/drawable-xxhdpi-v4/com_mixpanel_android_square_dropshadow.9.png
+- res/drawable-xxhdpi-v4/com_mixpanel_android_square_nodropshadow.9.png
+- res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png
+- res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png
+- res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png
+- res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png
+- res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+- res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+- res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+- res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+- res/drawable-xxxhdpi-v4/bubble_blue_bottom_center.9.png
+- res/drawable-xxxhdpi-v4/bubble_blue_bottom_left.9.png
+- res/drawable-xxxhdpi-v4/bubble_blue_bottom_right.9.png
+- res/drawable-xxxhdpi-v4/bubble_blue_top_left.9.png
+- res/drawable-xxxhdpi-v4/bubble_blue_top_right.9.png
+- webm
+- enc
+- res/raw/joda_atlantic_jan_mayen
+- res/raw/joda_est
+- res/raw/joda_etc_gmt
+- res/raw/joda_etc_gmt_1
+- res/raw/joda_etc_gmt_10
+- res/raw/joda_etc_gmt_11
+- res/raw/joda_etc_gmt_12
+- res/raw/joda_etc_gmt_13
+- res/raw/joda_etc_gmt_14
+- res/raw/joda_etc_gmt_2
+- res/raw/joda_etc_gmt_3
+- res/raw/joda_etc_gmt_4
+- res/raw/joda_etc_gmt_5
+- res/raw/joda_etc_gmt_6
+- res/raw/joda_etc_gmt_7
+- res/raw/joda_etc_gmt_8
+- res/raw/joda_etc_gmt_9
+- res/raw/joda_etc_gmtplus1
+- res/raw/joda_etc_gmtplus10
+- res/raw/joda_etc_gmtplus11
+- res/raw/joda_etc_gmtplus12
+- res/raw/joda_etc_gmtplus2
+- res/raw/joda_etc_gmtplus3
+- res/raw/joda_etc_gmtplus4
+- res/raw/joda_etc_gmtplus5
+- res/raw/joda_etc_gmtplus6
+- res/raw/joda_etc_gmtplus7
+- res/raw/joda_etc_gmtplus8
+- res/raw/joda_etc_gmtplus9
+- res/raw/joda_etc_uct
+- res/raw/joda_etc_utc
+- res/raw/joda_hst
+- res/raw/joda_mst
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '21'
+  targetSdkVersion: '27'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  LICENSE-junit.txt: '8'
+  androidannotations-api.properties: '8'
+  androidsupportmultidexversion.txt: '8'
+  bundle.properties: '8'
+  firebase-common.properties: '8'
+  firebase-iid-interop.properties: '8'
+  firebase-iid.properties: '8'
+  firebase-measurement-connector.properties: '8'
+  firebase-messaging.properties: '8'
+  play-services-ads-identifier.properties: '8'
+  play-services-analytics-impl.properties: '8'
+  play-services-analytics.properties: '8'
+  play-services-base.properties: '8'
+  play-services-basement.properties: '8'
+  play-services-measurement-base.properties: '8'
+  play-services-stats.properties: '8'
+  play-services-tagmanager-v4-impl.properties: '8'
+  play-services-tasks.properties: '8'
+  rest-spring-api.properties: '8'
+  sql-error-codes.xml: '8'
+  com/baidu/android/pushservice/assets/defaultconfig.json: '8'
+  fabric/com.amazonaws.aws-android-sdk-cognito.properties: '8'
+  fabric/com.amazonaws.aws-android-sdk-core.properties: '8'
+  fabric/com.crashlytics.sdk.android.answers.properties: '8'
+  fabric/com.crashlytics.sdk.android.beta.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics-core.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics.properties: '8'
+  fabric/io.fabric.sdk.android.fabric.properties: '8'
+  junit/runner/logo.gif: '0'
+  junit/runner/smalllogo.gif: '0'
+  org/eclipse/paho/client/mqttv3/internal/nls/logcat.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_cs.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_de.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_es.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_fr.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_hu.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_it.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_ja.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_ko.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_pl.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_pt_BR.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_ru.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_zh_CN.properties: '8'
+  org/eclipse/paho/client/mqttv3/internal/nls/messages_zh_TW.properties: '8'
+  org/eclipse/paho/client/mqttv3/logging/jsr47min.properties: '8'
+  org/joda/time/format/messages.properties: '8'
+  org/joda/time/format/messages_cs.properties: '8'
+  org/joda/time/format/messages_da.properties: '8'
+  org/joda/time/format/messages_de.properties: '8'
+  org/joda/time/format/messages_en.properties: '8'
+  org/joda/time/format/messages_es.properties: '8'
+  org/joda/time/format/messages_fr.properties: '8'
+  org/joda/time/format/messages_it.properties: '8'
+  org/joda/time/format/messages_ja.properties: '8'
+  org/joda/time/format/messages_nl.properties: '8'
+  org/joda/time/format/messages_no.properties: '8'
+  org/joda/time/format/messages_pl.properties: '8'
+  org/joda/time/format/messages_pt.properties: '8'
+  org/joda/time/format/messages_ru.properties: '8'
+  org/joda/time/format/messages_tr.properties: '8'
+  org/springframework/social/connect/jdbc/JdbcUsersConnectionRepository.sql: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.4.0
+versionInfo:
+  versionCode: '1552429643'
+  versionName: 3.4.1-release

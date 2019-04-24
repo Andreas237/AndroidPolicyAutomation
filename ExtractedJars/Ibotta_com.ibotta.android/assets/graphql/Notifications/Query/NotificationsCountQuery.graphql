@@ -1,0 +1,3 @@
+query NotificationsCountQuery($customerId: Long!, $type: Type, $since: DateTime!) {
+  count(customerId: $customerId, type: $type, since: $since)
+}

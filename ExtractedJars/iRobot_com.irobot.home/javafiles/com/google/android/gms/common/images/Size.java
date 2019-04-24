@@ -1,0 +1,249 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package com.google.android.gms.common.images;
+
+
+public final class Size
+{
+
+	public Size(int i, int j)
+	{
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #12  <Method void Object()>
+		zand = i;
+	//    2    4:aload_0         
+	//    3    5:iload_1         
+	//    4    6:putfield        #14  <Field int zand>
+		zane = j;
+	//    5    9:aload_0         
+	//    6   10:iload_2         
+	//    7   11:putfield        #16  <Field int zane>
+	//    8   14:return          
+	}
+
+	public static Size parseSize(String s)
+	{
+		NumberFormatException numberformatexception;
+		if(s == null)
+	//*   0    0:aload_0         
+	//*   1    1:ifnonnull       14
+			throw new IllegalArgumentException("string must not be null");
+	//    2    4:new             #23  <Class IllegalArgumentException>
+	//    3    7:dup             
+	//    4    8:ldc1            #25  <String "string must not be null">
+	//    5   10:invokespecial   #28  <Method void IllegalArgumentException(String)>
+	//    6   13:athrow          
+		int j = s.indexOf('*');
+	//    7   14:aload_0         
+	//    8   15:bipush          42
+	//    9   17:invokevirtual   #34  <Method int String.indexOf(int)>
+	//   10   20:istore_2        
+		int i = j;
+	//   11   21:iload_2         
+	//   12   22:istore_1        
+		if(j < 0)
+	//*  13   23:iload_2         
+	//*  14   24:ifge            34
+			i = s.indexOf('x');
+	//   15   27:aload_0         
+	//   16   28:bipush          120
+	//   17   30:invokevirtual   #34  <Method int String.indexOf(int)>
+	//   18   33:istore_1        
+		if(i < 0)
+	//*  19   34:iload_1         
+	//*  20   35:ifge            43
+			throw zah(s);
+	//   21   38:aload_0         
+	//   22   39:invokestatic    #38  <Method NumberFormatException zah(String)>
+	//   23   42:athrow          
+		Size size;
+		try
+		{
+			size = new Size(Integer.parseInt(s.substring(0, i)), Integer.parseInt(s.substring(i + 1)));
+	//   24   43:new             #2   <Class Size>
+	//   25   46:dup             
+	//   26   47:aload_0         
+	//   27   48:iconst_0        
+	//   28   49:iload_1         
+	//   29   50:invokevirtual   #42  <Method String String.substring(int, int)>
+	//   30   53:invokestatic    #48  <Method int Integer.parseInt(String)>
+	//   31   56:aload_0         
+	//   32   57:iload_1         
+	//   33   58:iconst_1        
+	//   34   59:iadd            
+	//   35   60:invokevirtual   #51  <Method String String.substring(int)>
+	//   36   63:invokestatic    #48  <Method int Integer.parseInt(String)>
+	//   37   66:invokespecial   #53  <Method void Size(int, int)>
+	//   38   69:astore_3        
+		}
+	//*  39   70:aload_3         
+	//*  40   71:areturn         
+	//*  41   72:aload_0         
+	//*  42   73:invokestatic    #38  <Method NumberFormatException zah(String)>
+	//*  43   76:athrow          
+		// Misplaced declaration of an exception variable
+		catch(NumberFormatException numberformatexception)
+		{
+			throw zah(s);
+		}
+		return size;
+	//*  44   77:astore_3        
+	//*  45   78:goto            72
+	}
+
+	private static NumberFormatException zah(String s)
+	{
+		StringBuilder stringbuilder = new StringBuilder(String.valueOf(((Object) (s))).length() + 16);
+	//    0    0:new             #55  <Class StringBuilder>
+	//    1    3:dup             
+	//    2    4:aload_0         
+	//    3    5:invokestatic    #59  <Method String String.valueOf(Object)>
+	//    4    8:invokevirtual   #63  <Method int String.length()>
+	//    5   11:bipush          16
+	//    6   13:iadd            
+	//    7   14:invokespecial   #66  <Method void StringBuilder(int)>
+	//    8   17:astore_1        
+		stringbuilder.append("Invalid Size: \"");
+	//    9   18:aload_1         
+	//   10   19:ldc1            #68  <String "Invalid Size: \"">
+	//   11   21:invokevirtual   #72  <Method StringBuilder StringBuilder.append(String)>
+	//   12   24:pop             
+		stringbuilder.append(s);
+	//   13   25:aload_1         
+	//   14   26:aload_0         
+	//   15   27:invokevirtual   #72  <Method StringBuilder StringBuilder.append(String)>
+	//   16   30:pop             
+		stringbuilder.append("\"");
+	//   17   31:aload_1         
+	//   18   32:ldc1            #74  <String "\"">
+	//   19   34:invokevirtual   #72  <Method StringBuilder StringBuilder.append(String)>
+	//   20   37:pop             
+		throw new NumberFormatException(stringbuilder.toString());
+	//   21   38:new             #21  <Class NumberFormatException>
+	//   22   41:dup             
+	//   23   42:aload_1         
+	//   24   43:invokevirtual   #78  <Method String StringBuilder.toString()>
+	//   25   46:invokespecial   #79  <Method void NumberFormatException(String)>
+	//   26   49:athrow          
+	}
+
+	public final boolean equals(Object obj)
+	{
+		if(obj == null)
+	//*   0    0:aload_1         
+	//*   1    1:ifnonnull       6
+			return false;
+	//    2    4:iconst_0        
+	//    3    5:ireturn         
+		if(this == obj)
+	//*   4    6:aload_0         
+	//*   5    7:aload_1         
+	//*   6    8:if_acmpne       13
+			return true;
+	//    7   11:iconst_1        
+	//    8   12:ireturn         
+		if(obj instanceof Size)
+	//*   9   13:aload_1         
+	//*  10   14:instanceof      #2   <Class Size>
+	//*  11   17:ifeq            49
+		{
+			obj = ((Object) ((Size)obj));
+	//   12   20:aload_1         
+	//   13   21:checkcast       #2   <Class Size>
+	//   14   24:astore_1        
+			if(zand == ((Size) (obj)).zand && zane == ((Size) (obj)).zane)
+	//*  15   25:aload_0         
+	//*  16   26:getfield        #14  <Field int zand>
+	//*  17   29:aload_1         
+	//*  18   30:getfield        #14  <Field int zand>
+	//*  19   33:icmpne          49
+	//*  20   36:aload_0         
+	//*  21   37:getfield        #16  <Field int zane>
+	//*  22   40:aload_1         
+	//*  23   41:getfield        #16  <Field int zane>
+	//*  24   44:icmpne          49
+				return true;
+	//   25   47:iconst_1        
+	//   26   48:ireturn         
+		}
+		return false;
+	//   27   49:iconst_0        
+	//   28   50:ireturn         
+	}
+
+	public final int getHeight()
+	{
+		return zane;
+	//    0    0:aload_0         
+	//    1    1:getfield        #16  <Field int zane>
+	//    2    4:ireturn         
+	}
+
+	public final int getWidth()
+	{
+		return zand;
+	//    0    0:aload_0         
+	//    1    1:getfield        #14  <Field int zand>
+	//    2    4:ireturn         
+	}
+
+	public final int hashCode()
+	{
+		return zane ^ (zand << 16 | zand >>> 16);
+	//    0    0:aload_0         
+	//    1    1:getfield        #16  <Field int zane>
+	//    2    4:aload_0         
+	//    3    5:getfield        #14  <Field int zand>
+	//    4    8:bipush          16
+	//    5   10:ishl            
+	//    6   11:aload_0         
+	//    7   12:getfield        #14  <Field int zand>
+	//    8   15:bipush          16
+	//    9   17:iushr           
+	//   10   18:ior             
+	//   11   19:ixor            
+	//   12   20:ireturn         
+	}
+
+	public final String toString()
+	{
+		int i = zand;
+	//    0    0:aload_0         
+	//    1    1:getfield        #14  <Field int zand>
+	//    2    4:istore_1        
+		int j = zane;
+	//    3    5:aload_0         
+	//    4    6:getfield        #16  <Field int zane>
+	//    5    9:istore_2        
+		StringBuilder stringbuilder = new StringBuilder(23);
+	//    6   10:new             #55  <Class StringBuilder>
+	//    7   13:dup             
+	//    8   14:bipush          23
+	//    9   16:invokespecial   #66  <Method void StringBuilder(int)>
+	//   10   19:astore_3        
+		stringbuilder.append(i);
+	//   11   20:aload_3         
+	//   12   21:iload_1         
+	//   13   22:invokevirtual   #87  <Method StringBuilder StringBuilder.append(int)>
+	//   14   25:pop             
+		stringbuilder.append("x");
+	//   15   26:aload_3         
+	//   16   27:ldc1            #89  <String "x">
+	//   17   29:invokevirtual   #72  <Method StringBuilder StringBuilder.append(String)>
+	//   18   32:pop             
+		stringbuilder.append(j);
+	//   19   33:aload_3         
+	//   20   34:iload_2         
+	//   21   35:invokevirtual   #87  <Method StringBuilder StringBuilder.append(int)>
+	//   22   38:pop             
+		return stringbuilder.toString();
+	//   23   39:aload_3         
+	//   24   40:invokevirtual   #78  <Method String StringBuilder.toString()>
+	//   25   43:areturn         
+	}
+
+	private final int zand;
+	private final int zane;
+}

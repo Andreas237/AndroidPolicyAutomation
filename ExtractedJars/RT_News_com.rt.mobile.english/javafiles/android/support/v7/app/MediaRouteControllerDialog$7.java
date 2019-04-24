@@ -1,0 +1,72 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package android.support.v7.app;
+
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Transformation;
+
+// Referenced classes of package android.support.v7.app:
+//			MediaRouteControllerDialog
+
+class MediaRouteControllerDialog$7 extends Animation
+{
+
+	protected void applyTransformation(float f, Transformation transformation)
+	{
+		int i = val$startValue;
+	//    0    0:aload_0         
+	//    1    1:getfield        #22  <Field int val$startValue>
+	//    2    4:istore_3        
+		int j = (int)((float)(val$startValue - val$endValue) * f);
+	//    3    5:aload_0         
+	//    4    6:getfield        #22  <Field int val$startValue>
+	//    5    9:aload_0         
+	//    6   10:getfield        #24  <Field int val$endValue>
+	//    7   13:isub            
+	//    8   14:i2f             
+	//    9   15:fload_1         
+	//   10   16:fmul            
+	//   11   17:f2i             
+	//   12   18:istore          4
+		MediaRouteControllerDialog.setLayoutHeight(val$view, i - j);
+	//   13   20:aload_0         
+	//   14   21:getfield        #26  <Field View val$view>
+	//   15   24:iload_3         
+	//   16   25:iload           4
+	//   17   27:isub            
+	//   18   28:invokestatic    #35  <Method void MediaRouteControllerDialog.setLayoutHeight(View, int)>
+	//   19   31:return          
+	}
+
+	final MediaRouteControllerDialog this$0;
+	final int val$endValue;
+	final int val$startValue;
+	final View val$view;
+
+	MediaRouteControllerDialog$7()
+	{
+		this$0 = final_mediaroutecontrollerdialog;
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:putfield        #20  <Field MediaRouteControllerDialog this$0>
+		val$startValue = i;
+	//    3    5:aload_0         
+	//    4    6:iload_2         
+	//    5    7:putfield        #22  <Field int val$startValue>
+		val$endValue = j;
+	//    6   10:aload_0         
+	//    7   11:iload_3         
+	//    8   12:putfield        #24  <Field int val$endValue>
+		val$view = View.this;
+	//    9   15:aload_0         
+	//   10   16:aload           4
+	//   11   18:putfield        #26  <Field View val$view>
+		super();
+	//   12   21:aload_0         
+	//   13   22:invokespecial   #29  <Method void Animation()>
+	//   14   25:return          
+	}
+}

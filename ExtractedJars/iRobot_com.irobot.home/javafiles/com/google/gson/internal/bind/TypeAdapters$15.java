@@ -1,0 +1,95 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package com.google.gson.internal.bind;
+
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.*;
+import java.math.BigInteger;
+
+// Referenced classes of package com.google.gson.internal.bind:
+//			TypeAdapters
+
+static final class TypeAdapters$15 extends TypeAdapter
+{
+
+	public volatile Object read(JsonReader jsonreader)
+	{
+		return ((Object) (read(jsonreader)));
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:invokevirtual   #17  <Method BigInteger read(JsonReader)>
+	//    3    5:areturn         
+	}
+
+	public BigInteger read(JsonReader jsonreader)
+	{
+		if(jsonreader.peek() == JsonToken.NULL)
+	//*   0    0:aload_1         
+	//*   1    1:invokevirtual   #25  <Method JsonToken JsonReader.peek()>
+	//*   2    4:getstatic       #31  <Field JsonToken JsonToken.NULL>
+	//*   3    7:if_acmpne       16
+		{
+			jsonreader.nextNull();
+	//    4   10:aload_1         
+	//    5   11:invokevirtual   #34  <Method void JsonReader.nextNull()>
+			return null;
+	//    6   14:aconst_null     
+	//    7   15:areturn         
+		}
+		try
+		{
+			jsonreader = ((JsonReader) (new BigInteger(jsonreader.nextString())));
+	//    8   16:new             #36  <Class BigInteger>
+	//    9   19:dup             
+	//   10   20:aload_1         
+	//   11   21:invokevirtual   #40  <Method String JsonReader.nextString()>
+	//   12   24:invokespecial   #43  <Method void BigInteger(String)>
+	//   13   27:astore_1        
+		}
+	//*  14   28:aload_1         
+	//*  15   29:areturn         
+		// Misplaced declaration of an exception variable
+		catch(JsonReader jsonreader)
+	//*  16   30:astore_1        
+		{
+			throw new JsonSyntaxException(((Throwable) (jsonreader)));
+	//   17   31:new             #45  <Class JsonSyntaxException>
+	//   18   34:dup             
+	//   19   35:aload_1         
+	//   20   36:invokespecial   #48  <Method void JsonSyntaxException(Throwable)>
+	//   21   39:athrow          
+		}
+		return ((BigInteger) (jsonreader));
+	}
+
+	public volatile void write(JsonWriter jsonwriter, Object obj)
+	{
+		write(jsonwriter, (BigInteger)obj);
+	//    0    0:aload_0         
+	//    1    1:aload_1         
+	//    2    2:aload_2         
+	//    3    3:checkcast       #36  <Class BigInteger>
+	//    4    6:invokevirtual   #53  <Method void write(JsonWriter, BigInteger)>
+	//    5    9:return          
+	}
+
+	public void write(JsonWriter jsonwriter, BigInteger biginteger)
+	{
+		jsonwriter.value(((Number) (biginteger)));
+	//    0    0:aload_1         
+	//    1    1:aload_2         
+	//    2    2:invokevirtual   #59  <Method JsonWriter JsonWriter.value(Number)>
+	//    3    5:pop             
+	//    4    6:return          
+	}
+
+	TypeAdapters$15()
+	{
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #11  <Method void TypeAdapter()>
+	//    2    4:return          
+	}
+}

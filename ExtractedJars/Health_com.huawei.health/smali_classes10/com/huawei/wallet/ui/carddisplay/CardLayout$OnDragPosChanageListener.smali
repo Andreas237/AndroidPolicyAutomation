@@ -1,0 +1,22 @@
+.class public interface abstract Lcom/huawei/wallet/ui/carddisplay/CardLayout$OnDragPosChanageListener;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/huawei/wallet/ui/carddisplay/CardLayout;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "OnDragPosChanageListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract a(II)V
+.end method
+
+.method public abstract d(II)V
+.end method

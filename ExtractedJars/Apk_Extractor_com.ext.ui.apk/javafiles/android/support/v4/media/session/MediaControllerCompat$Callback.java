@@ -1,0 +1,910 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) annotate safe 
+
+package android.support.v4.media.session;
+
+import android.os.*;
+import android.support.v4.media.MediaMetadataCompat;
+import java.lang.ref.WeakReference;
+import java.util.List;
+
+// Referenced classes of package android.support.v4.media.session:
+//			MediaControllerCompat, MediaControllerCompatApi21, PlaybackStateCompat, ParcelableVolumeInfo
+
+public static abstract class MediaControllerCompat$Callback
+	implements android.os.IBinder.DeathRecipient
+{
+	private class MessageHandler extends Handler
+	{
+
+		public void handleMessage(Message message)
+		{
+			if(!mRegistered)
+		//*   0    0:aload_0         
+		//*   1    1:getfield        #48  <Field boolean mRegistered>
+		//*   2    4:ifne            8
+				return;
+		//    3    7:return          
+			switch(message.what)
+		//*   4    8:aload_1         
+		//*   5    9:getfield        #56  <Field int Message.what>
+			{
+		//*   6   12:tableswitch     1 12: default 76
+		//		               1 77
+		//		               2 96
+		//		               3 111
+		//		               4 243
+		//		               5 126
+		//		               6 141
+		//		               7 228
+		//		               8 258
+		//		               9 174
+		//		               10 192
+		//		               11 156
+		//		               12 210
+			default:
+				return;
+		//    7   76:return          
+
+			case 1: // '\001'
+				onSessionEvent((String)message.obj, message.getData());
+		//    8   77:aload_0         
+		//    9   78:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   10   81:aload_1         
+		//   11   82:getfield        #60  <Field Object Message.obj>
+		//   12   85:checkcast       #62  <Class String>
+		//   13   88:aload_1         
+		//   14   89:invokevirtual   #66  <Method Bundle Message.getData()>
+		//   15   92:invokevirtual   #70  <Method void MediaControllerCompat$Callback.onSessionEvent(String, Bundle)>
+				return;
+		//   16   95:return          
+
+			case 2: // '\002'
+				onPlaybackStateChanged((PlaybackStateCompat)message.obj);
+		//   17   96:aload_0         
+		//   18   97:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   19  100:aload_1         
+		//   20  101:getfield        #60  <Field Object Message.obj>
+		//   21  104:checkcast       #72  <Class PlaybackStateCompat>
+		//   22  107:invokevirtual   #76  <Method void MediaControllerCompat$Callback.onPlaybackStateChanged(PlaybackStateCompat)>
+				return;
+		//   23  110:return          
+
+			case 3: // '\003'
+				onMetadataChanged((MediaMetadataCompat)message.obj);
+		//   24  111:aload_0         
+		//   25  112:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   26  115:aload_1         
+		//   27  116:getfield        #60  <Field Object Message.obj>
+		//   28  119:checkcast       #78  <Class MediaMetadataCompat>
+		//   29  122:invokevirtual   #82  <Method void MediaControllerCompat$Callback.onMetadataChanged(MediaMetadataCompat)>
+				return;
+		//   30  125:return          
+
+			case 5: // '\005'
+				onQueueChanged((List)message.obj);
+		//   31  126:aload_0         
+		//   32  127:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   33  130:aload_1         
+		//   34  131:getfield        #60  <Field Object Message.obj>
+		//   35  134:checkcast       #84  <Class List>
+		//   36  137:invokevirtual   #88  <Method void MediaControllerCompat$Callback.onQueueChanged(List)>
+				return;
+		//   37  140:return          
+
+			case 6: // '\006'
+				onQueueTitleChanged((CharSequence)message.obj);
+		//   38  141:aload_0         
+		//   39  142:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   40  145:aload_1         
+		//   41  146:getfield        #60  <Field Object Message.obj>
+		//   42  149:checkcast       #90  <Class CharSequence>
+		//   43  152:invokevirtual   #94  <Method void MediaControllerCompat$Callback.onQueueTitleChanged(CharSequence)>
+				return;
+		//   44  155:return          
+
+			case 11: // '\013'
+				onCaptioningEnabledChanged(((Boolean)message.obj).booleanValue());
+		//   45  156:aload_0         
+		//   46  157:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   47  160:aload_1         
+		//   48  161:getfield        #60  <Field Object Message.obj>
+		//   49  164:checkcast       #96  <Class Boolean>
+		//   50  167:invokevirtual   #100 <Method boolean Boolean.booleanValue()>
+		//   51  170:invokevirtual   #104 <Method void MediaControllerCompat$Callback.onCaptioningEnabledChanged(boolean)>
+				return;
+		//   52  173:return          
+
+			case 9: // '\t'
+				onRepeatModeChanged(((Integer)message.obj).intValue());
+		//   53  174:aload_0         
+		//   54  175:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   55  178:aload_1         
+		//   56  179:getfield        #60  <Field Object Message.obj>
+		//   57  182:checkcast       #106 <Class Integer>
+		//   58  185:invokevirtual   #110 <Method int Integer.intValue()>
+		//   59  188:invokevirtual   #114 <Method void MediaControllerCompat$Callback.onRepeatModeChanged(int)>
+				return;
+		//   60  191:return          
+
+			case 10: // '\n'
+				onShuffleModeChanged(((Boolean)message.obj).booleanValue());
+		//   61  192:aload_0         
+		//   62  193:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   63  196:aload_1         
+		//   64  197:getfield        #60  <Field Object Message.obj>
+		//   65  200:checkcast       #96  <Class Boolean>
+		//   66  203:invokevirtual   #100 <Method boolean Boolean.booleanValue()>
+		//   67  206:invokevirtual   #117 <Method void MediaControllerCompat$Callback.onShuffleModeChanged(boolean)>
+				return;
+		//   68  209:return          
+
+			case 12: // '\f'
+				onShuffleModeChanged(((Integer)message.obj).intValue());
+		//   69  210:aload_0         
+		//   70  211:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   71  214:aload_1         
+		//   72  215:getfield        #60  <Field Object Message.obj>
+		//   73  218:checkcast       #106 <Class Integer>
+		//   74  221:invokevirtual   #110 <Method int Integer.intValue()>
+		//   75  224:invokevirtual   #119 <Method void MediaControllerCompat$Callback.onShuffleModeChanged(int)>
+				return;
+		//   76  227:return          
+
+			case 7: // '\007'
+				onExtrasChanged((Bundle)message.obj);
+		//   77  228:aload_0         
+		//   78  229:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   79  232:aload_1         
+		//   80  233:getfield        #60  <Field Object Message.obj>
+		//   81  236:checkcast       #121 <Class Bundle>
+		//   82  239:invokevirtual   #125 <Method void MediaControllerCompat$Callback.onExtrasChanged(Bundle)>
+				return;
+		//   83  242:return          
+
+			case 4: // '\004'
+				onAudioInfoChanged((MediaControllerCompat.PlaybackInfo)message.obj);
+		//   84  243:aload_0         
+		//   85  244:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   86  247:aload_1         
+		//   87  248:getfield        #60  <Field Object Message.obj>
+		//   88  251:checkcast       #127 <Class MediaControllerCompat$PlaybackInfo>
+		//   89  254:invokevirtual   #131 <Method void MediaControllerCompat$Callback.onAudioInfoChanged(MediaControllerCompat$PlaybackInfo)>
+				return;
+		//   90  257:return          
+
+			case 8: // '\b'
+				onSessionDestroyed();
+		//   91  258:aload_0         
+		//   92  259:getfield        #43  <Field MediaControllerCompat$Callback this$0>
+		//   93  262:invokevirtual   #135 <Method void MediaControllerCompat$Callback.onSessionDestroyed()>
+				return;
+		//   94  265:return          
+			}
+		}
+
+		private static final int MSG_DESTROYED = 8;
+		private static final int MSG_EVENT = 1;
+		private static final int MSG_UPDATE_CAPTIONING_ENABLED = 11;
+		private static final int MSG_UPDATE_EXTRAS = 7;
+		private static final int MSG_UPDATE_METADATA = 3;
+		private static final int MSG_UPDATE_PLAYBACK_STATE = 2;
+		private static final int MSG_UPDATE_QUEUE = 5;
+		private static final int MSG_UPDATE_QUEUE_TITLE = 6;
+		private static final int MSG_UPDATE_REPEAT_MODE = 9;
+		private static final int MSG_UPDATE_SHUFFLE_MODE = 12;
+		private static final int MSG_UPDATE_SHUFFLE_MODE_DEPRECATED = 10;
+		private static final int MSG_UPDATE_VOLUME = 4;
+		boolean mRegistered;
+		final MediaControllerCompat.Callback this$0;
+
+		MessageHandler(Looper looper)
+		{
+			this$0 = MediaControllerCompat.Callback.this;
+		//    0    0:aload_0         
+		//    1    1:aload_1         
+		//    2    2:putfield        #43  <Field MediaControllerCompat$Callback this$0>
+			super(looper);
+		//    3    5:aload_0         
+		//    4    6:aload_2         
+		//    5    7:invokespecial   #46  <Method void Handler(Looper)>
+			mRegistered = false;
+		//    6   10:aload_0         
+		//    7   11:iconst_0        
+		//    8   12:putfield        #48  <Field boolean mRegistered>
+		//    9   15:return          
+		}
+	}
+
+	private static class StubApi21
+		implements MediaControllerCompatApi21.Callback
+	{
+
+		public void onAudioInfoChanged(int i, int j, int k, int l, int i1)
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #27  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #8   <Class MediaControllerCompat$Callback>
+		//    4   10:astore          6
+			if(callback != null)
+		//*   5   12:aload           6
+		//*   6   14:ifnull          36
+				callback.onAudioInfoChanged(new MediaControllerCompat.PlaybackInfo(i, j, k, l, i1));
+		//    7   17:aload           6
+		//    8   19:new             #36  <Class MediaControllerCompat$PlaybackInfo>
+		//    9   22:dup             
+		//   10   23:iload_1         
+		//   11   24:iload_2         
+		//   12   25:iload_3         
+		//   13   26:iload           4
+		//   14   28:iload           5
+		//   15   30:invokespecial   #38  <Method void MediaControllerCompat$PlaybackInfo(int, int, int, int, int)>
+		//   16   33:invokevirtual   #41  <Method void MediaControllerCompat$Callback.onAudioInfoChanged(MediaControllerCompat$PlaybackInfo)>
+		//   17   36:return          
+		}
+
+		public void onExtrasChanged(Bundle bundle)
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #27  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #8   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          20
+				callback.onExtrasChanged(bundle);
+		//    7   15:aload_2         
+		//    8   16:aload_1         
+		//    9   17:invokevirtual   #45  <Method void MediaControllerCompat$Callback.onExtrasChanged(Bundle)>
+		//   10   20:return          
+		}
+
+		public void onMetadataChanged(Object obj)
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #27  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #8   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          23
+				callback.onMetadataChanged(MediaMetadataCompat.fromMediaMetadata(obj));
+		//    7   15:aload_2         
+		//    8   16:aload_1         
+		//    9   17:invokestatic    #52  <Method MediaMetadataCompat MediaMetadataCompat.fromMediaMetadata(Object)>
+		//   10   20:invokevirtual   #55  <Method void MediaControllerCompat$Callback.onMetadataChanged(MediaMetadataCompat)>
+		//   11   23:return          
+		}
+
+		public void onPlaybackStateChanged(Object obj)
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #27  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #8   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback == null || callback.mHasExtraCallback)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          22
+		//*   7   15:aload_2         
+		//*   8   16:getfield        #60  <Field boolean MediaControllerCompat$Callback.mHasExtraCallback>
+		//*   9   19:ifeq            23
+			{
+				return;
+		//   10   22:return          
+			} else
+			{
+				callback.onPlaybackStateChanged(PlaybackStateCompat.fromPlaybackState(obj));
+		//   11   23:aload_2         
+		//   12   24:aload_1         
+		//   13   25:invokestatic    #66  <Method PlaybackStateCompat PlaybackStateCompat.fromPlaybackState(Object)>
+		//   14   28:invokevirtual   #69  <Method void MediaControllerCompat$Callback.onPlaybackStateChanged(PlaybackStateCompat)>
+				return;
+		//   15   31:return          
+			}
+		}
+
+		public void onQueueChanged(List list)
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #27  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #8   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          23
+				callback.onQueueChanged(MediaSessionCompat.QueueItem.fromQueueItemList(list));
+		//    7   15:aload_2         
+		//    8   16:aload_1         
+		//    9   17:invokestatic    #77  <Method List MediaSessionCompat$QueueItem.fromQueueItemList(List)>
+		//   10   20:invokevirtual   #79  <Method void MediaControllerCompat$Callback.onQueueChanged(List)>
+		//   11   23:return          
+		}
+
+		public void onQueueTitleChanged(CharSequence charsequence)
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #27  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #8   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          20
+				callback.onQueueTitleChanged(charsequence);
+		//    7   15:aload_2         
+		//    8   16:aload_1         
+		//    9   17:invokevirtual   #85  <Method void MediaControllerCompat$Callback.onQueueTitleChanged(CharSequence)>
+		//   10   20:return          
+		}
+
+		public void onSessionDestroyed()
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #27  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #8   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_1        
+			if(callback != null)
+		//*   5   11:aload_1         
+		//*   6   12:ifnull          19
+				callback.onSessionDestroyed();
+		//    7   15:aload_1         
+		//    8   16:invokevirtual   #88  <Method void MediaControllerCompat$Callback.onSessionDestroyed()>
+		//    9   19:return          
+		}
+
+		public void onSessionEvent(String s, Bundle bundle)
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #27  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #8   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_3        
+			if(callback == null || callback.mHasExtraCallback && android.os.Build.VERSION.SDK_INT < 23)
+		//*   5   11:aload_3         
+		//*   6   12:ifnull          30
+		//*   7   15:aload_3         
+		//*   8   16:getfield        #60  <Field boolean MediaControllerCompat$Callback.mHasExtraCallback>
+		//*   9   19:ifeq            31
+		//*  10   22:getstatic       #96  <Field int android.os.Build$VERSION.SDK_INT>
+		//*  11   25:bipush          23
+		//*  12   27:icmpge          31
+			{
+				return;
+		//   13   30:return          
+			} else
+			{
+				callback.onSessionEvent(s, bundle);
+		//   14   31:aload_3         
+		//   15   32:aload_1         
+		//   16   33:aload_2         
+		//   17   34:invokevirtual   #98  <Method void MediaControllerCompat$Callback.onSessionEvent(String, Bundle)>
+				return;
+		//   18   37:return          
+			}
+		}
+
+		private final WeakReference mCallback;
+
+		StubApi21(MediaControllerCompat.Callback callback)
+		{
+		//    0    0:aload_0         
+		//    1    1:invokespecial   #20  <Method void Object()>
+			mCallback = new WeakReference(((Object) (callback)));
+		//    2    4:aload_0         
+		//    3    5:new             #22  <Class WeakReference>
+		//    4    8:dup             
+		//    5    9:aload_1         
+		//    6   10:invokespecial   #25  <Method void WeakReference(Object)>
+		//    7   13:putfield        #27  <Field WeakReference mCallback>
+		//    8   16:return          
+		}
+	}
+
+	private static class StubCompat extends IMediaControllerCallback.Stub
+	{
+
+		public void onCaptioningEnabledChanged(boolean flag)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          26
+				callback.postToHandler(11, ((Object) (Boolean.valueOf(flag))), ((Bundle) (null)));
+		//    7   15:aload_2         
+		//    8   16:bipush          11
+		//    9   18:iload_1         
+		//   10   19:invokestatic    #40  <Method Boolean Boolean.valueOf(boolean)>
+		//   11   22:aconst_null     
+		//   12   23:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   13   26:return          
+		}
+
+		public void onEvent(String s, Bundle bundle)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_3        
+			if(callback != null)
+		//*   5   11:aload_3         
+		//*   6   12:ifnull          22
+				callback.postToHandler(1, ((Object) (s)), bundle);
+		//    7   15:aload_3         
+		//    8   16:iconst_1        
+		//    9   17:aload_1         
+		//   10   18:aload_2         
+		//   11   19:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   12   22:return          
+		}
+
+		public void onExtrasChanged(Bundle bundle)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          23
+				callback.postToHandler(7, ((Object) (bundle)), ((Bundle) (null)));
+		//    7   15:aload_2         
+		//    8   16:bipush          7
+		//    9   18:aload_1         
+		//   10   19:aconst_null     
+		//   11   20:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   12   23:return          
+		}
+
+		public void onMetadataChanged(MediaMetadataCompat mediametadatacompat)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          22
+				callback.postToHandler(3, ((Object) (mediametadatacompat)), ((Bundle) (null)));
+		//    7   15:aload_2         
+		//    8   16:iconst_3        
+		//    9   17:aload_1         
+		//   10   18:aconst_null     
+		//   11   19:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   12   22:return          
+		}
+
+		public void onPlaybackStateChanged(PlaybackStateCompat playbackstatecompat)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          22
+				callback.postToHandler(2, ((Object) (playbackstatecompat)), ((Bundle) (null)));
+		//    7   15:aload_2         
+		//    8   16:iconst_2        
+		//    9   17:aload_1         
+		//   10   18:aconst_null     
+		//   11   19:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   12   22:return          
+		}
+
+		public void onQueueChanged(List list)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          22
+				callback.postToHandler(5, ((Object) (list)), ((Bundle) (null)));
+		//    7   15:aload_2         
+		//    8   16:iconst_5        
+		//    9   17:aload_1         
+		//   10   18:aconst_null     
+		//   11   19:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   12   22:return          
+		}
+
+		public void onQueueTitleChanged(CharSequence charsequence)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          23
+				callback.postToHandler(6, ((Object) (charsequence)), ((Bundle) (null)));
+		//    7   15:aload_2         
+		//    8   16:bipush          6
+		//    9   18:aload_1         
+		//   10   19:aconst_null     
+		//   11   20:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   12   23:return          
+		}
+
+		public void onRepeatModeChanged(int i)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          26
+				callback.postToHandler(9, ((Object) (Integer.valueOf(i))), ((Bundle) (null)));
+		//    7   15:aload_2         
+		//    8   16:bipush          9
+		//    9   18:iload_1         
+		//   10   19:invokestatic    #66  <Method Integer Integer.valueOf(int)>
+		//   11   22:aconst_null     
+		//   12   23:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   13   26:return          
+		}
+
+		public void onSessionDestroyed()
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_1        
+			if(callback != null)
+		//*   5   11:aload_1         
+		//*   6   12:ifnull          23
+				callback.postToHandler(8, ((Object) (null)), ((Bundle) (null)));
+		//    7   15:aload_1         
+		//    8   16:bipush          8
+		//    9   18:aconst_null     
+		//   10   19:aconst_null     
+		//   11   20:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   12   23:return          
+		}
+
+		public void onShuffleModeChanged(int i)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          26
+				callback.postToHandler(12, ((Object) (Integer.valueOf(i))), ((Bundle) (null)));
+		//    7   15:aload_2         
+		//    8   16:bipush          12
+		//    9   18:iload_1         
+		//   10   19:invokestatic    #66  <Method Integer Integer.valueOf(int)>
+		//   11   22:aconst_null     
+		//   12   23:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   13   26:return          
+		}
+
+		public void onShuffleModeChangedDeprecated(boolean flag)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          26
+				callback.postToHandler(10, ((Object) (Boolean.valueOf(flag))), ((Bundle) (null)));
+		//    7   15:aload_2         
+		//    8   16:bipush          10
+		//    9   18:iload_1         
+		//   10   19:invokestatic    #40  <Method Boolean Boolean.valueOf(boolean)>
+		//   11   22:aconst_null     
+		//   12   23:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//   13   26:return          
+		}
+
+		public void onVolumeInfoChanged(ParcelableVolumeInfo parcelablevolumeinfo)
+			throws RemoteException
+		{
+			MediaControllerCompat.Callback callback = (MediaControllerCompat.Callback)mCallback.get();
+		//    0    0:aload_0         
+		//    1    1:getfield        #25  <Field WeakReference mCallback>
+		//    2    4:invokevirtual   #34  <Method Object WeakReference.get()>
+		//    3    7:checkcast       #6   <Class MediaControllerCompat$Callback>
+		//    4   10:astore_2        
+			if(callback != null)
+		//*   5   11:aload_2         
+		//*   6   12:ifnull          54
+			{
+				if(parcelablevolumeinfo != null)
+		//*   7   15:aload_1         
+		//*   8   16:ifnull          55
+					parcelablevolumeinfo = ((ParcelableVolumeInfo) (new MediaControllerCompat.PlaybackInfo(parcelablevolumeinfo.volumeType, parcelablevolumeinfo.audioStream, parcelablevolumeinfo.controlType, parcelablevolumeinfo.maxVolume, parcelablevolumeinfo.currentVolume)));
+		//    9   19:new             #73  <Class MediaControllerCompat$PlaybackInfo>
+		//   10   22:dup             
+		//   11   23:aload_1         
+		//   12   24:getfield        #79  <Field int ParcelableVolumeInfo.volumeType>
+		//   13   27:aload_1         
+		//   14   28:getfield        #82  <Field int ParcelableVolumeInfo.audioStream>
+		//   15   31:aload_1         
+		//   16   32:getfield        #85  <Field int ParcelableVolumeInfo.controlType>
+		//   17   35:aload_1         
+		//   18   36:getfield        #88  <Field int ParcelableVolumeInfo.maxVolume>
+		//   19   39:aload_1         
+		//   20   40:getfield        #91  <Field int ParcelableVolumeInfo.currentVolume>
+		//   21   43:invokespecial   #94  <Method void MediaControllerCompat$PlaybackInfo(int, int, int, int, int)>
+		//   22   46:astore_1        
+				else
+		//*  23   47:aload_2         
+		//*  24   48:iconst_4        
+		//*  25   49:aload_1         
+		//*  26   50:aconst_null     
+		//*  27   51:invokevirtual   #44  <Method void MediaControllerCompat$Callback.postToHandler(int, Object, Bundle)>
+		//*  28   54:return          
+					parcelablevolumeinfo = null;
+		//   29   55:aconst_null     
+		//   30   56:astore_1        
+				callback.postToHandler(4, ((Object) (parcelablevolumeinfo)), ((Bundle) (null)));
+			}
+		//*  31   57:goto            47
+		}
+
+		private final WeakReference mCallback;
+
+		StubCompat(MediaControllerCompat.Callback callback)
+		{
+		//    0    0:aload_0         
+		//    1    1:invokespecial   #18  <Method void IMediaControllerCallback$Stub()>
+			mCallback = new WeakReference(((Object) (callback)));
+		//    2    4:aload_0         
+		//    3    5:new             #20  <Class WeakReference>
+		//    4    8:dup             
+		//    5    9:aload_1         
+		//    6   10:invokespecial   #23  <Method void WeakReference(Object)>
+		//    7   13:putfield        #25  <Field WeakReference mCallback>
+		//    8   16:return          
+		}
+	}
+
+
+	public void binderDied()
+	{
+		onSessionDestroyed();
+	//    0    0:aload_0         
+	//    1    1:invokevirtual   #53  <Method void onSessionDestroyed()>
+	//    2    4:return          
+	}
+
+	public void onAudioInfoChanged(nfo nfo)
+	{
+	//    0    0:return          
+	}
+
+	public void onCaptioningEnabledChanged(boolean flag)
+	{
+	//    0    0:return          
+	}
+
+	public void onExtrasChanged(Bundle bundle)
+	{
+	//    0    0:return          
+	}
+
+	public void onMetadataChanged(MediaMetadataCompat mediametadatacompat)
+	{
+	//    0    0:return          
+	}
+
+	public void onPlaybackStateChanged(PlaybackStateCompat playbackstatecompat)
+	{
+	//    0    0:return          
+	}
+
+	public void onQueueChanged(List list)
+	{
+	//    0    0:return          
+	}
+
+	public void onQueueTitleChanged(CharSequence charsequence)
+	{
+	//    0    0:return          
+	}
+
+	public void onRepeatModeChanged(int i)
+	{
+	//    0    0:return          
+	}
+
+	public void onSessionDestroyed()
+	{
+	//    0    0:return          
+	}
+
+	public void onSessionEvent(String s, Bundle bundle)
+	{
+	//    0    0:return          
+	}
+
+	public void onShuffleModeChanged(int i)
+	{
+	//    0    0:return          
+	}
+
+	public void onShuffleModeChanged(boolean flag)
+	{
+	//    0    0:return          
+	}
+
+	void postToHandler(int i, Object obj, Bundle bundle)
+	{
+		if(mHandler != null)
+	//*   0    0:aload_0         
+	//*   1    1:getfield        #80  <Field MediaControllerCompat$Callback$MessageHandler mHandler>
+	//*   2    4:ifnull          26
+		{
+			obj = ((Object) (mHandler.obtainMessage(i, obj)));
+	//    3    7:aload_0         
+	//    4    8:getfield        #80  <Field MediaControllerCompat$Callback$MessageHandler mHandler>
+	//    5   11:iload_1         
+	//    6   12:aload_2         
+	//    7   13:invokevirtual   #84  <Method Message MediaControllerCompat$Callback$MessageHandler.obtainMessage(int, Object)>
+	//    8   16:astore_2        
+			((Message) (obj)).setData(bundle);
+	//    9   17:aload_2         
+	//   10   18:aload_3         
+	//   11   19:invokevirtual   #89  <Method void Message.setData(Bundle)>
+			((Message) (obj)).sendToTarget();
+	//   12   22:aload_2         
+	//   13   23:invokevirtual   #92  <Method void Message.sendToTarget()>
+		}
+	//   14   26:return          
+	}
+
+	void setHandler(Handler handler)
+	{
+		if(handler == null)
+	//*   0    0:aload_1         
+	//*   1    1:ifnonnull       33
+		{
+			if(mHandler != null)
+	//*   2    4:aload_0         
+	//*   3    5:getfield        #80  <Field MediaControllerCompat$Callback$MessageHandler mHandler>
+	//*   4    8:ifnull          32
+			{
+				mHandler.mRegistered = false;
+	//    5   11:aload_0         
+	//    6   12:getfield        #80  <Field MediaControllerCompat$Callback$MessageHandler mHandler>
+	//    7   15:iconst_0        
+	//    8   16:putfield        #97  <Field boolean MediaControllerCompat$Callback$MessageHandler.mRegistered>
+				mHandler.removeCallbacksAndMessages(((Object) (null)));
+	//    9   19:aload_0         
+	//   10   20:getfield        #80  <Field MediaControllerCompat$Callback$MessageHandler mHandler>
+	//   11   23:aconst_null     
+	//   12   24:invokevirtual   #101 <Method void MediaControllerCompat$Callback$MessageHandler.removeCallbacksAndMessages(Object)>
+				mHandler = null;
+	//   13   27:aload_0         
+	//   14   28:aconst_null     
+	//   15   29:putfield        #80  <Field MediaControllerCompat$Callback$MessageHandler mHandler>
+			}
+			return;
+	//   16   32:return          
+		} else
+		{
+			mHandler = new MessageHandler(handler.getLooper());
+	//   17   33:aload_0         
+	//   18   34:new             #11  <Class MediaControllerCompat$Callback$MessageHandler>
+	//   19   37:dup             
+	//   20   38:aload_0         
+	//   21   39:aload_1         
+	//   22   40:invokevirtual   #107 <Method Looper Handler.getLooper()>
+	//   23   43:invokespecial   #110 <Method void MediaControllerCompat$Callback$MessageHandler(MediaControllerCompat$Callback, Looper)>
+	//   24   46:putfield        #80  <Field MediaControllerCompat$Callback$MessageHandler mHandler>
+			mHandler.mRegistered = true;
+	//   25   49:aload_0         
+	//   26   50:getfield        #80  <Field MediaControllerCompat$Callback$MessageHandler mHandler>
+	//   27   53:iconst_1        
+	//   28   54:putfield        #97  <Field boolean MediaControllerCompat$Callback$MessageHandler.mRegistered>
+			return;
+	//   29   57:return          
+		}
+	}
+
+	private final Object mCallbackObj;
+	MessageHandler mHandler;
+	boolean mHasExtraCallback;
+
+
+/*
+	static Object access$000(MediaControllerCompat$Callback mediacontrollercompat$callback)
+	{
+		return mediacontrollercompat$callback.mCallbackObj;
+	//    0    0:aload_0         
+	//    1    1:getfield        #45  <Field Object mCallbackObj>
+	//    2    4:areturn         
+	}
+
+*/
+
+	public MediaControllerCompat$Callback()
+	{
+	//    0    0:aload_0         
+	//    1    1:invokespecial   #28  <Method void Object()>
+		if(android.os.Build.VERSION.SDK_INT >= 21)
+	//*   2    4:getstatic       #34  <Field int android.os.Build$VERSION.SDK_INT>
+	//*   3    7:bipush          21
+	//*   4    9:icmplt          28
+		{
+			mCallbackObj = MediaControllerCompatApi21.createCallback(((back) (new StubApi21(this))));
+	//    5   12:aload_0         
+	//    6   13:new             #14  <Class MediaControllerCompat$Callback$StubApi21>
+	//    7   16:dup             
+	//    8   17:aload_0         
+	//    9   18:invokespecial   #37  <Method void MediaControllerCompat$Callback$StubApi21(MediaControllerCompat$Callback)>
+	//   10   21:invokestatic    #43  <Method Object MediaControllerCompatApi21.createCallback(MediaControllerCompatApi21$Callback)>
+	//   11   24:putfield        #45  <Field Object mCallbackObj>
+			return;
+	//   12   27:return          
+		} else
+		{
+			mCallbackObj = ((Object) (new StubCompat(this)));
+	//   13   28:aload_0         
+	//   14   29:new             #17  <Class MediaControllerCompat$Callback$StubCompat>
+	//   15   32:dup             
+	//   16   33:aload_0         
+	//   17   34:invokespecial   #46  <Method void MediaControllerCompat$Callback$StubCompat(MediaControllerCompat$Callback)>
+	//   18   37:putfield        #45  <Field Object mCallbackObj>
+			return;
+	//   19   40:return          
+		}
+	}
+}
