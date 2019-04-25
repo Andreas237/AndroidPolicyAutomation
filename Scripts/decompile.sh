@@ -77,7 +77,7 @@ function decompileapk {
 # later.
 function getmanifest {
 	echo "Running Apktool"
-	apktool d -o "$filename" $apk
+	apktool d -o "$filename" --no-res $apk
 } # end function getmanifest
 
 
