@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFlowResults FileFormatVersion="102" TerminationState="Success">
+  <Results>
+    <Result>
+      <Sink Statement="virtualinvoke $r2.&lt;java.io.ByteArrayOutputStream: void write(byte[],int,int)&gt;($r1, 0, $i0)" Method="&lt;com.itextpdf.text.io.StreamUtil: byte[] inputStreamToArray(java.io.InputStream)&gt;">
+        <AccessPath Value="$r2" Type="java.io.ByteArrayOutputStream" TaintSubFields="true">
+          <Fields>
+            <Field Value="&lt;java.io.OutputStream: byte[] innerArray&gt;" Type="byte[]"/>
+          </Fields>
+        </AccessPath>
+      </Sink>
+      <Sources>
+        <Source Statement="$r2 = virtualinvoke $r1.&lt;java.net.URL: java.io.InputStream openStream()&gt;()" Method="&lt;com.itextpdf.text.io.RandomAccessSourceFactory: com.itextpdf.text.io.RandomAccessSource createSource(java.net.URL)&gt;">
+          <AccessPath Value="$r2" Type="java.io.InputStream" TaintSubFields="true"/>
+        </Source>
+      </Sources>
+    </Result>
+  </Results>
+  <PerformanceData>
+    <PerformanceEntry Name="CallgraphConstructionSeconds" Value="114"/>
+    <PerformanceEntry Name="TaintPropagationSeconds" Value="58"/>
+    <PerformanceEntry Name="TotalRuntimeSeconds" Value="174"/>
+    <PerformanceEntry Name="MaxMemoryConsumption" Value="250"/>
+    <PerformanceEntry Name="SourceCount" Value="10"/>
+    <PerformanceEntry Name="SinkCount" Value="38"/>
+  </PerformanceData>
+</DataFlowResults>

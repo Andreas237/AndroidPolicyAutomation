@@ -1,0 +1,110 @@
+*{
+    font-family: Helvetica;
+    padding: 0;
+    margin: 0;
+    color: #1F1F1F;
+}
+html {
+  font-size: 100.01%;
+  height: 100%;
+}
+body {
+  font-size: 62.5%;
+  height: 100%;
+}
+h1,h2{
+    font-weight: normal;
+}
+h1, .date{
+    color: #999;
+}
+h1{
+    font-size: 1.2em;
+    margin: 10px 14px 5px;
+}
+h2{
+    font-size: 1.4em;
+    line-height: 27px;
+}
+.content .media{
+    position: relative;
+}
+.content .media img{
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+a.video{
+    background: url(http://rt.com/static/img/icon/bg_icon_video.png) no-repeat 0 0;
+    overflow: hidden;
+    position: absolute;
+    text-decoration: none;
+    text-indent: -10000px;
+    height: 40px;
+    width: 40px;
+    bottom: 12px;
+    right: 22px;
+    z-index: 10;
+}
+.content > *{
+    padding: 0 14px;
+}
+.content p{
+    padding-bottom: 15px;
+}
+.content img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4px;
+    display: block;
+}
+.content{
+    font-size: 1.8em;
+    line-height: 30px;
+    padding-bottom: 40px;
+    height: 100%;
+}
+.alt{
+    font-size: 14px;
+    line-height: 17px;
+    color: #999;
+}
+.content .date{
+    font-size: 11px;
+    padding-bottom: 10px;
+}
+
+blockquote.twitter-tweet{
+    background: #fff;
+    border-radius: 5px;
+    border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187);
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px;
+    padding: 4px 8px 8px 50px;
+    margin: 10px 14px 30px;
+    background:url(http://rt.com/static/img/icon/mobile_twitter.png) no-repeat 13px 9px;
+}
+
+blockquote.twitter-tweet a{
+    color: #008BED;
+}
+
+/*@media all and (max-width: 768px) {
+    .content .media{
+        float: none;
+    }
+     .content .media img{
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+   .content{
+        -moz-column-width: auto;
+        -webkit-column-width: auto;
+        column-width: auto;
+    }   
+}*/

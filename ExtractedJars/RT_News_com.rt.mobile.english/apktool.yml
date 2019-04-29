@@ -1,0 +1,797 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: RT_News_com.rt.mobile.english.apk
+compressionType: false
+doNotCompress:
+- arsc
+- META-INF/android.arch.core_runtime.version
+- META-INF/android.arch.lifecycle_livedata-core.version
+- META-INF/android.arch.lifecycle_runtime.version
+- META-INF/android.arch.lifecycle_viewmodel.version
+- META-INF/com.android.support_animated-vector-drawable.version
+- META-INF/com.android.support_appcompat-v7.version
+- META-INF/com.android.support_cardview-v7.version
+- META-INF/com.android.support_customtabs.version
+- META-INF/com.android.support_design.version
+- META-INF/com.android.support_mediarouter-v7.version
+- META-INF/com.android.support_palette-v7.version
+- META-INF/com.android.support_recyclerview-v7.version
+- META-INF/com.android.support_support-compat.version
+- META-INF/com.android.support_support-core-ui.version
+- META-INF/com.android.support_support-core-utils.version
+- META-INF/com.android.support_support-fragment.version
+- META-INF/com.android.support_support-media-compat.version
+- META-INF/com.android.support_support-v4.version
+- META-INF/com.android.support_support-vector-drawable.version
+- META-INF/com.android.support_transition.version
+- META-INF/services/com.fasterxml.jackson.core.JsonFactory
+- properties
+- png
+- res/drawable-hdpi-v4/ab_transparent_democastoverlay.9.png
+- res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+- res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+- res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_list_focused_holo.9.png
+- res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png
+- res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png
+- res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png
+- res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+- res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png
+- res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+- res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png
+- res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+- res/drawable-hdpi-v4/btn_cling_normal.9.png
+- res/drawable-hdpi-v4/btn_cling_pressed.9.png
+- res/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png
+- res/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png
+- res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png
+- res/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png
+- res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png
+- res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png
+- res/drawable-hdpi-v4/drawer_shadow.9.png
+- res/drawable-hdpi-v4/notification_bg_low_normal.9.png
+- res/drawable-hdpi-v4/notification_bg_low_pressed.9.png
+- res/drawable-hdpi-v4/notification_bg_normal.9.png
+- res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png
+- res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-mdpi-v4/ab_transparent_democastoverlay.9.png
+- res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+- res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+- res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_list_focused_holo.9.png
+- res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png
+- res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png
+- res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png
+- res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+- res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png
+- res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+- res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png
+- res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+- res/drawable-mdpi-v4/btn_cling_normal.9.png
+- res/drawable-mdpi-v4/btn_cling_pressed.9.png
+- res/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png
+- res/drawable-mdpi-v4/com_facebook_tooltip_blue_background.9.png
+- res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png
+- res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png
+- res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png
+- res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png
+- res/drawable-mdpi-v4/drawer_shadow.9.png
+- res/drawable-mdpi-v4/notification_bg_low_normal.9.png
+- res/drawable-mdpi-v4/notification_bg_low_pressed.9.png
+- res/drawable-mdpi-v4/notification_bg_normal.9.png
+- res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png
+- res/drawable-xhdpi-v4/ab_transparent_democastoverlay.9.png
+- res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+- res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+- res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_list_focused_holo.9.png
+- res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png
+- res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png
+- res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png
+- res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+- res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png
+- res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+- res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png
+- res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+- res/drawable-xhdpi-v4/btn_cling_normal.9.png
+- res/drawable-xhdpi-v4/btn_cling_pressed.9.png
+- res/drawable-xhdpi-v4/com_facebook_tooltip_black_background.9.png
+- res/drawable-xhdpi-v4/com_facebook_tooltip_blue_background.9.png
+- res/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png
+- res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png
+- res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png
+- res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png
+- res/drawable-xhdpi-v4/drawer_shadow.9.png
+- res/drawable-xhdpi-v4/notification_bg_low_normal.9.png
+- res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png
+- res/drawable-xhdpi-v4/notification_bg_normal.9.png
+- res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png
+- res/drawable-xhdpi-v4/shadow7.9.png
+- res/drawable-xhdpi-v4/undobar.9.png
+- res/drawable-xhdpi-v4/undobar_button_focused.9.png
+- res/drawable-xhdpi-v4/undobar_button_pressed.9.png
+- res/drawable-xhdpi-v4/undobar_divider.9.png
+- res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+- res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+- res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png
+- res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png
+- res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png
+- res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png
+- res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+- res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png
+- res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+- res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png
+- res/drawable-xxhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+- res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png
+- res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png
+- res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png
+- res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png
+- res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+- res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+- res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+- res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+- res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+- res/drawable/shadow7.9.png
+- apk
+isFrameworkApk: false
+packageInfo: null
+sdkInfo: null
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  androidsupportmultidexversion.txt: '0'
+  firebase-analytics-impl.properties: '8'
+  firebase-analytics.properties: '8'
+  firebase-common.properties: '8'
+  firebase-core.properties: '8'
+  firebase-iid-interop.properties: '8'
+  firebase-iid.properties: '8'
+  firebase-measurement-connector-impl.properties: '8'
+  firebase-measurement-connector.properties: '8'
+  firebase-messaging.properties: '8'
+  play-services-ads-base.properties: '8'
+  play-services-ads-identifier.properties: '8'
+  play-services-ads-lite.properties: '8'
+  play-services-ads.properties: '8'
+  play-services-analytics-impl.properties: '8'
+  play-services-analytics.properties: '8'
+  play-services-base.properties: '8'
+  play-services-basement.properties: '8'
+  play-services-cast.properties: '8'
+  play-services-flags.properties: '8'
+  play-services-gass.properties: '8'
+  play-services-measurement-base.properties: '8'
+  play-services-stats.properties: '8'
+  play-services-tagmanager-v4-impl.properties: '8'
+  play-services-tasks.properties: '8'
+  play-services-wearable.properties: '8'
+  sentry-build.properties: '0'
+  fabric/com.crashlytics.sdk.android.answers.properties: '8'
+  fabric/com.crashlytics.sdk.android.beta.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics-core.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics.properties: '8'
+  fabric/com.mopub.sdk.android.mopub.properties: '8'
+  fabric/io.fabric.sdk.android.fabric.properties: '8'
+  kotlinx/coroutines/AbstractContinuation.kotlin_metadata: '8'
+  kotlinx/coroutines/AbstractContinuationKt.kotlin_metadata: '8'
+  kotlinx/coroutines/AbstractCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/Active.kotlin_metadata: '8'
+  kotlinx/coroutines/AwaitAll.kotlin_metadata: '8'
+  kotlinx/coroutines/AwaitKt.kotlin_metadata: '8'
+  kotlinx/coroutines/Builders_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/CancelHandler.kotlin_metadata: '8'
+  kotlinx/coroutines/CancelHandlerBase.kotlin_metadata: '8'
+  kotlinx/coroutines/CancellableContinuation.kotlin_metadata: '8'
+  kotlinx/coroutines/CancellableContinuationImpl.kotlin_metadata: '8'
+  kotlinx/coroutines/CancellableContinuationKt.kotlin_metadata: '8'
+  kotlinx/coroutines/CancellationException.kotlin_metadata: '8'
+  kotlinx/coroutines/CancelledContinuation.kotlin_metadata: '8'
+  kotlinx/coroutines/ChildContinuation.kotlin_metadata: '8'
+  kotlinx/coroutines/ChildHandle.kotlin_metadata: '8'
+  kotlinx/coroutines/ChildHandleNode.kotlin_metadata: '8'
+  kotlinx/coroutines/ChildJob.kotlin_metadata: '8'
+  kotlinx/coroutines/CompletableDeferred.kotlin_metadata: '8'
+  kotlinx/coroutines/CompletableDeferredImpl.kotlin_metadata: '8'
+  kotlinx/coroutines/CompletableDeferredKt.kotlin_metadata: '8'
+  kotlinx/coroutines/CompletedExceptionally.kotlin_metadata: '8'
+  kotlinx/coroutines/CompletedExceptionallyKt.kotlin_metadata: '8'
+  kotlinx/coroutines/CompletedIdempotentResult.kotlin_metadata: '8'
+  kotlinx/coroutines/CompletionHandlerBase.kotlin_metadata: '8'
+  kotlinx/coroutines/CompletionHandlerException.kotlin_metadata: '8'
+  kotlinx/coroutines/CompletionHandler_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/CoroutineContext_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/CoroutineDispatcher.kotlin_metadata: '8'
+  kotlinx/coroutines/CoroutineExceptionHandler.kotlin_metadata: '8'
+  kotlinx/coroutines/CoroutineExceptionHandlerKt.kotlin_metadata: '8'
+  kotlinx/coroutines/CoroutineName.kotlin_metadata: '8'
+  kotlinx/coroutines/CoroutineScope.kotlin_metadata: '8'
+  kotlinx/coroutines/CoroutineScopeKt.kotlin_metadata: '8'
+  kotlinx/coroutines/CoroutineStart.kotlin_metadata: '8'
+  kotlinx/coroutines/Debug_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/Deferred.kotlin_metadata: '8'
+  kotlinx/coroutines/DeferredCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/Delay.kotlin_metadata: '8'
+  kotlinx/coroutines/DelayKt.kotlin_metadata: '8'
+  kotlinx/coroutines/DispatchException.kotlin_metadata: '8'
+  kotlinx/coroutines/DispatchedContinuation.kotlin_metadata: '8'
+  kotlinx/coroutines/DispatchedCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/DispatchedKt.kotlin_metadata: '8'
+  kotlinx/coroutines/DispatchedTask.kotlin_metadata: '8'
+  kotlinx/coroutines/Dispatchers.kotlin_metadata: '8'
+  kotlinx/coroutines/DisposableHandle.kotlin_metadata: '8'
+  kotlinx/coroutines/DisposeOnCancel.kotlin_metadata: '8'
+  kotlinx/coroutines/DisposeOnCompletion.kotlin_metadata: '8'
+  kotlinx/coroutines/Empty.kotlin_metadata: '8'
+  kotlinx/coroutines/Exceptions_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/ExperimentalCoroutinesApi.kotlin_metadata: '8'
+  kotlinx/coroutines/GlobalScope.kotlin_metadata: '8'
+  kotlinx/coroutines/InactiveNodeList.kotlin_metadata: '8'
+  kotlinx/coroutines/Incomplete.kotlin_metadata: '8'
+  kotlinx/coroutines/InternalCoroutinesApi.kotlin_metadata: '8'
+  kotlinx/coroutines/InvokeOnCancel.kotlin_metadata: '8'
+  kotlinx/coroutines/InvokeOnCancelling.kotlin_metadata: '8'
+  kotlinx/coroutines/InvokeOnCompletion.kotlin_metadata: '8'
+  kotlinx/coroutines/Job.kotlin_metadata: '8'
+  kotlinx/coroutines/JobCancellationException.kotlin_metadata: '8'
+  kotlinx/coroutines/JobCancellingNode.kotlin_metadata: '8'
+  kotlinx/coroutines/JobImpl.kotlin_metadata: '8'
+  kotlinx/coroutines/JobKt.kotlin_metadata: '8'
+  kotlinx/coroutines/JobNode.kotlin_metadata: '8'
+  kotlinx/coroutines/JobSupport.kotlin_metadata: '8'
+  kotlinx/coroutines/JobSupportKt.kotlin_metadata: '8'
+  kotlinx/coroutines/LazyDeferredCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/LazyStandaloneCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/MainCoroutineDispatcher.kotlin_metadata: '8'
+  kotlinx/coroutines/NodeList.kotlin_metadata: '8'
+  kotlinx/coroutines/NonCancellable.kotlin_metadata: '8'
+  kotlinx/coroutines/NonDisposableHandle.kotlin_metadata: '8'
+  kotlinx/coroutines/NotCompleted.kotlin_metadata: '8'
+  kotlinx/coroutines/ObsoleteCoroutinesApi.kotlin_metadata: '8'
+  kotlinx/coroutines/ParentJob.kotlin_metadata: '8'
+  kotlinx/coroutines/RemoveOnCancel.kotlin_metadata: '8'
+  kotlinx/coroutines/ResumeAwaitOnCompletion.kotlin_metadata: '8'
+  kotlinx/coroutines/ResumeModeKt.kotlin_metadata: '8'
+  kotlinx/coroutines/ResumeOnCompletion.kotlin_metadata: '8'
+  kotlinx/coroutines/Runnable.kotlin_metadata: '8'
+  kotlinx/coroutines/Runnable_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/SchedulerTask.kotlin_metadata: '8'
+  kotlinx/coroutines/SchedulerTaskContext.kotlin_metadata: '8'
+  kotlinx/coroutines/SchedulerTask_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/SelectAwaitOnCompletion.kotlin_metadata: '8'
+  kotlinx/coroutines/SelectJoinOnCompletion.kotlin_metadata: '8'
+  kotlinx/coroutines/StandaloneCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/SupervisorCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/SupervisorJobImpl.kotlin_metadata: '8'
+  kotlinx/coroutines/SupervisorKt.kotlin_metadata: '8'
+  kotlinx/coroutines/TimeoutCancellationException.kotlin_metadata: '8'
+  kotlinx/coroutines/TimeoutCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/TimeoutKt.kotlin_metadata: '8'
+  kotlinx/coroutines/Unconfined.kotlin_metadata: '8'
+  kotlinx/coroutines/UndispatchedCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/UndispatchedEventLoop.kotlin_metadata: '8'
+  kotlinx/coroutines/YieldKt.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/AbstractChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/AbstractChannelKt.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/AbstractSendChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ArrayBroadcastChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ArrayChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/BroadcastChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/BroadcastChannelKt.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/BroadcastCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/BroadcastKt.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/Channel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ChannelCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ChannelIterator.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ChannelKt.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/Channels_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/Closed.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ClosedReceiveChannelException.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ClosedSendChannelException.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ConflatedBroadcastChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ConflatedChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/LazyBroadcastCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/LinkedListChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ProduceKt.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ProducerCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ProducerScope.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/Receive.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ReceiveChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/ReceiveOrClosed.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/RendezvousChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/Send.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/SendChannel.kotlin_metadata: '8'
+  kotlinx/coroutines/channels/SendElement.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/AbstractAtomicDesc.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/AddLastDesc.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/ArrayCopy_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/ArrayQueue.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/AtomicDesc.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/AtomicKt.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/AtomicOp.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/CommonThreadLocal.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/Concurrent_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/ContextScope.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/LockFreeLinkedListHead.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/LockFreeLinkedListNode.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/MainDispatcherFactory.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/NativeThreadLocal.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/OpDescriptor.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/ReentrantLock.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/RemoveFirstDesc.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/ScopeCoroutine.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/Symbol.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/SynchronizedObject.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/Synchronized_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/internal/ThreadContext_commonKt.kotlin_metadata: '8'
+  kotlinx/coroutines/intrinsics/CancellableKt.kotlin_metadata: '8'
+  kotlinx/coroutines/intrinsics/UndispatchedKt.kotlin_metadata: '8'
+  kotlinx/coroutines/selects/SelectBuilder.kotlin_metadata: '8'
+  kotlinx/coroutines/selects/SelectBuilderImpl.kotlin_metadata: '8'
+  kotlinx/coroutines/selects/SelectClause0.kotlin_metadata: '8'
+  kotlinx/coroutines/selects/SelectClause1.kotlin_metadata: '8'
+  kotlinx/coroutines/selects/SelectClause2.kotlin_metadata: '8'
+  kotlinx/coroutines/selects/SelectInstance.kotlin_metadata: '8'
+  kotlinx/coroutines/selects/SelectKt.kotlin_metadata: '8'
+  kotlinx/coroutines/selects/SelectUnbiasedKt.kotlin_metadata: '8'
+  kotlinx/coroutines/selects/UnbiasedSelectBuilderImpl.kotlin_metadata: '8'
+  kotlinx/coroutines/selects/WhileSelectKt.kotlin_metadata: '8'
+  kotlinx/coroutines/sync/Empty.kotlin_metadata: '8'
+  kotlinx/coroutines/sync/Mutex.kotlin_metadata: '8'
+  kotlinx/coroutines/sync/MutexImpl.kotlin_metadata: '8'
+  kotlinx/coroutines/sync/MutexKt.kotlin_metadata: '8'
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: '0'
+  org/joda/time/format/messages.properties: '8'
+  org/joda/time/format/messages_da.properties: '8'
+  org/joda/time/format/messages_de.properties: '8'
+  org/joda/time/format/messages_en.properties: '0'
+  org/joda/time/format/messages_es.properties: '8'
+  org/joda/time/format/messages_fr.properties: '8'
+  org/joda/time/format/messages_ja.properties: '8'
+  org/joda/time/format/messages_nl.properties: '8'
+  org/joda/time/format/messages_pl.properties: '8'
+  org/joda/time/format/messages_pt.properties: '8'
+  org/joda/time/tz/data/CET: '8'
+  org/joda/time/tz/data/CST6CDT: '8'
+  org/joda/time/tz/data/EET: '8'
+  org/joda/time/tz/data/EST: '0'
+  org/joda/time/tz/data/EST5EDT: '8'
+  org/joda/time/tz/data/HST: '0'
+  org/joda/time/tz/data/MET: '8'
+  org/joda/time/tz/data/MST: '0'
+  org/joda/time/tz/data/MST7MDT: '8'
+  org/joda/time/tz/data/PST8PDT: '8'
+  org/joda/time/tz/data/WET: '8'
+  org/joda/time/tz/data/ZoneInfoMap: '8'
+  org/joda/time/tz/data/Africa/Abidjan: '8'
+  org/joda/time/tz/data/Africa/Accra: '8'
+  org/joda/time/tz/data/Africa/Addis_Ababa: '8'
+  org/joda/time/tz/data/Africa/Algiers: '8'
+  org/joda/time/tz/data/Africa/Asmara: '8'
+  org/joda/time/tz/data/Africa/Bissau: '8'
+  org/joda/time/tz/data/Africa/Cairo: '8'
+  org/joda/time/tz/data/Africa/Casablanca: '8'
+  org/joda/time/tz/data/Africa/Ceuta: '8'
+  org/joda/time/tz/data/Africa/Dar_es_Salaam: '8'
+  org/joda/time/tz/data/Africa/Djibouti: '8'
+  org/joda/time/tz/data/Africa/El_Aaiun: '8'
+  org/joda/time/tz/data/Africa/Johannesburg: '8'
+  org/joda/time/tz/data/Africa/Kampala: '8'
+  org/joda/time/tz/data/Africa/Khartoum: '8'
+  org/joda/time/tz/data/Africa/Lagos: '8'
+  org/joda/time/tz/data/Africa/Maputo: '8'
+  org/joda/time/tz/data/Africa/Mogadishu: '8'
+  org/joda/time/tz/data/Africa/Monrovia: '8'
+  org/joda/time/tz/data/Africa/Nairobi: '8'
+  org/joda/time/tz/data/Africa/Ndjamena: '8'
+  org/joda/time/tz/data/Africa/Tripoli: '8'
+  org/joda/time/tz/data/Africa/Tunis: '8'
+  org/joda/time/tz/data/Africa/Windhoek: '8'
+  org/joda/time/tz/data/America/Adak: '8'
+  org/joda/time/tz/data/America/Anchorage: '8'
+  org/joda/time/tz/data/America/Antigua: '8'
+  org/joda/time/tz/data/America/Araguaina: '8'
+  org/joda/time/tz/data/America/Asuncion: '8'
+  org/joda/time/tz/data/America/Atikokan: '8'
+  org/joda/time/tz/data/America/Bahia: '8'
+  org/joda/time/tz/data/America/Bahia_Banderas: '8'
+  org/joda/time/tz/data/America/Barbados: '8'
+  org/joda/time/tz/data/America/Belem: '8'
+  org/joda/time/tz/data/America/Belize: '8'
+  org/joda/time/tz/data/America/Blanc-Sablon: '8'
+  org/joda/time/tz/data/America/Boa_Vista: '8'
+  org/joda/time/tz/data/America/Bogota: '8'
+  org/joda/time/tz/data/America/Boise: '8'
+  org/joda/time/tz/data/America/Cambridge_Bay: '8'
+  org/joda/time/tz/data/America/Campo_Grande: '8'
+  org/joda/time/tz/data/America/Cancun: '8'
+  org/joda/time/tz/data/America/Caracas: '8'
+  org/joda/time/tz/data/America/Cayenne: '8'
+  org/joda/time/tz/data/America/Cayman: '8'
+  org/joda/time/tz/data/America/Chicago: '8'
+  org/joda/time/tz/data/America/Chihuahua: '8'
+  org/joda/time/tz/data/America/Costa_Rica: '8'
+  org/joda/time/tz/data/America/Creston: '8'
+  org/joda/time/tz/data/America/Cuiaba: '8'
+  org/joda/time/tz/data/America/Curacao: '8'
+  org/joda/time/tz/data/America/Danmarkshavn: '8'
+  org/joda/time/tz/data/America/Dawson: '8'
+  org/joda/time/tz/data/America/Dawson_Creek: '8'
+  org/joda/time/tz/data/America/Denver: '8'
+  org/joda/time/tz/data/America/Detroit: '8'
+  org/joda/time/tz/data/America/Edmonton: '8'
+  org/joda/time/tz/data/America/Eirunepe: '8'
+  org/joda/time/tz/data/America/El_Salvador: '8'
+  org/joda/time/tz/data/America/Fortaleza: '8'
+  org/joda/time/tz/data/America/Glace_Bay: '8'
+  org/joda/time/tz/data/America/Godthab: '8'
+  org/joda/time/tz/data/America/Goose_Bay: '8'
+  org/joda/time/tz/data/America/Grand_Turk: '8'
+  org/joda/time/tz/data/America/Guatemala: '8'
+  org/joda/time/tz/data/America/Guayaquil: '8'
+  org/joda/time/tz/data/America/Guyana: '8'
+  org/joda/time/tz/data/America/Halifax: '8'
+  org/joda/time/tz/data/America/Havana: '8'
+  org/joda/time/tz/data/America/Hermosillo: '8'
+  org/joda/time/tz/data/America/Inuvik: '8'
+  org/joda/time/tz/data/America/Iqaluit: '8'
+  org/joda/time/tz/data/America/Jamaica: '8'
+  org/joda/time/tz/data/America/Juneau: '8'
+  org/joda/time/tz/data/America/La_Paz: '8'
+  org/joda/time/tz/data/America/Lima: '8'
+  org/joda/time/tz/data/America/Los_Angeles: '8'
+  org/joda/time/tz/data/America/Maceio: '8'
+  org/joda/time/tz/data/America/Managua: '8'
+  org/joda/time/tz/data/America/Manaus: '8'
+  org/joda/time/tz/data/America/Martinique: '8'
+  org/joda/time/tz/data/America/Matamoros: '8'
+  org/joda/time/tz/data/America/Mazatlan: '8'
+  org/joda/time/tz/data/America/Menominee: '8'
+  org/joda/time/tz/data/America/Merida: '8'
+  org/joda/time/tz/data/America/Metlakatla: '8'
+  org/joda/time/tz/data/America/Mexico_City: '8'
+  org/joda/time/tz/data/America/Miquelon: '8'
+  org/joda/time/tz/data/America/Moncton: '8'
+  org/joda/time/tz/data/America/Monterrey: '8'
+  org/joda/time/tz/data/America/Montevideo: '8'
+  org/joda/time/tz/data/America/Montreal: '8'
+  org/joda/time/tz/data/America/Nassau: '8'
+  org/joda/time/tz/data/America/New_York: '8'
+  org/joda/time/tz/data/America/Nipigon: '8'
+  org/joda/time/tz/data/America/Nome: '8'
+  org/joda/time/tz/data/America/Noronha: '8'
+  org/joda/time/tz/data/America/Ojinaga: '8'
+  org/joda/time/tz/data/America/Panama: '8'
+  org/joda/time/tz/data/America/Pangnirtung: '8'
+  org/joda/time/tz/data/America/Paramaribo: '8'
+  org/joda/time/tz/data/America/Phoenix: '8'
+  org/joda/time/tz/data/America/Port-au-Prince: '8'
+  org/joda/time/tz/data/America/Port_of_Spain: '8'
+  org/joda/time/tz/data/America/Porto_Velho: '8'
+  org/joda/time/tz/data/America/Puerto_Rico: '8'
+  org/joda/time/tz/data/America/Rainy_River: '8'
+  org/joda/time/tz/data/America/Rankin_Inlet: '8'
+  org/joda/time/tz/data/America/Recife: '8'
+  org/joda/time/tz/data/America/Regina: '8'
+  org/joda/time/tz/data/America/Resolute: '8'
+  org/joda/time/tz/data/America/Rio_Branco: '8'
+  org/joda/time/tz/data/America/Santa_Isabel: '8'
+  org/joda/time/tz/data/America/Santarem: '8'
+  org/joda/time/tz/data/America/Santiago: '8'
+  org/joda/time/tz/data/America/Santo_Domingo: '8'
+  org/joda/time/tz/data/America/Sao_Paulo: '8'
+  org/joda/time/tz/data/America/Scoresbysund: '8'
+  org/joda/time/tz/data/America/Sitka: '8'
+  org/joda/time/tz/data/America/St_Johns: '8'
+  org/joda/time/tz/data/America/Swift_Current: '8'
+  org/joda/time/tz/data/America/Tegucigalpa: '8'
+  org/joda/time/tz/data/America/Thule: '8'
+  org/joda/time/tz/data/America/Thunder_Bay: '8'
+  org/joda/time/tz/data/America/Tijuana: '8'
+  org/joda/time/tz/data/America/Toronto: '8'
+  org/joda/time/tz/data/America/Vancouver: '8'
+  org/joda/time/tz/data/America/Whitehorse: '8'
+  org/joda/time/tz/data/America/Winnipeg: '8'
+  org/joda/time/tz/data/America/Yakutat: '8'
+  org/joda/time/tz/data/America/Yellowknife: '8'
+  org/joda/time/tz/data/America/Argentina/Buenos_Aires: '8'
+  org/joda/time/tz/data/America/Argentina/Catamarca: '8'
+  org/joda/time/tz/data/America/Argentina/Cordoba: '8'
+  org/joda/time/tz/data/America/Argentina/Jujuy: '8'
+  org/joda/time/tz/data/America/Argentina/La_Rioja: '8'
+  org/joda/time/tz/data/America/Argentina/Mendoza: '8'
+  org/joda/time/tz/data/America/Argentina/Rio_Gallegos: '8'
+  org/joda/time/tz/data/America/Argentina/Salta: '8'
+  org/joda/time/tz/data/America/Argentina/San_Juan: '8'
+  org/joda/time/tz/data/America/Argentina/San_Luis: '8'
+  org/joda/time/tz/data/America/Argentina/Tucuman: '8'
+  org/joda/time/tz/data/America/Argentina/Ushuaia: '8'
+  org/joda/time/tz/data/America/Indiana/Indianapolis: '8'
+  org/joda/time/tz/data/America/Indiana/Knox: '8'
+  org/joda/time/tz/data/America/Indiana/Marengo: '8'
+  org/joda/time/tz/data/America/Indiana/Petersburg: '8'
+  org/joda/time/tz/data/America/Indiana/Tell_City: '8'
+  org/joda/time/tz/data/America/Indiana/Vevay: '8'
+  org/joda/time/tz/data/America/Indiana/Vincennes: '8'
+  org/joda/time/tz/data/America/Indiana/Winamac: '8'
+  org/joda/time/tz/data/America/Kentucky/Louisville: '8'
+  org/joda/time/tz/data/America/Kentucky/Monticello: '8'
+  org/joda/time/tz/data/America/North_Dakota/Beulah: '8'
+  org/joda/time/tz/data/America/North_Dakota/Center: '8'
+  org/joda/time/tz/data/America/North_Dakota/New_Salem: '8'
+  org/joda/time/tz/data/Antarctica/Casey: '8'
+  org/joda/time/tz/data/Antarctica/Davis: '8'
+  org/joda/time/tz/data/Antarctica/DumontDUrville: '8'
+  org/joda/time/tz/data/Antarctica/Macquarie: '8'
+  org/joda/time/tz/data/Antarctica/Mawson: '8'
+  org/joda/time/tz/data/Antarctica/Palmer: '8'
+  org/joda/time/tz/data/Antarctica/Rothera: '8'
+  org/joda/time/tz/data/Antarctica/Syowa: '8'
+  org/joda/time/tz/data/Antarctica/Troll: '8'
+  org/joda/time/tz/data/Antarctica/Vostok: '8'
+  org/joda/time/tz/data/Asia/Aden: '8'
+  org/joda/time/tz/data/Asia/Almaty: '8'
+  org/joda/time/tz/data/Asia/Amman: '8'
+  org/joda/time/tz/data/Asia/Anadyr: '8'
+  org/joda/time/tz/data/Asia/Aqtau: '8'
+  org/joda/time/tz/data/Asia/Aqtobe: '8'
+  org/joda/time/tz/data/Asia/Ashgabat: '8'
+  org/joda/time/tz/data/Asia/Baghdad: '8'
+  org/joda/time/tz/data/Asia/Bahrain: '8'
+  org/joda/time/tz/data/Asia/Baku: '8'
+  org/joda/time/tz/data/Asia/Bangkok: '8'
+  org/joda/time/tz/data/Asia/Beirut: '8'
+  org/joda/time/tz/data/Asia/Bishkek: '8'
+  org/joda/time/tz/data/Asia/Brunei: '8'
+  org/joda/time/tz/data/Asia/Chita: '8'
+  org/joda/time/tz/data/Asia/Choibalsan: '8'
+  org/joda/time/tz/data/Asia/Colombo: '8'
+  org/joda/time/tz/data/Asia/Damascus: '8'
+  org/joda/time/tz/data/Asia/Dhaka: '8'
+  org/joda/time/tz/data/Asia/Dili: '8'
+  org/joda/time/tz/data/Asia/Dubai: '8'
+  org/joda/time/tz/data/Asia/Dushanbe: '8'
+  org/joda/time/tz/data/Asia/Gaza: '8'
+  org/joda/time/tz/data/Asia/Hebron: '8'
+  org/joda/time/tz/data/Asia/Ho_Chi_Minh: '8'
+  org/joda/time/tz/data/Asia/Hong_Kong: '8'
+  org/joda/time/tz/data/Asia/Hovd: '8'
+  org/joda/time/tz/data/Asia/Irkutsk: '8'
+  org/joda/time/tz/data/Asia/Jakarta: '8'
+  org/joda/time/tz/data/Asia/Jayapura: '8'
+  org/joda/time/tz/data/Asia/Jerusalem: '8'
+  org/joda/time/tz/data/Asia/Kabul: '8'
+  org/joda/time/tz/data/Asia/Kamchatka: '8'
+  org/joda/time/tz/data/Asia/Karachi: '8'
+  org/joda/time/tz/data/Asia/Kathmandu: '8'
+  org/joda/time/tz/data/Asia/Khandyga: '8'
+  org/joda/time/tz/data/Asia/Kolkata: '8'
+  org/joda/time/tz/data/Asia/Krasnoyarsk: '8'
+  org/joda/time/tz/data/Asia/Kuala_Lumpur: '8'
+  org/joda/time/tz/data/Asia/Kuching: '8'
+  org/joda/time/tz/data/Asia/Kuwait: '8'
+  org/joda/time/tz/data/Asia/Macau: '8'
+  org/joda/time/tz/data/Asia/Magadan: '8'
+  org/joda/time/tz/data/Asia/Makassar: '8'
+  org/joda/time/tz/data/Asia/Manila: '8'
+  org/joda/time/tz/data/Asia/Muscat: '8'
+  org/joda/time/tz/data/Asia/Nicosia: '8'
+  org/joda/time/tz/data/Asia/Novokuznetsk: '8'
+  org/joda/time/tz/data/Asia/Novosibirsk: '8'
+  org/joda/time/tz/data/Asia/Omsk: '8'
+  org/joda/time/tz/data/Asia/Oral: '8'
+  org/joda/time/tz/data/Asia/Phnom_Penh: '8'
+  org/joda/time/tz/data/Asia/Pontianak: '8'
+  org/joda/time/tz/data/Asia/Pyongyang: '8'
+  org/joda/time/tz/data/Asia/Qatar: '8'
+  org/joda/time/tz/data/Asia/Qyzylorda: '8'
+  org/joda/time/tz/data/Asia/Rangoon: '8'
+  org/joda/time/tz/data/Asia/Riyadh: '8'
+  org/joda/time/tz/data/Asia/Sakhalin: '8'
+  org/joda/time/tz/data/Asia/Samarkand: '8'
+  org/joda/time/tz/data/Asia/Seoul: '8'
+  org/joda/time/tz/data/Asia/Shanghai: '8'
+  org/joda/time/tz/data/Asia/Singapore: '8'
+  org/joda/time/tz/data/Asia/Srednekolymsk: '8'
+  org/joda/time/tz/data/Asia/Taipei: '8'
+  org/joda/time/tz/data/Asia/Tashkent: '8'
+  org/joda/time/tz/data/Asia/Tbilisi: '8'
+  org/joda/time/tz/data/Asia/Tehran: '8'
+  org/joda/time/tz/data/Asia/Thimphu: '8'
+  org/joda/time/tz/data/Asia/Tokyo: '8'
+  org/joda/time/tz/data/Asia/Ulaanbaatar: '8'
+  org/joda/time/tz/data/Asia/Urumqi: '8'
+  org/joda/time/tz/data/Asia/Ust-Nera: '8'
+  org/joda/time/tz/data/Asia/Vientiane: '8'
+  org/joda/time/tz/data/Asia/Vladivostok: '8'
+  org/joda/time/tz/data/Asia/Yakutsk: '8'
+  org/joda/time/tz/data/Asia/Yekaterinburg: '8'
+  org/joda/time/tz/data/Asia/Yerevan: '8'
+  org/joda/time/tz/data/Atlantic/Azores: '8'
+  org/joda/time/tz/data/Atlantic/Bermuda: '8'
+  org/joda/time/tz/data/Atlantic/Canary: '8'
+  org/joda/time/tz/data/Atlantic/Cape_Verde: '8'
+  org/joda/time/tz/data/Atlantic/Faroe: '8'
+  org/joda/time/tz/data/Atlantic/Madeira: '8'
+  org/joda/time/tz/data/Atlantic/Reykjavik: '8'
+  org/joda/time/tz/data/Atlantic/South_Georgia: '8'
+  org/joda/time/tz/data/Atlantic/Stanley: '8'
+  org/joda/time/tz/data/Australia/Adelaide: '8'
+  org/joda/time/tz/data/Australia/Brisbane: '8'
+  org/joda/time/tz/data/Australia/Broken_Hill: '8'
+  org/joda/time/tz/data/Australia/Currie: '8'
+  org/joda/time/tz/data/Australia/Darwin: '8'
+  org/joda/time/tz/data/Australia/Eucla: '8'
+  org/joda/time/tz/data/Australia/Hobart: '8'
+  org/joda/time/tz/data/Australia/Lindeman: '8'
+  org/joda/time/tz/data/Australia/Lord_Howe: '8'
+  org/joda/time/tz/data/Australia/Melbourne: '8'
+  org/joda/time/tz/data/Australia/Perth: '8'
+  org/joda/time/tz/data/Australia/Sydney: '8'
+  org/joda/time/tz/data/Etc/GMT: '0'
+  org/joda/time/tz/data/Etc/GMT+1: '0'
+  org/joda/time/tz/data/Etc/GMT+10: '0'
+  org/joda/time/tz/data/Etc/GMT+11: '0'
+  org/joda/time/tz/data/Etc/GMT+12: '0'
+  org/joda/time/tz/data/Etc/GMT+2: '0'
+  org/joda/time/tz/data/Etc/GMT+3: '0'
+  org/joda/time/tz/data/Etc/GMT+4: '0'
+  org/joda/time/tz/data/Etc/GMT+5: '0'
+  org/joda/time/tz/data/Etc/GMT+6: '0'
+  org/joda/time/tz/data/Etc/GMT+7: '0'
+  org/joda/time/tz/data/Etc/GMT+8: '0'
+  org/joda/time/tz/data/Etc/GMT+9: '0'
+  org/joda/time/tz/data/Etc/GMT-1: '0'
+  org/joda/time/tz/data/Etc/GMT-10: '0'
+  org/joda/time/tz/data/Etc/GMT-11: '0'
+  org/joda/time/tz/data/Etc/GMT-12: '0'
+  org/joda/time/tz/data/Etc/GMT-13: '0'
+  org/joda/time/tz/data/Etc/GMT-14: '0'
+  org/joda/time/tz/data/Etc/GMT-2: '0'
+  org/joda/time/tz/data/Etc/GMT-3: '0'
+  org/joda/time/tz/data/Etc/GMT-4: '0'
+  org/joda/time/tz/data/Etc/GMT-5: '0'
+  org/joda/time/tz/data/Etc/GMT-6: '0'
+  org/joda/time/tz/data/Etc/GMT-7: '0'
+  org/joda/time/tz/data/Etc/GMT-8: '0'
+  org/joda/time/tz/data/Etc/GMT-9: '0'
+  org/joda/time/tz/data/Etc/UCT: '0'
+  org/joda/time/tz/data/Etc/UTC: '0'
+  org/joda/time/tz/data/Europe/Amsterdam: '8'
+  org/joda/time/tz/data/Europe/Andorra: '8'
+  org/joda/time/tz/data/Europe/Athens: '8'
+  org/joda/time/tz/data/Europe/Belgrade: '8'
+  org/joda/time/tz/data/Europe/Berlin: '8'
+  org/joda/time/tz/data/Europe/Brussels: '8'
+  org/joda/time/tz/data/Europe/Bucharest: '8'
+  org/joda/time/tz/data/Europe/Budapest: '8'
+  org/joda/time/tz/data/Europe/Chisinau: '8'
+  org/joda/time/tz/data/Europe/Copenhagen: '8'
+  org/joda/time/tz/data/Europe/Dublin: '8'
+  org/joda/time/tz/data/Europe/Gibraltar: '8'
+  org/joda/time/tz/data/Europe/Helsinki: '8'
+  org/joda/time/tz/data/Europe/Istanbul: '8'
+  org/joda/time/tz/data/Europe/Kaliningrad: '8'
+  org/joda/time/tz/data/Europe/Kiev: '8'
+  org/joda/time/tz/data/Europe/Lisbon: '8'
+  org/joda/time/tz/data/Europe/London: '8'
+  org/joda/time/tz/data/Europe/Luxembourg: '8'
+  org/joda/time/tz/data/Europe/Madrid: '8'
+  org/joda/time/tz/data/Europe/Malta: '8'
+  org/joda/time/tz/data/Europe/Minsk: '8'
+  org/joda/time/tz/data/Europe/Monaco: '8'
+  org/joda/time/tz/data/Europe/Moscow: '8'
+  org/joda/time/tz/data/Europe/Oslo: '8'
+  org/joda/time/tz/data/Europe/Paris: '8'
+  org/joda/time/tz/data/Europe/Prague: '8'
+  org/joda/time/tz/data/Europe/Riga: '8'
+  org/joda/time/tz/data/Europe/Rome: '8'
+  org/joda/time/tz/data/Europe/Samara: '8'
+  org/joda/time/tz/data/Europe/Simferopol: '8'
+  org/joda/time/tz/data/Europe/Sofia: '8'
+  org/joda/time/tz/data/Europe/Stockholm: '8'
+  org/joda/time/tz/data/Europe/Tallinn: '8'
+  org/joda/time/tz/data/Europe/Tirane: '8'
+  org/joda/time/tz/data/Europe/Uzhgorod: '8'
+  org/joda/time/tz/data/Europe/Vienna: '8'
+  org/joda/time/tz/data/Europe/Vilnius: '8'
+  org/joda/time/tz/data/Europe/Volgograd: '8'
+  org/joda/time/tz/data/Europe/Warsaw: '8'
+  org/joda/time/tz/data/Europe/Zaporozhye: '8'
+  org/joda/time/tz/data/Europe/Zurich: '8'
+  org/joda/time/tz/data/Indian/Antananarivo: '8'
+  org/joda/time/tz/data/Indian/Chagos: '8'
+  org/joda/time/tz/data/Indian/Christmas: '8'
+  org/joda/time/tz/data/Indian/Cocos: '8'
+  org/joda/time/tz/data/Indian/Comoro: '8'
+  org/joda/time/tz/data/Indian/Kerguelen: '8'
+  org/joda/time/tz/data/Indian/Mahe: '8'
+  org/joda/time/tz/data/Indian/Maldives: '8'
+  org/joda/time/tz/data/Indian/Mauritius: '8'
+  org/joda/time/tz/data/Indian/Mayotte: '8'
+  org/joda/time/tz/data/Indian/Reunion: '8'
+  org/joda/time/tz/data/Pacific/Apia: '8'
+  org/joda/time/tz/data/Pacific/Auckland: '8'
+  org/joda/time/tz/data/Pacific/Chatham: '8'
+  org/joda/time/tz/data/Pacific/Chuuk: '8'
+  org/joda/time/tz/data/Pacific/Easter: '8'
+  org/joda/time/tz/data/Pacific/Efate: '8'
+  org/joda/time/tz/data/Pacific/Enderbury: '8'
+  org/joda/time/tz/data/Pacific/Fakaofo: '8'
+  org/joda/time/tz/data/Pacific/Fiji: '8'
+  org/joda/time/tz/data/Pacific/Funafuti: '8'
+  org/joda/time/tz/data/Pacific/Galapagos: '8'
+  org/joda/time/tz/data/Pacific/Gambier: '8'
+  org/joda/time/tz/data/Pacific/Guadalcanal: '8'
+  org/joda/time/tz/data/Pacific/Guam: '8'
+  org/joda/time/tz/data/Pacific/Honolulu: '8'
+  org/joda/time/tz/data/Pacific/Kiritimati: '8'
+  org/joda/time/tz/data/Pacific/Kosrae: '8'
+  org/joda/time/tz/data/Pacific/Kwajalein: '8'
+  org/joda/time/tz/data/Pacific/Majuro: '8'
+  org/joda/time/tz/data/Pacific/Marquesas: '8'
+  org/joda/time/tz/data/Pacific/Midway: '8'
+  org/joda/time/tz/data/Pacific/Nauru: '8'
+  org/joda/time/tz/data/Pacific/Niue: '8'
+  org/joda/time/tz/data/Pacific/Norfolk: '8'
+  org/joda/time/tz/data/Pacific/Noumea: '8'
+  org/joda/time/tz/data/Pacific/Pago_Pago: '8'
+  org/joda/time/tz/data/Pacific/Palau: '8'
+  org/joda/time/tz/data/Pacific/Pitcairn: '8'
+  org/joda/time/tz/data/Pacific/Pohnpei: '8'
+  org/joda/time/tz/data/Pacific/Port_Moresby: '8'
+  org/joda/time/tz/data/Pacific/Rarotonga: '8'
+  org/joda/time/tz/data/Pacific/Saipan: '8'
+  org/joda/time/tz/data/Pacific/Tahiti: '8'
+  org/joda/time/tz/data/Pacific/Tarawa: '8'
+  org/joda/time/tz/data/Pacific/Tongatapu: '8'
+  org/joda/time/tz/data/Pacific/Wake: '8'
+  org/joda/time/tz/data/Pacific/Wallis: '8'
+  org/jsoup/nodes/entities-base.properties: '8'
+  org/jsoup/nodes/entities-full.properties: '8'
+usesFramework: null
+version: 2.4.0
+versionInfo: null

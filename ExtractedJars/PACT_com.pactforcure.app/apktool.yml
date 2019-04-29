@@ -167,12 +167,8 @@ doNotCompress:
 - css
 - json
 isFrameworkApk: false
-packageInfo:
-  forcedPackageId: '127'
-  renameManifestPackage: null
-sdkInfo:
-  minSdkVersion: '19'
-  targetSdkVersion: '26'
+packageInfo: null
+sdkInfo: null
 sharedLibrary: false
 sparseResources: false
 unknownFiles:
@@ -210,11 +206,6 @@ unknownFiles:
   fabric/com.crashlytics.sdk.android.crashlytics.properties: '8'
   fabric/io.fabric.sdk.android.fabric.properties: '8'
   jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
-usesFramework:
-  ids:
-  - 1
-  tag: null
+usesFramework: null
 version: 2.4.0
-versionInfo:
-  versionCode: '176'
-  versionName: 4.0.5.176
+versionInfo: null
