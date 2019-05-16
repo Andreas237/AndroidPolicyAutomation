@@ -1,6 +1,6 @@
 #Smali Code won't be analyzed as of 2019.04.24
 smali/
-res/
+# res/ #this folder is necessary for Android. Find the root path if it needs excluding
 lib/
 
 
