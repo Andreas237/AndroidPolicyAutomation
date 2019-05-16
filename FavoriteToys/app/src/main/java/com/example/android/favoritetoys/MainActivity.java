@@ -15,8 +15,10 @@
  */
 package com.example.android.favoritetoys;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -59,7 +61,20 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Add functionality to move from MainActivity to LeakyActivity via LeakyButton
-        final Button leakyButton = findViewById(R.id.leaky_button);
+        // https://developer.android.com/reference/android/widget/Button
+        final Button leakyButton = (Button) findViewById(R.id.leaky_button);
+        leakyButton.setOnClickListener(new View.OnClickListener() {
+
+
+
+            // When the button is clicked set the view to get_name
+            @Override
+            public void onClick(View view) {
+                Intent goto_LeakyAcivity = new Intent(MainActivity.this, LeakyActivity.class);
+                startActivity(goto_LeakyAcivity);
+
+            }// end public void onClick(View view)
+        });
 
 
 
