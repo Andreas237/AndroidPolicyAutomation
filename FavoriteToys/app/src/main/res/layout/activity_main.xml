@@ -32,4 +32,16 @@
             android:padding="16dp"
             android:textSize="20sp" />
     </ScrollView>
+
+    <Button
+        android:id="@+id/leaky_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:padding="8dp"
+        android:text="go_to_leaky"
+        android:layout_gravity="right"
+        android:onClick="onClickLeaky"/>
+
+
 </FrameLayout>

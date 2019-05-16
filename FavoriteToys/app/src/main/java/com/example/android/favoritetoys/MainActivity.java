@@ -17,6 +17,7 @@ package com.example.android.favoritetoys;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -50,8 +51,17 @@ public class MainActivity extends AppCompatActivity {
          * the "\n\n\n" after the String is to give visual separation between each String in the
          * TextView. Later, we'll learn about a better way to display lists of data.
          */
-        for (String toyName : toyNames) {
+        for (String toyName : toyNames)
             mToysListTextView.append(toyName + "\n\n\n");
-        }
-    }
-}
+
+
+
+
+
+        // Add functionality to move from MainActivity to LeakyActivity via LeakyButton
+        final Button leakyButton = findViewById(R.id.leaky_button);
+
+
+
+    }// end onCreate
+}// end public class MainActivity extends AppCompatActivity
